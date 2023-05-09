@@ -21,6 +21,22 @@
       text-decoration: none;
     }
   </style>        
+<style>
+    /* Default styles for the GIF */
+    .gif {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 600px; /* Set the maximum width of the GIF */
+    }
+  
+    /* Styles for smaller screens */
+    @media (max-width: 600px) {
+      .gif {
+        max-width: 100%; /* Scale the GIF to fit the screen width */
+      }
+    }
+  </style>
 <body><center>
 <a>\ michelle czajkowski /</a><br>
 <a>/ radboud university \</a>
@@ -28,7 +44,7 @@
 <a>\ how we write /</a/>
     <br><a>\ how we take language tests / </a><br><a>/ how we write language tests \</a>
 <br><br><br><br></center>
-<img src="Animation.gif" alt="Which are you most interested in?">
+<img src="Animation.gif" alt="Which are you most interested in?" class="gif">
 
 <script>
     // Listen for keypress events on the document
@@ -70,6 +86,7 @@
       }
     });
   </script>
+
 <br><br>
 <a href="languagetesting.html" class="no-underline black">A. Diagnostic assessment of academic language skills (PhD project) </a><br>
 <a href="experience.html" class="black no-underline">B. Test development and administration</a><br>

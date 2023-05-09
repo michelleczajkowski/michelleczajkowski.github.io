@@ -22,21 +22,20 @@
     }
   </style>        
 <style>
-    /* Default styles for the GIF */
-    .gif {
-      display: block;
-      margin: 0 auto;
+    /* Default styles for the GIF container */
+    .gif-container {
       width: 100%;
-      max-width: 600px; /* Set the maximum width of the GIF */
+      overflow: hidden;
     }
   
-    /* Styles for smaller screens */
-    @media (max-width: 600px) {
-      .gif {
-        max-width: 100%; /* Scale the GIF to fit the screen width */
-      }
+    /* Default styles for the GIF */
+    .gif {
+      max-width: 100%;
+      height: auto;
+      float: left; /* Align the GIF to the left side */
     }
   </style>
+  
 <body><center>
 <a>\ michelle czajkowski /</a><br>
 <a>/ radboud university \</a>
@@ -44,7 +43,8 @@
 <a>\ how we write /</a/>
     <br><a>\ how we take language tests / </a><br><a>/ how we write language tests \</a>
 <br><br><br><br></center>
-<img src="Animation.gif" alt="Which are you most interested in?" class="gif">
+<div class="gif-container"></div>
+<img src="Animation.gif" alt="Which are you most interested in?" class="gif"></div>
 
 <script>
     // Listen for keypress events on the document

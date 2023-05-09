@@ -14,25 +14,33 @@
     .black {
       color: black;
     }
-  </style>
+  
+
+</style>
 <style>
     /* Remove underline for links with class "no-underline" */
     .no-underline {
       text-decoration: none;
     }
-  </style>        
-<style>
+  </style>
+  <style>
     /* Default styles for the GIF container */
     .gif-container {
-      width: 100%;
-      overflow: hidden;
+      text-align: left;
     }
   
     /* Default styles for the GIF */
     .gif {
+      display: inline-block;
       max-width: 100%;
-      height: auto;
-      float: left; /* Align the GIF to the left side */
+      height: 25px;
+    }
+  
+    /* Styles for smaller screens */
+    @media (max-width: 600px) {
+      .gif-container {
+        text-align: left; /* Align the GIF to the left side */
+      }
     }
   </style>
   
@@ -44,7 +52,8 @@
     <br><a>\ how we take language tests / </a><br><a>/ how we write language tests \</a>
 <br><br><br><br></center>
 <div class="gif-container"></div>
-<img src="Animation.gif" alt="Which are you most interested in?" class="gif"></div>
+<img src="Animation.gif" alt="Which are you most interested in?" class="gif">
+</div>
 
 <script>
     // Listen for keypress events on the document
@@ -87,7 +96,7 @@
     });
   </script>
 
-<br><br>
+<br>
 <a href="languagetesting.html" class="no-underline black">A. Diagnostic assessment of academic language skills (PhD project) </a><br>
 <a href="experience.html" class="black no-underline">B. Test development and administration</a><br>
 <a href="teaching.html" class="no-underline black">C. Teaching </a><br>

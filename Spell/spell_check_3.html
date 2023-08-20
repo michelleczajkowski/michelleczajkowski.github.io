@@ -164,6 +164,18 @@
         misspelledWords.forEach(word => {
             word.addEventListener("click", handleWordCorrection);
         });
+	
+
+	// Specify your Qualtrics survey URL
+	const qualtricsURL = 'https://radboudletteren.eu.qualtrics.com/jfe/form/SV_8wCQ6iEycXJmFwy'; 
+
+	// Update the URL of the Qualtrics survey with userCorrections as a query parameter
+	window.opener.location.href = qualtricsURL + '?userCorrections=' + encodeURIComponent(userCorrections);
+
+	// Close the spell check window (optional)
+	window.close();
+
+
     </script>
 </body>
 </html>

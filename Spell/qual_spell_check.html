@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spell Check</title>
+    <style type="text/css">
+        /* Style the misspelled words in red and make them clickable */
+        .red {
+            color: red;
+            cursor: pointer;
+        }
+
+        /* Style the cursor to indicate interactivity */
+        .red:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <p id="sentence">I want to going to the shop to buy some schoes.</p>
+
+    <script type="text/javascript">
+        // Define your word options
+        const wordOptions = {
+            "going": ["going", "go", "goes"],
+            "buy": ["buy", "bye", "by"],
+            "schoes": ["schoes", "schools", "echoes"]
+        };
+
+        // Attach click event listeners to misspelled words
+        const sentenceElement = document.getElementById("sentence");
+        sentenceElement.addEventListener("click", handleWordCorrection);
+
+        // Function to handle word correction
+        function handleWordCorrection(event) {
+            const clickedWord = event.target.textContent;
+            const trimmedWord = clickedWord.replace(/[.,!?]/g, ''); // Remove punctuation
+
+            const correctionOptions = wordOptions[trimmedWord.toLowerCase()];
+            if (correctionOptions) {
+                const punctuation = clickedWord.replace(/[A-Za-z]+/g, ''); // Extract punctuation
+
+                const popupDiv = document.createElement("div");
+                popupDiv.classList.add("popup");
+                const optionsList = document.createElement("ul");
+
+                correctionOptions.forEach(option => {
+                    if (option !== trimmedWord) { // Exclude the original word
+                        const listItem = document.createElement("li");
+                        listItem.textContent = option + punctuation;
+                        listItem.addEventListener("click", () => {
+                            event.target.textContent = option + punctuation;
+                            event.target.classList.remove("red");
+                            popupDiv.remove();
+                        });
+                        optionsList.appendChild(listItem);
+                    }
+                });
+
+                // Add the "Other" option with a text input field
+                const otherOption = document.createElement("li");
+                const inputField = document.createElement("input");
+                inputField.setAttribute("placeholder", "Other");
+                inputField.addEventListener("keyup", (e) => {
+                    if (e.key === "Enter") {
+                        const customWord = inputField.value.trim();
+                        if (customWord) {
+                            event.target.textContent = customWord + punctuation;
+                            event.target.classList.remove("red");
+                            popupDiv.remove();
+                        }
+                    }
+                });
+                otherOption.appendChild(inputField);
+                optionsList.appendChild(otherOption);
+
+                // Add the "<ignore>" option as the last one
+                const ignoreOption = document.createElement("li");
+                ignoreOption.innerHTML = "//ignore//";
+                ignoreOption.addEventListener("click", () => {
+                    event.target.classList.remove("red"); // Remove the "red" class
+                    popupDiv.remove();
+                });
+                optionsList.appendChild(ignoreOption);
+
+                popupDiv.appendChild(optionsList);
+                document.body.appendChild(popupDiv);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* Style the misspelled words in red and make them clickable */
+.red {
+    color: red;
+    cursor: pointer;
+}
+
+/* Style the cursor to indicate interactivity */
+.red:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Style the pop-up box */
+.popup {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* Style the list of correction options */
+.popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style each correction option in the list */
+.popup li {
+    padding: 5px;
+}
+
+/* Add styles for the entire body for better presentation */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+/* Style the input field for the "Other" option */
+.popup input {
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}

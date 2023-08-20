@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spell Check</title>
+    <style> 
+        /* Style the misspelled words in red and make them clickable */
+        .red {
+            color: red;
+            cursor: pointer;
+        }
+
+        /* Style the cursor to indicate interactivity */
+        .red:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Style the pop-up box */
+        .popup {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        /* Style the list of correction options */
+        .popup ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Style each correction option in the list */
+        .popup li {
+            padding: 5px;
+        }
+
+        /* Add styles for the entire body for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        /* Style the input field for the "Other" option */
+        .popup input {
+            border: 1px solid #ccc;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <p id="sentence">I want to going to the shop to buy some schoes.</p>
+    <button id="submitButton">Submit Corrections</button> <!-- Add the Submit button -->
+
+    <div id="userCorrectionsDisplay" style="display: none;"></div>
+
+    <script>
+        // Define your word options
+        const wordOptions = {
+            "going": ["going", "go", "goes"],
+            "buy": ["buy", "bye", "by"],
+            "schoes": ["schoes", "schools", "echoes"]
+        };
+
+        // Function to wrap misspelled words in <span> elements
+        function highlightMisspelledWords() {
+            const sentenceElement = document.getElementById("sentence");
+            const sentence = sentenceElement.textContent;
+            const words = sentence.split(/\b/); // Split by word boundaries
+            const correctedWords = words.map(word => {
+                const trimmedWord = word.replace(/[.,!?]/g, ''); // Remove punctuation
+                const correctedWord = wordOptions[trimmedWord.toLowerCase()];
+                if (correctedWord) {
+                    const punctuation = word.replace(/[A-Za-z]+/g, ''); // Extract punctuation
+                    return `<span class="red" data-word="${trimmedWord}">${correctedWord[0] + punctuation}</span>`;
+                }
+                return word;
+            });
+            sentenceElement.innerHTML = correctedWords.join("");
+        }
+
+        // Function to handle word correction
+        function handleWordCorrection(event) {
+            const clickedWord = event.target.dataset.word;
+            if (clickedWord) {
+                const correctionOptions = wordOptions[clickedWord.toLowerCase()];
+                if (correctionOptions) {
+                    const popupDiv = document.createElement("div");
+                    popupDiv.classList.add("popup");
+                    const optionsList = document.createElement("ul");
+
+                    correctionOptions.forEach(option => {
+                        if (option !== clickedWord) { // Exclude the original word
+                            const listItem = document.createElement("li");
+                            listItem.textContent = option;
+                            listItem.addEventListener("click", () => {
+                                const punctuation = clickedWord.replace(/[A-Za-z]+/g, ''); // Extract punctuation
+                                const correctedWord = option + punctuation;
+                                event.target.textContent = correctedWord;
+                                event.target.classList.remove("red");
+                                popupDiv.remove();
+                            });
+                            optionsList.appendChild(listItem);
+                        }
+                    });
+
+                    // Add the "Other" option with a text input field
+                    const otherOption = document.createElement("li");
+                    const inputField = document.createElement("input");
+                    inputField.setAttribute("placeholder", "Other");
+                    inputField.style.width = "50%";
+                    inputField.addEventListener("keyup", (e) => {
+                        if (e.key === "Enter") {
+                            const customWord = inputField.value.trim();
+                            if (customWord) {
+                                const punctuation = clickedWord.replace(/[A-Za-z]+/g, ''); // Extract punctuation
+                                const correctedWord = customWord + punctuation;
+                                event.target.textContent = correctedWord;
+                                event.target.classList.remove("red");
+                                popupDiv.remove();
+                            }
+                        }
+                    });
+                    otherOption.appendChild(inputField);
+
+                    // Add the "<ignore>" option as the last one
+                    const ignoreOption = document.createElement("li");
+                    ignoreOption.innerHTML = "//ignore//";
+                    ignoreOption.addEventListener("click", () => {
+                        event.target.classList.remove("red"); // Remove the "red" class
+                        popupDiv.remove();
+                    });
+                    optionsList.appendChild(otherOption);
+                    optionsList.appendChild(ignoreOption);
+
+                    popupDiv.appendChild(optionsList);
+                    document.body.appendChild(popupDiv);
+                }
+            }
+        }
+
+        // Event listener for the Submit button
+        const submitButton = document.getElementById("submitButton");
+        submitButton.addEventListener("click", () => {
+            // Get the corrected text from the HTML
+            const correctedText = document.getElementById("sentence").innerHTML;
+
+            // Display the corrected text under the button
+            const userCorrectionsDisplay = document.getElementById("userCorrectionsDisplay");
+            userCorrectionsDisplay.innerHTML = "<strong>Corrected Text:</strong><br>" + correctedText;
+            userCorrectionsDisplay.style.display = "block"; // Display the div
+        });
+
+        // Call the highlight function on page load
+        highlightMisspelledWords();
+
+        // Attach click event listeners to misspelled words
+        const misspelledWords = document.querySelectorAll(".red");
+        misspelledWords.forEach(word => {
+            word.addEventListener("click", handleWordCorrection);
+        });
+    </script>
+</body>
+</html>

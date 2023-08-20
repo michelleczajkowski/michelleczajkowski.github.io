@@ -60,6 +60,9 @@
     <div id="userCorrectionsDisplay" style="display: none;"></div>
 
     <script>
+        // Declare userCorrections globally
+        let userCorrections = "";
+
         // Define your word options
         const wordOptions = {
             "going": ["going", "go", "goes"],
@@ -150,10 +153,22 @@
             // Get the corrected text from the HTML
             const correctedText = document.getElementById("sentence").innerHTML;
 
+            // Update the userCorrections variable
+            userCorrections = correctedText;
+
             // Display the corrected text under the button
             const userCorrectionsDisplay = document.getElementById("userCorrectionsDisplay");
             userCorrectionsDisplay.innerHTML = "<strong>Corrected Text:</strong><br>" + correctedText;
             userCorrectionsDisplay.style.display = "block"; // Display the div
+
+            // Specify your Qualtrics survey URL
+            const qualtricsURL = 'https://radboudletteren.eu.qualtrics.com/jfe/form/SV_8wCQ6iEycXJmFwy'; 
+
+            // Update the URL of the Qualtrics survey with userCorrections as a query parameter
+            window.opener.location.href = qualtricsURL + '?userCorrections=' + encodeURIComponent(userCorrections);
+
+            // Close the spell check window (optional)
+            window.close();
         });
 
         // Call the highlight function on page load
@@ -164,17 +179,6 @@
         misspelledWords.forEach(word => {
             word.addEventListener("click", handleWordCorrection);
         });
-	
-
-	// Specify your Qualtrics survey URL
-	const qualtricsURL = 'https://radboudletteren.eu.qualtrics.com/jfe/form/SV_8wCQ6iEycXJmFwy'; 
-
-	// Update the URL of the Qualtrics survey with userCorrections as a query parameter
-	window.opener.location.href = qualtricsURL + '?userCorrections=' + encodeURIComponent(userCorrections);
-
-	// Close the spell check window (optional)
-	window.close();
-
 
     </script>
 </body>

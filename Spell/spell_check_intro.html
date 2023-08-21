@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial 1</title>
-    <style> 
+    <title>Test: Tutorial</title>
+    <style>
         /* Style the misspelled words in red and make them clickable */
         .red {
             color: red;
@@ -42,8 +42,9 @@
 
         /* Add styles for the entire body for better presentation */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans',Arial, sans-serif;
             margin: 20px;
+            font-size: 20px;
         }
 
         /* Style the input field for the "Other" option */
@@ -60,159 +61,164 @@
 
         #nextButton {
             display: none; /* Initially hide the Next button */
-            /* Example media query for small screens */
-        
         }
-
     </style>
 </head>
 <body>
-    <h1>Tutorial</h1>
-    <p>A classmate asked you to check their assignment for spelling and grammar errors.<br> You open the file on your computer. <br> You notice that:
-        <br><br>1: There are some words underlined in red. The computer has found some errors.<br>
-        2: There are some <i>other</i> errors that the checker did not catch. <br><br> You will need to correct both. 
-        <br><br>First, let's practice. In the sentence below, 
-        there are three errors in red. Click on each, and make the 
-        corrections. <br><br>Note: Sometimes you click on the correct word. 
-        Sometimes you fill in your own idea. Sometimes, the word is actually right, and you click ignore.<br><br>Text:<br>
-    </p>
-    <h2>1 of 3: Accepting or Ignoring Advice</h2>
-    <p id="sentence">I want to going to the shop to buy some schoes. </p>
-    <button id="checkButton">Check</button>
-    <div id="result">
-        <p id="correctSentence"></p>
-        <button id="nextButton">Next</button>
-    </div>
+<h1>Tutorial</h1>
+<p>A classmate asked you to check their assignment for spelling and grammar errors.<br> You open the file on your computer.
+    <br> You notice that:
+    <br><br>1: There are some words underlined in red. The computer has found some errors.<br>
+    2: There are some <i>other</i> errors that the checker did not catch. <br><br> You will need to correct both.
+    <br><br>First, let's practice. In the sentence below,
+    there are three errors in red. Click on each, and make the
+    corrections. <br><br>Note: Sometimes you click on the correct word.
+    Sometimes you fill in your own idea. Sometimes, the word is actually right, and you click ignore.<br><br>Text:<br>
+</p>
+<h2>1 of 3: Accepting or Ignoring Advice</h2>
+<p id="sentence">I want to going to the shop to buy some schoes. </p>
+<button id="checkButton">Check</button>
+<div id="result">
+    <p id="correctSentence"></p>
+    <button id="nextButton">Next</button>
+</div>
 
-    <script>
-        // Define your word options
-        const wordOptions = {
-            "going": ["going", "go", "goes"],
-            "buy": ["buy", "bye", "by"],
-            "schoes": ["schoes", "schools", "echoes"]
-        };
+<script>
+    // Define your word options
+    const wordOptions = {
+        "going": ["going", "go", "goes"],
+        "buy": ["buy", "bye", "by"],
+        "schoes": ["schoes", "schools", "echoes"]
+    };
 
-        // Function to wrap misspelled words in <span> elements
-        function highlightMisspelledWords() {
-            const sentenceElement = document.getElementById("sentence");
-            const sentence = sentenceElement.textContent;
-            const words = sentence.split(/\b/); // Split by word boundaries
-            const correctedWords = words.map(word => {
-                const trimmedWord = word.replace(/[.,!?]/g, ''); // Remove punctuation
-                const correctedWord = wordOptions[trimmedWord.toLowerCase()];
-                if (correctedWord) {
-                    const punctuation = word.replace(/[A-Za-z]+/g, ''); // Extract punctuation
-                    return `<span class="red" data-word="${trimmedWord}">${correctedWord[0] + punctuation}</span>`;
-                }
-                return word;
-            });
-            sentenceElement.innerHTML = correctedWords.join("");
+    let currentPopup = null; // Variable to keep track of the currently open pop-up
+
+    // Function to wrap misspelled words in <span> elements
+    function highlightMisspelledWords() {
+        const sentenceElement = document.getElementById("sentence");
+        const sentence = sentenceElement.textContent;
+        const words = sentence.split(/\b/); // Split by word boundaries
+        const correctedWords = words.map(word => {
+            const trimmedWord = word.replace(/[.,!?]/g, ''); // Remove punctuation
+            const correctedWord = wordOptions[trimmedWord.toLowerCase()];
+            if (correctedWord) {
+                const punctuation = word.replace(/[A-Za-z]+/g, ''); // Extract punctuation
+                return `<span class="red" data-word="${trimmedWord}">${correctedWord[0] + punctuation}</span>`;
+            }
+            return word;
+        });
+        sentenceElement.innerHTML = correctedWords.join("");
+    }
+
+    // Function to handle word correction
+    function handleWordCorrection(event) {
+        if (currentPopup) {
+            currentPopup.remove(); // Close the current pop-up
         }
 
-        // Function to handle word correction
-        function handleWordCorrection(event) {
-            const clickedWord = event.target;
-            if (clickedWord.dataset.word) {
-                const correctionOptions = wordOptions[clickedWord.dataset.word.toLowerCase()];
-                if (correctionOptions) {
-                    // Calculate the position of the clicked word
-                    const rect = clickedWord.getBoundingClientRect();
-                    const wordTop = rect.top + window.scrollY;
-                    const wordLeft = rect.left + window.scrollX;
+        const clickedWord = event.target;
+        if (clickedWord.dataset.word) {
+            const correctionOptions = wordOptions[clickedWord.dataset.word.toLowerCase()];
+            if (correctionOptions) {
+                // Calculate the position of the clicked word
+                const rect = clickedWord.getBoundingClientRect();
+                const wordTop = rect.top + window.scrollY;
+                const wordLeft = rect.left + window.scrollX;
 
-                    const popupDiv = document.createElement("div");
-                    popupDiv.classList.add("popup");
+                const popupDiv = document.createElement("div");
+                popupDiv.classList.add("popup");
 
-                    // Set the position of the pop-up box just below the word
-                    popupDiv.style.top = wordTop + rect.height + "px";
-                    popupDiv.style.left = wordLeft + "px";
+                // Set the position of the pop-up box just below the word
+                popupDiv.style.top = wordTop + rect.height + "px";
+                popupDiv.style.left = wordLeft + "px";
 
-                    const optionsList = document.createElement("ul");
+                const optionsList = document.createElement("ul");
 
-                    correctionOptions.forEach(option => {
-                        if (option !== clickedWord.dataset.word) { // Exclude the original word
-                            const listItem = document.createElement("li");
-                            listItem.textContent = option;
-                            listItem.addEventListener("click", () => {
-                                const punctuation = clickedWord.dataset.word.replace(/[A-Za-z]+/g, ''); // Extract punctuation
-                                const correctedWord = option + punctuation;
-                                clickedWord.textContent = correctedWord;
-                                clickedWord.classList.remove("red");
-                                popupDiv.remove();
-                            });
-                            optionsList.appendChild(listItem);
+                correctionOptions.forEach(option => {
+                    if (option !== clickedWord.dataset.word) { // Exclude the original word
+                        const listItem = document.createElement("li");
+                        listItem.textContent = option;
+                        listItem.addEventListener("click", () => {
+                            const punctuation = clickedWord.dataset.word.replace(/[A-Za-z]+/g, ''); // Extract punctuation
+                            const correctedWord = option + punctuation;
+                            clickedWord.textContent = correctedWord;
+                            clickedWord.classList.remove("red");
+                            popupDiv.remove();
+                        });
+                        optionsList.appendChild(listItem);
+                    }
+                });
+
+                // Add the "Other" option with a text input field
+                const otherOption = document.createElement("li");
+                const inputField = document.createElement("input");
+                inputField.setAttribute("placeholder", "Other");
+                inputField.style.width = "50%";
+                inputField.addEventListener("keyup", (e) => {
+                    if (e.key === "Enter") {
+                        const customWord = inputField.value.trim();
+                        if (customWord) {
+                            const punctuation = clickedWord.dataset.word.replace(/[A-Za-z]+/g, ''); // Extract punctuation
+                            const correctedWord = customWord + punctuation;
+                            clickedWord.textContent = correctedWord;
+                            clickedWord.classList.remove("red");
+                            popupDiv.remove();
                         }
-                    });
+                    }
+                });
+                otherOption.appendChild(inputField);
 
-                    // Add the "Other" option with a text input field
-                    const otherOption = document.createElement("li");
-                    const inputField = document.createElement("input");
-                    inputField.setAttribute("placeholder", "Other");
-                    inputField.style.width = "50%";
-                    inputField.addEventListener("keyup", (e) => {
-                        if (e.key === "Enter") {
-                            const customWord = inputField.value.trim();
-                            if (customWord) {
-                                const punctuation = clickedWord.dataset.word.replace(/[A-Za-z]+/g, ''); // Extract punctuation
-                                const correctedWord = customWord + punctuation;
-                                clickedWord.textContent = correctedWord;
-                                clickedWord.classList.remove("red");
-                                popupDiv.remove();
-                            }
-                        }
-                    });
-                    otherOption.appendChild(inputField);
+                // Add the "<ignore>" option as the last one
+                const ignoreOption = document.createElement("li");
+                ignoreOption.innerHTML = "(correct as is)";
+                ignoreOption.addEventListener("click", () => {
+                    clickedWord.classList.remove("red"); // Remove the "red" class
+                    popupDiv.remove();
+                });
+                optionsList.appendChild(otherOption);
+                optionsList.appendChild(ignoreOption);
 
-                    // Add the "<ignore>" option as the last one
-                    const ignoreOption = document.createElement("li");
-                    ignoreOption.innerHTML = "(correct as is)";
-                    ignoreOption.addEventListener("click", () => {
-                        clickedWord.classList.remove("red"); // Remove the "red" class
-                        popupDiv.remove();
-                    });
-                    optionsList.appendChild(otherOption);
-                    optionsList.appendChild(ignoreOption);
+                popupDiv.appendChild(optionsList);
+                document.body.appendChild(popupDiv);
 
-                    popupDiv.appendChild(optionsList);
-                    document.body.appendChild(popupDiv);
-                }
+                // Set the currentPopup variable to the new pop-up
+                currentPopup = popupDiv;
             }
         }
+    }
 
-        // Call the highlight function on page load
-        highlightMisspelledWords();
+    // Call the highlight function on page load
+    highlightMisspelledWords();
 
-        // Attach click event listeners to misspelled words
-        const misspelledWords = document.querySelectorAll(".red");
-        misspelledWords.forEach(word => {
-            word.addEventListener("click", handleWordCorrection);
-        });
-        // Function to handle the "Check" button click
-        function handleCheckButtonClick() {
-            const correctSentenceElement = document.getElementById("correctSentence");
-            correctSentenceElement.innerHTML = "Correct sentence: <br>I want to go to the shop to buy some shoes. ";
+    // Attach click event listeners to misspelled words
+    const misspelledWords = document.querySelectorAll(".red");
+    misspelledWords.forEach(word => {
+        word.addEventListener("click", handleWordCorrection);
+    });
 
-            // Show the "Next" button and the note
-            const nextButton = document.getElementById("nextButton");
-            const note = document.getElementById("note");
-            nextButton.style.display = "block";
-            note.style.display = "block";
-        }
+    // Function to handle the "Check" button click
+    function handleCheckButtonClick() {
+        const correctSentenceElement = document.getElementById("correctSentence");
+        correctSentenceElement.innerHTML = "Correct sentence: <br>I want to go to the shop to buy some shoes. ";
 
-        // Attach a click event listener to the "Check" button
-        const checkButton = document.getElementById("checkButton");
-        checkButton.addEventListener("click", handleCheckButtonClick);
-
-        // Function to handle the "Next" button click
-        function handleNextButtonClick() {
-            // Redirect to the desired URL
-            window.location.href = "spell_check_intro_2.html"; // Replace with your actual URL
-        }
-        // Attach a click event listener to the "Next" button
+        // Show the "Next" button
         const nextButton = document.getElementById("nextButton");
-        nextButton.addEventListener("click", handleNextButtonClick);
+        nextButton.style.display = "block";
+    }
 
-    </script>
-    
+    // Attach a click event listener to the "Check" button
+    const checkButton = document.getElementById("checkButton");
+    checkButton.addEventListener("click", handleCheckButtonClick);
+
+    // Function to handle the "Next" button click
+    function handleNextButtonClick() {
+        // Redirect to the desired URL
+        window.location.href = "spell_check_intro_2.html"; // Replace with your actual URL
+    }
+
+    // Attach a click event listener to the "Next" button
+    const nextButton = document.getElementById("nextButton");
+    nextButton.addEventListener("click", handleNextButtonClick);
+</script>
 </body>
 </html>

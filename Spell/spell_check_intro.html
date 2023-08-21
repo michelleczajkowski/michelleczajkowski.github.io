@@ -42,7 +42,7 @@
 
         /* Add styles for the entire body for better presentation */
         body {
-            font-family: 'Open Sans',Arial, sans-serif;
+            font-family: 'Open Sans', Arial, sans-serif;
             margin: 20px;
             font-size: 20px;
         }
@@ -68,8 +68,8 @@
 <h1>Tutorial</h1>
 <p>A classmate asked you to check their writing. You open the file on your computer. You notice that:
     <br><br>1: The spelling and grammar checker has found some errors.<br>
-    2: There are some <i>other</i> errors that the checker did not catch. <br><br> You will need to correct both.
-    <br><br>First, let's practice. In the sentence below,
+    2: There are some <i>other</i> errors that the checker did not catch. <br><br> You will need to correct both, using your language skills and your skillful use of spelling and grammar checkers.
+    <br><br>First, a short tutorial. In the sentence below,
     there are three errors in red. Click on each, and make the
     corrections.</p>
 <h2>1 of 3: Accepting or Ignoring Advice</h2>
@@ -92,7 +92,7 @@
         if (tutA === "") {
             tutA = sentenceElement.textContent;
         }
-        
+
         const updatedSentence = tutA.replace(originalWord, correctedWord);
         tutA = updatedSentence;
     }
@@ -223,15 +223,10 @@
     function handleCheckButtonClick() {
         const correctSentenceElement = document.getElementById("correctSentence");
 
-        // Get the current sentence from the "sentence" element
-        const currentSentence = sentenceElement.textContent;
+        // Replace the following line with the correct answer
+        const correctAnswer = "Correct answer: <br>I want to go to the shop to buy some shoes.";
 
-        // Store the current sentence in tutA
-        tutA = currentSentence;
-
-        const correctedSentence = "Correct sentence: <br>" + currentSentence;
-
-        correctSentenceElement.innerHTML = correctedSentence;
+        correctSentenceElement.innerHTML = correctAnswer;
 
         // Show the "Next" button
         const nextButton = document.getElementById("nextButton");

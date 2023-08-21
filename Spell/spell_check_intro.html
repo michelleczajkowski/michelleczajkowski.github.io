@@ -68,7 +68,7 @@
         <br><br>First, let's practice. In the sentence below, 
         there are three errors in red. Click on each, and make the 
         corrections. <br><br>Note: Sometimes you click on the correct word. 
-        Sometimes you fill in your own idea. Sometimes, the word is actually right, and you click ignore.
+        Sometimes you fill in your own idea. Sometimes, the word is actually right, and you click ignore.<br><br>Text:<br>
     </p>
     
     <p id="sentence">I want to going to the shop to buy some schoes. </p>
@@ -184,7 +184,7 @@
         // Function to handle the "Check" button click
         function handleCheckButtonClick() {
             const correctSentenceElement = document.getElementById("correctSentence");
-            correctSentenceElement.textContent = "Correct sentence: I want to go to the shop to buy some shoes. ";
+            correctSentenceElement.innerHTML = "Correct sentence: <br>I want to go to the shop to buy some shoes. ";
 
             // Show the "Next" button and the note
             const nextButton = document.getElementById("nextButton");

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Highlighter</title>
     <style>
+                body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
         .highlightable {
             cursor: pointer;
         }
@@ -15,10 +19,16 @@
     </style>
 </head>
 <body>
+    <h1>Instructions:</h1>
+    <p>Computer tools aren't perfect. They often don't 'see' certain kinds of errors. In the sentence below, 
+        there are two errors that spell check did not catch. Find them, and click on them to turn them yellow. <br><br>Note: You do not need to make corrections. Just identify where there are errors.
+    </p>
+    <p></p>
     <div id="text-container">
         <!-- Your text goes here -->
-        <span class="highlightable">I</span> <span class="highlightable">want</span> <span class="highlightable">to</span> <span class="highlightable">go</span> <span class="highlightable">to</span> <span class="highlightable">the</span> <span class="highlightable">shop</span> <span class="highlightable">to</span> <span class="highlightable">buy</span> <span class="highlightable">some</span> <span class="highlightable">shoes.</span> <span class="highlightable">Their's</span> <span class="highlightable">a</span> <span class="highlightable">sale</span> <span class="highlightable">and</span> <span class="highlightable">its</span> <span class="highlightable">only</span> <span class="highlightable">today!</span>
-    </div>
+        <span class="highlightable">My</span> <span class="highlightable">friends</span> <span class="highlightable">told</span> <span class="highlightable">me</span> <span class="highlightable">that</span> <span class="highlightable">theirs</span> <span class="highlightable">a</span> <span class="highlightable">sale</span> <span class="highlightable">at</span> <span class="highlightable">the</span> <span class="highlightable">shoeshop</span>, <span class="highlightable">but</span> <span class="highlightable">it's</span> <span class="highlightable">only</span> <span class="highlightable">one</span> <span class="highlightable">day,</span> <span class="highlightable">so</span> <span class="highlightable">we</span> <span class="highlightable">have</span> <span class="highlightable">to</span> <span class="highlightable">go</span> <span class="highlightable">today.</span>
+</div>
+    <br><br>
     <button id="save-button">Save Selection</button>
     <script>
         document.addEventListener("DOMContentLoaded", function () {

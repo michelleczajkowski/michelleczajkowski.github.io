@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Highlighter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .highlightable {
+            cursor: pointer;
+        }
+        .highlighted {
+            background-color: rgb(207, 207, 152);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Instructions:</h1>
+    <p>Computer tools aren't perfect. They often don't 'see' certain kinds of errors. In the sentence below, 
+        there are two errors that spell check did not catch. Find them, and click on them to turn them yellow. <br><br>Note: You do not need to make corrections. Just identify where there are errors.
+    </p>
+    <p><br>Text:<br></p>
+    <div id="text-container">
+        <!-- Your text goes here -->
+        <span class="highlightable">My</span> <span class="highlightable">friends</span> <span class="highlightable">told</span> <span class="highlightable">me</span> <span class="highlightable">that</span> <span class="highlightable">theirs</span> <span class="highlightable">a</span> <span class="highlightable">sale</span> <span class="highlightable">at</span> <span class="highlightable">the</span> <span class="highlightable">shoeshop</span>, <span class="highlightable">but</span> <span class="highlightable">it's</span> <span class="highlightable">only</span> <span class="highlightable">one</span> <span class="highlightable">day,</span> <span class="highlightable">so</span> <span class="highlightable">we</span> <span class="highlightable">have</span> <span class="highlightable">to</span> <span class="highlightable">go</span> <span class="highlightable">today.</span>
+    </div>
+    <br>
+    <button id="save-button">Check</button>
+    <div id="answer-container" style="display: none;">
+        <p id="correct-answer"></p>
+        <button id="next-button">Next</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const highlightableWords = document.querySelectorAll(".highlightable");
+            const saveButton = document.getElementById("save-button");
+            const answerContainer = document.getElementById("answer-container");
+            const correctAnswer = document.getElementById("correct-answer");
+            const nextButton = document.getElementById("next-button");
+            let selectedWordIndices = []; // Store word indices instead of words
+
+            // Function to toggle word highlighting and store its index
+            function toggleHighlight(word, index) {
+                word.classList.toggle("highlighted");
+                if (word.classList.contains("highlighted")) {
+                    selectedWordIndices.push(index);
+                } else {
+                    selectedWordIndices = selectedWordIndices.filter(selectedIndex => selectedIndex !== index);
+                }
+            }
+
+            // Add click event listeners to each highlightable word
+            highlightableWords.forEach((word, index) => {
+                word.addEventListener("click", () => {
+                    toggleHighlight(word, index);
+                });
+            });
+
+            // Add click event listener to save button
+            saveButton.addEventListener("click", () => {
+                // Here, you can determine the correct answer based on selectedWordIndices
+                // For demonstration, we'll just display "Correct answer: blah blah"
+                correctAnswer.innerHTML = 'Correct answer:<br> My friends told me that <span class="highlighted">theirs</span> a sale at the <span class="highlighted">shoeshop</span>, but it\'s only one day, so we have to go today.';
+
+                // Show the answer container
+                answerContainer.style.display = "block";
+            });
+
+            // Add click event listener to next button
+            nextButton.addEventListener("click", () => {
+                // Redirect the user to the new URL
+                window.location.href = "spell_check_intro_3.html";
+            });
+        });
+    </script>
+</body>
+</html>

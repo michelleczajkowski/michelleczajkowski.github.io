@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Highlighter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .highlightable {
+            cursor: pointer;
+        }
+        .highlighted {
+            background-color: rgb(207, 207, 152);
+            font-weight: bold;
+        }
+        .popup {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Instructions:</h1>
+    <p>In the 2nd task, you found some errors. Now try to correct them. Click on the highlighted errors, and correct them.</p>
+    <p><br>Text:<br></p>
+    <div id="text-container">My friends told me that <span class="highlighted">theirs</span> a sale at the <span class="highlighted">shoeshop</span>, but it\'s only one day, so we have to go today.
+    </div>
+    <br>
+    <button id="save-button">Check</button>
+    <div id="answer-container" style="display: none;">
+        <p id="correct-answer"></p>
+        <button id="next-button">Next</button>
+    </div>
+    <div class="popup" id="popup">
+        <input type="text" id="replacementText" onkeydown="handleKeydown(event)">
+    </div>
+
+    <script>
+        const highlightedElements = document.querySelectorAll('.highlighted');
+        const popup = document.getElementById('popup');
+        const replacementText = document.getElementById('replacementText');
+
+        let currentHighlightedIndex = -1; // Index of the currently highlighted element
+
+        function showPopup(element) {
+            currentHighlightedIndex = Array.from(highlightedElements).indexOf(element);
+            replacementText.value = ''; // Clear the input field
+            popup.style.display = 'block';
+            popup.style.top = (element.offsetTop + element.offsetHeight) + 'px';
+            popup.style.left = element.offsetLeft + 'px';
+            replacementText.focus();
+        }
+
+        function replaceHighlightedText() {
+            if (currentHighlightedIndex !== -1 && replacementText.value) {
+                highlightedElements[currentHighlightedIndex].textContent = replacementText.value;
+                popup.style.display = 'none';
+
+                // Move to the next highlighted element
+                const nextIndex = (currentHighlightedIndex + 1) % highlightedElements.length;
+                showPopup(highlightedElements[nextIndex]);
+            }
+        }
+
+        function handleKeydown(event) {
+            if (event.key === 'Enter') {
+                replaceHighlightedText();
+            } else if (event.key === 'Tab') {
+                // Prevent the default tab behavior (e.g., focusing on other page elements)
+                event.preventDefault();
+                replaceHighlightedText();
+            }
+        }
+
+        highlightedElements.forEach(element => {
+            element.addEventListener('click', () => {
+                showPopup(element);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -26,16 +26,16 @@
     </style>
 </head>
 <body>
-    <h1>Instructions:</h1>
-    <p>In the 2nd task, you found some errors. Now try to correct them. Click on the highlighted errors, and correct them.</p>
+    <h1>3: Correcting Errors</h1>
+    <p>Now that you have found some errors, try to correct them. Click on the highlighted errors, type, and hit enter or tab.</p>
     <p><br>Text:<br></p>
-    <div id="text-container">My friends told me that <span class="highlighted">theirs</span> a sale at the <span class="highlighted">shoeshop</span>, but it\'s only one day, so we have to go today.
+    <div id="text-container">My friends told me that <span class="highlighted">theirs</span> a sale at the <span class="highlighted">shoeshop</span>, but it's only one day, so we have to go today.
     </div>
     <br>
     <button id="save-button">Check</button>
     <div id="answer-container" style="display: none;">
         <p id="correct-answer"></p>
-        <button id="next-button">Next</button>
+        <a href="spell_check_task_1.html"><button id="next-button">Next</button></a>
     </div>
     <div class="popup" id="popup">
         <input type="text" id="replacementText" onkeydown="handleKeydown(event)">
@@ -45,6 +45,8 @@
         const highlightedElements = document.querySelectorAll('.highlighted');
         const popup = document.getElementById('popup');
         const replacementText = document.getElementById('replacementText');
+        const answerContainer = document.getElementById('answer-container');
+        const correctAnswer = document.getElementById('correct-answer');
 
         let currentHighlightedIndex = -1; // Index of the currently highlighted element
 
@@ -54,6 +56,10 @@
             popup.style.display = 'block';
             popup.style.top = (element.offsetTop + element.offsetHeight) + 'px';
             popup.style.left = element.offsetLeft + 'px';
+
+            // Set the width of the text box to match the width of the highlighted element
+            replacementText.style.width = element.offsetWidth + 'px';
+
             replacementText.focus();
         }
 
@@ -77,6 +83,12 @@
                 replaceHighlightedText();
             }
         }
+
+        document.getElementById('save-button').addEventListener('click', () => {
+            // Display the correct answer and the "Next" button when the "Check" button is clicked
+            answerContainer.style.display = 'block';
+            correctAnswer.innerHTML = "Correct answer: <br>My friends told me that there's a sale at the shoe shop, but it's only one day, so we have to go today.<br><br>Are you ready to try on a short academic text? You'll get feedback on how you did: <br>-- Acceptiong or Ignoring Computer Advice<br>--Finding Errors the Computer Missed<br>--Correcting Errors";
+        });
 
         highlightedElements.forEach(element => {
             element.addEventListener('click', () => {

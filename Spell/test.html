@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Highlighter</title>
+    <style>
+        .highlightable {
+            cursor: pointer;
+        }
+
+        .highlighted {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="text-container">
+        <!-- Your text goes here -->
+        <span class="highlightable">I</span> <span class="highlightable">want</span> <span class="highlightable">to</span> <span class="highlightable">go</span> <span class="highlightable">to</span> <span class="highlightable">the</span> <span class="highlightable">shop</span> <span class="highlightable">to</span> <span class="highlightable">buy</span> <span class="highlightable">some</span> <span class="highlightable">shoes.</span> <span class="highlightable">Their's</span> <span class="highlightable">a</span> <span class="highlightable">sale</span> <span class="highlightable">and</span> <span class="highlightable">its</span> <span class="highlightable">only</span> <span class="highlightable">today!</span>
+    </div>
+    <button id="save-button">Save Selection</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const highlightableWords = document.querySelectorAll(".highlightable");
+            const saveButton = document.getElementById("save-button");
+            let selectedWordIndices = []; // Store word indices instead of words
+
+            // Function to toggle word highlighting and store its index
+            function toggleHighlight(word, index) {
+                word.classList.toggle("highlighted");
+                if (word.classList.contains("highlighted")) {
+                    selectedWordIndices.push(index);
+                } else {
+                    selectedWordIndices = selectedWordIndices.filter(selectedIndex => selectedIndex !== index);
+                }
+            }
+
+            // Add click event listeners to each highlightable word
+            highlightableWords.forEach((word, index) => {
+                word.addEventListener("click", () => {
+                    toggleHighlight(word, index);
+                });
+            });
+
+            // Add click event listener to save button
+            saveButton.addEventListener("click", () => {
+                alert("Selected Word Positions: " + selectedWordIndices.join(", "));
+                // You can send the selected word positions to a server or perform any other desired action here
+            });
+        });
+    </script>
+</body>
+</html>

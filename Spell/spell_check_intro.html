@@ -7,11 +7,11 @@
         .red {
             color: red;
             cursor: pointer;
+            text-decoration: underline; /* Add underline to red words */
         }
 
         /* Style the cursor to indicate interactivity */
         .red:hover {
-            text-decoration: underline;
             cursor: pointer;
         }
 
@@ -43,7 +43,7 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        
+
         /* Style the input field for the "Other" option */
         .popup input {
             border: 1px solid #ccc;
@@ -51,25 +51,34 @@
             width: 100%;
             box-sizing: border-box;
         }
+
+        u {
+            text-decoration: underline;
+        }
+
+        #nextButton {
+            display: none; /* Initially hide the Next button */
     </style>
 </head>
 <body>
     <h1>Instructions:</h1>
     <p>A classmate asked you to check their assignment because your English is pretty good. <br> You open the file in a word processor and notice that:
-        <br><br>1: There are some red words, which means that the spelling and grammar checker has found some errors, and <br>
-        2: There are some other errors that the checker did not catch. <br><br> 
-        <br><br>First, let's practice. In the sentence below, there are three errors in red. Click on each, and make the corrections. Choose one of the suggested corrections, or your own idea, or choose ignore if the original word is actually correct (spell checkers make mistakes sometimes!)
+        <br><br>1: There are some red words, which means that the program has found some errors.<br>
+        2: There are some other errors that the checker did not catch. <br><br> You will need to correct both. 
+        <br><br>First, let's practice. In the sentence below, 
+        there are three errors in red. Click on each, and make the 
+        corrections. <br><br>Note: Sometimes you click on the correct word. 
+        Sometimes you fill in your own idea. Sometimes, the word is actually right, and you click ignore.
     </p>
     
-    <p id="sentence">I want to going to the shop to buy some schoes.</p>
-    <button id="submitButton">Submit Corrections</button> <!-- Add the Submit button -->
-
-    <div id="userCorrectionsDisplay" style="display: none;"></div>
+    <p id="sentence">I want to going to the shop to buy some schoes. </p>
+    <button id="checkButton">Check</button>
+    <div id="result">
+        <p id="correctSentence"></p>
+        <button id="nextButton">Next</button>
+    </div>
 
     <script>
-        // Declare userCorrections globally
-        let userCorrections = "";
-
         // Define your word options
         const wordOptions = {
             "going": ["going", "go", "goes"],
@@ -96,23 +105,33 @@
 
         // Function to handle word correction
         function handleWordCorrection(event) {
-            const clickedWord = event.target.dataset.word;
-            if (clickedWord) {
-                const correctionOptions = wordOptions[clickedWord.toLowerCase()];
+            const clickedWord = event.target;
+            if (clickedWord.dataset.word) {
+                const correctionOptions = wordOptions[clickedWord.dataset.word.toLowerCase()];
                 if (correctionOptions) {
+                    // Calculate the position of the clicked word
+                    const rect = clickedWord.getBoundingClientRect();
+                    const wordTop = rect.top + window.scrollY;
+                    const wordLeft = rect.left + window.scrollX;
+
                     const popupDiv = document.createElement("div");
                     popupDiv.classList.add("popup");
+
+                    // Set the position of the pop-up box just below the word
+                    popupDiv.style.top = wordTop + rect.height + "px";
+                    popupDiv.style.left = wordLeft + "px";
+
                     const optionsList = document.createElement("ul");
 
                     correctionOptions.forEach(option => {
-                        if (option !== clickedWord) { // Exclude the original word
+                        if (option !== clickedWord.dataset.word) { // Exclude the original word
                             const listItem = document.createElement("li");
                             listItem.textContent = option;
                             listItem.addEventListener("click", () => {
-                                const punctuation = clickedWord.replace(/[A-Za-z]+/g, ''); // Extract punctuation
+                                const punctuation = clickedWord.dataset.word.replace(/[A-Za-z]+/g, ''); // Extract punctuation
                                 const correctedWord = option + punctuation;
-                                event.target.textContent = correctedWord;
-                                event.target.classList.remove("red");
+                                clickedWord.textContent = correctedWord;
+                                clickedWord.classList.remove("red");
                                 popupDiv.remove();
                             });
                             optionsList.appendChild(listItem);
@@ -128,10 +147,10 @@
                         if (e.key === "Enter") {
                             const customWord = inputField.value.trim();
                             if (customWord) {
-                                const punctuation = clickedWord.replace(/[A-Za-z]+/g, ''); // Extract punctuation
+                                const punctuation = clickedWord.dataset.word.replace(/[A-Za-z]+/g, ''); // Extract punctuation
                                 const correctedWord = customWord + punctuation;
-                                event.target.textContent = correctedWord;
-                                event.target.classList.remove("red");
+                                clickedWord.textContent = correctedWord;
+                                clickedWord.classList.remove("red");
                                 popupDiv.remove();
                             }
                         }
@@ -142,7 +161,7 @@
                     const ignoreOption = document.createElement("li");
                     ignoreOption.innerHTML = "//ignore//";
                     ignoreOption.addEventListener("click", () => {
-                        event.target.classList.remove("red"); // Remove the "red" class
+                        clickedWord.classList.remove("red"); // Remove the "red" class
                         popupDiv.remove();
                     });
                     optionsList.appendChild(otherOption);
@@ -154,35 +173,6 @@
             }
         }
 
-        // Event listener for the Submit button
-        const submitButton = document.getElementById("submitButton");
-        submitButton.addEventListener("click", () => {
-            // Get the corrected text from the HTML
-            const correctedText = document.getElementById("sentence").innerHTML;
-
-            // Update the userCorrections variable
-            userCorrections = correctedText;
-
-            // Display the corrected text under the button
-            const userCorrectionsDisplay = document.getElementById("userCorrectionsDisplay");
-            userCorrectionsDisplay.innerHTML = "<strong>Corrected Text:</strong><br>" + correctedText;
-            userCorrectionsDisplay.style.display = "block"; // Display the div
-
-            // Access the current value of userCorrections
-        console.log(userCorrections);
-
-            // Specify your Qualtrics survey URL
-            const qualtricsURL = 'https://radboudletteren.eu.qualtrics.com/jfe/form/SV_8wCQ6iEycXJmFwy'; 
-
-            // Update the URL of the Qualtrics survey with userCorrections as a query parameter
-            if (window.opener) {
-                window.opener.location.href = qualtricsURL + '?userCorrections=' + encodeURIComponent(userCorrections);
-            }
-
-            // Close the spell check window (optional)
-            window.close();
-        });
-
         // Call the highlight function on page load
         highlightMisspelledWords();
 
@@ -191,7 +181,32 @@
         misspelledWords.forEach(word => {
             word.addEventListener("click", handleWordCorrection);
         });
+        // Function to handle the "Check" button click
+        function handleCheckButtonClick() {
+            const correctSentenceElement = document.getElementById("correctSentence");
+            correctSentenceElement.textContent = "Correct sentence: I want to go to the shop to buy some shoes. ";
+
+            // Show the "Next" button and the note
+            const nextButton = document.getElementById("nextButton");
+            const note = document.getElementById("note");
+            nextButton.style.display = "block";
+            note.style.display = "block";
+        }
+
+        // Attach a click event listener to the "Check" button
+        const checkButton = document.getElementById("checkButton");
+        checkButton.addEventListener("click", handleCheckButtonClick);
+
+        // Function to handle the "Next" button click
+        function handleNextButtonClick() {
+            // Redirect to the desired URL
+            window.location.href = "spell_check_intro_2.html"; // Replace with your actual URL
+        }
+        // Attach a click event listener to the "Next" button
+        const nextButton = document.getElementById("nextButton");
+        nextButton.addEventListener("click", handleNextButtonClick);
 
     </script>
+    
 </body>
 </html>

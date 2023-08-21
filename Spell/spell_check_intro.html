@@ -80,8 +80,23 @@
     <p id="correctSentence"></p>
     <button id="nextButton">Next</button>
 </div>
-
 <script>
+    // Initialize tutA variable
+    let tutA = "";
+
+    // Declare sentenceElement as a global variable
+    let sentenceElement;
+
+    // Function to store corrected word in tutA
+    function storeCorrectedWord(originalWord, correctedWord) {
+        if (tutA === "") {
+            tutA = sentenceElement.textContent;
+        }
+        
+        const updatedSentence = tutA.replace(originalWord, correctedWord);
+        tutA = updatedSentence;
+    }
+
     // Define your word options
     const wordOptions = {
         "going": ["going", "go", "goes"],
@@ -93,7 +108,8 @@
 
     // Function to wrap misspelled words in <span> elements
     function highlightMisspelledWords() {
-        const sentenceElement = document.getElementById("sentence");
+        sentenceElement = document.getElementById("sentence"); // Assign the global variable
+
         const sentence = sentenceElement.textContent;
         const words = sentence.split(/\b/); // Split by word boundaries
         const correctedWords = words.map(word => {
@@ -142,6 +158,9 @@
                             clickedWord.textContent = correctedWord;
                             clickedWord.classList.remove("red");
                             popupDiv.remove();
+
+                            // Store the corrected word in tutA
+                            storeCorrectedWord(clickedWord.dataset.word, correctedWord);
                         });
                         optionsList.appendChild(listItem);
                     }
@@ -161,6 +180,9 @@
                             clickedWord.textContent = correctedWord;
                             clickedWord.classList.remove("red");
                             popupDiv.remove();
+
+                            // Store the corrected word in tutA
+                            storeCorrectedWord(clickedWord.dataset.word, correctedWord);
                         }
                     }
                 });
@@ -172,6 +194,9 @@
                 ignoreOption.addEventListener("click", () => {
                     clickedWord.classList.remove("red"); // Remove the "red" class
                     popupDiv.remove();
+
+                    // Store the original word in tutA
+                    storeCorrectedWord(clickedWord.dataset.word, clickedWord.textContent);
                 });
                 optionsList.appendChild(otherOption);
                 optionsList.appendChild(ignoreOption);
@@ -197,7 +222,16 @@
     // Function to handle the "Check" button click
     function handleCheckButtonClick() {
         const correctSentenceElement = document.getElementById("correctSentence");
-        correctSentenceElement.innerHTML = "Correct sentence: <br>I want to go to the shop to buy some shoes. ";
+
+        // Get the current sentence from the "sentence" element
+        const currentSentence = sentenceElement.textContent;
+
+        // Store the current sentence in tutA
+        tutA = currentSentence;
+
+        const correctedSentence = "Correct sentence: <br>" + currentSentence;
+
+        correctSentenceElement.innerHTML = correctedSentence;
 
         // Show the "Next" button
         const nextButton = document.getElementById("nextButton");

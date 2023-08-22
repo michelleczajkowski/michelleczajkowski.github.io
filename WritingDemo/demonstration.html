@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosing / Process</title>
+    <style>
+        /* Add styles for the entire body for better presentation */
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 20px;
+            font-size: 20px;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #e3000b;
+            color: #fff;
+            height: 90vh; /* Set the height to 100% of the viewport height */
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            padding: 10px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #fff;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+            display: flex; /* Add this */
+        }
+        iframe {
+            flex: 1; /* Add this */
+            border: none; /* Remove the border, if not needed */
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="demonstration_intro.html" target="content">1.Introduction</a></li>
+            <li><a href="demonstration_product.html" target="content">2.The Writing Product</a></li>
+            <li><a href="demonstration_process.html" target="content">3.The Writing Process</a></li>
+            <li><a href="demonstration_study.html" target="content">4.The Study</a></li><br><br>
+            <li><a href="spell_check_intro.html" target="content">Revision Test Demo</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <iframe src="demonstration_intro.html" name="content" frameborder="0"></iframe>
+        <section id="product">
+            <!-- Content for "The Product" section -->
+        </section>
+        <section id="process">
+            <!-- Content for "The Process" section -->
+        </section>
+        <section id="study">
+            <!-- Content for "The Study" section -->
+        </section>
+    </main>
+    <script>
+        // script.js
+        const menuLinks = document.querySelectorAll('.sidebar a');
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                
+                // Check if the link is an internal link (starts with '#')
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1); // Remove the '#' character
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

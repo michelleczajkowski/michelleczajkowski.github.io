@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosing / Process</title>
+    <style>
+        /* Add styles for the entire body for better presentation */
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 20px;
+            font-size: 20px;
+        }
+
+        /* This CSS rule changes the color of all <h1> elements to red */
+        h1 {
+            color: rgb(115, 14, 4);
+        }
+
+        /* This CSS rule changes the color of all <h2> elements to blue */
+        h2 {
+            color: rgb(190, 49, 26);
+        }
+    </style>
+</head>
+<body>
+    <h1>The Writing Process</h1>
+    <p>In the video below, you will watch - at 8x speed - how the text was written. <br> Think about the problems you identified in step 2. Do you observe behavior that leads to these problems? What else do you notice about how this student goes about writing?"
+    </p>
+    <h2>The video</h2>
+    <p><a href="demonstration.mp4" target="_blank">Click here</a> to view the video in a new window</p>
+    <p><a href="raw_text.html" target="_blank">Click here</a> to view the final text in a new window</p>
+    
+
+    <script>
+        // JavaScript to open a new window when a link is clicked
+        const popupLinks = document.querySelectorAll('a[target="_blank"]');
+
+        popupLinks.forEach((link) => {
+            link.addEventListener('click', function (e) {
+                // The default action (opening the link in a new window) will occur.
+                // You can add additional logic here if needed.
+            });
+        });
+    </script>
+</body>
+</html>

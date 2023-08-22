@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            font-size: 20px;
+            font-size: 18px;
         }
         .highlightable {
             cursor: pointer;
@@ -93,7 +93,7 @@
         document.getElementById('save-button').addEventListener('click', () => {
             // Display the correct answer and the "Next" button when the "Check" button is clicked
             answerContainer.style.display = 'block';
-            correctAnswer.innerHTML = "Correct answer: <br>My friends told me that there's a sale at the shoe shop, but it's only one day, so we have to go today.<br><br>Are you ready to try on a short academic text? You'll get feedback on how you did: <br><br>-- Acceptiong or Ignoring Computer Advice<br>-- Finding Errors the Computer Missed<br>-- Correcting Errors";
+            correctAnswer.innerHTML = "Correct answer: <br>My friends told me that there's a sale at the shoe shop, but it's only one day, so we have to go today.<br><br>Click next to try these skills on an academic text. You'll get feedback on how well you 1) accepted or ignored computer advice, found errors the computer missed, and corrected errors.";
         });
 
         highlightedElements.forEach(element => {

@@ -14,15 +14,8 @@
             cursor: pointer;
         }
         .highlighted {
-            background-color: rgb(247, 247, 244);
+            background-color: rgb(207, 207, 152);
             font-weight: bold;
-        }
-        .popup {
-            display: none;
-            position: absolute;
-            background-color: white;
-            border: 1px solid #ccc;
-            padding: 5px;
         }
         #text-container {
             background-color: lightgoldenrodyellow; /* Set a light grey background color */
@@ -32,74 +25,74 @@
     </style>
 </head>
 <body>
-    <h2>Tutorial 3 of 3: Correcting Errors</h2>
-    <p>Now that you have found some errors, try to correct them. Click on the highlighted errors, type, and hit enter or tab.</p>
-    <div id="text-container">My friends told me that <span class="highlighted">theirs</span> a sale at the <span class="highlighted">shoeshop</span>, but it's only one day, so we have to go today.
+    <h2>Tutorial 2 of 3: Finding Errors the Computer Missed</h2>
+    <p>Computer tools aren't perfect. They often don't find all errors, so you have to be careful you don't trust them too much. <br><br>In the sentence below, 
+        there are two errors that spell check did not catch. Click on them to turn them yellow. You do not need to make corrections yet.
+    </p>
+    <div id="text-container">
+        <!-- Your text goes here -->
+        <span class="highlightable">My</span> <span class="highlightable">friends</span> <span class="highlightable">told</span> <span class="highlightable">me</span> <span class="highlightable">that</span> <span class="highlightable">theirs</span> <span class="highlightable">a</span> <span class="highlightable">sale</span> <span class="highlightable">at</span> <span class="highlightable">the</span> <span class="highlightable">shoeshop</span>, <span class="highlightable">but</span> <span class="highlightable">it's</span> <span class="highlightable">only</span> <span class="highlightable">one</span> <span class="highlightable">day,</span> <span class="highlightable">so</span> <span class="highlightable">we</span> <span class="highlightable">have</span> <span class="highlightable">to</span> <span class="highlightable">go</span> <span class="highlightable">today.</span>
     </div>
     <br>
     <button id="save-button">Check</button>
     <div id="answer-container" style="display: none;">
         <p id="correct-answer"></p>
-        <a href="spell_check_task_1.html"><button id="next-button">Next</button></a>
+        <button id="next-button">Next</button>
     </div>
-    <div class="popup" id="popup">
-        <input type="text" id="replacementText" onkeydown="handleKeydown(event)">
-    </div>
-
     <script>
-        const highlightedElements = document.querySelectorAll('.highlighted');
-        const popup = document.getElementById('popup');
-        const replacementText = document.getElementById('replacementText');
-        const answerContainer = document.getElementById('answer-container');
-        const correctAnswer = document.getElementById('correct-answer');
+        document.addEventListener("DOMContentLoaded", function () {
+            const highlightableWords = document.querySelectorAll(".highlightable");
+            const saveButton = document.getElementById("save-button");
+            const answerContainer = document.getElementById("answer-container");
+            const correctAnswer = document.getElementById("correct-answer");
+            const nextButton = document.getElementById("next-button");
+            let selectedWordIndices = []; // Store word indices instead of words
 
-        let currentHighlightedIndex = -1; // Index of the currently highlighted element
-
-        function showPopup(element) {
-            currentHighlightedIndex = Array.from(highlightedElements).indexOf(element);
-            replacementText.value = ''; // Clear the input field
-            popup.style.display = 'block';
-            popup.style.top = (element.offsetTop + element.offsetHeight) + 'px';
-            popup.style.left = element.offsetLeft + 'px';
-
-            // Set the width of the text box to match the width of the highlighted element
-            replacementText.style.width = element.offsetWidth + 'px';
-
-            replacementText.focus();
-        }
-
-        function replaceHighlightedText() {
-            if (currentHighlightedIndex !== -1 && replacementText.value) {
-                highlightedElements[currentHighlightedIndex].textContent = replacementText.value;
-                popup.style.display = 'none';
-
-                // Move to the next highlighted element
-                const nextIndex = (currentHighlightedIndex + 1) % highlightedElements.length;
-                showPopup(highlightedElements[nextIndex]);
+            // Function to toggle word highlighting and store its index
+            function toggleHighlight(word, index) {
+                word.classList.toggle("highlighted");
+                if (word.classList.contains("highlighted")) {
+                    selectedWordIndices.push(index);
+                } else {
+                    selectedWordIndices = selectedWordIndices.filter(selectedIndex => selectedIndex !== index);
+                }
             }
-        }
 
-        function handleKeydown(event) {
-            if (event.key === 'Enter') {
-                replaceHighlightedText();
-            } else if (event.key === 'Tab') {
-                // Prevent the default tab behavior (e.g., focusing on other page elements)
-                event.preventDefault();
-                replaceHighlightedText();
-            }
-        }
+            // Add click event listeners to each highlightable word
+            highlightableWords.forEach((word, index) => {
+                word.addEventListener("click", () => {
+                    toggleHighlight(word, index);
+                });
+            });
 
-        document.getElementById('save-button').addEventListener('click', () => {
-            // Display the correct answer and the "Next" button when the "Check" button is clicked
-            answerContainer.style.display = 'block';
-            correctAnswer.innerHTML = "Correct answer: <br>My friends told me that there's a sale at the shoe shop, but it's only one day, so we have to go today.<br><br>Click next to try these skills on an academic text. You'll get feedback on how well you 1) accepted or ignored computer advice, found errors the computer missed, and corrected errors.";
-        });
+            // Add click event listener to save button
+            saveButton.addEventListener("click", () => {
+                // Here, you can determine the correct answer based on selectedWordIndices
+                // For demonstration, we'll just display "Correct answer: blah blah"
+                correctAnswer.innerHTML = 'Correct answer:<br> My friends told me that <span class="highlighted">theirs</span> a sale at the <span class="highlighted">shoeshop</span>, but it\'s only one day, so we have to go today.';
 
-        highlightedElements.forEach(element => {
-            element.addEventListener('click', () => {
-                showPopup(element);
+                // Show the answer container
+                answerContainer.style.display = "block";
+            });
+
+            // Add click event listener to next button
+            nextButton.addEventListener("click", () => {
+                // Redirect the user to the new URL
+                window.location.href = "spell_check_intro_3.html";
             });
         });
+    // Function to parse query parameters from the URL
+    function getQueryParam(parameterName) {
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        return urlSearchParams.get(parameterName);
+    }
+
+    // Retrieve the coda value from the URL
+    const codaQueryParam = getQueryParam("coda");
+
+    // You can now use the codaQueryParam as needed on this page
+    console.log(`Received coda from previous page: ${codaQueryParam}`);
+
     </script>
 </body>
 </html>

@@ -94,6 +94,8 @@
 <script>
     // Initialize tutA variable
     let tuta = [];
+    // Initialize coda as an empty string
+    let coda = '';
 
     // Declare sentenceElement as a global variable
     let sentenceElement;
@@ -266,18 +268,51 @@
 
     // Call the highlight function on page load
     highlightMisspelledWords();
+    
+    
     // Function to handle the "Check" button click
     function handleCheckButtonClick() {
-        // Calculate the user's score
-        const userScore = calculateScore(tuta, keya);
+        // Initialize coda as an empty string
+        let coda = '';
 
-        // Display the user's score in the correctSentenceElement
-        const correctSentenceElement = document.getElementById("correctSentence");
-        correctSentenceElement.innerHTML = `User's Score: ${userScore}/15`;
+        // Iterate through keya to check correctness and update coda
+        keya.forEach((correctAnswer, index) => {
+            // Find the user's last attempt for the current word
+            const userAnswer = tuta.slice().reverse().find(userAns => userAns.original === correctAnswer.original);
+
+            if (userAnswer) {
+                if (userAnswer.corrected === correctAnswer.corrected) {
+                    coda += '1'; // Correct answer
+                } else {
+                    coda += '0'; // Incorrect answer
+                }
+            } else {
+                coda += '0'; // No user answer provided
+            }
+
+            // Add a separator if it's not the last element
+            if (index < keya.length - 1) {
+                coda += ', ';
+            }
+        });
+
+        // Fill in any remaining positions in coda with '0' if the user didn't answer
+        const remainingPositions = 15 - keya.length;
+        if (remainingPositions > 0) {
+            coda += ', ' + '0'.repeat(remainingPositions * 2 - 1); // Add the appropriate number of '0's
+        }
+
+        // Display the coda
+        console.log(`coda: ${coda}`);
 
         // Show the "Next" button
         const nextButton = document.getElementById("nextButton");
         nextButton.style.display = "block";
+
+        // Display the user's score
+        const userScore = calculateScore(tuta, keya);
+        const correctSentenceElement = document.getElementById("correctSentence");
+        correctSentenceElement.innerHTML = `User's Score: ${userScore}/15`;
     }
 
     // Attach a click event listener to the "Check" button
@@ -293,6 +328,8 @@
     // Attach a click event listener to the "Next" button
     const nextButton = document.getElementById("nextButton");
     nextButton.addEventListener("click", handleNextButtonClick);
+
+    
 </script>
 </body>
 </html>

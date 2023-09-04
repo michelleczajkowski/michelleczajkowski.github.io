@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test: Tutorial</title>
+    <title>Revision Test Main Task</title>
     <style>
         /* Style the misspelled words in red and make them clickable */
         .red {
@@ -14,6 +14,18 @@
 
         /* Style the cursor to indicate interactivity */
         .red:hover {
+            cursor: pointer;
+        }
+
+        /* Style the non-target words in blue and make them clickable */
+        .non-target {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline; /* Add underline to non-target words */
+        }
+
+        /* Style the cursor to indicate interactivity for non-target words */
+        .non-target:hover {
             cursor: pointer;
         }
 
@@ -72,10 +84,11 @@
 </head>
 <body>
 <h1>Revision Test</h1>
-<p>A classmate asked you to check their writing. You open the file on your computer and see that the spelling and grammar checker has found some errors. Decide how to address each one: accept a suggestion, keep it as is, or fill in your own revision.<br>
-    </p>
+<p>A classmate asked you to check their writing. You open the file on your computer. You notice that:
+    <br>1: The spelling and grammar checker has found some errors.<br>
+    2: There are some <i>other</i> errors that the checker did not catch. <br><br> You will need to correct both, using your language skills and your skillful use of spelling and grammar checkers. Use the skills you learned in the tutorials. </p>
 
-<p id="sentence">A study recently published by in cooperation with environmental organizations WeGreen and Home Proud <span class="red" data-word="show">show</span> that, at least within city centres, efforts to better insulate an apartment are highly <span class="red" data-word="positive">positive</span> associated with an increased feeling of inclusion in the neighbourhood. There is already ample evidence that measures such as replacing single-pane windows and closing curtains at night are <span class="red" data-word="affective">affective</span> ways of lowering heating costs by insulating homes <span class="red" data-word="for">for</span> cold. However, this is the first study which also examines the psychological effects of these measures.
+<p id="sentence">A study recently published in cooperation with environmental organizations WeGreen and Home Proud <span class="red" data-word="show">show</span> that, at least within city centres, efforts to better insulate an apartment are highly <span class="red" data-word="positive">positive</span> associated with an increased feeling of inclusion in the neighbourhood. There is already ample evidence that measures such as replacing single-pane windows and closing curtains at night are <span class="red" data-word="affective">affective</span> ways of lowering heating costs by insulating homes <span class="red" data-word="for">for</span> cold. However, this is the first study which also examines the psychological effects of these measures.
 
     <br><br>The study asked participants from fifteen neighbourhoods in three cities responded to an online questionnaire. In total, over 500 questionnaires <span class="red" data-word="have been completed">have been completed</span>. Participants were asked about how they <span class="red" data-word="insulate">insulate</span> their homes, but also how much they save in terms of gas, hot water, and money. Additionally, they were asked to describe <span class="red" data-word="they're">they're</span> neighbourhood and what they like about living there. They were asked to <span class="red" data-word="indiate">indiate</span> the degree to which they agreed with a number of different statements, e.g., "I would like to know my neighbours more."
     
@@ -91,16 +104,25 @@
     <p id="correctSentence"></p>
     <button id="nextButton">Next</button>
 </div>
+<div class="popup" id="popup">
+    <input type="text" id="replacementText" onkeydown="handleKeydown(event)">
+</div>
+
 <script>
     // Initialize tutA variable
-    let tuta = [];
+    let tutA = "";
 
     // Declare sentenceElement as a global variable
     let sentenceElement;
 
-    // Function to store corrected word in tuta
+    // Function to store corrected word in tutA
     function storeCorrectedWord(originalWord, correctedWord) {
-        tuta.push({ original: originalWord, corrected: correctedWord });
+        if (tutA === "") {
+            tutA = sentenceElement.textContent;
+        }
+
+        const updatedSentence = tutA.replace(originalWord, correctedWord);
+        tutA = updatedSentence;
     }
 
     // Define your word options
@@ -121,51 +143,6 @@
         "initiative": ["initiative", "initiation", "insinulation"],
         "pesidents": ["pesidents", "presidents", "president"]
     };
-    const keya = [
-        { original: "show", corrected: "shows" },
-        { original: "positive", corrected: "positively" },
-        { original: "affective", corrected: "effective" },
-        { original: "for", corrected: "against" },
-        { original: "have been completed", corrected: "were completed" },
-        { original: "insulate", corrected: "insulate" }, // No change
-        { original: "they're", corrected: "their" },
-        { original: "indiate", corrected: "indicate" },
-        { original: "a", corrected: "an" },
-        { original: "would own", corrected: "owned" },
-        { original: "which", corrected: "who" },
-        { original: "belonging", corrected: "belonging" }, // No change
-        { original: "impulcatns", corrected: "implications" },
-        { original: "initiative", corrected: "initiative" }, // No change
-        { original: "pesidents", corrected: "residents" }
-    ];
-
-    // Define the calculateScore function
-    function calculateScore(userAnswers, correctAnswers) {
-        let score = 0;
-        
-        userAnswers.forEach(userAnswer => {
-            const matchingCorrectAnswer = correctAnswers.find(correctAnswer => 
-                correctAnswer.original === userAnswer.original
-            );
-
-            if (matchingCorrectAnswer && matchingCorrectAnswer.corrected === userAnswer.corrected) {
-                score++;
-            }
-        });
-        
-        return score;
-    }
-
-    // Example userAnswers array (replace this with the user's answers)
-    const userAnswers = tuta;
-
-    // Calculate the user's score
-    const userScore = calculateScore(userAnswers, keya);
-
-    // Display the user's score (you can modify this part as needed)
-    console.log(`User's Score: ${userScore}/15`);
-
-
 
     let currentPopup = null; // Variable to keep track of the currently open pop-up
 
@@ -264,35 +241,74 @@
         }
     }
 
-    // Call the highlight function on page load
+    // Function to highlight non-target words and make them clickable
+    function highlightNonTargetWords() {
+        sentenceElement = document.getElementById("sentence"); // Assign the global variable
+
+        const allWords = sentenceElement.textContent.split(' ');
+        const misspelledWords = sentenceElement.querySelectorAll(".red");
+
+        allWords.forEach(word => {
+            if (!misspelledWords.some(redWord => redWord.getAttribute("data-word") === word)) {
+                const span = document.createElement("span");
+                span.textContent = word;
+                span.classList.add("non-target");
+                span.addEventListener("click", handleNonTargetWordClick);
+                sentenceElement.replaceChild(span, document.createTextNode(' '));
+            }
+        });
+    }
+
+    // Function to handle non-target word click
+    function handleNonTargetWordClick(event) {
+        if (currentPopup) {
+            currentPopup.remove(); // Close the current pop-up
+        }
+
+        const clickedWord = event.target;
+        const originalWord = clickedWord.textContent;
+
+        if (originalWord) {
+            showPopup(clickedWord, originalWord);
+        }
+    }
+
+    // Function to display a pop-up for non-target words
+    function showPopup(element, originalWord) {
+        currentHighlightedIndex = Array.from(highlightedElements).indexOf(element);
+        replacementText.value = ''; // Clear the input field
+        popup.style.display = 'block';
+        popup.style.top = (element.offsetTop + element.offsetHeight) + 'px';
+        popup.style.left = element.offsetLeft + 'px';
+
+        // Set the width of the text box to match the width of the clicked word
+        replacementText.style.width = element.offsetWidth + 'px';
+
+        replacementText.focus();
+
+        // Handle replacement of non-target word
+        replaceNonTargetWord(element, originalWord);
+    }
+
+    // Function to replace the non-target word
+    function replaceNonTargetWord(element, originalWord) {
+        replacementText.value = originalWord;
+        replacementText.addEventListener("keydown", function (event) {
+            if (event.key === 'Enter') {
+                const newWord = replacementText.value.trim();
+                if (newWord) {
+                    element.textContent = newWord;
+                    popup.style.display = 'none';
+                }
+            }
+        });
+    }
+
+    // Call the highlight functions on page load
     highlightMisspelledWords();
-    // Function to handle the "Check" button click
-    function handleCheckButtonClick() {
-        // Calculate the user's score
-        const userScore = calculateScore(tuta, keya);
+    highlightNonTargetWords();
 
-        // Display the user's score in the correctSentenceElement
-        const correctSentenceElement = document.getElementById("correctSentence");
-        correctSentenceElement.innerHTML = `User's Score: ${userScore}/15`;
-
-        // Show the "Next" button
-        const nextButton = document.getElementById("nextButton");
-        nextButton.style.display = "block";
-    }
-
-    // Attach a click event listener to the "Check" button
-    const checkButton = document.getElementById("checkButton");
-    checkButton.addEventListener("click", handleCheckButtonClick);
-
-    // Function to handle the "Next" button click
-    function handleNextButtonClick() {
-        // Redirect to the desired URL
-        window.location.href = "spell_check_intro_2.html"; // Replace with your actual URL
-    }
-
-    // Attach a click event listener to the "Next" button
-    const nextButton = document.getElementById("nextButton");
-    nextButton.addEventListener("click", handleNextButtonClick);
+    // ... (your existing JavaScript) ...
 </script>
 </body>
 </html>

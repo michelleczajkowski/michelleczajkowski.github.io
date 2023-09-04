@@ -44,7 +44,7 @@
 
     </div>
     <br>
-    <button id="save-button">Check</button>
+    <button id="save-button">Click when done</button>
     <div id="answer-container" style="display: none;">
         <p id="correct-answer"></p>
         <button id="next-button">Next</button>
@@ -96,8 +96,8 @@
                 });
 
                 // Calculate and display scores
-                const totalScore = truePositives - falsePositives;
-                correctAnswer.innerHTML = `True Positives: ${truePositives}<br>False Positives: ${falsePositives}<br>Total Score: ${totalScore}`;
+                //const totalScore = truePositives - falsePositives;
+                //correctAnswer.innerHTML = `True Positives: ${truePositives}<br>False Positives: ${falsePositives}<br>Total Score: ${totalScore}`;
 
                 // Show the answer container
                 answerContainer.style.display = "block";
@@ -109,7 +109,7 @@
                 const updatedCoda = `${codaQueryParam},${truePositives},${falsePositives}`;
 
                 // Redirect the user to the new URL with the updated coda parameter
-                window.location.href = `spell_check_task_3.html?${updatedCoda}`;
+                window.location.href = `spell_check_task_3.html?coda=${updatedCoda}`;
             });
 
         });

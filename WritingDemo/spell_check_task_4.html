@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test: Results</title>
+    <style>
+        /* Style the misspelled words in red and make them clickable */
+        .red {
+            color: darkred;
+            cursor: pointer;
+            text-decoration: underline; /* Add underline to red words */
+            background-color: rgb(240, 210, 135);
+            font-weight: bold;
+        }
+
+        /* Style the cursor to indicate interactivity */
+        .red:hover {
+            cursor: pointer;
+        }
+
+        /* Style the pop-up box */
+        .popup {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        /* Style the list of correction options */
+        .popup ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Style each correction option in the list */
+        .popup li {
+            padding: 5px;
+        }
+
+        /* Add styles for the entire body for better presentation */
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        /* Style the input field for the "Other" option */
+        .popup input {
+            border: 1px solid #ccc;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        u {
+            text-decoration: underline;
+        }
+
+        #nextButton {
+            display: none; /* Initially hide the Next button */
+        }
+
+        #sentence {
+            background-color: lightgoldenrodyellow; /* Set a light grey background color */
+            padding: 10px; /* Add some padding to create space around the text */
+            border: 1px solid lightgoldenrodyellow; /* Add a 1px solid grey border */
+        }
+
+        /* Add styles for the glossary box */
+        #glossaryBox {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            font-size: 14px;
+            width: 150px;
+            z-index: 1000;
+        }
+
+        /* Add padding to the content container to make space for the glossary box */
+        #content-container {
+            padding-right: 170px; /* Adjust the value as needed */
+        }
+    </style>
+</head>
+<body>
+    <h1>Revision Test - Results</h1>
+
+    <div id="content-container">
+        <p id="taskOneTotalScore"></p>
+        <p id="taskOneTotal"></p>
+        <p id="taskOneSame"></p>
+        <p id="taskOneNew"></p>
+        <p id="taskTwoScore"></p>
+        <p id="taskTwoTrue"></p>
+        <p id="taskTwoFalse"></p>
+        <p id="taskThreeScore"></p>
+        <p id="taskThree"></p>
+  
+        
+        
+        
+    </div>
+    
+    <button id="checkButton">Click When Finished</button>
+    <div id="result">
+        <p id="correctSentence"></p>
+        <button id="nextButton">Next</button>
+    </div>
+
+    <script>
+        // Function to parse query parameters from the URL
+        function getQueryParam(parameterName) {
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            return urlSearchParams.get(parameterName);
+        }
+
+        // Retrieve the updated coda value from the URL
+        const updatedCodaQueryParam = getQueryParam('coda');
+
+        // Split the updated coda into an array of numbers
+        const codaArray = updatedCodaQueryParam.split(',').map(Number);
+
+        // Calculate taskOneTotal
+        const taskOneTotal = codaArray.slice(0, 15).reduce((accumulator, currentValue) => accumulator + currentValue, 0) ;
+
+        // Calculate taskOneChoose
+        const taskOneChoose = (
+            codaArray[0] + codaArray[1] + codaArray[3] + codaArray[4] +
+            codaArray[6] + codaArray[7] + codaArray[8] + codaArray[10] + codaArray[12]
+        ) ;
+
+        // Calculate taskOneSame
+        const taskOneSame = (codaArray[5] + codaArray[11] + codaArray[13]);
+
+        // Calculate taskOneNew
+        const taskOneNew = (codaArray[2] + codaArray[9] + codaArray[14]);
+
+        // Calculate taskTwoTrue
+        const taskTwoTrue = codaArray[15];
+
+        // Calculate taskTwoFalse
+        const taskTwoFalse = codaArray[16];
+
+        // Calculate taskThree
+        const taskThree = codaArray[17];
+
+        // Calculate the new scores
+        const taskOneScore = (taskOneTotal / 15) * 100; // Task One Score
+        const taskTwoScore = (taskTwoTrue/7)// Task Two Score
+        const taskThreeScore = (taskThree / 7) * 100; // Task Three Score
+
+        // Define feedback messages based on the provided ranges and text
+        const feedbackMessages = {
+            taskOneTotal: [
+                "You did not use the spelling and grammar tool well. This means that many errors remain in the text.",
+                "You used the spelling and grammar tool to some good effect. However, some errors remain in the text.",
+                "You used the spelling and grammar tool well! The quality of the text was improved."
+            ],
+            taskOneSame: [
+                "Remember that spell checkers can be wrong. Perhaps what you wrote is actually correct. Don't be afraid to ignore suggestions if necessary!",
+                "You were able to determine whether the checker was wrong. That's great. They aren't always right, so you can't blindly trust them."
+            ],
+            taskOneNew: [
+                "Even when the checker finds an error, the suggestions might not be right. Don't be afraid to type your own revision when appropriate!",
+                "You were able to see when the checker's suggestions were wrong. Good job! The checker isn't always right."
+            ],
+            taskTwoTrue: [
+                "You had a great deal of difficulty finding the errors that the checker missed. This can be a problem because many errors will slip through to your final text. Remember, the checker misses some things.",
+                "You were able to find some of the errors that the checker missed. That's great, but a few slipped through. When looking at your own writing, make sure you check carefully for these types of errors.",
+                "You were really good at spotting those errors that the checker missed. Well done! You have an eagle's eye for errors."
+            ],
+            taskTwoFalse: [
+                "You found some 'errors' that were actually correct. Be careful, and always check with a resource or a friend if you aren't sure whether something is right or not.",
+                "You clicked on a lot of 'errors' which were actually correct. Be careful; when you find an 'error,' you can always check with a dictionary, the internet, or another resource to be 100% sure."
+            ],
+            taskThree: [
+                "You weren't able to correct most of the errors that the checker missed. This means that your knowledge of spelling and grammar may be weak. Try to review them!",
+                "You were able to correct many of the errors that the checker missed, but not all. This means that you may have weak spots in your language knowledge. Time for a review of grammar and spelling?",
+                "You did well correcting the errors that the checker missed. This signals that you have good language skills."
+            ]
+        };
+
+        // Update the feedback messages in your HTML
+        document.getElementById('taskOneTotal').textContent = feedbackMessages.taskOneTotal[taskOneTotal <= 7 ? 0 : taskOneTotal <= 13 ? 1 : 2];
+        document.getElementById('taskOneSame').textContent = feedbackMessages.taskOneSame[taskOneSame <= 1 ? 0 : 1];
+        document.getElementById('taskOneNew').textContent = feedbackMessages.taskOneNew[taskOneNew <= 1 ? 0 : 1];
+        document.getElementById('taskTwoTrue').textContent = feedbackMessages.taskTwoTrue[taskTwoTrue <= 3 ? 0 : taskTwoTrue <= 5 ? 1 : 2];
+        document.getElementById('taskTwoFalse').textContent = feedbackMessages.taskTwoFalse[taskTwoFalse <= 3 ? 0 : 1];
+        document.getElementById('taskThree').textContent = feedbackMessages.taskThree[taskThree <= 3 ? 0 : taskThree <= 5 ? 1 : 2];
+
+        // Display the scores as percentages with two decimal points
+        document.getElementById('taskOneTotalScore').textContent = `Task One - Evaluating Checker Advice: ${taskOneScore.toFixed(0)}%`;
+        document.getElementById('taskTwoScore').textContent = `Task Two - Finding Errors the Checker Missed: ${taskTwoScore.toFixed(0)}%`;
+        document.getElementById('taskThreeScore').textContent = `Task Three - Correcting Errors the Checker Missed: ${taskThreeScore.toFixed(0)}%`;
+
+
+
+        // Show the "Next" button
+        const nextButton = document.getElementById('nextButton');
+        nextButton.style.display = 'block';
+    </script>
+</body>
+</html>

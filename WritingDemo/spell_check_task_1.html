@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test: Tutorial</title>
+    <title>Test: Part 1</title>
     <style>
         /* Style the misspelled words in red and make them clickable */
         .red {
-            color: red;
+            color: darkred;
             cursor: pointer;
             text-decoration: underline; /* Add underline to red words */
+            background-color: rgb(240, 210, 135);
+            font-weight: bold
         }
 
         /* Style the cursor to indicate interactivity */
@@ -96,13 +98,13 @@
 <p>A classmate asked you to check their writing. You open the file on your computer and see that the spelling and grammar checker has found some errors. Decide how to address each one: accept a suggestion, keep it as is, or fill in your own revision.<br>
     </p>
 
-<p id="sentence">A study recently published by in cooperation with environmental organizations WeGreen and Home Proud <span class="red" data-word="show">show</span> that, at least within city centres, efforts to better insulate an apartment are highly <span class="red" data-word="positive">positive</span> associated with an increased feeling of inclusion in the neighbourhood. There is already ample evidence that measures such as replacing single-pane windows and closing curtains at night are <span class="red" data-word="affective">affective</span> ways of lowering heating costs by insulating homes <span class="red" data-word="for">for</span> cold. However, this is the first study which also examines the psychological effects of these measures.
+<p id="sentence">A study recently published in cooperation with environmental organizations <i>WeGreen</i> and <i>Home Proud</i> <span class="red" data-word="show">show</span> that, at least within city centres, efforts to better insulate an apartment are highly <span class="red" data-word="positive">positive</span> associated with an increased feeling of inclusion in the neighbourhood. There is already ample evidence that measures such as replacing single-pane windows and closing curtains at night are <span class="red" data-word="affective">affective</span> ways of lowering heating costs by insulating homes <span class="red" data-word="for">for</span> cold. However, this is the first study which also examines the psychological effects of these measures.
 
     <br><br>The study asked participants from fifteen neighbourhoods in three cities responded to an online questionnaire. In total, over 500 questionnaires <span class="red" data-word="have been completed">have been completed</span>. Participants were asked about how they <span class="red" data-word="insulate">insulate</span> their homes, but also how much they save in terms of gas, hot water, and money. Additionally, they were asked to describe <span class="red" data-word="they're">they're</span> neighbourhood and what they like about living there. They were asked to <span class="red" data-word="indiate">indiate</span> the degree to which they agreed with a number of different statements, e.g., "I would like to know my neighbours more."
     
    <br><br> The results of the study indicate firstly that residents took more actions to insulate their homes than expected, <span class="red" data-word="a">a</span> expected effect of a result of last years high gas prices. The results also indicate that insulating one's home was associated with more positive feelings about one's residential area.
     
-   <br><br> It is important to note that this effect was greater if a person <span class="red" data-word="would own">would own</span> their own apartment. Previous study's show that homeowners are both more likely to proactive insulate their homes then renters who view that as the owner's responsibility and feel a sense of belonging in a neighbourhood. However, the results of this study show a relationship between insulation efforts and this feeling. In other words, residents <span class="red" data-word="which">which</span> owned their apartment but took few or no steps to insulate their homes had lower measures of neighbourhood <span class="red" data-word="belonging">belonging</span>.
+   <br><br> It is important to note that this effect was greater if a person <span class="red" data-word="would own">would own</span> their own apartment. Previous study's show that homeowners are both more likely to proactive insulate their homes then renters, who view that as the owner's responsibility, and to feel a sense of belonging in a neighbourhood. However, the results of this study show a relationship between insulation efforts and this feeling. In other words, residents <span class="red" data-word="which">which</span> owned their apartment but took few or no steps to insulate their homes had lower measures of neighbourhood <span class="red" data-word="belonging">belonging</span>.
     
    <br><br> The researchers believe that such home improvement efforts provide a feeling of being in control over one's environment, weather financial, social or physical. This conclusion has <span class="red" data-word="impulcatns">impulcatns</span> for improving other aspects of a neighbourhood as well. Previous research shows, unsurprisingly, that its people who feel most part of a neighbourhood who take the <span class="red" data-word="initiative">initiative</span> to pick up litter, plant flowers, and push the local government to make repairs to the road and pavement.
     
@@ -111,7 +113,7 @@
     <p><strong>Glossary</strong></p>
     <p><em>To Insulate (Verb):</em> To insulate something (from/against something): to protect something with a material that prevents something from passing through. For example, to insulate a house means less cold (winter) or heat (summer) will pass into the building. <strong>Noun:</strong> insulation</p>
 </div>
-<button id="checkButton">Check</button>
+<button id="checkButton">Click When Finished</button>
 <div id="result">
     <p id="correctSentence"></p>
     <button id="nextButton">Next</button>
@@ -298,7 +300,10 @@
     // Function to handle the "Check" button click
     function handleCheckButtonClick() {
         // Initialize coda as an empty string
-        let coda = '';
+        coda = '';
+
+        // Initialize a flag to track if all 15 items have been attempted
+        let allItemsAttempted = true;
 
         // Iterate through keya to check correctness and update coda
         keya.forEach((correctAnswer, index) => {
@@ -313,11 +318,12 @@
                 }
             } else {
                 coda += '0'; // No user answer provided
+                allItemsAttempted = false; // Set the flag to false if any item is not attempted
             }
 
             // Add a separator if it's not the last element
             if (index < keya.length - 1) {
-                coda += ', ';
+                coda += ',';
             }
         });
 
@@ -325,20 +331,26 @@
         const remainingPositions = 15 - keya.length;
         if (remainingPositions > 0) {
             coda += ', ' + '0'.repeat(remainingPositions * 2 - 1); // Add the appropriate number of '0's
+            allItemsAttempted = false; // Set the flag to false if any item is not attempted
         }
 
         // Display the coda
         console.log(`coda: ${coda}`);
+        // Display a warning if not all items have been attempted
+        if (!allItemsAttempted) {
+            alert("Please attempt all 15 items before checking.");
+        } else {
+            // Show the "Next" button
+            const nextButton = document.getElementById("nextButton");
+            nextButton.style.display = "block";
 
-        // Show the "Next" button
-        const nextButton = document.getElementById("nextButton");
-        nextButton.style.display = "block";
-
-        // Display the user's score
-        const userScore = calculateScore(tuta, keya);
-        const correctSentenceElement = document.getElementById("correctSentence");
-        correctSentenceElement.innerHTML = `User's Score: ${userScore}/15`;
+            // Display the user's score
+            const userScore = calculateScore(tuta, keya);
+            const correctSentenceElement = document.getElementById("correctSentence");
+            correctSentenceElement.innerHTML = `All questions answered. Click next to move to the next task.`;
+        }
     }
+
 
     // Attach a click event listener to the "Check" button
     const checkButton = document.getElementById("checkButton");
@@ -350,7 +362,7 @@
         const codaQueryParam = encodeURIComponent(coda);
 
         // Redirect to the next page with coda as a query parameter
-        window.location.href = `spell_check_intro_2.html?coda=${codaQueryParam}`;
+        window.location.href = `spell_check_task_2.html?coda=${codaQueryParam}`;
     }
 
 

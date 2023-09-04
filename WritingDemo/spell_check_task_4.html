@@ -95,15 +95,15 @@
     <h1>Revision Test - Results</h1>
 
     <div id="content-container">
-        <p id="taskOneTotalScore"></p>
-        <p id="taskOneTotal"></p>
-        <p id="taskOneSame"></p>
-        <p id="taskOneNew"></p>
-        <p id="taskTwoScore"></p>
-        <p id="taskTwoTrue"></p>
-        <p id="taskTwoFalse"></p>
-        <p id="taskThreeScore"></p>
-        <p id="taskThree"></p>
+        <p id="taskOneTotalScore" style="background-color: goldenrod;"></p>
+        <p id="taskOneTotal" style="margin-left: 20px;" style="font-style: italic;"></p>
+        <p id="taskOneSame" style="margin-left: 20px;" style="font-style: italic;"></p>
+        <p id="taskOneNew" style="margin-left: 20px;" style="font-style: italic;"></p>
+        <p id="taskTwoScore" style="background-color: goldenrod;"></p>
+        <p id="taskTwoTrue" style="margin-left: 20px;" style="font-style: italic;"></p>
+        <p id="taskTwoFalse" style="margin-left: 20px;" style="font-style: italic;"></p>
+        <p id="taskThreeScore" style="background-color: goldenrod;"></p>
+        <p id="taskThree" style="margin-left: 20px;" style="font-style: italic;"></p>
   
         
         
@@ -155,7 +155,7 @@
 
         // Calculate the new scores
         const taskOneScore = (taskOneTotal / 15) * 100; // Task One Score
-        const taskTwoScore = (taskTwoTrue/7)// Task Two Score
+        const taskTwoScore = (taskTwoTrue/7) * 100;// Task Two Score
         const taskThreeScore = (taskThree / 7) * 100; // Task Three Score
 
         // Define feedback messages based on the provided ranges and text
@@ -180,7 +180,9 @@
             ],
             taskTwoFalse: [
                 "You found some 'errors' that were actually correct. Be careful, and always check with a resource or a friend if you aren't sure whether something is right or not.",
-                "You clicked on a lot of 'errors' which were actually correct. Be careful; when you find an 'error,' you can always check with a dictionary, the internet, or another resource to be 100% sure."
+                "You clicked on a lot of 'errors' which were actually correct. Be careful; when you find an 'error,' you can always check with a dictionary, the internet, or another resource to be 100% sure.",
+                "Congratulations! You found no 'errors' that were actually correct. This demonstrates a keen eye for detail and a strong ability to discern between true errors and false alarms. While spelling and grammar checkers can be helpful, it's essential to remember that they are not perfect. Continue to trust your judgment and careful proofreading skills to maintain the quality of your writing."
+
             ],
             taskThree: [
                 "You weren't able to correct most of the errors that the checker missed. This means that your knowledge of spelling and grammar may be weak. Try to review them!",
@@ -194,7 +196,7 @@
         document.getElementById('taskOneSame').textContent = feedbackMessages.taskOneSame[taskOneSame <= 1 ? 0 : 1];
         document.getElementById('taskOneNew').textContent = feedbackMessages.taskOneNew[taskOneNew <= 1 ? 0 : 1];
         document.getElementById('taskTwoTrue').textContent = feedbackMessages.taskTwoTrue[taskTwoTrue <= 3 ? 0 : taskTwoTrue <= 5 ? 1 : 2];
-        document.getElementById('taskTwoFalse').textContent = feedbackMessages.taskTwoFalse[taskTwoFalse <= 3 ? 0 : 1];
+        document.getElementById('taskTwoFalse').textContent = feedbackMessages.taskTwoFalse[taskTwoFalse >= 6 ? 1 : taskTwoFalse >= 2 ? 0 : 2];
         document.getElementById('taskThree').textContent = feedbackMessages.taskThree[taskThree <= 3 ? 0 : taskThree <= 5 ? 1 : 2];
 
         // Display the scores as percentages with two decimal points

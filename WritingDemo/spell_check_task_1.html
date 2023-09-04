@@ -68,9 +68,30 @@
             padding: 10px; /* Add some padding to create space around the text */
             border: 1px solid lightgoldenrodyellow; /* Add a 1px solid grey border */
         }
+        /* Add styles for the glossary box */
+        /* Add styles for the glossary box */
+        #glossaryBox {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            font-size: 14px;
+            width:150px;
+            z-index: 1000;
+        }
+        /* Add padding to the content container to make space for the glossary box */
+        #content-container {
+            padding-right: 170px; /* Adjust the value as needed */
+        }
+
+
     </style>
 </head>
 <body>
+<div id="content-container">
 <h1>Revision Test</h1>
 <p>A classmate asked you to check their writing. You open the file on your computer and see that the spelling and grammar checker has found some errors. Decide how to address each one: accept a suggestion, keep it as is, or fill in your own revision.<br>
     </p>
@@ -86,11 +107,15 @@
    <br><br> The researchers believe that such home improvement efforts provide a feeling of being in control over one's environment, weather financial, social or physical. This conclusion has <span class="red" data-word="impulcatns">impulcatns</span> for improving other aspects of a neighbourhood as well. Previous research shows, unsurprisingly, that its people who feel most part of a neighbourhood who take the <span class="red" data-word="initiative">initiative</span> to pick up litter, plant flowers, and push the local government to make repairs to the road and pavement.
     
    <br><br> The government already provides financial incentives for <span class="red" data-word="pesidents">pesidents</span> to take environmentally friendly actions, for example reducing use of cars. The same could be done for the insulating of homes. If the government would reduce the cost of insulating measures, it could benefit people in a number of different ways.</p>
+   <div id="glossaryBox">
+    <p><strong>Glossary</strong></p>
+    <p><em>To Insulate (Verb):</em> To insulate something (from/against something): to protect something with a material that prevents something from passing through. For example, to insulate a house means less cold (winter) or heat (summer) will pass into the building. <strong>Noun:</strong> insulation</p>
+</div>
 <button id="checkButton">Check</button>
 <div id="result">
     <p id="correctSentence"></p>
     <button id="nextButton">Next</button>
-</div>
+</div></div>
 <script>
     // Initialize tutA variable
     let tuta = [];
@@ -321,9 +346,13 @@
 
     // Function to handle the "Next" button click
     function handleNextButtonClick() {
-        // Redirect to the desired URL
-        window.location.href = "spell_check_intro_2.html"; // Replace with your actual URL
+        // Encode the coda variable as a query parameter
+        const codaQueryParam = encodeURIComponent(coda);
+
+        // Redirect to the next page with coda as a query parameter
+        window.location.href = `spell_check_intro_2.html?coda=${codaQueryParam}`;
     }
+
 
     // Attach a click event listener to the "Next" button
     const nextButton = document.getElementById("nextButton");

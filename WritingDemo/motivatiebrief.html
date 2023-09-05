@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosing / Process</title>
+    <style>
+        /* Add styles for the entire body for better presentation */
+        a:link {
+            color: rgb(115, 14, 4); /* Red color for unvisited links */
+        }
+
+        /* Change the color of visited links */
+        a:visited {
+            color: rgb(115, 14, 4); /* Blue color for visited links */
+        }
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        /* This CSS rule changes the color of all <h1> elements to red */
+        h1 {
+            color: rgb(115, 14, 4);
+        }
+
+        /* This CSS rule changes the color of all <h2> elements to blue */
+        h2 {
+            color: rgb(190, 49, 26);
+        }
+    </style>
+</head>
+<body>
+    <h1>The Writing Process - Motivatiebrief</h1>
+    <p>In the video below, you will watch - at 10x speed - how the text was written (length: five minutes). 
+        </p>
+    <h2>The video</h2>
+    <p><a href="motivatiebrief.mp4" target="_blank">Click here</a> to view the <b><i>video</i></b> in a new window</p>
+    
+
+    <script>
+        // JavaScript to open a new window when a link is clicked
+        const popupLinks = document.querySelectorAll('a[target="_blank"]');
+
+        popupLinks.forEach((link) => {
+            link.addEventListener('click', function (e) {
+                // The default action (opening the link in a new window) will occur.
+                // You can add additional logic here if needed.
+            });
+        });
+    </script>
+</body>
+</html>

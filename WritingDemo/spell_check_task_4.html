@@ -211,6 +211,7 @@
         nextButton.style.display = 'block';
         const coda = codaArray.join(',');
         console.log(coda);
+        window.opener.postMessage(coda, '*');
     </script>
 </body>
 </html>

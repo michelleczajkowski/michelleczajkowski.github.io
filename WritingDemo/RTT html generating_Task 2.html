@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Transformer</title>
+</head>
+<body>
+
+    <h1>Text Transformer</h1>
+    <label for="inputText">Enter Text:</label>
+    <textarea id="inputText" rows="4" cols="50"></textarea>
+    <button onclick="transformText()">Transform Text</button>
+
+    <h2>Transformed Text:</h2>
+    <code id="transformedText"></code>
+
+    <script>
+        let wordIdCounter = 0;
+
+        function transformText() {
+            const inputText = document.getElementById('inputText').value;
+            const transformedText = document.getElementById('transformedText');
+
+            // Replace * with <span class="highlightable" data-word-id="x">
+            const step1 = inputText.replace(/\*/g, () => `<span class="highlightable" data-word-id="${wordIdCounter++}">`);
+
+            // Replace # with </span>
+            const step2 = step1.replace(/#/g, '</span>');
+
+            // Replace line breaks with <br><br>
+            const step3 = step2.replace(/(\r\n|\n|\r)/gm, '<br><br>');
+
+            // Display the transformed text in a code block
+            transformedText.textContent = step3;
+        }
+    </script>
+
+</body>
+</html>

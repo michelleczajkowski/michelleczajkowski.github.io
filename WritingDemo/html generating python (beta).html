@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Transformation</title>
+    <style>
+        .red {
+            color: red; /* You can customize the styling as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <label for="inputText">Enter text:</label><br>
+    <textarea id="inputText" rows="4" cols="50"></textarea>
+    <br>
+
+    <label for="optionsAndKeys">Enter options and keys:</label><br>
+    <textarea id="optionsAndKeys" rows="4" cols="50"></textarea>
+    <br>
+
+
+    <label for="answers">Enter answers:</label><br>
+    <textarea id="answers" rows="4" cols="50"></textarea>
+    <br>
+
+    <button onclick="transformText()">Transform</button>
+
+    <div id="output"></div>
+
+    <script>
+        function transformText() {
+            var inputText = document.getElementById('inputText').value;
+            var optionsAndKeysText = document.getElementById('optionsAndKeys').value;
+            var answersText = document.getElementById('answers').value;
+            var outputDiv = document.getElementById('output');
+
+            // Transform inputText
+            var transformedText = '<p id="sentence">' + inputText.replace(/\*(.*?)\*\*/g, function(match, p1) {
+                return '<span class="red" data-word="' + p1 + '">' + p1 + '</span>';
+            }).replace(/\n/g, '<br><br>').replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</p>';
+
+            // Transform optionsAndKeysText
+            var transformedOptionsAndKeys = optionsAndKeysText.split('\n').map(function(line) {
+                var parts = line.split(',');
+                var key = parts[0].trim();
+                var values = parts.slice(1).map(function(value) {
+                    return value.trim();
+                });
+
+                return '"' + key + '": ["' + [key].concat(values).join('", "') + '"]';
+            }).join(', ');
+
+            // Transform answersText
+            var transformedAnswers = answersText.split('\n').map(function(answer) {
+                var parts = answer.split(',');
+                var original = parts[0].trim();
+                var corrected = parts[1].trim();
+
+                return '{ original: "' + original + '", corrected: "' + corrected + '" }';
+            }).join(', ');
+
+            // Display the transformed text as escaped HTML
+            outputDiv.innerHTML = transformedText + '<br>' + transformedOptionsAndKeys + '<br>' + transformedAnswers;
+
+            // Append </p> to the output
+            outputDiv.innerHTML += '</p>';
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!-- 
+    Notes on this document: 
+    This is part one of the RTT. To create your own test, format the text with * and ** surrounding the target words,
+    and a separate options and key list. Options should look like this, with the target in first space and options after:
+    option,options,optioning
+    choose,choice,choosy
+    and the key should look like this, with the target in the first space and the correct answer afterwards
+    option,option
+    choose,choosy
+    The RTT html generating_v2 script will help you format it to copy and paste here. 
+    When this is taken by the test taker, the scores are coded as 1=correct, 0=incorrect, 9=not attempted
+    The scores, in a string separated by - are sent via url to the next part. 
+-->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test: Part 1</title>
+    <style>
+        /* Style the misspelled words in red and make them clickable */
+        .red {
+            color: darkred;
+            cursor: pointer;
+            text-decoration: underline; /* Add underline to red words */
+            background-color: rgb(240, 210, 135);
+            font-weight: bold
+        }
+
+        /* Style the cursor to indicate interactivity */
+        .red:hover {
+            cursor: pointer;
+        }
+
+        /* Style the pop-up box */
+        .popup {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        /* Style the list of correction options */
+        .popup ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Style each correction option in the list */
+        .popup li {
+            padding: 5px;
+        }
+
+        /* Add styles for the entire body for better presentation */
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        /* Style the input field for the "Other" option */
+        .popup input {
+            border: 1px solid #ccc;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        u {
+            text-decoration: underline;
+        }
+
+        #nextButton {
+            display: none; /* Initially hide the Next button */
+        }
+
+        #sentence {
+            background-color: lightgoldenrodyellow; /* Set a light grey background color */
+            padding: 10px; /* Add some padding to create space around the text */
+            border: 1px solid lightgoldenrodyellow; /* Add a 1px solid grey border */
+        }
+        /* Add styles for the glossary box */
+        /* Add styles for the glossary box */
+        #glossaryBox {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            font-size: 14px;
+            width:150px;
+            z-index: 1000;
+        }
+        /* Add padding to the content container to make space for the glossary box */
+        #content-container {
+            padding-right: 170px; /* Adjust the value as needed */
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="content-container">
+Revision Test: Part 1
+<p>Instructions: You have written the following text. You want to make sure the grammar and spelling are correct. You turn on the spelling and grammar checker and some words are highlighted. Click on each word and choose 1) an alternative from the list, 2) another correction, or 3) to leave it as it is. <br>
+    </p> 
+    <p id="sentence">   
+    <!-- place your text here that's been modified by RTT html generating_v2.html script. -->
+    <!-- check for apostrophes, make sure they're all the same -->
+    A study recently published in cooperation with environmental organizations WeGreen and Home Proud 
+    <span class="red" data-word="show">show</span> that, at least within city centres, efforts to better 
+    insulate an apartment are highly <span class="red" data-word="positive">positive</span> associated 
+    with an increased feeling of inclusion in the neighbourhood. There is already ample evidence that 
+    measures such as replacing single-pane windows and closing curtains at night are <span class="red" 
+    data-word="affective">affective</span> ways of lowering heating costs by insulating homes <span class="red" 
+    data-word="for">for</span> cold. However, this is the first study which also examines the psychological 
+    effects of these measures.<br><br>The study asked participants from fifteen neighbourhoods 
+    in three cities responded to an online questionnaire. In total, over 500 questionnaires <span class="red" 
+    data-word="have been completed">have been completed</span>. Participants were asked about how they 
+    <span class="red" data-word="insulate">insulate</span> their home and how much they save in terms of 
+    gas, hot water, and money. Additionally, they were asked to describe <span class="red" data-word="they're">
+        they're</span> neighbourhood and what they like about living there. They were asked to <span class="red" 
+        data-word="indiate">indiate</span> the degree to which they agreed with a number of different statements, 
+        e.g., "I would like to know my neighbours more."<br><br>The results showed that insulating 
+        ones home was associated with more positive feelings about one's residential area, an effect that was 
+        greater if a person <span class="red" data-word="would own">would own</span> their own apartment. The 
+        researchers believe that such home improvement efforts provide a feeling of being in control over one's 
+        environment, weather financial, social or physical. Previous research shows, unsurprisingly, that its 
+        people who feel most part of a neighbourhood who take the <span class="red" data-word="initiative">
+            initiative</span> to pick up litter, plant flowers, and push the local government to make repairs 
+            to the road and pavement.
+    
+ </p>
+    
+       <div id="glossaryBox">
+    <p><strong></strong></p>
+    <p></p>
+</div>
+<button id="checkButton">Click When Finished</button>
+<div id="result">
+    <p id="correctSentence"></p>
+    <button id="nextButton">Next</button>
+</div></div>
+<script>
+    
+    let tuta = [];// Initialize tutA variable
+    let coda = '';// Initialize coda as an empty string
+    let sentenceElement;// Declare sentenceElement as a global variable
+    // Function to store corrected word in tuta
+    function storeCorrectedWord(originalWord, correctedWord) {
+        tuta.push({ original: originalWord, corrected: correctedWord });
+    }
+    // Add your options here in the following format. RTT html generating_v2.html to help. 
+    // NOTE: can't handle capitals in first position, just make it lower case. inside brackets it's ok to leave as is
+    const wordOptions = {
+
+        "show": ["show", "shows", "showed"], 
+        "positive": ["positive", "positivity", "positively"], 
+        "affective": ["affective", "affected", "affects"], 
+        "for": ["for", "in", "against"], 
+        "have been completed": ["have been completed", "were completed", "had been completed"], 
+        "insulate": ["insulate", "insult", "insure"], 
+        "they're": ["they're", "there", "their"], 
+        "indiate": ["indiate", "indicate", "incubate"], 
+        "would own": ["would own", "will own", "is owned"], 
+        "initiative": ["initiative", "initiation", "insulation"]
+    };
+    // Add your keys here in the following format. RTT html generating_v2.html to help. 
+    const keya = [
+    { original: "show", corrected: "shows" }, 
+    { original: "positive", corrected: "positively" }, 
+    { original: "affective", corrected: "effective" }, 
+    { original: "for", corrected: "against" }, 
+    { original: "have been completed", corrected: "were completed" }, 
+    { original: "insulate", corrected: "insulate" }, 
+    { original: "they're", corrected: "their" }, 
+    { original: "indiate", corrected: "indicate" }, 
+    { original: "would own", corrected: "owned" }, 
+    { original: "initiative", corrected: "initiative" }
+    ];
+    // Define the calculateScore function
+    // Function to calculate the user's score based on userAnswers and correctAnswers arrays
+    function calculateScore(userAnswers, correctAnswers) {
+        // Initialize the score to 0
+        let score = 0;
+        // Iterate through each user answer
+        userAnswers.forEach(userAnswer => {
+            // Find the corresponding correct answer for the current user answer
+            const matchingCorrectAnswer = correctAnswers.find(correctAnswer => 
+                correctAnswer.original === userAnswer.original
+            );
+
+            // Check if a matching correct answer was found and if the correction is accurate
+            if (matchingCorrectAnswer && matchingCorrectAnswer.corrected === userAnswer.corrected) {
+                // If correct, increment the score
+                score++;
+            }
+        });
+
+        // Return the final score
+        return score;
+    }
+
+
+    // Example userAnswers array (replace this with the user's answers)
+    const userAnswers = tuta;
+
+    // Calculate the user's score
+    const userScore = calculateScore(userAnswers, keya);
+
+    // Display the user's score (you can modify this part as needed)
+    console.log(`User's Score: ${userScore}/15`);
+
+
+
+    let currentPopup = null; // Variable to keep track of the currently open pop-up
+
+    // Function to highlight misspelled words and show correction options
+    function highlightMisspelledWords() {
+        sentenceElement = document.getElementById("sentence"); // Assign the global variable
+
+        const misspelledWords = sentenceElement.querySelectorAll(".red");
+
+        misspelledWords.forEach(word => {
+            word.addEventListener("click", handleWordCorrection);
+        });
+    }
+
+    // Function to handle word correction
+    function handleWordCorrection(event) {
+        if (currentPopup) {
+            currentPopup.remove(); // Close the current pop-up
+        }
+
+        const clickedWord = event.target;
+        const originalWord = clickedWord.getAttribute("data-word");
+
+        if (originalWord) {
+            const correctionOptions = wordOptions[originalWord.toLowerCase()];
+            if (correctionOptions) {
+                // Calculate the position of the clicked word
+                const rect = clickedWord.getBoundingClientRect();
+                const wordTop = rect.top + window.scrollY;
+                const wordLeft = rect.left + window.scrollX;
+
+                const popupDiv = document.createElement("div");
+                popupDiv.classList.add("popup");
+
+                // Set the position of the pop-up box just below the word
+                popupDiv.style.top = wordTop + rect.height + "px";
+                popupDiv.style.left = wordLeft + "px";
+
+                const optionsList = document.createElement("ul");
+
+                correctionOptions.forEach(option => {
+                    if (option !== originalWord) { // Exclude the original word
+                        const listItem = document.createElement("li");
+                        listItem.textContent = option;
+                        listItem.addEventListener("click", () => {
+                            clickedWord.textContent = option;
+                            clickedWord.classList.remove("red");
+                            popupDiv.remove();
+
+                            // Store the corrected word in tutA
+                            storeCorrectedWord(originalWord, option);
+                        });
+                        optionsList.appendChild(listItem);
+                    }
+                });
+
+                // Add the "Other" option with a text input field
+                const otherOption = document.createElement("li");
+                const inputField = document.createElement("input");
+                inputField.setAttribute("placeholder", "Other");
+                inputField.style.width = "50%";
+                inputField.addEventListener("keyup", (e) => {
+                    if (e.key === "Enter") {
+                        const customWord = inputField.value.trim();
+                        if (customWord) {
+                            clickedWord.textContent = customWord;
+                            clickedWord.classList.remove("red");
+                            popupDiv.remove();
+
+                            // Store the corrected word in tutA
+                            storeCorrectedWord(originalWord, customWord);
+                        }
+                    }
+                });
+                otherOption.appendChild(inputField);
+
+                // Add the "<ignore>" option as the last one
+                const ignoreOption = document.createElement("li");
+                ignoreOption.innerHTML = "(correct as is)";
+                ignoreOption.addEventListener("click", () => {
+                    clickedWord.classList.remove("red"); // Remove the "red" class
+                    popupDiv.remove();
+
+                    // Store the original word in tutA
+                    storeCorrectedWord(originalWord, originalWord);
+                });
+                optionsList.appendChild(otherOption);
+                optionsList.appendChild(ignoreOption);
+
+                popupDiv.appendChild(optionsList);
+                document.body.appendChild(popupDiv);
+
+                // Set the currentPopup variable to the new pop-up
+                currentPopup = popupDiv;
+            }
+        }
+    }
+
+    // Call the highlight function on page load
+    highlightMisspelledWords();
+    
+    
+    // Function to handle the "Check" button click
+    function handleCheckButtonClick() {
+        // Initialize coda as an empty string
+        coda = '';
+
+        // Initialize a flag to track if all 15 items have been attempted
+        let allItemsAttempted = true;
+
+        // Iterate through keya to check correctness and update coda
+        keya.forEach((correctAnswer, index) => {
+            // Find the user's last attempt for the current word
+            const userAnswer = tuta.slice().reverse().find(userAns => userAns.original === correctAnswer.original);
+
+            if (userAnswer) {
+                if (userAnswer.corrected === correctAnswer.corrected) {
+                    coda += '1'; // Correct answer
+                } else {
+                    coda += '0'; // Incorrect answer
+                }
+            } else {
+                coda += '9'; // No user answer provided
+                //allItemsAttempted = false; // Set the flag to false if any item is not attempted
+            }
+
+            // Add a separator if it's not the last element
+            if (index < keya.length - 1) {
+                coda += ',';
+            }
+        });
+
+        // Fill in any remaining positions in coda with '0' if the user didn't answer
+        const remainingPositions = 0;
+        if (remainingPositions > 0) {
+            coda += ', ' + '0'.repeat(remainingPositions * 2 - 1); // Add the appropriate number of '0's
+            allItemsAttempted = false; // Set the flag to false if any item is not attempted
+        }
+
+        // Display the coda
+        console.log(`coda: ${coda}`);
+        // Display a warning if not all items have been attempted
+        //if (!allItemsAttempted) {
+            //alert("Please attempt all 5 items before checking.");
+        //} else {
+            // Show the "Next" button
+            const nextButton = document.getElementById("nextButton");
+            nextButton.style.display = "block";
+
+            // Display the user's score
+            const userScore = calculateScore(tuta, keya);
+            const correctSentenceElement = document.getElementById("correctSentence");
+            correctSentenceElement.innerHTML = `Click next to move to the next task.`;
+        //}
+    }
+
+
+    // Attach a click event listener to the "Check" button
+    const checkButton = document.getElementById("checkButton");
+    checkButton.addEventListener("click", handleCheckButtonClick);
+
+    // Function to handle the "Next" button click
+    function handleNextButtonClick() {
+        // Encode the coda variable as a query parameter
+        const codaQueryParam = coda.replace(/,/g, '%2C');
+
+        // Redirect to the next page with coda as a query parameter
+        window.location.href = `RTT_ENG_2.html?coda=${codaQueryParam}`;
+    }
+
+
+    // Attach a click event listener to the "Next" button
+    const nextButton = document.getElementById("nextButton");
+    nextButton.addEventListener("click", handleNextButtonClick);
+
+    
+</script>
+</body>
+</html>

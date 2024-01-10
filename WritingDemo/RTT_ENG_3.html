@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test: Part 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            font-size: 18px;
+        }
+        .highlightable {
+            cursor: pointer;
+        }
+        .highlighted {
+            background-color: rgb(247, 247, 244);
+            font-weight: bold;
+            color: darkred;
+            text-decoration: underline;
+
+        }
+        .popup {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+        #text-container {
+            background-color: lightgoldenrodyellow; /* Set a light grey background color */
+            padding: 10px; /* Add some padding to create space around the text */
+            border: 1px solid lightgoldenrodyellow; /* Add a 1px solid grey border */
+        }
+    </style>
+</head>
+<body>
+    Part 3
+    <p>The  errors from the previous part are now highlighted in the text. Can you make appropriate corrections? 
+        Click on the highlighted errors, type, and hit enter or tab. You can write more than one word if needed in each gap.</p>
+    <div id="text-container">
+        <!-- Place the text here with 
+            <span class="highlighted">
+            </span>
+            around target words-->
+        …
+        The study asked participants from fifteen neighbourhoods in three cities 
+        <span class="highlighted">responded</span> 
+        to an online questionnaire. In total, over 500 questionnaires were completed. The results 
+        of the study show that residents took more actions to insulate their homes than predicted, 
+        an expected effect of last <span class="highlighted">years</span> gas prices. 
+        …
+        Previous <span class="highlighted">study's</span> have shown that homeowners are both more 
+        likely to <span class="highlighted">proactive</span> insulate their homes <span class="highlighted">then</span> renters, 
+        who view home improvement as the owner's responsibility, and 
+        to feel a sense of belonging in their neighbourhood. The results of this study extend 
+        this idea, showing a relationship between this feeling and efforts to better weatherproof 
+        one's home. 
+
+        The researchers believe that such home improvement efforts provide a feeling of being in 
+        control over one's environment, <span class="highlighted">weather</span> financial, social or physical. This conclusion has 
+        implications for improving other aspects of a neighbourhood as well. Previous research shows, 
+        unsurprisingly, that people who feel they are part of a neighbourhood take the initiative to 
+        pick up litter, plant flowers, and push the local government to make repairs to the road and 
+        pavement.
+        …
+        If the government <span class="highlighted">would reduce</span> the cost of insulating measures, 
+        it could benefit people <span class="highlighted">of</span> a 
+        number of different ways.
+
+
+    </div>
+
+
+    <br>
+    <button id="save-button">Click when finished</button>
+    <div id="answer-container" style="display: none;">
+        <p id="correct-answer"></p>
+        <a id="next-link" href="spell_check_task_4.html?coda="><button id="next-button">Next</button></a>
+
+
+
+    </div>
+    <div class="popup" id="popup">
+        <input type="text" id="replacementText" onkeydown="handleKeydown(event)">
+    </div>
+
+    <script>
+// Function to parse query parameters from the URL
+function getQueryParam(parameterName) {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    return urlSearchParams.get(parameterName);
+}
+
+const highlightedElements = document.querySelectorAll('.highlighted');
+const popup = document.getElementById('popup');
+const replacementText = document.getElementById('replacementText');
+const answerContainer = document.getElementById('answer-container');
+const correctAnswer = document.getElementById('correct-answer');
+const correctVersions = ['to respond', "year's", 'studies', 'proactively', 'than', 'whether', 'reduced'];
+
+let userScore = [];
+let currentHighlightedIndex = -1; // Index of the currently highlighted element
+
+// Define combinedCoda in the global scope with an initial value of an empty string
+let combinedCoda = '';
+
+function showPopup(element) {
+    currentHighlightedIndex = Array.from(highlightedElements).indexOf(element);
+    replacementText.value = ''; // Clear the input field
+    popup.style.display = 'block';
+    popup.style.top = (element.offsetTop + element.offsetHeight) + 'px';
+    popup.style.left = element.offsetLeft + 'px';
+
+    // Set the width of the text box to match the width of the highlighted element
+    replacementText.style.width = element.offsetWidth + 'px';
+
+    replacementText.focus();
+}
+let userResponses = [];
+function replaceHighlightedText() {
+    if (currentHighlightedIndex !== -1) {
+        const userCorrection = replacementText.value.toLowerCase();
+        const correctCorrection = correctVersions[currentHighlightedIndex].toLowerCase();
+
+        // Determine correctness and push the value into the userScore array
+        userScore[currentHighlightedIndex] = userCorrection === correctCorrection ? 1 : 0;
+    } else {
+        // If the user did not attempt, push 9 into the userScore array for the current question
+        userScore[currentHighlightedIndex] = 9;
+    }
+
+    const highlightedElement = highlightedElements[currentHighlightedIndex];
+    highlightedElement.textContent = replacementText.value;
+    highlightedElement.classList.remove('highlighted');
+    popup.style.display = 'none';
+
+    // Move to the next highlighted element
+    const nextIndex = (currentHighlightedIndex + 1) % highlightedElements.length;
+    showPopup(highlightedElements[nextIndex]);
+}
+
+
+
+
+function handleKeydown(event) {
+    if (event.key === 'Enter') {
+        replaceHighlightedText();
+    } else if (event.key === 'Tab') {
+        // Prevent the default tab behavior (e.g., focusing on other page elements)
+        event.preventDefault();
+        replaceHighlightedText();
+    }
+}
+
+document.getElementById('save-button').addEventListener('click', () => {
+    // Display the correct answer and the "Next" button when the "Check" button is clicked
+    answerContainer.style.display = 'block';
+    correctAnswer.innerHTML = `Test is finished. Click next to receive results.`;
+
+    // Combine codaQueryParam and userScore with a comma
+    // Create a new array with eight 9s
+    const fullUserScore = Array(8).fill(9);
+
+    // Copy the values from userScore to the corresponding positions in fullUserScore
+    userScore.forEach((score, index) => {
+        fullUserScore[index] = score;
+    });
+
+    // Combine codaQueryParam and fullUserScore with eight 9s separated by commas
+    const codacombined = `${codaQueryParam},${fullUserScore}`;
+
+
+
+    // Construct the URL for the "Next" button using codacombined
+    const nextLink = document.getElementById('next-link');
+    const updatedURL = `spell_check_task_4.html?coda=${encodeURIComponent(codacombined)}`;
+    nextLink.href = updatedURL;
+
+    // Redirect to the updated URL
+    window.location.href = updatedURL;
+});
+
+highlightedElements.forEach(element => {
+    element.addEventListener('click', () => {
+        showPopup(element);
+    });
+});
+
+// Retrieve the coda value from the URL
+const codaQueryParam = getQueryParam("coda");
+
+// Now, you can use the codaQueryParam as needed on this page
+console.log(`Received coda from previous page: ${codaQueryParam}`);
+
+// Function to handle the "Next" button click
+function handleNextButtonClick() {
+    // Encode the coda variable as a query parameter
+    const codaQueryParam = encodeURIComponent(coda);
+
+    // Combine codaQueryParam and userScore with a comma
+    //const codacombined = codaQueryParam + ',' + userScore;
+    const codacombined = `${codaQueryParam},${userScore}`;
+    // Construct the updated URL with coda and userScore as query parameters
+    const updatedURL = `spell_check_task_4.html?coda=${codacombined}`;
+
+
+    // Update the href attribute of the "next-link" anchor element
+    const nextLink = document.getElementById('next-link');
+    nextLink.href = updatedURL;
+
+    // Redirect to the updated URL
+    window.location.href = updatedURL;
+}
+
+// Get a reference to the "Next" button by its ID
+const nextButton = document.getElementById('next-button');
+
+// Add a click event listener to the "Next" button
+nextButton.addEventListener("click", handleNextButtonClick);
+
+    </script>
+</body>
+</html>

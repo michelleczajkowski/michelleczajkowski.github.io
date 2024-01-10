@@ -64,8 +64,8 @@
         pick up litter, plant flowers, and push the local government to make repairs to the road and 
         pavement.
         …
-        If the government <span class="highlighted">would reduce</span> the cost of insulating measures, 
-        it could benefit people <span class="highlighted">of</span> a 
+        If the government <span class="highlighted">would reduce</span> the cost <span class="highlighted">of</span> insulating measures, 
+        it could benefit people of a 
         number of different ways.
 
 
@@ -97,7 +97,7 @@ const popup = document.getElementById('popup');
 const replacementText = document.getElementById('replacementText');
 const answerContainer = document.getElementById('answer-container');
 const correctAnswer = document.getElementById('correct-answer');
-const correctVersions = ['to respond', "year's", 'studies', 'proactively', 'than', 'whether', 'reduced'];
+const correctVersions = ['to respond', "year's", 'studies', 'proactively', 'than', 'whether', 'reduced', 'in'];
 
 let userScore = [];
 let currentHighlightedIndex = -1; // Index of the currently highlighted element
@@ -168,14 +168,14 @@ document.getElementById('save-button').addEventListener('click', () => {
     });
 
     // Combine codaQueryParam and fullUserScore with eight 9s separated by commas
-    // Combine codaQueryParam and fullUserScore with eight 9s separated by dashes
-    const codacombined = `${codaQueryParam}-${fullUserScore.join('-')}`;
+    const codacombined = `${codaQueryParam},${fullUserScore}`;
+
+
 
     // Construct the URL for the "Next" button using codacombined
     const nextLink = document.getElementById('next-link');
     const updatedURL = `spell_check_task_4.html?coda=${encodeURIComponent(codacombined)}`;
     nextLink.href = updatedURL;
-
 
     // Redirect to the updated URL
     window.location.href = updatedURL;
@@ -200,7 +200,8 @@ function handleNextButtonClick() {
 
     // Combine codaQueryParam and userScore with a comma
     //const codacombined = codaQueryParam + ',' + userScore;
-    const codacombined = `${codaQueryParam},${userScore}`;
+    const codacombined = `${encodeURIComponent(codaQueryParam)}-${userScore.map(encodeURIComponent).join('-')}`;
+
     // Construct the updated URL with coda and userScore as query parameters
     const updatedURL = `spell_check_task_4.html?coda=${codacombined}`;
 

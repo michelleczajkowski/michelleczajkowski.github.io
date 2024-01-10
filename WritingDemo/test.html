@@ -2,89 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test: Part 2</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            font-size: 18px;
-        }
-        .highlightable {
-            cursor: pointer;
-        }
-        .highlighted {
-            background-color: rgb(207, 207, 152);
-            font-weight: bold;
-        }
-        #text-container {
-            background-color: lightgoldenrodyellow;
-            padding: 10px;
-            border: 1px solid lightgoldenrodyellow;
-        }
-    </style>
+    <title>Text Transformer</title>
 </head>
 <body>
-    <h1>Revision Test</h1>
-    <p>Now, you'll need to find any errors that the spelling and grammar checker missed. Click any words you think are wrong (spelling and grammar) in this extract.</p>
-    
-    <div id="text-container">
-        <span class="highlightable" data-word-id="1">I</span> <span class="highlightable" data-word-id="2">wishing</span><br><br><span class="highlightable" data-word-id="3">that you</span> <span class="highlightable" data-word-id="4">is</span> <span class="highlightable" data-word-id="5">going</span><br><br><span class="highlightable" data-word-id="6">with</span> <span class="highlightable" data-word-id="7">my</span>.
-    </div>
-    <br>
-    <button id="save-button">Click when done</button>
-    <div id="answer-container" style="display: none;">
-        <p id="correct-answer"></p>
-        <button id="next-button">Next</button>
-    </div>
+
+    <h1>Text Transformer</h1>
+    <label for="inputText">Enter Text:</label>
+    <textarea id="inputText" rows="4" cols="50"></textarea>
+    <button onclick="transformText()">Transform Text</button>
+
+    <h2>Transformed Text:</h2>
+    <code id="transformedText"></code>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const incorrectWords = ["responded", "years", "study's", "proactive", "then", "weather", "would reduce"];
-            const highlightableWords = document.querySelectorAll(".highlightable");
-            const saveButton = document.getElementById("save-button");
-            const answerContainer = document.getElementById("answer-container");
-            const correctAnswer = document.getElementById("correct-answer");
-            const nextButton = document.getElementById("next-button");
-            let selectedWordIndices = [];
-            let selectedWordsText;
+        function transformText() {
+            const inputText = document.getElementById('inputText').value;
+            const transformedText = document.getElementById('transformedText');
 
-            function toggleHighlight(word) {
-                word.classList.toggle("highlighted");
-                const wordId = word.dataset.wordId;
-                if (word.classList.contains("highlighted")) {
-                    selectedWordIndices.push(wordId);
-                } else {
-                    selectedWordIndices = selectedWordIndices.filter(selectedId => selectedId !== wordId);
-                }
-            }
+            const words = inputText.split(/\s+/); // Split input text into words
 
-            highlightableWords.forEach((word, index) => {
-                word.addEventListener("click", () => {
-                    toggleHighlight(word, index);
-                });
+            let transformedHTML = '';
+
+            words.forEach((word, index) => {
+                // Exclude punctuation and spaces from being inside span commands
+                const cleanedWord = word.replace(/[.,\s]/g, '');
+                
+                // Create a span element with a unique data attribute for each word
+                transformedHTML += `<span class="highlightable" data-word-id="${index}">${cleanedWord}</span> `;
             });
 
-            saveButton.addEventListener("click", () => {
-                const selectedWords = selectedWordIndices.map(index => highlightableWords[index].dataset.wordId);
-                selectedWordsText = selectedWords.join('-');
-                correctAnswer.innerHTML = `Selected Words: ${selectedWordsText}`;
-                answerContainer.style.display = "block";
-            });
-
-            nextButton.addEventListener("click", () => {
-                const codaQueryParam = getQueryParam("coda");
-                const updatedCoda = `${codaQueryParam},${selectedWordsText}`;
-                window.location.href = `spell_check_task_3.html?coda=${updatedCoda}`;
-            });
-        });
-
-        function getQueryParam(parameterName) {
-            const urlSearchParams = new URLSearchParams(window.location.search);
-            return urlSearchParams.get(parameterName);
+            // Display the transformed text in a code block
+            transformedText.textContent = transformedHTML.trim();
         }
-
-        const codaQueryParam = getQueryParam("coda");
-        console.log(`Received coda from previous page: ${codaQueryParam}`);
     </script>
+
 </body>
 </html>

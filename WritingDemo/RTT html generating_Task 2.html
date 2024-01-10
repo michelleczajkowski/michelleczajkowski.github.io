@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+<!-- How to use this program
+Enter the text you wish to transform for task 2 in the RTT
+Then you'll get a downloaded file. It's an HTML file. 
+If you open it in a browser, it won't look different.
+But open it, say by right clicking and viewing source
+or opening it in VSCode or something similar and you'll see it's 
+all ready to be plugged into the RTT_ENG_1 code.  
+HOWEVER - note that it will split any punctuated word in half, like I'm or it's or happy-jappy.
+You'll need to go back manually and change this if it occurs. 
+ALSO if you want any multi-word clusters, you'll need to adjust for that too. Remove the span 
+elements from between the words-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,31 +22,36 @@
     <h1>Text Transformer</h1>
     <label for="inputText">Enter Text:</label>
     <textarea id="inputText" rows="4" cols="50"></textarea>
-    <button onclick="transformText()">Transform Text</button>
-
-    <h2>Transformed Text:</h2>
-    <code id="transformedText"></code>
+    <button onclick="transformAndDownload()">Transform Text and Download</button>
 
     <script>
-        let wordIdCounter = 0;
-
-        function transformText() {
+        function transformAndDownload() {
             const inputText = document.getElementById('inputText').value;
-            const transformedText = document.getElementById('transformedText');
 
-            // Replace * with <span class="highlightable" data-word-id="x">
-            const step1 = inputText.replace(/\*/g, () => `<span class="highlightable" data-word-id="${wordIdCounter++}">`);
+            let transformedText = '';
+            let index = 0;
 
-            // Replace # with </span>
-            const step2 = step1.replace(/#/g, '</span>');
+            inputText.split(/(\b\w+\b|[^\w])/g).forEach((wordOrPunctuation) => {
+                if (wordOrPunctuation.match(/\w/)) {
+                    // If it's a word, add the span element
+                    transformedText += `<span class="highlightable" data-word-id="${index}">${wordOrPunctuation}</span>`;
+                    index++;
+                } else {
+                    // If it's punctuation, add it as is
+                    transformedText += wordOrPunctuation;
+                }
+            });
 
-            // Replace line breaks with <br><br>
-            const step3 = step2.replace(/(\r\n|\n|\r)/gm, '<br><br>');
+            // Create a Blob with the transformed text
+            const blob = new Blob([`${transformedText}`], { type: 'text/html' });
 
-            // Display the transformed text in a code block
-            transformedText.textContent = step3;
+            // Create a link element and trigger a click event to prompt the user to download the file
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = 'transformed_text.html';
+            link.click();
         }
-    </script>
 
+    </script>
 </body>
 </html>

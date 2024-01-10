@@ -167,8 +167,9 @@ document.getElementById('save-button').addEventListener('click', () => {
         fullUserScore[index] = score;
     });
 
-    // Combine codaQueryParam and fullUserScore with eight 9s separated by commas
-    const codacombined = `${codaQueryParam},${fullUserScore}`;
+    // Combine codaQueryParam and fullUserScore with eight 9s separated by hyphens
+    const codacombined = `${codaQueryParam}-${fullUserScore.join('-')}`;
+
 
 
 

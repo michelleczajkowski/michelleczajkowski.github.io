@@ -168,14 +168,14 @@ document.getElementById('save-button').addEventListener('click', () => {
     });
 
     // Combine codaQueryParam and fullUserScore with eight 9s separated by commas
-    const codacombined = `${codaQueryParam},${fullUserScore}`;
-
-
+    // Combine codaQueryParam and fullUserScore with eight 9s separated by dashes
+    const codacombined = `${codaQueryParam}-${fullUserScore.join('-')}`;
 
     // Construct the URL for the "Next" button using codacombined
     const nextLink = document.getElementById('next-link');
     const updatedURL = `spell_check_task_4.html?coda=${encodeURIComponent(codacombined)}`;
     nextLink.href = updatedURL;
+
 
     // Redirect to the updated URL
     window.location.href = updatedURL;

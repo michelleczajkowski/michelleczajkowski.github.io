@@ -91,7 +91,7 @@
                 const selectedWords = selectedWordIndices.map(index => highlightableWords[index].dataset.wordId);
 
                 // Display the selected words
-                const selectedWordsText = selectedWords.join('-');
+                const selectedWordsText = selectedWords.join(',');
                 correctAnswer.innerHTML = `Selected Words: ${selectedWordsText}`;
                 // Calculate the updated coda value by adding truePositives and falsePositives
                 const updatedCoda = `${codaQueryParam},${selectedWordsText}`;

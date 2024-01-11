@@ -76,7 +76,7 @@
     <button id="save-button">Click when finished</button>
     <div id="answer-container" style="display: none;">
         <p id="correct-answer"></p>
-        <a id="next-link" href="spell_check_task_4.html?coda="><button id="next-button">Next</button></a>
+        <a id="next-link" href="RTT_ENG_4.html?coda="><button id="next-button">Next</button></a>
 
 
 
@@ -168,14 +168,14 @@ document.getElementById('save-button').addEventListener('click', () => {
     });
 
     // Combine codaQueryParam and fullUserScore with eight 9s separated by hyphens
-    const codacombined = `${codaQueryParam}-${fullUserScore.join('-')}`;
+    const codacombined = `${codaQueryParam},${fullUserScore.join('-')}`;
 
 
 
 
     // Construct the URL for the "Next" button using codacombined
     const nextLink = document.getElementById('next-link');
-    const updatedURL = `spell_check_task_4.html?coda=${encodeURIComponent(codacombined)}`;
+    const updatedURL = `RTT_ENG_4.html?coda=${encodeURIComponent(codacombined)}`;
     nextLink.href = updatedURL;
 
     // Redirect to the updated URL
@@ -201,10 +201,11 @@ function handleNextButtonClick() {
 
     // Combine codaQueryParam and userScore with a comma
     //const codacombined = codaQueryParam + ',' + userScore;
-    const codacombined = `${encodeURIComponent(codaQueryParam)}-${userScore.map(encodeURIComponent).join('-')}`;
+    const updatedCoda = `${codaQueryParam},${userScore}`;
+    //const codacombined = `${encodeURIComponent(codaQueryParam)}-${userScore.map(encodeURIComponent).join(',')}`;
 
     // Construct the updated URL with coda and userScore as query parameters
-    const updatedURL = `spell_check_task_4.html?coda=${codacombined}`;
+    const updatedURL = `RTT_ENG_4.html?coda=${codacombined}`;
 
 
     // Update the href attribute of the "next-link" anchor element

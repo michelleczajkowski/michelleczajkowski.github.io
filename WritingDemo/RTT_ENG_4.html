@@ -12,8 +12,6 @@
             font-size: 18px;
         }
 
-
-
         #nextButton {
             display: none; /* Initially hide the Next button */
         }
@@ -25,13 +23,14 @@
         }
 
 
-
     </style>
 </head>
 <body>
-    Results<br>
-    Error-free academic writing is important. Technology is an important tool in achieving error-free writing. But these tools make mistakes too! They miss things, and sometimes give poor advice. <br>
-    Below are the skills needed to collaborate well with technology and writing tools. Where are your weaker areas? 
+    Results<br><br>
+
+
+    <!-- Include your JavaScript file -->
+  
 
     
     <script>
@@ -72,14 +71,24 @@
 
 
 // Function to calculate percentage score for a given group
+// Function to calculate percentage score for a given group
 function calculatePercentageScore(array, elements) {
-    const score = elements.reduce((sum, index) => {
+    const validElements = elements.filter(index => index <= array.length);
+    const countOfOnes = validElements.reduce((count, index) => {
         const value = array[index - 1]; // Subtract 1 to adjust for 0-based indexing
-        return sum + ((isNaN(value) || value === 0) ? 0 : value);
+        return count + ((value === 1) ? 1 : 0);
     }, 0);
 
-    return (score / elements.length) * 100;
+    const totalElements = validElements.length;
+    const percentageScore = (countOfOnes / totalElements) * 100;
+
+    return percentageScore;
 }
+
+
+
+
+
 
 // Define elements for each group
 const scoreElements1 = [1, 2, 4, 5, 7, 8];
@@ -87,35 +96,91 @@ const scoreElements2 = [3, 9];
 const scoreElements3 = [6, 10];
 
 // Calculate and log percentage scores for each group with custom names
-const score_1_option = calculatePercentageScore(codaArray1, scoreElements1);
-const score_1_custom = calculatePercentageScore(codaArray1, scoreElements2);
-const score_1_keep = calculatePercentageScore(codaArray1, scoreElements3);
-
-console.log('Score for codaArray1 (Group 1) (%):', score_1_option);
-console.log('Score for codaArray1 (Group 2) (%):', score_1_custom);
-console.log('Score for codaArray1 (Group 3) (%):', score_1_keep);
+const score_1_option = calculatePercentageScore(codaArray1, scoreElements1).toFixed(1);
+const score_1_custom = calculatePercentageScore(codaArray1, scoreElements2).toFixed(1);
+const score_1_keep = calculatePercentageScore(codaArray1, scoreElements3).toFixed(1);
 
 
+console.log('score_1_option:', score_1_option);
+console.log('score_1_custom', score_1_custom);
+console.log('score_1_keep', score_1_keep);
+
+// Define elements for the second group
+const elementsToMatch = [10, 48, 58, 62, 44, 122, 179, 189];
+
+// Function to calculate the number of matches and misses for a given group
+function calculateMatchesAndMisses(array, elementsToMatch) {
+    let matches = 0;
+    let misses = 0;
+
+    array.forEach(value => {
+        if (elementsToMatch.includes(value)) {
+            matches++;
+        } else {
+            misses++;
+        }
+    });
+
+    return { matches, misses };
+}
+
+// Calculate and log matches and misses for codaArray2
+const { matches: score_2_hit, misses: score_2_miss } = calculateMatchesAndMisses(codaArray2, elementsToMatch);
 
 
+// Filter out 0s and 9s from codaArray3 and sum up all the 1s
+const sumOfOnesInCodaArray3 = codaArray3.reduce((sum, value) => {
+    // Ignore 0s and 9s
+    if (value === 1) {
+        return sum + 1;
+    }
+    return sum;
+}, 0);
 
 
-        
+// Calculate score_2_hit_p
+const score_2_hit_p = score_2_hit / 8 * 100;
+// Calculate score_2_miss_p based on the specified rules
+let score_2_miss_p;
+if (score_2_hit === 0) {
+    score_2_miss_p = 100;
+} else if (score_2_hit === 1) {
+    score_2_miss_p = 80;
+} else if (score_2_hit === 2) {
+    score_2_miss_p = 60;
+} else if (score_2_hit === 3) {
+    score_2_miss_p = 50;
+} else {
+    score_2_miss_p = 30;
+}
+
+console.log('score_2_hit_p',score_2_hit_p);    
+console.log('score_2_miss_p',score_2_miss_p);   
+
+// Calculate score_3_cor
+const score_3_cor = (sumOfOnesInCodaArray3 / 8) * 100;
+
+console.log('score_3_cor',score_3_cor); 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </script>
+function docWrite(variable) {
+    document.write(variable);
+}
+</script>
+<br><br>
+    How well did you interact with the technology's suggestions?<br><br>
+    When the correct version was one of the options provided, you got <script>docWrite(score_1_option)</script>% correct. 
+    <br><br>
+    When the list does NOT contain the correct version, you saw this and entered your own correction <script>docWrite(score_1_custom)</script>% of the time. 
+    <br><br>
+    And when your original word was correct, you ignored the advice <script>docWrite(score_1_keep)</script>% of the times. 
+    <br><br>
+    Of course, sometimes the technology misses errors. You have to carefully check for errors yourself, too.<br>
+    You were able to find <script>docWrite(score_2_hit_p)</script>% of the error that the tech missed. 
+    <br><br>
+    You identified <script>docWrite(score_2_miss)</script> CORRECT words as errors. 
+    <br><br>
+    Finally, you were able to correct <script>docWrite(score_3_cor)</script>% of the errors that the technology missed. 
+    <br><br>
 </body>
 </html>

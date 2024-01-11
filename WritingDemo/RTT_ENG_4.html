@@ -12,24 +12,14 @@
             font-size: 18px;
         }
 
-        #nextButton {
-            display: none; /* Initially hide the Next button */
-        }
+
 
         #sentence {
             background-color: lightgoldenrodyellow; /* Set a light grey background color */
             padding: 10px; /* Add some padding to create space around the text */
             border: 1px solid lightgoldenrodyellow; /* Add a 1px solid grey border */
         }
-        abbr[title]:hover::before {
-            content: '';
-            display: block;
-            position: absolute;
-            background-size: cover;
-            width: 200px; /* Adjust the width of the pop-up as needed */
-            height: 200px; /* Adjust the height of the pop-up as needed */
-            z-index: 1;
-        }
+
 
 
     </style>
@@ -175,7 +165,36 @@ console.log('score_3_cor',score_3_cor);
 function docWrite(variable) {
     document.write(variable);
 }
+// Function to parse query parameters from the URL
+function getQueryParam(parameterName) {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    return urlSearchParams.get(parameterName);
+}
 
+const codaQueryParam = getQueryParam("coda");
+
+// Function to send the result back to the parent window
+function sendResultToParent() {
+    // Check if the parent window exists
+    if (window.opener) {
+        // Send the result to the parent window
+        window.opener.postMessage({ result: codaQueryParam }, "*");
+    }
+}
+
+console.log('codaQueryParam', codaQueryParam)
+
+        // Function to redirect to Qualtrics with codaQueryParam
+        function redirectToQualtrics() {
+            // Check if codaQueryParam exists
+            if (codaQueryParam) {
+                // Redirect to the specified URL with codaQueryParam
+                window.location.href = `https://radboudletteren.eu.qualtrics.com/jfe/form/SV_8wCQ6iEycXJmFwy?coda=${codaQueryParam}`;
+            } else {
+                // Redirect to the URL without codaQueryParam if it doesn't exist
+                window.location.href = "https://radboudletteren.eu.qualtrics.com/jfe/form/SV_8wCQ6iEycXJmFwy";
+            }
+        }
 </script>
 <br>
     Part 1: How well did you interact with the technology's suggestions?<br><br>
@@ -191,6 +210,8 @@ function docWrite(variable) {
     <br><br>
     Part 3: Finally, it's important that you have the language knowledge to be able to correct these errors. 
     <br><br>- You were able to correct <script>docWrite(score_3_cor)</script>% of the errors that the technology missed. 
-    <br><br><abbr title="example" data-img="Example1.jpg" onmouseover="setHoverImage(this)" onmouseout="this.style.backgroundImage=''">example</abbr>
+
+    <br><br><br><br>
+    <button onclick="redirectToQualtrics()">Finish</button>
 </body>
 </html>

@@ -21,6 +21,15 @@
             padding: 10px; /* Add some padding to create space around the text */
             border: 1px solid lightgoldenrodyellow; /* Add a 1px solid grey border */
         }
+        abbr[title]:hover::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background-size: cover;
+            width: 200px; /* Adjust the width of the pop-up as needed */
+            height: 200px; /* Adjust the height of the pop-up as needed */
+            z-index: 1;
+        }
 
 
     </style>
@@ -96,9 +105,9 @@ const scoreElements2 = [3, 9];
 const scoreElements3 = [6, 10];
 
 // Calculate and log percentage scores for each group with custom names
-const score_1_option = calculatePercentageScore(codaArray1, scoreElements1).toFixed(1);
-const score_1_custom = calculatePercentageScore(codaArray1, scoreElements2).toFixed(1);
-const score_1_keep = calculatePercentageScore(codaArray1, scoreElements3).toFixed(1);
+const score_1_option = calculatePercentageScore(codaArray1, scoreElements1).toFixed(0);
+const score_1_custom = calculatePercentageScore(codaArray1, scoreElements2).toFixed(0);
+const score_1_keep = calculatePercentageScore(codaArray1, scoreElements3).toFixed(0);
 
 
 console.log('score_1_option:', score_1_option);
@@ -166,21 +175,22 @@ console.log('score_3_cor',score_3_cor);
 function docWrite(variable) {
     document.write(variable);
 }
+
 </script>
-<br><br>
-    How well did you interact with the technology's suggestions?<br><br>
-    When the correct version was one of the options provided, you got <script>docWrite(score_1_option)</script>% correct. 
+<br>
+    Part 1: How well did you interact with the technology's suggestions?<br><br>
+    - When the correct version was one of the options provided, you got <script>docWrite(score_1_option)</script>% correct. 
     <br><br>
-    When the list does NOT contain the correct version, you saw this and entered your own correction <script>docWrite(score_1_custom)</script>% of the time. 
+    - When the list does NOT contain the correct version, you saw this and entered your own correction <script>docWrite(score_1_custom)</script>% of the time. 
     <br><br>
-    And when your original word was correct, you ignored the advice <script>docWrite(score_1_keep)</script>% of the times. 
+    - And when your original word was correct, you ignored the advice <script>docWrite(score_1_keep)</script>% of the times. 
     <br><br>
-    Of course, sometimes the technology misses errors. You have to carefully check for errors yourself, too.<br>
-    You were able to find <script>docWrite(score_2_hit_p)</script>% of the error that the tech missed. 
+    Part 2: Of course, sometimes the technology misses errors. You have to carefully check for errors yourself, too.
+    <br><br>- You were able to find <script>docWrite(score_2_hit_p)</script>% of the error that the tech missed. 
+    <br><br>- You identified <script>docWrite(score_2_miss)</script> CORRECT words as errors. 
     <br><br>
-    You identified <script>docWrite(score_2_miss)</script> CORRECT words as errors. 
-    <br><br>
-    Finally, you were able to correct <script>docWrite(score_3_cor)</script>% of the errors that the technology missed. 
-    <br><br>
+    Part 3: Finally, it's important that you have the language knowledge to be able to correct these errors. 
+    <br><br>- You were able to correct <script>docWrite(score_3_cor)</script>% of the errors that the technology missed. 
+    <br><br><abbr title="example" data-img="Example1.jpg" onmouseover="setHoverImage(this)" onmouseout="this.style.backgroundImage=''">example</abbr>
 </body>
 </html>

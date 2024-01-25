@@ -189,10 +189,10 @@ console.log('codaQueryParam', codaQueryParam)
             // Check if codaQueryParam exists
             if (codaQueryParam) {
                 // Redirect to the specified URL with codaQueryParam
-                // window.location.href = `https://radboudletteren.eu.qualtrics.com/jfe/form/SV_8wCQ6iEycXJmFwy?coda=${codaQueryParam}`;
+                window.location.href = `https://radboudletteren.eu.qualtrics.com/jfe/form/SV_8wCQ6iEycXJmFwy?coda=${codaQueryParam}`;
             } else {
                 // Redirect to the URL without codaQueryParam if it doesn't exist
-                // window.location.href = "https://radboudletteren.eu.qualtrics.com/jfe/form/SV_8wCQ6iEycXJmFwy";
+                window.location.href = "https://radboudletteren.eu.qualtrics.com/jfe/form/SV_8wCQ6iEycXJmFwy";
             }
         }
 </script>
@@ -212,6 +212,6 @@ console.log('codaQueryParam', codaQueryParam)
     <br><br>- You were able to correct <script>docWrite(score_3_cor)</script>% of the errors that the technology missed. 
 
     <br><br><br><br>
-    <button onclick="redirectToQualtrics()">Finish</button>
+    // <button onclick="redirectToQualtrics()">Finish</button>
 </body>
 </html>

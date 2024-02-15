@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test: Results</title>
-    <style>
+    <style> 
         /* Add styles for the entire body for better presentation */
         body {
             font-family: 'Open Sans', Arial, sans-serif;
@@ -12,65 +12,53 @@
             font-size: 18px;
         }
 
-
-
         #sentence {
             background-color: lightgoldenrodyellow; /* Set a light grey background color */
             padding: 10px; /* Add some padding to create space around the text */
             border: 1px solid lightgoldenrodyellow; /* Add a 1px solid grey border */
         }
-
-
-
     </style>
 </head>
+
 <body>
     Results<br><br>
-
-
-    <!-- Include your JavaScript file -->
-  
-
-    
     <script>
-        // Function to parse query parameters from the URL
+        // Function to parse query parameters from the URL (this function retrieves from the URL the student's answers from the test)
         function getQueryParam(parameterName) {
             const urlSearchParams = new URLSearchParams(window.location.search);
             return urlSearchParams.get(parameterName);
         }
-
-        // Retrieve the updated coda value from the URL
+        // Retrieve the updated coda value from the URL (the retrieval function in action)
         const updatedCodaQueryParam = getQueryParam('coda');
 
-        // Log the value of coda to the console
+        // Log the value of coda to the console (adds answers to the console, making it easy to check on the development side)
         console.log('coda:', updatedCodaQueryParam);
 
-        // Split the coda string by commas
+        // Split the coda string by commas (each of the three test section answers are separated by a comma)
         const codaParts = updatedCodaQueryParam.split(',');
 
-        // Separate into coda1, coda2, and coda3
+        // Separate into coda1, coda2, and coda3 (answers for test section 1, 2 and 3 separated for grading and feedback purposes)
         const coda1 = codaParts[0];
         const coda2 = codaParts[1];
         const coda3 = codaParts[2];
 
-        // Log the values of coda1, coda2, and coda3 to the console
+        // Log the values of coda1, coda2, and coda3 to the console (again, add to console for easy checking in development)
         console.log('coda1:', coda1);
         console.log('coda2:', coda2);
         console.log('coda3:', coda3);
 
-        // Convert each codaX string into an array of numbers
+        // Convert each codaX string into an array of numbers (creates arrays of individual test answers for each test section)
         const codaArray1 = coda1.split('-').map(Number);
         const codaArray2 = coda2.split('-').map(Number);
         const codaArray3 = coda3.split('-').map(Number);
 
-        // Log the arrays to the console
+        // Log the arrays to the console (again, add to console so I can check its working)
         console.log('codaArray1:', codaArray1);
         console.log('codaArray2:', codaArray2);
         console.log('codaArray3:', codaArray3);
 
 
-// Function to calculate percentage score for a given group
-// Function to calculate percentage score for a given group
+// Function to calculate percentage score for a given group (this refers to part 1 where there are three different subskills tested)
 function calculatePercentageScore(array, elements) {
     const validElements = elements.filter(index => index <= array.length);
     const countOfOnes = validElements.reduce((count, index) => {
@@ -84,17 +72,12 @@ function calculatePercentageScore(array, elements) {
     return percentageScore;
 }
 
-
-
-
-
-
-// Define elements for each group
+// Define elements for each subskill group - question numbers that correspond to choose right answer, correct in own way, keep as is
 const scoreElements1 = [1, 2, 4, 5, 7, 8];
 const scoreElements2 = [3, 9];
 const scoreElements3 = [6, 10];
 
-// Calculate and log percentage scores for each group with custom names
+// Calculate and log percentage scores for each of these subskills and log to console
 const score_1_option = calculatePercentageScore(codaArray1, scoreElements1).toFixed(0);
 const score_1_custom = calculatePercentageScore(codaArray1, scoreElements2).toFixed(0);
 const score_1_keep = calculatePercentageScore(codaArray1, scoreElements3).toFixed(0);
@@ -104,10 +87,10 @@ console.log('score_1_option:', score_1_option);
 console.log('score_1_custom', score_1_custom);
 console.log('score_1_keep', score_1_keep);
 
-// Define elements for the second group
+// Define elements for the second group - question numbers of right answers for part 2 - find errors
 const elementsToMatch = [10, 48, 58, 62, 44, 122, 179, 189];
 
-// Function to calculate the number of matches and misses for a given group
+// Function to calculate the number of matches and misses, in other words which words are correctly identified as incorrect, and incorrectly identified as incorrect. 
 function calculateMatchesAndMisses(array, elementsToMatch) {
     let matches = 0;
     let misses = 0;
@@ -127,7 +110,7 @@ function calculateMatchesAndMisses(array, elementsToMatch) {
 const { matches: score_2_hit, misses: score_2_miss } = calculateMatchesAndMisses(codaArray2, elementsToMatch);
 
 
-// Filter out 0s and 9s from codaArray3 and sum up all the 1s
+// Filter out 0s and 9s from codaArray3 and sum up all the 1s - this is the score for part 3, in which the errors and highlighted and must be corrected. 9 represents an answer that was not attempted. 0 is an answer that was wrong.
 const sumOfOnesInCodaArray3 = codaArray3.reduce((sum, value) => {
     // Ignore 0s and 9s
     if (value === 1) {
@@ -137,9 +120,9 @@ const sumOfOnesInCodaArray3 = codaArray3.reduce((sum, value) => {
 }, 0);
 
 
-// Calculate score_2_hit_p
+// Calculate score_2_hit_p - This provides a score for part 2. In theory, an very large number of misses could be recorded. This sets the parameters for how many misses equals what score.; 0 = 100, 1=80 and so on
 const score_2_hit_p = score_2_hit / 8 * 100;
-// Calculate score_2_miss_p based on the specified rules
+// Calculate score_2_miss_p based on the specified rules - anything more than 3 is automatically assigned a 30%
 let score_2_miss_p;
 if (score_2_hit === 0) {
     score_2_miss_p = 100;
@@ -152,20 +135,20 @@ if (score_2_hit === 0) {
 } else {
     score_2_miss_p = 30;
 }
-
+// Record these scores to console.
 console.log('score_2_hit_p',score_2_hit_p);    
 console.log('score_2_miss_p',score_2_miss_p);   
 
-// Calculate score_3_cor
+// Calculate score_3_cor - This is the score in percentage for part 3
 const score_3_cor = (sumOfOnesInCodaArray3 / 8) * 100;
-
+// log to console
 console.log('score_3_cor',score_3_cor); 
 
-
+// this function sets up the ability to pull one of the variables just defined into the output of the html (so the test taker can see their score!)
 function docWrite(variable) {
     document.write(variable);
 }
-// Function to parse query parameters from the URL
+// Function to parse query parameters from the URL - The below steps basically grab the responses from the URL (the test taker answer) and sends them back to the open window, which in this case would be qualtrics survey. 
 function getQueryParam(parameterName) {
     const urlSearchParams = new URLSearchParams(window.location.search);
     return urlSearchParams.get(parameterName);
@@ -212,6 +195,7 @@ console.log('codaQueryParam', codaQueryParam)
     <br><br>- You were able to correct <script>docWrite(score_3_cor)</script>% of the errors that the technology missed. 
 
     <br><br><br><br>
-    <!-- <button onclick="redirectToQualtrics()">Finish</button> -->
+    <!-- Add a button after your text -->
+    <button onclick="redirectToQualtrics()">Go to Qualtrics Survey</button>
 </body>
 </html>

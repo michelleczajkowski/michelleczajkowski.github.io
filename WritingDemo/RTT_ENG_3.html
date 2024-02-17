@@ -154,11 +154,10 @@ function handleKeydown(event) {
 }
 
 document.getElementById('save-button').addEventListener('click', () => {
-    // Display the correct answer and the "Next" button when the "Check" button is clicked
+    // Display the correct answer and the "Next" button
     answerContainer.style.display = 'block';
     correctAnswer.innerHTML = `Test is finished. Click next to receive results.`;
 
-    // Combine codaQueryParam and userScore with a comma
     // Create a new array with eight 9s
     const fullUserScore = Array(8).fill(9);
 
@@ -170,9 +169,6 @@ document.getElementById('save-button').addEventListener('click', () => {
     // Combine codaQueryParam and fullUserScore with eight 9s separated by hyphens
     const codacombined = `${codaQueryParam},${fullUserScore.join('-')}`;
 
-
-
-
     // Construct the URL for the "Next" button using codacombined
     const nextLink = document.getElementById('next-link');
     const updatedURL = `RTT_ENG_4.html?coda=${encodeURIComponent(codacombined)}`;
@@ -181,6 +177,7 @@ document.getElementById('save-button').addEventListener('click', () => {
     // Redirect to the updated URL
     window.location.href = updatedURL;
 });
+
 
 highlightedElements.forEach(element => {
     element.addEventListener('click', () => {

@@ -148,8 +148,7 @@ console.log('score_2_miss_p',score_2_miss_p);
 const score_3_cor = (sumOfOnesInCodaArray3 / 8) * 100;
 // log to console
 console.log('score_3_cor',score_3_cor); 
-const total_score = (((score_1_option+score_1_keep+score_1_custom)/3) + ((score_2_hit_p+score_2_miss_p)/2) + score_3_cor)/3;
-consol.log('total_score');
+
 // this function sets up the ability to pull one of the variables just defined into the output of the html (so the test taker can see their score!)
 function docWrite(variable) {
     document.write(variable);
@@ -178,7 +177,7 @@ console.log('codaQueryParam', codaQueryParam)
             // Check if codaQueryParam exists
             if (codaQueryParam) {
                 // Redirect to the specified URL with codaQueryParam
-                window.location.href = `https://radboudletteren.eu.qualtrics.com/jfe/form/SV_8wCQ6iEycXJmFwy?coda=${codaQueryParam}&oneone=${score_1_option}&onetwo=${score_1_custom}&onethree=${score_1_keep}&twoone=${score_2_hit_p}&twotwo=${score_2_miss_p}&three=${score_3_cor}&total=${total_score}`;
+                window.location.href = `https://radboudletteren.eu.qualtrics.com/jfe/form/SV_8wCQ6iEycXJmFwy?coda=${codaQueryParam}&oneone=${score_1_option}&onetwo=${score_1_custom}&onethree=${score_1_keep}&twoone=${score_2_hit_p}&twotwo=${score_2_miss_p}&three=${score_3_cor}`;
             } else {
                 // Redirect to the URL without codaQueryParam if it doesn't exist
                 window.location.href = "https://radboudletteren.eu.qualtrics.com/jfe/form/SV_8wCQ6iEycXJmFwy";

@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Test</title>
+    <title>The Revision Tool Test</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap">
 
     <style type="text/css">
         body, html {
@@ -11,34 +12,50 @@
             padding: 0;
             background: transparent;
         }
-
+    
         .box {
             width: 100%;
             height: 100vh;
-            background-size: cover;
-            background-position: 50% 50%;
+            background-size: 100% auto;
+            background-position: 50% 0%;
+            background-repeat: no-repeat;
             position: fixed;
             top: 0;
             left: 0;
             opacity: 0;
             z-index: -1;
         }
-
+    
         .box-placeholder {
             position: relative;
-            height: 600vh; /*bestimmt den widerstand*/
+            height: 700vh;
             background: transparent;
-            font: opensans;
-            font-size: 30px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
             color: #4a0004;
             padding-left: 2em;
             box-sizing: content-box;
         }
-
+    
         .inner-text {
             position: absolute;
+            width: 40%;
+            left: 0;
+            font-family: 'Open Sans', sans-serif;
+            padding-left: 5vw; /* Add left padding of 5% of the screen width */
         }
+    
+        .dutch {
+            color:#e3000b;
+            text-align: center;
+        }
+            
+</style>
     </style>
+    
+    
+    
+    
 
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 </head>
@@ -46,36 +63,108 @@
 
 <div class="boxes">
     <div class="box"
-         style="background-image: url('RADArresults.jpg');opacity:1;"></div>
+         style="background-image: url('typing.jpg');opacity:1;"></div>    
     <div class="box"
-         style="background-image: url('http://graphics.wsj.com/hostage/img/bunker16x9/2.jpg');"></div>
+         style="background-image: url('studyskills.jpg');opacity:0;"></div>
     <div class="box"
-         style="background-image: url('http://graphics.wsj.com/hostage/img/bunker16x9/3.jpg');"></div>
+         style="background-image: url('RADArresults.jpg');"></div>
     <div class="box"
-         style="background-image: url('http://graphics.wsj.com/hostage/img/bunker16x9/4.jpg');"></div>
+         style="background-image: url('examples.jpg');"></div>
     <div class="box"
-         style="background-image: url('http://graphics.wsj.com/hostage/img/bunker16x9/5.jpg');"></div>
+         style="background-image: url('spellcheck.jpg');"></div>
     <div class="box"
-         style="background-image: url('http://graphics.wsj.com/hostage/img/bunker16x9/6.jpg');"></div>
+         style="background-image: url('digitalnative.jpg');"></div>
+    <div class="box"
+         style="background-image: url('model.jpg');"></div>
+    <div class="box"
+         style="background-image: url('feedback.jpg');"></div>
+    <div class="box"
+         style="background-image: url('computer.jpg');"></div>
+
 </div>
 
 <div class="box-placeholder">
-    <div class="inner-text" style="top: 100vh;">As of my last knowledge update in January 2022, I do not have specific information about an R package named "rolldown." Similar to the previous case with "parallaxr," the availability and details of packages can change over time.
+    <div class="inner-text" style="top: 15vh; font-size: 30px;" >
+        <b>The Revision Tool Test<br><br>An experimental test of academic writing skills. 
+        <br><br>
+        <span class="dutch">De Revision Tool Test<br><br>Een experimentele test van academische schrijfvaardigheden.
+        </span><br><br></b>
+    </div>
+    <div class="inner-text" style="top: 90vh;">
+        All first-year students take the RADAr (Radboud Academic Diagnostic Assessment). This diagnostic tests provides feedback to students on individual language areas (e.g. spelling, reading comprehension) so they know what to focus on when improving their language skills.  
+        <br><br><span class="dutch">
+        Alle eerstejaars maken de RADAr (Radboud Academic Diagnostic Assessment). Deze diagnostische toets geeft feedback aan studenten op individuele taalgebieden (bijv. spelling, begrijpend lezen), zodat ze weten waar ze zich op moeten richten bij het verbeteren van hun taalvaardigheid.
+        </span>    
+    </div>
+    <div class="inner-text" style="top: 170vh;">
+        Students struggle with the Writing Section of the test. In this graph, Dutch (triangle) and English (circle) RADAr scores from different years and faculties show this broad pattern.
+        <br><br><span class="dutch">
+        Studenten hebben moeite met het onderdeel schrijven van de toets. In deze grafiek laten Nederlandse (driehoek) en Engelse (cirkel) RADAr scores van verschillende jaren en faculteiten dit brede patroon zien.
+        </span>    
+    </div>
+    <div class="inner-text" style="top: 250vh;">
+        The Writing Section measures in part the knowledge that students have about mechanics (spelling, punctuation, grammar). These are the types of errors that cause frustration in instructors. They feel that students should have the knowledge needed to produce polished writing. And they’re right. 
+        <br><br><span class="dutch">
+            Het onderdeel Schrijven meet o.a. de kennis die leerlingen hebben over spelling, interpunctie, en grammatica. Dit zijn de soorten fouten die frustratie opwekken bij docenten en instructeurs. Ze vinden dat studenten de kennis moeten hebben die nodig is om verzorgd te schrijven. En ze hebben gelijk.    
+        </span>    
+    </div>
+    <div class="inner-text" style="top: 320vh;">
+        However, authentic academic writing today will typically involve some kind of technology. Spelling and grammar checkers are one example. These can help students find and correct errors. Unlike technology like chat GPT, simple tools like spell check are not only allowed by instructors, they are encouraged. 
+        <br><br><span class="dutch">
+            Bij authentiek academisch schrijven wordt tegenwoordig echter meestal gebruik gemaakt van technologie. Spelling- en grammaticacontrole zijn daar een voorbeeld van. Deze kunnen studenten helpen om fouten te vinden en te corrigeren. In tegenstelling tot technologie zoals chat GPT, worden eenvoudige tools zoals spellingcontrole niet alleen toegestaan door docenten, maar zelfs aangemoedigd.    
+        </span>    
+    </div>
+    <div class="inner-text" style="top: 400vh;">
+        We may think that students learned to write using these tools, and that they use them well. That is not so. Research shows that novice writers (like first year university students) do not always use these tools well. This can have a negative effect on their submitted academic work.
+        <br><br><span class="dutch">
+            We denken dat studenten hebben leren schrijven met deze hulpmiddelen en dat ze ze goed gebruiken. Dat is niet zo. Onderzoek toont aan dat beginnende schrijvers (zoals eerstejaars universiteitsstudenten) deze hulpmiddelen niet altijd goed gebruiken. Dit kan een negatief effect hebben op hun academische werk.</span>    
+    </div>
+    <div class="inner-text" style="top: 480vh;">
+        The Revision Tool Test measures the use of simple revision tools like spelling and grammar checkers based on a model of human-machine decision-making. When the machine identifies a potential error, can you correct it? When the machine fails to identify an error, can you find it yourself? Once you find that error, can you correct it accurately?
+        <br><br><span class="dutch">
+        De Revision Tool Test meet het gebruik van eenvoudige correctietools zoals spelling- en grammaticacontrole op basis van een model van mens-machine besluitvorming. Wanneer de machine een potentiële fout identificeert, kun je deze dan corrigeren? Als de machine een fout niet herkent, kun je die dan zelf vinden? Als je de fout hebt gevonden, kun je deze dan nauwkeurig corrigeren?
+        </span>    
+    </div>
+    <div class="inner-text" style="top: 560vh;">
+        The Revision Tool Test provides detailed diagnostic feedback on six different ‘can do’ statements, and advice on how students can improve their awareness, skills and language knowledge. 
+        <br><br><span class="dutch">
+        De Revision Tool Test geeft gedetailleerde diagnostische feedback op zes verschillende 'can do' stellingen en advies over hoe studenten hun bewustzijn, vaardigheden en taalkennis kunnen verbeteren.   
+        </span>    
+    </div>
+    <div class="inner-text" style="top: 640vh;">
+        To pilot the test, we would like to reach out to all first year students and encourage them to take the test, starting in March. We will also ask students to provide their s-number (optional) so that we can compare their performance on the Writing Section with their score on this new test. We expect that the revision tools test will make students more aware of skillful use of these tools. We are also curious how well performance on this test relates to RADAr Writing scores. 
+        In a few weeks, once the March RADAr has finished, I will write to you and give you an update on the project, and ask if you could promote the test in your faculty. 
+        <br><br><span class="dutch">
+        Om de test te testen, willen we alle eerstejaars studenten aansporen om de test vanaf maart te maken. We zullen studenten ook vragen om hun s-nummer op te geven (optioneel), zodat we hun prestaties op het onderdeel Schrijven kunnen vergelijken met hun score op deze nieuwe test. We verwachten dat de toets met revisiehulpmiddelen leerlingen bewuster zal maken van het vaardig gebruik van deze hulpmiddelen. We zijn ook benieuwd hoe goed de prestaties op deze toets zich verhouden tot de scores op RADAr Writing. 
+        Over een paar weken, als de RADAr van maart klaar is, zal ik je schrijven en je een update geven over het project, en vragen of je de test zou kunnen promoten in je faculteit. 
+        </span>    
+    </div>
+    <div class="inner-text" style="top: 760vh;">
+        You can try the test for yourself <a href=https://michelleczajkowski.github.io/WritingDemo/RTT_ENG_1.html target="_blank">here!</a>*<br><br>
+        * The final touches are still being made; minor changes will be added. 
+        Your suggestions are welcome by emailing <a href="mailto:michelle.czajkowski@ru.nl">michelle.czajkowski@ru.nl</a>. Dutch language test to follow shortly!
+        <br><br><span class="dutch">
+        Je kunt de test <a href=https://michelleczajkowski.github.io/WritingDemo/RTT_ENG_1.html target="_blank">hier</a> uitproberen!*<br><br>
+        * De laatste puntjes op de i worden nog gezet; er zullen nog kleine wijzigingen worden aangebracht. 
+        Suggesties zijn welkom door te mailen naar <a href="mailto:michelle.czajkowski@ru.nl">michelle.czajkowski@ru.nl</a>. Nederlandstalige versie volgt binnenkort!  
+               
+        </span>    
+    </div>
+    <div class="inner-text" style="top: 285vh;">
+        
+        <br><br><span class="dutch">
+            
+        </span>    
+    </div>
+    <div class="inner-text" style="top: 900vh;">
+        <a href="https://www.freepik.com/free-vector/student-centered-education-knowledge-gaining-remote-graduation-bite-sized-learning-learn-own-pace-flexible-learning-process-concept_10782704.htm#query=academic%20language%20skills&position=30&from_view=search&track=ais&uuid=e1d532ed-6374-47a6-aea5-564088724b5b">Image by vectorjuice</a> on Freepik
+        <a href="https://www.freepik.com/free-photo/little-girl-playing-computer_3274177.htm#query=typing%20student&position=11&from_view=search&track=ais&uuid=93459a9e-cb59-4dfc-b95b-cb171b63db87">Image by rawpixel.com</a> on Freepik
+        <a href="https://www.freepik.com/free-vector/color-theory-online-studying-web-design-basics-drawing-tutorial-interior-designer-female-artist-cartoon-character-holding-pencil_12085850.htm#query=academic%20computer&position=1&from_view=search&track=ais&uuid=f7db3a67-b216-4fa2-927a-4d6211bac9a7">Image by vectorjuice</a> on Freepik
+        <br><br><span class="dutch">
+            
+        </span>    
+    </div>    
 
-        To learn more about the "rolldown" package, I recommend checking the following sources:
-        
-            CRAN (Comprehensive R Archive Network): Use the install.packages("rolldown") command to attempt installing the package from CRAN. If it's available on CRAN, the package documentation and details might be found there.
-        
-            GitHub Repository: If the package is not on CRAN, it might be hosted on GitHub. You can search for the package on GitHub or use the devtools::install_github("username/rolldown") command to install it directly from GitHub. Replace "username" with the actual GitHub username or organization.
-        
-            Author's Website or Documentation: Check if the author or maintainers of the package have provided documentation, a README file, or any information on their website or associated documentation.
-        
-            Online Forums and Communities: Look for discussions or mentions of the "rolldown" package in online R forums, such as Stack Overflow or the RStudio Community. Users might share their experiences or provide insights into the package.
-        
-        Always make sure to refer to the most recent and official sources for the package information. If the package is actively maintained, you should find relevant details on how to use it, its purpose, and any examples of its application.</div>
-    <div class="inner-text" style="top: 300vh;">2. Text über Bild</div>
-    <div class="inner-text" style="top: 500vh;">3 - i wonder how this works i'm going to change the vh to 50. </div>
-</div>
 
 
 <script>
@@ -104,7 +193,7 @@
             var currentIndex = Math.floor(division);
             var rest = division - currentIndex;
             // TODO don't update all elements on every call
-            for (var i = 0; i < currentIndex; i++) {
+            for (var i = 1; i < currentIndex; i++) {
                 elements[i].style.opacity = 1;
             }
             elements[currentIndex].style.opacity = rest;

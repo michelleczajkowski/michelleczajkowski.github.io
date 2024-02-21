@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+
+    <style type="text/css">
+        body, html {
+            margin: 0;
+            padding: 0;
+            background: transparent;
+        }
+
+        .box {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: 50% 50%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        .box-placeholder {
+            position: relative;
+            height: 600vh; /*bestimmt den widerstand*/
+            background: transparent;
+            font: opensans;
+            font-size: 30px;
+            color: #4a0004;
+            padding-left: 2em;
+            box-sizing: content-box;
+        }
+
+        .inner-text {
+            position: absolute;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+<body>
+
+<div class="boxes">
+    <div class="box"
+         style="background-image: url('RADArresults.jpg');opacity:1;"></div>
+    <div class="box"
+         style="background-image: url('http://graphics.wsj.com/hostage/img/bunker16x9/2.jpg');"></div>
+    <div class="box"
+         style="background-image: url('http://graphics.wsj.com/hostage/img/bunker16x9/3.jpg');"></div>
+    <div class="box"
+         style="background-image: url('http://graphics.wsj.com/hostage/img/bunker16x9/4.jpg');"></div>
+    <div class="box"
+         style="background-image: url('http://graphics.wsj.com/hostage/img/bunker16x9/5.jpg');"></div>
+    <div class="box"
+         style="background-image: url('http://graphics.wsj.com/hostage/img/bunker16x9/6.jpg');"></div>
+</div>
+
+<div class="box-placeholder">
+    <div class="inner-text" style="top: 100vh;">As of my last knowledge update in January 2022, I do not have specific information about an R package named "rolldown." Similar to the previous case with "parallaxr," the availability and details of packages can change over time.
+
+        To learn more about the "rolldown" package, I recommend checking the following sources:
+        
+            CRAN (Comprehensive R Archive Network): Use the install.packages("rolldown") command to attempt installing the package from CRAN. If it's available on CRAN, the package documentation and details might be found there.
+        
+            GitHub Repository: If the package is not on CRAN, it might be hosted on GitHub. You can search for the package on GitHub or use the devtools::install_github("username/rolldown") command to install it directly from GitHub. Replace "username" with the actual GitHub username or organization.
+        
+            Author's Website or Documentation: Check if the author or maintainers of the package have provided documentation, a README file, or any information on their website or associated documentation.
+        
+            Online Forums and Communities: Look for discussions or mentions of the "rolldown" package in online R forums, such as Stack Overflow or the RStudio Community. Users might share their experiences or provide insights into the package.
+        
+        Always make sure to refer to the most recent and official sources for the package information. If the package is actively maintained, you should find relevant details on how to use it, its purpose, and any examples of its application.</div>
+    <div class="inner-text" style="top: 300vh;">2. Text über Bild</div>
+    <div class="inner-text" style="top: 500vh;">3 - i wonder how this works i'm going to change the vh to 50. </div>
+</div>
+
+
+<script>
+    $(function () {
+        var dimensions = {}, elements = [];
+
+        var onResize = function () {
+            dimensions.windowHeight = $(window).height();
+            dimensions.boxHeight = $('.box-placeholder').height();
+            dimensions.boxOffsetTop = $('.box-placeholder').offset().top;
+        };
+        $(window).resize(onResize);
+
+        $(document).on('ready', function () {
+            $('.box').each(function (index, box) {
+                if (index === 0) return true;
+                elements.push(box);
+            });
+            onResize();
+        });
+
+        document.addEventListener('scroll', function () {
+            var scrollPosition = window.scrollY - dimensions.boxOffsetTop;
+            if (scrollPosition < 0) return true;
+            var division = scrollPosition / (dimensions.boxHeight / (elements.length + 1));
+            var currentIndex = Math.floor(division);
+            var rest = division - currentIndex;
+            // TODO don't update all elements on every call
+            for (var i = 0; i < currentIndex; i++) {
+                elements[i].style.opacity = 1;
+            }
+            elements[currentIndex].style.opacity = rest;
+            for (var i = currentIndex + 1; i < elements.length; i++) {
+                elements[i].style.opacity = 0;
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

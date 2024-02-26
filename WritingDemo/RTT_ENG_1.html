@@ -142,7 +142,8 @@ Revision Test: Part 1
        <div id="glossaryBox">
     <p><strong></strong></p>
     <p>
-    <b>insulate</b> (something) (from/against something) to protect something with a material that prevents heat, sound, electricity, etc. from passing through Homeowners are being encouraged to insulate their homes to save energy.   
+    <b>insulate</b> (something) (from/against something) to protect something with a material that prevents heat, 
+    sound, electricity, etc., from passing through. E.g. Homeowners are being encouraged to <i>insulate</i> their homes to save energy.   
     </p>
 </div>
 <button id="checkButton">Click When Finished</button>
@@ -388,7 +389,7 @@ Revision Test: Part 1
         const codaQueryParam = coda.replace(/,/g, '%2C');
 
         // Redirect to the next page with coda as a query parameter
-        window.location.href = `RTT_ENG_2.html?coda=${codaQueryParam}`;
+        window.location.href = `RTT_ENG_2.html?random=${RandomQueryParam}&?coda=${codaQueryParam}`;
     }
 
 
@@ -396,6 +397,11 @@ Revision Test: Part 1
     const nextButton = document.getElementById("nextButton");
     nextButton.addEventListener("click", handleNextButtonClick);
 
+    // Retrieve the coda value from the URL
+    const RandomQueryParam = getQueryParam("random");
+
+    // You can now use the codaQueryParam as needed on this page
+    console.log(`Received Random ID from previous page: ${RandomQueryParam}`);
     
 </script>
 </body>

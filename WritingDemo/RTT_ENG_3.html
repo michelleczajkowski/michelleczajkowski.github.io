@@ -191,6 +191,12 @@ const codaQueryParam = getQueryParam("coda");
 // Now, you can use the codaQueryParam as needed on this page
 console.log(`Received coda from previous page: ${codaQueryParam}`);
 
+// Retrieve the coda value from the URL
+const randomQueryParam = getQueryParam("random");
+
+// You can now use the codaQueryParam as needed on this page
+console.log(`Received random from previous page: ${randomQueryParam}`);
+
 // Function to handle the "Next" button click
 function handleNextButtonClick() {
     // Encode the coda variable as a query parameter
@@ -202,7 +208,7 @@ function handleNextButtonClick() {
     //const codacombined = `${encodeURIComponent(codaQueryParam)}-${userScore.map(encodeURIComponent).join(',')}`;
 
     // Construct the updated URL with coda and userScore as query parameters
-    const updatedURL = `RTT_ENG_4.html?coda=${codacombined}`;
+    const updatedURL = `RTT_ENG_4.html?coda=${codacombined}&random=${randomQueryParam}`;
 
 
     // Update the href attribute of the "next-link" anchor element

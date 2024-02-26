@@ -171,7 +171,7 @@ document.getElementById('save-button').addEventListener('click', () => {
 
     // Construct the URL for the "Next" button using codacombined
     const nextLink = document.getElementById('next-link');
-    const updatedURL = `RTT_ENG_4.html?coda=${encodeURIComponent(codacombined)}`;
+    const updatedURL = `RTT_ENG_4.html?coda=${encodeURIComponent(codacombined)}&random=${randomQueryParam}`;
     nextLink.href = updatedURL;
 
     // Redirect to the updated URL

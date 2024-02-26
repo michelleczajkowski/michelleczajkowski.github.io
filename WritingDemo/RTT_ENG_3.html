@@ -201,6 +201,7 @@ console.log(`Received random from previous page: ${randomQueryParam}`);
 function handleNextButtonClick() {
     // Encode the coda variable as a query parameter
     const codaQueryParam = encodeURIComponent(coda);
+    const randomQueryParam = encodeURIComponent(random);
 
     // Combine codaQueryParam and userScore with a comma
     //const codacombined = codaQueryParam + ',' + userScore;

@@ -120,7 +120,7 @@ function showPopup(element) {
 let userResponses = [];
 function replaceHighlightedText() {
     if (currentHighlightedIndex !== -1) {
-        const userCorrection = replacementText.value.toLowerCase();
+        const userCorrection = replacementText.value.toLowerCase().trim();
         const correctCorrection = correctVersions[currentHighlightedIndex].toLowerCase();
 
         // Determine correctness and push the value into the userScore array

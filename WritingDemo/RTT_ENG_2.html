@@ -26,7 +26,10 @@
 </head>
 <body>
     Part 2 <br>
-    <p>In Task 1, you may have noticed a few other errors that the spelling and grammar checker didn't catch. Here's some extracts from the same text. Can you find the errors in spelling and grammar? Click on any words which are wrong (you don't need to correct them). There are no more than 10, but there may be fewer than 10.
+    <p>In Task 1, you may have noticed a few other errors that the spelling and grammar checker didn't catch. 
+        Here are some extracts from the same text. Can you find the errors in spelling and grammar? 
+        Click on any words which are wrong (you don't need to correct them). There are no more than 10, 
+        but there may be fewer than 10.
     </p>
     
     
@@ -103,7 +106,7 @@
                 const updatedCoda = `${codaQueryParam},${selectedWordsText}`;
 
                 // Redirect the user to the new URL with the updated coda parameter
-                window.location.href = `RTT_ENG_3.html?coda=${updatedCoda}`;
+                window.location.href = `RTT_ENG_3.html?coda=${updatedCoda}&random=${randomQueryParam}`;
             });
 
         });
@@ -118,6 +121,12 @@
 
     // You can now use the codaQueryParam as needed on this page
     console.log(`Received coda from previous page: ${codaQueryParam}`);
+    
+    // Retrieve the coda value from the URL
+    const randomQueryParam = getQueryParam("random");
+
+    // You can now use the codaQueryParam as needed on this page
+    console.log(`Received random from previous page: ${randomQueryParam}`);
 
     </script>
 </body>

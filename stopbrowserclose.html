@@ -12,11 +12,13 @@
 <p>you will be disconnected from the researcher's computer...</p>
 
 <script>
-window.addEventListener('beforeunload', function (e) {
-    var confirmationMessage = 'Are you sure you want to leave this page?'; // Message shown to the user
-    e.returnValue = confirmationMessage; // Gecko, Trident, Chrome 34+
-    return confirmationMessage; // Gecko, WebKit, Chrome <34
-});
+function main() {
+    window.addEventListener('beforeunload', function (e) {
+        var confirmationMessage = 'Are you sure you want to leave this page?'; // Message shown to the user
+        e.returnValue = confirmationMessage; // Gecko, Trident, Chrome 34+
+        return confirmationMessage; // Gecko, WebKit, Chrome <34
+    });
+}
 </script>
 
 </body>

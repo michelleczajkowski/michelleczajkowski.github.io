@@ -1,0 +1,925 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="Style/source_analysis.xsl"?>
+<session>
+  <meta>
+    <entry name="Logfile" value="194104_0.idfx" />
+    <entry name="MainDocument" value="Writing Task 194104.20240513193934.docx" />
+    <entry name="LogCreationDate" value="13/05/24 19:39:36.821" />
+    <entry name="LogGUID" value="c0e83394-a0df-4277-8440-4b61282f4fd0" />
+    <entry name="LogProgramVersion" value="9.5.0.1" />
+    <entry name="AnalysisCreationDate" value="27/05/24 17:45:31" />
+    <entry name="AnalysisGUID" value="51ef6772-fb3e-49ca-9a4d-1e5845b5be4c" />
+    <entry name="AnalysisProgramVersion" value="9.5.0.1" />
+  </meta>
+  <sessionIdentification>
+    <entry name="Participant" value="194104" />
+    <entry name="Text Language" value="EN" />
+    <entry name="Age" value="" />
+    <entry name="Gender" value="" />
+    <entry name="Session" value="" />
+    <entry name="Group" value="" />
+    <entry name="Experience" value="" />
+    <entry name="Restricted Logging" value="" />
+  </sessionIdentification>
+  <module name="Window Statistics">
+    <block name="Total Time(s)">
+      <element name="* Time before the first window *" value="0.000" />
+      <element name="Inputlog 9.5.0.1" value="13.390" />
+      <element name="TASKBAR" value="16.427" />
+      <element name="Remote Support - Chrome Remote Desktop - Google Chrome" value="6.531" />
+      <element name="WordLog MainDoc" value="3119.310" />
+      <element name="New Tab - Google Chrome" value="100.966" />
+      <element name="Leave site?" value="4.484" />
+      <element name="Online Javascript Editor - Google Chrome" value="1.781" />
+      <element name="Word Options" value="27.907" />
+      <element name="Microsoft Word" value="10.907" />
+      <element name="meaning of echo chambers - Google Search - Google Chrome" value="24.367" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="91.499" />
+      <element name="google translate - Google Search - Google Chrome" value="48.806" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="20.694" />
+      <element name="negative effects of echo chambers in social media - Google Search - Google Chrome" value="15.828" />
+      <element name="Chrome Remote Desktop" value="1.172" />
+      <element name="synonym of in the worst case - Google Search - Google Chrome" value="14.214" />
+      <element name="synonym of bad - Google Search - Google Chrome" value="25.389" />
+      <element name="synonym of to encourage - Google Search - Google Chrome" value="6.297" />
+    </block>
+    <block name="Total Time(relative)">
+      <element name="* Time before the first window *" value="0.000" />
+      <element name="Inputlog 9.5.0.1" value="0.004" />
+      <element name="TASKBAR" value="0.005" />
+      <element name="Remote Support - Chrome Remote Desktop - Google Chrome" value="0.002" />
+      <element name="WordLog MainDoc" value="0.879" />
+      <element name="New Tab - Google Chrome" value="0.028" />
+      <element name="Leave site?" value="0.001" />
+      <element name="Online Javascript Editor - Google Chrome" value="0.001" />
+      <element name="Word Options" value="0.008" />
+      <element name="Microsoft Word" value="0.003" />
+      <element name="meaning of echo chambers - Google Search - Google Chrome" value="0.007" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="0.026" />
+      <element name="google translate - Google Search - Google Chrome" value="0.014" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="0.006" />
+      <element name="negative effects of echo chambers in social media - Google Search - Google Chrome" value="0.004" />
+      <element name="Chrome Remote Desktop" value="0.000" />
+      <element name="synonym of in the worst case - Google Search - Google Chrome" value="0.004" />
+      <element name="synonym of bad - Google Search - Google Chrome" value="0.007" />
+      <element name="synonym of to encourage - Google Search - Google Chrome" value="0.002" />
+    </block>
+    <block name="Total Keystrokes ">
+      <element name="* Time before the first window *" value="0" />
+      <element name="Inputlog 9.5.0.1" value="0" />
+      <element name="TASKBAR" value="0" />
+      <element name="Remote Support - Chrome Remote Desktop - Google Chrome" value="0" />
+      <element name="WordLog MainDoc" value="3195" />
+      <element name="New Tab - Google Chrome" value="84" />
+      <element name="Leave site?" value="0" />
+      <element name="Online Javascript Editor - Google Chrome" value="0" />
+      <element name="Word Options" value="0" />
+      <element name="Microsoft Word" value="0" />
+      <element name="meaning of echo chambers - Google Search - Google Chrome" value="19" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="10" />
+      <element name="google translate - Google Search - Google Chrome" value="64" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="27" />
+      <element name="negative effects of echo chambers in social media - Google Search - Google Chrome" value="0" />
+      <element name="Chrome Remote Desktop" value="0" />
+      <element name="synonym of in the worst case - Google Search - Google Chrome" value="0" />
+      <element name="synonym of bad - Google Search - Google Chrome" value="16" />
+      <element name="synonym of to encourage - Google Search - Google Chrome" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) ">
+      <element name="* Time before the first window *" value="0.000" />
+      <element name="Inputlog 9.5.0.1" value="0.000" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="Remote Support - Chrome Remote Desktop - Google Chrome" value="0.000" />
+      <element name="WordLog MainDoc" value="0.936" />
+      <element name="New Tab - Google Chrome" value="0.025" />
+      <element name="Leave site?" value="0.000" />
+      <element name="Online Javascript Editor - Google Chrome" value="0.000" />
+      <element name="Word Options" value="0.000" />
+      <element name="Microsoft Word" value="0.000" />
+      <element name="meaning of echo chambers - Google Search - Google Chrome" value="0.006" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="0.003" />
+      <element name="google translate - Google Search - Google Chrome" value="0.019" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="0.008" />
+      <element name="negative effects of echo chambers in social media - Google Search - Google Chrome" value="0.000" />
+      <element name="Chrome Remote Desktop" value="0.000" />
+      <element name="synonym of in the worst case - Google Search - Google Chrome" value="0.000" />
+      <element name="synonym of bad - Google Search - Google Chrome" value="0.005" />
+      <element name="synonym of to encourage - Google Search - Google Chrome" value="0.000" />
+    </block>
+    <block name="Totals">
+      <element name="totalTime" value="3549.969" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="3415" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Window Transition Statistics" totalTransitions="101">
+    <block name="transitionFrom " ignoreForMerge="1">
+      <element name="[Inputlog 9.5.0.1~TASKBAR]" value="Inputlog 9.5.0.1" />
+      <element name="[Inputlog 9.5.0.1~Chrome Remote Desktop]" value="Inputlog 9.5.0.1" />
+      <element name="[TASKBAR~Remote Support - Chrome Remote Desktop - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~meaning of echo chambers in social media - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~google translate - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~synonym of encounter - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~synonym of in the worst case - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~synonym of bad - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~Inputlog 9.5.0.1]" value="TASKBAR" />
+      <element name="[Remote Support - Chrome Remote Desktop - Google Chrome~TASKBAR]" value="Remote Support - Chrome Remote Desktop - Google Chrome" />
+      <element name="[Remote Support - Chrome Remote Desktop - Google Chrome~New Tab - Google Chrome]" value="Remote Support - Chrome Remote Desktop - Google Chrome" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[WordLog MainDoc~Word Options]" value="WordLog MainDoc" />
+      <element name="[WordLog MainDoc~Microsoft Word]" value="WordLog MainDoc" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="WordLog MainDoc" />
+      <element name="[New Tab - Google Chrome~Leave site?]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~TASKBAR]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~meaning of echo chambers - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~google translate - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~synonym of encounter - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~synonym of bad - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[Leave site?~Online Javascript Editor - Google Chrome]" value="Leave site?" />
+      <element name="[Online Javascript Editor - Google Chrome~New Tab - Google Chrome]" value="Online Javascript Editor - Google Chrome" />
+      <element name="[Word Options~WordLog MainDoc]" value="Word Options" />
+      <element name="[Microsoft Word~WordLog MainDoc]" value="Microsoft Word" />
+      <element name="[meaning of echo chambers - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="meaning of echo chambers - Google Search - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~TASKBAR]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~New Tab - Google Chrome]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~negative effects of echo chambers in social media - Google Search - Google Chrome]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~TASKBAR]" value="google translate - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~New Tab - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~synonym of bad - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~TASKBAR]" value="synonym of encounter - Google Search - Google Chrome" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="synonym of encounter - Google Search - Google Chrome" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~synonym of in the worst case - Google Search - Google Chrome]" value="synonym of encounter - Google Search - Google Chrome" />
+      <element name="[negative effects of echo chambers in social media - Google Search - Google Chrome~synonym of encounter - Google Search - Google Chrome]" value="negative effects of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="Chrome Remote Desktop" />
+      <element name="[Chrome Remote Desktop~TASKBAR]" value="Chrome Remote Desktop" />
+      <element name="[synonym of in the worst case - Google Search - Google Chrome~TASKBAR]" value="synonym of in the worst case - Google Search - Google Chrome" />
+      <element name="[synonym of in the worst case - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="synonym of in the worst case - Google Search - Google Chrome" />
+      <element name="[synonym of bad - Google Search - Google Chrome~TASKBAR]" value="synonym of bad - Google Search - Google Chrome" />
+      <element name="[synonym of bad - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="synonym of bad - Google Search - Google Chrome" />
+      <element name="[synonym of bad - Google Search - Google Chrome~synonym of to encourage - Google Search - Google Chrome]" value="synonym of bad - Google Search - Google Chrome" />
+      <element name="[synonym of to encourage - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="synonym of to encourage - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionTo " ignoreForMerge="1">
+      <element name="[Inputlog 9.5.0.1~TASKBAR]" value="TASKBAR" />
+      <element name="[Inputlog 9.5.0.1~Chrome Remote Desktop]" value="Chrome Remote Desktop" />
+      <element name="[TASKBAR~Remote Support - Chrome Remote Desktop - Google Chrome]" value="Remote Support - Chrome Remote Desktop - Google Chrome" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[TASKBAR~meaning of echo chambers in social media - Google Search - Google Chrome]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[TASKBAR~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[TASKBAR~synonym of encounter - Google Search - Google Chrome]" value="synonym of encounter - Google Search - Google Chrome" />
+      <element name="[TASKBAR~synonym of in the worst case - Google Search - Google Chrome]" value="synonym of in the worst case - Google Search - Google Chrome" />
+      <element name="[TASKBAR~synonym of bad - Google Search - Google Chrome]" value="synonym of bad - Google Search - Google Chrome" />
+      <element name="[TASKBAR~Inputlog 9.5.0.1]" value="Inputlog 9.5.0.1" />
+      <element name="[Remote Support - Chrome Remote Desktop - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[Remote Support - Chrome Remote Desktop - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[WordLog MainDoc~Word Options]" value="Word Options" />
+      <element name="[WordLog MainDoc~Microsoft Word]" value="Microsoft Word" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="Chrome Remote Desktop" />
+      <element name="[New Tab - Google Chrome~Leave site?]" value="Leave site?" />
+      <element name="[New Tab - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[New Tab - Google Chrome~meaning of echo chambers - Google Search - Google Chrome]" value="meaning of echo chambers - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~synonym of encounter - Google Search - Google Chrome]" value="synonym of encounter - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~synonym of bad - Google Search - Google Chrome]" value="synonym of bad - Google Search - Google Chrome" />
+      <element name="[Leave site?~Online Javascript Editor - Google Chrome]" value="Online Javascript Editor - Google Chrome" />
+      <element name="[Online Javascript Editor - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[Word Options~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[Microsoft Word~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[meaning of echo chambers - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~negative effects of echo chambers in social media - Google Search - Google Chrome]" value="negative effects of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[google translate - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~synonym of bad - Google Search - Google Chrome]" value="synonym of bad - Google Search - Google Chrome" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~synonym of in the worst case - Google Search - Google Chrome]" value="synonym of in the worst case - Google Search - Google Chrome" />
+      <element name="[negative effects of echo chambers in social media - Google Search - Google Chrome~synonym of encounter - Google Search - Google Chrome]" value="synonym of encounter - Google Search - Google Chrome" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[Chrome Remote Desktop~TASKBAR]" value="TASKBAR" />
+      <element name="[synonym of in the worst case - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[synonym of in the worst case - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[synonym of bad - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[synonym of bad - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[synonym of bad - Google Search - Google Chrome~synonym of to encourage - Google Search - Google Chrome]" value="synonym of to encourage - Google Search - Google Chrome" />
+      <element name="[synonym of to encourage - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionCount ">
+      <element name="[Inputlog 9.5.0.1~TASKBAR]" value="1" />
+      <element name="[Inputlog 9.5.0.1~Chrome Remote Desktop]" value="1" />
+      <element name="[TASKBAR~Remote Support - Chrome Remote Desktop - Google Chrome]" value="2" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="16" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="3" />
+      <element name="[TASKBAR~meaning of echo chambers in social media - Google Search - Google Chrome]" value="2" />
+      <element name="[TASKBAR~google translate - Google Search - Google Chrome]" value="3" />
+      <element name="[TASKBAR~synonym of encounter - Google Search - Google Chrome]" value="2" />
+      <element name="[TASKBAR~synonym of in the worst case - Google Search - Google Chrome]" value="1" />
+      <element name="[TASKBAR~synonym of bad - Google Search - Google Chrome]" value="2" />
+      <element name="[TASKBAR~Inputlog 9.5.0.1]" value="2" />
+      <element name="[Remote Support - Chrome Remote Desktop - Google Chrome~TASKBAR]" value="1" />
+      <element name="[Remote Support - Chrome Remote Desktop - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="16" />
+      <element name="[WordLog MainDoc~Word Options]" value="2" />
+      <element name="[WordLog MainDoc~Microsoft Word]" value="2" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="1" />
+      <element name="[New Tab - Google Chrome~Leave site?]" value="1" />
+      <element name="[New Tab - Google Chrome~TASKBAR]" value="3" />
+      <element name="[New Tab - Google Chrome~meaning of echo chambers - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~google translate - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~synonym of encounter - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~synonym of bad - Google Search - Google Chrome]" value="1" />
+      <element name="[Leave site?~Online Javascript Editor - Google Chrome]" value="1" />
+      <element name="[Online Javascript Editor - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[Word Options~WordLog MainDoc]" value="2" />
+      <element name="[Microsoft Word~WordLog MainDoc]" value="2" />
+      <element name="[meaning of echo chambers - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="1" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~TASKBAR]" value="2" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="1" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~negative effects of echo chambers in social media - Google Search - Google Chrome]" value="1" />
+      <element name="[google translate - Google Search - Google Chrome~TASKBAR]" value="4" />
+      <element name="[google translate - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="2" />
+      <element name="[google translate - Google Search - Google Chrome~New Tab - Google Chrome]" value="2" />
+      <element name="[google translate - Google Search - Google Chrome~synonym of bad - Google Search - Google Chrome]" value="1" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~TASKBAR]" value="2" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="1" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~synonym of in the worst case - Google Search - Google Chrome]" value="1" />
+      <element name="[negative effects of echo chambers in social media - Google Search - Google Chrome~synonym of encounter - Google Search - Google Chrome]" value="1" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="1" />
+      <element name="[Chrome Remote Desktop~TASKBAR]" value="1" />
+      <element name="[synonym of in the worst case - Google Search - Google Chrome~TASKBAR]" value="1" />
+      <element name="[synonym of in the worst case - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="1" />
+      <element name="[synonym of bad - Google Search - Google Chrome~TASKBAR]" value="2" />
+      <element name="[synonym of bad - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="1" />
+      <element name="[synonym of bad - Google Search - Google Chrome~synonym of to encourage - Google Search - Google Chrome]" value="1" />
+      <element name="[synonym of to encourage - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="1" />
+    </block>
+  </module>
+  <module name="Intervals">
+    <block name="Start Time">
+      <element name="Interval 1" value="0.000" />
+      <element name="Interval 2" value="354.997" />
+      <element name="Interval 3" value="709.994" />
+      <element name="Interval 4" value="1064.991" />
+      <element name="Interval 5" value="1419.988" />
+      <element name="Interval 6" value="1774.985" />
+      <element name="Interval 7" value="2129.982" />
+      <element name="Interval 8" value="2484.979" />
+      <element name="Interval 9" value="2839.976" />
+      <element name="Interval 10" value="3194.973" />
+    </block>
+  </module>
+  <module name="Interval 1 - Window Statistics">
+    <block name="Total Time(s) 1">
+      <element name="Inputlog 9.5.0.1" value="13.000" />
+      <element name="TASKBAR" value="7.704" />
+      <element name="Remote Support - Chrome Remote Desktop - Google Chrome" value="6.531" />
+      <element name="WordLog MainDoc" value="199.057" />
+      <element name="New Tab - Google Chrome" value="83.626" />
+      <element name="Leave site?" value="4.484" />
+      <element name="Online Javascript Editor - Google Chrome" value="1.781" />
+      <element name="Word Options" value="27.907" />
+      <element name="Microsoft Word" value="10.907" />
+    </block>
+    <block name="Total Time(relative) 1">
+      <element name="Inputlog 9.5.0.1" value="0.037" />
+      <element name="TASKBAR" value="0.022" />
+      <element name="Remote Support - Chrome Remote Desktop - Google Chrome" value="0.018" />
+      <element name="WordLog MainDoc" value="0.561" />
+      <element name="New Tab - Google Chrome" value="0.236" />
+      <element name="Leave site?" value="0.013" />
+      <element name="Online Javascript Editor - Google Chrome" value="0.005" />
+      <element name="Word Options" value="0.079" />
+      <element name="Microsoft Word" value="0.031" />
+    </block>
+    <block name="Total Keystrokes 1">
+      <element name="Inputlog 9.5.0.1" value="0" />
+      <element name="TASKBAR" value="0" />
+      <element name="Remote Support - Chrome Remote Desktop - Google Chrome" value="0" />
+      <element name="WordLog MainDoc" value="18" />
+      <element name="New Tab - Google Chrome" value="0" />
+      <element name="Leave site?" value="0" />
+      <element name="Online Javascript Editor - Google Chrome" value="0" />
+      <element name="Word Options" value="0" />
+      <element name="Microsoft Word" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 1">
+      <element name="Inputlog 9.5.0.1" value="0.000" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="Remote Support - Chrome Remote Desktop - Google Chrome" value="0.000" />
+      <element name="WordLog MainDoc" value="1.000" />
+      <element name="New Tab - Google Chrome" value="0.000" />
+      <element name="Leave site?" value="0.000" />
+      <element name="Online Javascript Editor - Google Chrome" value="0.000" />
+      <element name="Word Options" value="0.000" />
+      <element name="Microsoft Word" value="0.000" />
+    </block>
+    <block name="Totals 1">
+      <element name="totalTime" value="354.997" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="18" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 2 - Window Statistics">
+    <block name="Total Time(s) 2">
+      <element name="WordLog MainDoc" value="298.450" />
+      <element name="TASKBAR" value="0.313" />
+      <element name="New Tab - Google Chrome" value="5.243" />
+      <element name="meaning of echo chambers - Google Search - Google Chrome" value="24.367" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="26.624" />
+    </block>
+    <block name="Total Time(relative) 2">
+      <element name="WordLog MainDoc" value="0.841" />
+      <element name="TASKBAR" value="0.001" />
+      <element name="New Tab - Google Chrome" value="0.015" />
+      <element name="meaning of echo chambers - Google Search - Google Chrome" value="0.069" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="0.075" />
+    </block>
+    <block name="Total Keystrokes 2">
+      <element name="WordLog MainDoc" value="327" />
+      <element name="TASKBAR" value="0" />
+      <element name="New Tab - Google Chrome" value="25" />
+      <element name="meaning of echo chambers - Google Search - Google Chrome" value="19" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 2">
+      <element name="WordLog MainDoc" value="0.881" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="New Tab - Google Chrome" value="0.067" />
+      <element name="meaning of echo chambers - Google Search - Google Chrome" value="0.051" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="0.000" />
+    </block>
+    <block name="Totals 2">
+      <element name="totalTime" value="354.997" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="371" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 3 - Window Statistics">
+    <block name="Total Time(s) 3">
+      <element name="WordLog MainDoc" value="354.997" />
+    </block>
+    <block name="Total Time(relative) 3">
+      <element name="WordLog MainDoc" value="1.000" />
+    </block>
+    <block name="Total Keystrokes 3">
+      <element name="WordLog MainDoc" value="568" />
+    </block>
+    <block name="Total Keystrokes(relative) 3">
+      <element name="WordLog MainDoc" value="1.000" />
+    </block>
+    <block name="Totals 3">
+      <element name="totalTime" value="354.997" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="568" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 4 - Window Statistics">
+    <block name="Total Time(s) 4">
+      <element name="WordLog MainDoc" value="249.294" />
+      <element name="TASKBAR" value="1.111" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="53.515" />
+      <element name="New Tab - Google Chrome" value="8.298" />
+      <element name="google translate - Google Search - Google Chrome" value="33.636" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="9.143" />
+    </block>
+    <block name="Total Time(relative) 4">
+      <element name="WordLog MainDoc" value="0.702" />
+      <element name="TASKBAR" value="0.003" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="0.151" />
+      <element name="New Tab - Google Chrome" value="0.023" />
+      <element name="google translate - Google Search - Google Chrome" value="0.095" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="0.026" />
+    </block>
+    <block name="Total Keystrokes 4">
+      <element name="WordLog MainDoc" value="359" />
+      <element name="TASKBAR" value="0" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="0" />
+      <element name="New Tab - Google Chrome" value="44" />
+      <element name="google translate - Google Search - Google Chrome" value="53" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 4">
+      <element name="WordLog MainDoc" value="0.787" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="0.000" />
+      <element name="New Tab - Google Chrome" value="0.096" />
+      <element name="google translate - Google Search - Google Chrome" value="0.116" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="0.000" />
+    </block>
+    <block name="Totals 4">
+      <element name="totalTime" value="354.997" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="456" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 5 - Window Statistics">
+    <block name="Total Time(s) 5">
+      <element name="WordLog MainDoc" value="322.668" />
+      <element name="TASKBAR" value="0.188" />
+      <element name="google translate - Google Search - Google Chrome" value="1.422" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="11.360" />
+      <element name="negative effects of echo chambers in social media - Google Search - Google Chrome" value="15.828" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="3.437" />
+      <element name="Chrome Remote Desktop" value="0.094" />
+    </block>
+    <block name="Total Time(relative) 5">
+      <element name="WordLog MainDoc" value="0.909" />
+      <element name="TASKBAR" value="0.001" />
+      <element name="google translate - Google Search - Google Chrome" value="0.004" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="0.032" />
+      <element name="negative effects of echo chambers in social media - Google Search - Google Chrome" value="0.045" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="0.010" />
+      <element name="Chrome Remote Desktop" value="0.000" />
+    </block>
+    <block name="Total Keystrokes 5">
+      <element name="WordLog MainDoc" value="331" />
+      <element name="TASKBAR" value="0" />
+      <element name="google translate - Google Search - Google Chrome" value="0" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="10" />
+      <element name="negative effects of echo chambers in social media - Google Search - Google Chrome" value="0" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="0" />
+      <element name="Chrome Remote Desktop" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 5">
+      <element name="WordLog MainDoc" value="0.971" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="google translate - Google Search - Google Chrome" value="0.000" />
+      <element name="meaning of echo chambers in social media - Google Search - Google Chrome" value="0.029" />
+      <element name="negative effects of echo chambers in social media - Google Search - Google Chrome" value="0.000" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="0.000" />
+      <element name="Chrome Remote Desktop" value="0.000" />
+    </block>
+    <block name="Totals 5">
+      <element name="totalTime" value="354.997" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="341" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 6 - Window Statistics">
+    <block name="Total Time(s) 6">
+      <element name="WordLog MainDoc" value="333.387" />
+      <element name="TASKBAR" value="3.126" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="8.114" />
+      <element name="synonym of in the worst case - Google Search - Google Chrome" value="10.370" />
+    </block>
+    <block name="Total Time(relative) 6">
+      <element name="WordLog MainDoc" value="0.939" />
+      <element name="TASKBAR" value="0.009" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="0.023" />
+      <element name="synonym of in the worst case - Google Search - Google Chrome" value="0.029" />
+    </block>
+    <block name="Total Keystrokes 6">
+      <element name="WordLog MainDoc" value="498" />
+      <element name="TASKBAR" value="0" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="27" />
+      <element name="synonym of in the worst case - Google Search - Google Chrome" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 6">
+      <element name="WordLog MainDoc" value="0.949" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="synonym of encounter - Google Search - Google Chrome" value="0.051" />
+      <element name="synonym of in the worst case - Google Search - Google Chrome" value="0.000" />
+    </block>
+    <block name="Totals 6">
+      <element name="totalTime" value="354.997" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="525" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 7 - Window Statistics">
+    <block name="Total Time(s) 7">
+      <element name="WordLog MainDoc" value="337.847" />
+      <element name="TASKBAR" value="0.109" />
+      <element name="synonym of in the worst case - Google Search - Google Chrome" value="3.844" />
+      <element name="google translate - Google Search - Google Chrome" value="1.218" />
+      <element name="New Tab - Google Chrome" value="3.799" />
+      <element name="synonym of bad - Google Search - Google Chrome" value="8.180" />
+    </block>
+    <block name="Total Time(relative) 7">
+      <element name="WordLog MainDoc" value="0.952" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="synonym of in the worst case - Google Search - Google Chrome" value="0.011" />
+      <element name="google translate - Google Search - Google Chrome" value="0.003" />
+      <element name="New Tab - Google Chrome" value="0.011" />
+      <element name="synonym of bad - Google Search - Google Chrome" value="0.023" />
+    </block>
+    <block name="Total Keystrokes 7">
+      <element name="WordLog MainDoc" value="485" />
+      <element name="TASKBAR" value="0" />
+      <element name="synonym of in the worst case - Google Search - Google Chrome" value="0" />
+      <element name="google translate - Google Search - Google Chrome" value="0" />
+      <element name="New Tab - Google Chrome" value="15" />
+      <element name="synonym of bad - Google Search - Google Chrome" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 7">
+      <element name="WordLog MainDoc" value="0.970" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="synonym of in the worst case - Google Search - Google Chrome" value="0.000" />
+      <element name="google translate - Google Search - Google Chrome" value="0.000" />
+      <element name="New Tab - Google Chrome" value="0.030" />
+      <element name="synonym of bad - Google Search - Google Chrome" value="0.000" />
+    </block>
+    <block name="Totals 7">
+      <element name="totalTime" value="354.997" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="500" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 8 - Window Statistics">
+    <block name="Total Time(s) 8">
+      <element name="synonym of bad - Google Search - Google Chrome" value="11.209" />
+      <element name="TASKBAR" value="0.312" />
+      <element name="WordLog MainDoc" value="343.476" />
+    </block>
+    <block name="Total Time(relative) 8">
+      <element name="synonym of bad - Google Search - Google Chrome" value="0.032" />
+      <element name="TASKBAR" value="0.001" />
+      <element name="WordLog MainDoc" value="0.968" />
+    </block>
+    <block name="Total Keystrokes 8">
+      <element name="synonym of bad - Google Search - Google Chrome" value="0" />
+      <element name="TASKBAR" value="0" />
+      <element name="WordLog MainDoc" value="326" />
+    </block>
+    <block name="Total Keystrokes(relative) 8">
+      <element name="synonym of bad - Google Search - Google Chrome" value="0.000" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="WordLog MainDoc" value="1.000" />
+    </block>
+    <block name="Totals 8">
+      <element name="totalTime" value="354.997" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="326" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 9 - Window Statistics">
+    <block name="Total Time(s) 9">
+      <element name="WordLog MainDoc" value="354.997" />
+    </block>
+    <block name="Total Time(relative) 9">
+      <element name="WordLog MainDoc" value="1.000" />
+    </block>
+    <block name="Total Keystrokes 9">
+      <element name="WordLog MainDoc" value="20" />
+    </block>
+    <block name="Total Keystrokes(relative) 9">
+      <element name="WordLog MainDoc" value="1.000" />
+    </block>
+    <block name="Totals 9">
+      <element name="totalTime" value="354.997" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="20" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 10 - Window Statistics">
+    <block name="Total Time(s) 10">
+      <element name="WordLog MainDoc" value="325.137" />
+      <element name="TASKBAR" value="3.564" />
+      <element name="synonym of bad - Google Search - Google Chrome" value="6.000" />
+      <element name="google translate - Google Search - Google Chrome" value="12.530" />
+      <element name="synonym of to encourage - Google Search - Google Chrome" value="6.297" />
+      <element name="Inputlog 9.5.0.1" value="0.390" />
+      <element name="Chrome Remote Desktop" value="1.078" />
+    </block>
+    <block name="Total Time(relative) 10">
+      <element name="WordLog MainDoc" value="0.916" />
+      <element name="TASKBAR" value="0.010" />
+      <element name="synonym of bad - Google Search - Google Chrome" value="0.017" />
+      <element name="google translate - Google Search - Google Chrome" value="0.035" />
+      <element name="synonym of to encourage - Google Search - Google Chrome" value="0.018" />
+      <element name="Inputlog 9.5.0.1" value="0.001" />
+      <element name="Chrome Remote Desktop" value="0.003" />
+    </block>
+    <block name="Total Keystrokes 10">
+      <element name="WordLog MainDoc" value="263" />
+      <element name="TASKBAR" value="0" />
+      <element name="synonym of bad - Google Search - Google Chrome" value="16" />
+      <element name="google translate - Google Search - Google Chrome" value="11" />
+      <element name="synonym of to encourage - Google Search - Google Chrome" value="0" />
+      <element name="Inputlog 9.5.0.1" value="0" />
+      <element name="Chrome Remote Desktop" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 10">
+      <element name="WordLog MainDoc" value="0.907" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="synonym of bad - Google Search - Google Chrome" value="0.055" />
+      <element name="google translate - Google Search - Google Chrome" value="0.038" />
+      <element name="synonym of to encourage - Google Search - Google Chrome" value="0.000" />
+      <element name="Inputlog 9.5.0.1" value="0.000" />
+      <element name="Chrome Remote Desktop" value="0.000" />
+    </block>
+    <block name="Totals 10">
+      <element name="totalTime" value="354.996" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="290" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 1 - Window Transition Statistics" totalTransitions="28">
+    <block name="transitionFrom 1" ignoreForMerge="1">
+      <element name="[Inputlog 9.5.0.1~TASKBAR]" value="Inputlog 9.5.0.1" />
+      <element name="[TASKBAR~Remote Support - Chrome Remote Desktop - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="TASKBAR" />
+      <element name="[Remote Support - Chrome Remote Desktop - Google Chrome~TASKBAR]" value="Remote Support - Chrome Remote Desktop - Google Chrome" />
+      <element name="[Remote Support - Chrome Remote Desktop - Google Chrome~New Tab - Google Chrome]" value="Remote Support - Chrome Remote Desktop - Google Chrome" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[WordLog MainDoc~Word Options]" value="WordLog MainDoc" />
+      <element name="[WordLog MainDoc~Microsoft Word]" value="WordLog MainDoc" />
+      <element name="[New Tab - Google Chrome~Leave site?]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~TASKBAR]" value="New Tab - Google Chrome" />
+      <element name="[Leave site?~Online Javascript Editor - Google Chrome]" value="Leave site?" />
+      <element name="[Online Javascript Editor - Google Chrome~New Tab - Google Chrome]" value="Online Javascript Editor - Google Chrome" />
+      <element name="[Word Options~WordLog MainDoc]" value="Word Options" />
+      <element name="[Microsoft Word~WordLog MainDoc]" value="Microsoft Word" />
+    </block>
+    <block name="transitionTo 1" ignoreForMerge="1">
+      <element name="[Inputlog 9.5.0.1~TASKBAR]" value="TASKBAR" />
+      <element name="[TASKBAR~Remote Support - Chrome Remote Desktop - Google Chrome]" value="Remote Support - Chrome Remote Desktop - Google Chrome" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[Remote Support - Chrome Remote Desktop - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[Remote Support - Chrome Remote Desktop - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[WordLog MainDoc~Word Options]" value="Word Options" />
+      <element name="[WordLog MainDoc~Microsoft Word]" value="Microsoft Word" />
+      <element name="[New Tab - Google Chrome~Leave site?]" value="Leave site?" />
+      <element name="[New Tab - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[Leave site?~Online Javascript Editor - Google Chrome]" value="Online Javascript Editor - Google Chrome" />
+      <element name="[Online Javascript Editor - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[Word Options~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[Microsoft Word~WordLog MainDoc]" value="WordLog MainDoc" />
+    </block>
+    <block name="transitionCount 1">
+      <element name="[Inputlog 9.5.0.1~TASKBAR]" value="1" />
+      <element name="[TASKBAR~Remote Support - Chrome Remote Desktop - Google Chrome]" value="2" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="4" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="2" />
+      <element name="[Remote Support - Chrome Remote Desktop - Google Chrome~TASKBAR]" value="1" />
+      <element name="[Remote Support - Chrome Remote Desktop - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="3" />
+      <element name="[WordLog MainDoc~Word Options]" value="2" />
+      <element name="[WordLog MainDoc~Microsoft Word]" value="2" />
+      <element name="[New Tab - Google Chrome~Leave site?]" value="1" />
+      <element name="[New Tab - Google Chrome~TASKBAR]" value="3" />
+      <element name="[Leave site?~Online Javascript Editor - Google Chrome]" value="1" />
+      <element name="[Online Javascript Editor - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[Word Options~WordLog MainDoc]" value="2" />
+      <element name="[Microsoft Word~WordLog MainDoc]" value="2" />
+    </block>
+  </module>
+  <module name="Interval 2 - Window Transition Statistics" totalTransitions="6">
+    <block name="transitionFrom 2" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[New Tab - Google Chrome~meaning of echo chambers - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[meaning of echo chambers - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="meaning of echo chambers - Google Search - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~TASKBAR]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionTo 2" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[New Tab - Google Chrome~meaning of echo chambers - Google Search - Google Chrome]" value="meaning of echo chambers - Google Search - Google Chrome" />
+      <element name="[meaning of echo chambers - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+    </block>
+    <block name="transitionCount 2">
+      <element name="[WordLog MainDoc~TASKBAR]" value="1" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="1" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="1" />
+      <element name="[New Tab - Google Chrome~meaning of echo chambers - Google Search - Google Chrome]" value="1" />
+      <element name="[meaning of echo chambers - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="1" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~TASKBAR]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 3 - Window Transition Statistics" totalTransitions="0">
+    <block name="transitionFrom 3" ignoreForMerge="1" />
+    <block name="transitionTo 3" ignoreForMerge="1" />
+    <block name="transitionCount 3" />
+  </module>
+  <module name="Interval 4 - Window Transition Statistics" totalTransitions="23">
+    <block name="transitionFrom 4" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~meaning of echo chambers in social media - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[TASKBAR~google translate - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~synonym of encounter - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~TASKBAR]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~New Tab - Google Chrome]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~google translate - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~synonym of encounter - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~TASKBAR]" value="google translate - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~New Tab - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~TASKBAR]" value="synonym of encounter - Google Search - Google Chrome" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="synonym of encounter - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionTo 4" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[TASKBAR~meaning of echo chambers in social media - Google Search - Google Chrome]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[TASKBAR~synonym of encounter - Google Search - Google Chrome]" value="synonym of encounter - Google Search - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~synonym of encounter - Google Search - Google Chrome]" value="synonym of encounter - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[google translate - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionCount 4">
+      <element name="[WordLog MainDoc~TASKBAR]" value="4" />
+      <element name="[TASKBAR~meaning of echo chambers in social media - Google Search - Google Chrome]" value="2" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="4" />
+      <element name="[TASKBAR~google translate - Google Search - Google Chrome]" value="1" />
+      <element name="[TASKBAR~synonym of encounter - Google Search - Google Chrome]" value="1" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~TASKBAR]" value="1" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~google translate - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~synonym of encounter - Google Search - Google Chrome]" value="1" />
+      <element name="[google translate - Google Search - Google Chrome~TASKBAR]" value="2" />
+      <element name="[google translate - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="1" />
+      <element name="[google translate - Google Search - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~TASKBAR]" value="1" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 5 - Window Transition Statistics" totalTransitions="9">
+    <block name="transitionFrom 5" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~google translate - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[google translate - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~negative effects of echo chambers in social media - Google Search - Google Chrome]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[negative effects of echo chambers in social media - Google Search - Google Chrome~synonym of encounter - Google Search - Google Chrome]" value="negative effects of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~TASKBAR]" value="synonym of encounter - Google Search - Google Chrome" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="Chrome Remote Desktop" />
+    </block>
+    <block name="transitionTo 5" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="Chrome Remote Desktop" />
+      <element name="[TASKBAR~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[google translate - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="meaning of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~negative effects of echo chambers in social media - Google Search - Google Chrome]" value="negative effects of echo chambers in social media - Google Search - Google Chrome" />
+      <element name="[negative effects of echo chambers in social media - Google Search - Google Chrome~synonym of encounter - Google Search - Google Chrome]" value="synonym of encounter - Google Search - Google Chrome" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="WordLog MainDoc" />
+    </block>
+    <block name="transitionCount 5">
+      <element name="[WordLog MainDoc~TASKBAR]" value="1" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="1" />
+      <element name="[TASKBAR~google translate - Google Search - Google Chrome]" value="1" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="1" />
+      <element name="[google translate - Google Search - Google Chrome~meaning of echo chambers in social media - Google Search - Google Chrome]" value="1" />
+      <element name="[meaning of echo chambers in social media - Google Search - Google Chrome~negative effects of echo chambers in social media - Google Search - Google Chrome]" value="1" />
+      <element name="[negative effects of echo chambers in social media - Google Search - Google Chrome~synonym of encounter - Google Search - Google Chrome]" value="1" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~TASKBAR]" value="1" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 6 - Window Transition Statistics" totalTransitions="7">
+    <block name="transitionFrom 6" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~synonym of encounter - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~synonym of in the worst case - Google Search - Google Chrome]" value="synonym of encounter - Google Search - Google Chrome" />
+      <element name="[synonym of in the worst case - Google Search - Google Chrome~TASKBAR]" value="synonym of in the worst case - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionTo 6" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[TASKBAR~synonym of encounter - Google Search - Google Chrome]" value="synonym of encounter - Google Search - Google Chrome" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~synonym of in the worst case - Google Search - Google Chrome]" value="synonym of in the worst case - Google Search - Google Chrome" />
+      <element name="[synonym of in the worst case - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+    </block>
+    <block name="transitionCount 6">
+      <element name="[WordLog MainDoc~TASKBAR]" value="2" />
+      <element name="[TASKBAR~synonym of encounter - Google Search - Google Chrome]" value="1" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="2" />
+      <element name="[synonym of encounter - Google Search - Google Chrome~synonym of in the worst case - Google Search - Google Chrome]" value="1" />
+      <element name="[synonym of in the worst case - Google Search - Google Chrome~TASKBAR]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 7 - Window Transition Statistics" totalTransitions="5">
+    <block name="transitionFrom 7" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~synonym of in the worst case - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[synonym of in the worst case - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="synonym of in the worst case - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~New Tab - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~synonym of bad - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+    </block>
+    <block name="transitionTo 7" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[TASKBAR~synonym of in the worst case - Google Search - Google Chrome]" value="synonym of in the worst case - Google Search - Google Chrome" />
+      <element name="[synonym of in the worst case - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~synonym of bad - Google Search - Google Chrome]" value="synonym of bad - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionCount 7">
+      <element name="[WordLog MainDoc~TASKBAR]" value="1" />
+      <element name="[TASKBAR~synonym of in the worst case - Google Search - Google Chrome]" value="1" />
+      <element name="[synonym of in the worst case - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="1" />
+      <element name="[google translate - Google Search - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~synonym of bad - Google Search - Google Chrome]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 8 - Window Transition Statistics" totalTransitions="6">
+    <block name="transitionFrom 8" ignoreForMerge="1">
+      <element name="[synonym of bad - Google Search - Google Chrome~TASKBAR]" value="synonym of bad - Google Search - Google Chrome" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[TASKBAR~synonym of bad - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+    </block>
+    <block name="transitionTo 8" ignoreForMerge="1">
+      <element name="[synonym of bad - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~synonym of bad - Google Search - Google Chrome]" value="synonym of bad - Google Search - Google Chrome" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+    </block>
+    <block name="transitionCount 8">
+      <element name="[synonym of bad - Google Search - Google Chrome~TASKBAR]" value="2" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="2" />
+      <element name="[TASKBAR~synonym of bad - Google Search - Google Chrome]" value="1" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 9 - Window Transition Statistics" totalTransitions="0">
+    <block name="transitionFrom 9" ignoreForMerge="1" />
+    <block name="transitionTo 9" ignoreForMerge="1" />
+    <block name="transitionCount 9" />
+  </module>
+  <module name="Interval 10 - Window Transition Statistics" totalTransitions="17">
+    <block name="transitionFrom 10" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~synonym of bad - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[TASKBAR~google translate - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~Inputlog 9.5.0.1]" value="TASKBAR" />
+      <element name="[synonym of bad - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="synonym of bad - Google Search - Google Chrome" />
+      <element name="[synonym of bad - Google Search - Google Chrome~synonym of to encourage - Google Search - Google Chrome]" value="synonym of bad - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~synonym of bad - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~TASKBAR]" value="google translate - Google Search - Google Chrome" />
+      <element name="[synonym of to encourage - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="synonym of to encourage - Google Search - Google Chrome" />
+      <element name="[Inputlog 9.5.0.1~Chrome Remote Desktop]" value="Inputlog 9.5.0.1" />
+      <element name="[Chrome Remote Desktop~TASKBAR]" value="Chrome Remote Desktop" />
+    </block>
+    <block name="transitionTo 10" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[TASKBAR~synonym of bad - Google Search - Google Chrome]" value="synonym of bad - Google Search - Google Chrome" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[TASKBAR~Inputlog 9.5.0.1]" value="Inputlog 9.5.0.1" />
+      <element name="[synonym of bad - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[synonym of bad - Google Search - Google Chrome~synonym of to encourage - Google Search - Google Chrome]" value="synonym of to encourage - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~synonym of bad - Google Search - Google Chrome]" value="synonym of bad - Google Search - Google Chrome" />
+      <element name="[google translate - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[synonym of to encourage - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="google translate - Google Search - Google Chrome" />
+      <element name="[Inputlog 9.5.0.1~Chrome Remote Desktop]" value="Chrome Remote Desktop" />
+      <element name="[Chrome Remote Desktop~TASKBAR]" value="TASKBAR" />
+    </block>
+    <block name="transitionCount 10">
+      <element name="[WordLog MainDoc~TASKBAR]" value="3" />
+      <element name="[TASKBAR~synonym of bad - Google Search - Google Chrome]" value="1" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="2" />
+      <element name="[TASKBAR~google translate - Google Search - Google Chrome]" value="1" />
+      <element name="[TASKBAR~Inputlog 9.5.0.1]" value="2" />
+      <element name="[synonym of bad - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="1" />
+      <element name="[synonym of bad - Google Search - Google Chrome~synonym of to encourage - Google Search - Google Chrome]" value="1" />
+      <element name="[google translate - Google Search - Google Chrome~synonym of bad - Google Search - Google Chrome]" value="1" />
+      <element name="[google translate - Google Search - Google Chrome~TASKBAR]" value="2" />
+      <element name="[synonym of to encourage - Google Search - Google Chrome~google translate - Google Search - Google Chrome]" value="1" />
+      <element name="[Inputlog 9.5.0.1~Chrome Remote Desktop]" value="1" />
+      <element name="[Chrome Remote Desktop~TASKBAR]" value="1" />
+    </block>
+  </module>
+</session>

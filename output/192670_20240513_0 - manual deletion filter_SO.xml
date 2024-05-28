@@ -1,0 +1,1279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="Style/source_analysis.xsl"?>
+<session>
+  <meta>
+    <entry name="Logfile" value="192670_0 - manual deletion filter.idfx" />
+    <entry name="MainDocument" value="Writing Task 192670.20240513171520.docx" />
+    <entry name="LogCreationDate" value="13/05/24 17:15:23.385" />
+    <entry name="LogGUID" value="fe4a0e3a-e560-4b64-a8a3-23a4b7bd448d" />
+    <entry name="LogProgramVersion" value="9.5.0.1" />
+    <entry name="AnalysisCreationDate" value="28/05/24 13:23:36" />
+    <entry name="AnalysisGUID" value="d79deef9-1f59-45b0-ada1-d710a413777f" />
+    <entry name="AnalysisProgramVersion" value="9.5.0.1" />
+  </meta>
+  <sessionIdentification>
+    <entry name="Participant" value="192670" />
+    <entry name="Text Language" value="EN" />
+    <entry name="Age" value="" />
+    <entry name="Gender" value="" />
+    <entry name="Session" value="" />
+    <entry name="Group" value="" />
+    <entry name="Experience" value="" />
+    <entry name="Restricted Logging" value="" />
+  </sessionIdentification>
+  <module name="Window Statistics">
+    <block name="Total Time(s)">
+      <element name="* Time before the first window *" value="57.466" />
+      <element name="Snap Assist" value="2.612" />
+      <element name="WordLog MainDoc" value="3904.829" />
+      <element name="TASKBAR" value="33.331" />
+      <element name="New Tab - Google Chrome" value="56.194" />
+      <element name="tran - Google Search - Google Chrome" value="2.016" />
+      <element name="translate - Google Search - Google Chrome" value="21.602" />
+      <element name="Search" value="4.497" />
+      <element name="conscious synonym - Google Search - Google Chrome" value="3.383" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="14.411" />
+      <element name="Chrome Remote Desktop" value="0.563" />
+      <element name="support synonym - Google Search - Google Chrome" value="24.872" />
+      <element name="concern synonym - Google Search - Google Chrome" value="28.880" />
+      <element name="teenagers developing - Google Search - Google Chrome" value="12.418" />
+      <element name="teenagers developing mental - Google Search - Google Chrome" value="3.074" />
+      <element name="teenagers developing mentally - Google Search - Google Chrome" value="29.312" />
+      <element name="serious synonym - Google Search - Google Chrome" value="9.392" />
+      <element name="ture - Google Search - Google Chrome" value="3.911" />
+      <element name="Tureng - ture - Turkish English Dictionary - Google Chrome" value="7.062" />
+      <element name="Tureng - caba - Turkish English Dictionary - Google Chrome" value="4.240" />
+      <element name="Tureng - emek - Turkish English Dictionary - Google Chrome" value="6.452" />
+      <element name="share synonym - Google Search - Google Chrome" value="8.789" />
+      <element name="pop culture - Google Search - Google Chrome" value="29.122" />
+      <element name="young adolescent age - Google Search - Google Chrome" value="13.296" />
+      <element name="unrealistic beauty standards - Google Search - Google Chrome" value="52.902" />
+      <element name="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" value="4.235" />
+      <element name="beauty standards - Google Search - Google Chrome" value="27.705" />
+      <element name="body dysmorphia - Google Search - Google Chrome" value="39.081" />
+      <element name="Tureng - sorun - Turkish English Dictionary - Google Chrome" value="5.143" />
+      <element name="worth to note synonym - Google Search - Google Chrome" value="5.703" />
+      <element name="Inputlog 9.5.0.1" value="2.562" />
+    </block>
+    <block name="Total Time(relative)">
+      <element name="* Time before the first window *" value="0.013" />
+      <element name="Snap Assist" value="0.001" />
+      <element name="WordLog MainDoc" value="0.884" />
+      <element name="TASKBAR" value="0.008" />
+      <element name="New Tab - Google Chrome" value="0.013" />
+      <element name="tran - Google Search - Google Chrome" value="0.000" />
+      <element name="translate - Google Search - Google Chrome" value="0.005" />
+      <element name="Search" value="0.001" />
+      <element name="conscious synonym - Google Search - Google Chrome" value="0.001" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="0.003" />
+      <element name="Chrome Remote Desktop" value="0.000" />
+      <element name="support synonym - Google Search - Google Chrome" value="0.006" />
+      <element name="concern synonym - Google Search - Google Chrome" value="0.007" />
+      <element name="teenagers developing - Google Search - Google Chrome" value="0.003" />
+      <element name="teenagers developing mental - Google Search - Google Chrome" value="0.001" />
+      <element name="teenagers developing mentally - Google Search - Google Chrome" value="0.007" />
+      <element name="serious synonym - Google Search - Google Chrome" value="0.002" />
+      <element name="ture - Google Search - Google Chrome" value="0.001" />
+      <element name="Tureng - ture - Turkish English Dictionary - Google Chrome" value="0.002" />
+      <element name="Tureng - caba - Turkish English Dictionary - Google Chrome" value="0.001" />
+      <element name="Tureng - emek - Turkish English Dictionary - Google Chrome" value="0.001" />
+      <element name="share synonym - Google Search - Google Chrome" value="0.002" />
+      <element name="pop culture - Google Search - Google Chrome" value="0.007" />
+      <element name="young adolescent age - Google Search - Google Chrome" value="0.003" />
+      <element name="unrealistic beauty standards - Google Search - Google Chrome" value="0.012" />
+      <element name="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" value="0.001" />
+      <element name="beauty standards - Google Search - Google Chrome" value="0.006" />
+      <element name="body dysmorphia - Google Search - Google Chrome" value="0.009" />
+      <element name="Tureng - sorun - Turkish English Dictionary - Google Chrome" value="0.001" />
+      <element name="worth to note synonym - Google Search - Google Chrome" value="0.001" />
+      <element name="Inputlog 9.5.0.1" value="0.001" />
+    </block>
+    <block name="Total Keystrokes ">
+      <element name="* Time before the first window *" value="0" />
+      <element name="Snap Assist" value="1" />
+      <element name="WordLog MainDoc" value="5108" />
+      <element name="TASKBAR" value="2" />
+      <element name="New Tab - Google Chrome" value="187" />
+      <element name="tran - Google Search - Google Chrome" value="0" />
+      <element name="translate - Google Search - Google Chrome" value="44" />
+      <element name="Search" value="2" />
+      <element name="conscious synonym - Google Search - Google Chrome" value="0" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="11" />
+      <element name="Chrome Remote Desktop" value="0" />
+      <element name="support synonym - Google Search - Google Chrome" value="9" />
+      <element name="concern synonym - Google Search - Google Chrome" value="0" />
+      <element name="teenagers developing - Google Search - Google Chrome" value="9" />
+      <element name="teenagers developing mental - Google Search - Google Chrome" value="3" />
+      <element name="teenagers developing mentally - Google Search - Google Chrome" value="11" />
+      <element name="serious synonym - Google Search - Google Chrome" value="7" />
+      <element name="ture - Google Search - Google Chrome" value="0" />
+      <element name="Tureng - ture - Turkish English Dictionary - Google Chrome" value="16" />
+      <element name="Tureng - caba - Turkish English Dictionary - Google Chrome" value="5" />
+      <element name="Tureng - emek - Turkish English Dictionary - Google Chrome" value="13" />
+      <element name="share synonym - Google Search - Google Chrome" value="13" />
+      <element name="pop culture - Google Search - Google Chrome" value="0" />
+      <element name="young adolescent age - Google Search - Google Chrome" value="23" />
+      <element name="unrealistic beauty standards - Google Search - Google Chrome" value="16" />
+      <element name="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" value="0" />
+      <element name="beauty standards - Google Search - Google Chrome" value="11" />
+      <element name="body dysmorphia - Google Search - Google Chrome" value="0" />
+      <element name="Tureng - sorun - Turkish English Dictionary - Google Chrome" value="0" />
+      <element name="worth to note synonym - Google Search - Google Chrome" value="0" />
+      <element name="Inputlog 9.5.0.1" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) ">
+      <element name="* Time before the first window *" value="0.000" />
+      <element name="Snap Assist" value="0.000" />
+      <element name="WordLog MainDoc" value="0.930" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="New Tab - Google Chrome" value="0.034" />
+      <element name="tran - Google Search - Google Chrome" value="0.000" />
+      <element name="translate - Google Search - Google Chrome" value="0.008" />
+      <element name="Search" value="0.000" />
+      <element name="conscious synonym - Google Search - Google Chrome" value="0.000" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="0.002" />
+      <element name="Chrome Remote Desktop" value="0.000" />
+      <element name="support synonym - Google Search - Google Chrome" value="0.002" />
+      <element name="concern synonym - Google Search - Google Chrome" value="0.000" />
+      <element name="teenagers developing - Google Search - Google Chrome" value="0.002" />
+      <element name="teenagers developing mental - Google Search - Google Chrome" value="0.001" />
+      <element name="teenagers developing mentally - Google Search - Google Chrome" value="0.002" />
+      <element name="serious synonym - Google Search - Google Chrome" value="0.001" />
+      <element name="ture - Google Search - Google Chrome" value="0.000" />
+      <element name="Tureng - ture - Turkish English Dictionary - Google Chrome" value="0.003" />
+      <element name="Tureng - caba - Turkish English Dictionary - Google Chrome" value="0.001" />
+      <element name="Tureng - emek - Turkish English Dictionary - Google Chrome" value="0.002" />
+      <element name="share synonym - Google Search - Google Chrome" value="0.002" />
+      <element name="pop culture - Google Search - Google Chrome" value="0.000" />
+      <element name="young adolescent age - Google Search - Google Chrome" value="0.004" />
+      <element name="unrealistic beauty standards - Google Search - Google Chrome" value="0.003" />
+      <element name="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" value="0.000" />
+      <element name="beauty standards - Google Search - Google Chrome" value="0.002" />
+      <element name="body dysmorphia - Google Search - Google Chrome" value="0.000" />
+      <element name="Tureng - sorun - Turkish English Dictionary - Google Chrome" value="0.000" />
+      <element name="worth to note synonym - Google Search - Google Chrome" value="0.000" />
+      <element name="Inputlog 9.5.0.1" value="0.000" />
+    </block>
+    <block name="Totals">
+      <element name="totalTime" value="4419.055" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="5491" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Window Transition Statistics" totalTransitions="187">
+    <block name="transitionFrom " ignoreForMerge="1">
+      <element name="[Snap Assist~WordLog MainDoc]" value="Snap Assist" />
+      <element name="[Snap Assist~Search]" value="Snap Assist" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="WordLog MainDoc" />
+      <element name="[WordLog MainDoc~Search]" value="WordLog MainDoc" />
+      <element name="[WordLog MainDoc~Snap Assist]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[TASKBAR~when did the internet become popular - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~support synonym - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~concern synonym - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~teenagers developing mentally - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~serious synonym - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~young adolescent age - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~unrealistic beauty standards - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~beauty standards - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~body dysmorphia - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~Tureng - sorun - Turkish English Dictionary - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~Inputlog 9.5.0.1]" value="TASKBAR" />
+      <element name="[New Tab - Google Chrome~tran - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~WordLog MainDoc]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~Search]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~TASKBAR]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~when did the internet become popular - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~teenagers developing - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~ture - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~pop culture - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~young adolescent age - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~Tureng - emek - Turkish English Dictionary - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~worth to note synonym - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[tran - Google Search - Google Chrome~translate - Google Search - Google Chrome]" value="tran - Google Search - Google Chrome" />
+      <element name="[translate - Google Search - Google Chrome~Search]" value="translate - Google Search - Google Chrome" />
+      <element name="[translate - Google Search - Google Chrome~conscious synonym - Google Search - Google Chrome]" value="translate - Google Search - Google Chrome" />
+      <element name="[Search~translate - Google Search - Google Chrome]" value="Search" />
+      <element name="[Search~TASKBAR]" value="Search" />
+      <element name="[Search~WordLog MainDoc]" value="Search" />
+      <element name="[Search~New Tab - Google Chrome]" value="Search" />
+      <element name="[conscious synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="conscious synonym - Google Search - Google Chrome" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~WordLog MainDoc]" value="when did the internet become popular - Google Search - Google Chrome" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~TASKBAR]" value="when did the internet become popular - Google Search - Google Chrome" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="when did the internet become popular - Google Search - Google Chrome" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="Chrome Remote Desktop" />
+      <element name="[support synonym - Google Search - Google Chrome~WordLog MainDoc]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[support synonym - Google Search - Google Chrome~concern synonym - Google Search - Google Chrome]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[support synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[concern synonym - Google Search - Google Chrome~WordLog MainDoc]" value="concern synonym - Google Search - Google Chrome" />
+      <element name="[concern synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="concern synonym - Google Search - Google Chrome" />
+      <element name="[teenagers developing - Google Search - Google Chrome~teenagers developing mental - Google Search - Google Chrome]" value="teenagers developing - Google Search - Google Chrome" />
+      <element name="[teenagers developing mental - Google Search - Google Chrome~teenagers developing mentally - Google Search - Google Chrome]" value="teenagers developing mental - Google Search - Google Chrome" />
+      <element name="[teenagers developing mentally - Google Search - Google Chrome~WordLog MainDoc]" value="teenagers developing mentally - Google Search - Google Chrome" />
+      <element name="[teenagers developing mentally - Google Search - Google Chrome~serious synonym - Google Search - Google Chrome]" value="teenagers developing mentally - Google Search - Google Chrome" />
+      <element name="[serious synonym - Google Search - Google Chrome~WordLog MainDoc]" value="serious synonym - Google Search - Google Chrome" />
+      <element name="[serious synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="serious synonym - Google Search - Google Chrome" />
+      <element name="[serious synonym - Google Search - Google Chrome~share synonym - Google Search - Google Chrome]" value="serious synonym - Google Search - Google Chrome" />
+      <element name="[ture - Google Search - Google Chrome~Tureng - ture - Turkish English Dictionary - Google Chrome]" value="ture - Google Search - Google Chrome" />
+      <element name="[Tureng - ture - Turkish English Dictionary - Google Chrome~Tureng - caba - Turkish English Dictionary - Google Chrome]" value="Tureng - ture - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - ture - Turkish English Dictionary - Google Chrome~Tureng - sorun - Turkish English Dictionary - Google Chrome]" value="Tureng - ture - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - caba - Turkish English Dictionary - Google Chrome~Tureng - emek - Turkish English Dictionary - Google Chrome]" value="Tureng - caba - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - emek - Turkish English Dictionary - Google Chrome~serious synonym - Google Search - Google Chrome]" value="Tureng - emek - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - emek - Turkish English Dictionary - Google Chrome~Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome]" value="Tureng - emek - Turkish English Dictionary - Google Chrome" />
+      <element name="[share synonym - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="share synonym - Google Search - Google Chrome" />
+      <element name="[pop culture - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="pop culture - Google Search - Google Chrome" />
+      <element name="[young adolescent age - Google Search - Google Chrome~WordLog MainDoc]" value="young adolescent age - Google Search - Google Chrome" />
+      <element name="[young adolescent age - Google Search - Google Chrome~TASKBAR]" value="young adolescent age - Google Search - Google Chrome" />
+      <element name="[young adolescent age - Google Search - Google Chrome~unrealistic beauty standards - Google Search - Google Chrome]" value="young adolescent age - Google Search - Google Chrome" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~WordLog MainDoc]" value="unrealistic beauty standards - Google Search - Google Chrome" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~TASKBAR]" value="unrealistic beauty standards - Google Search - Google Chrome" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~New Tab - Google Chrome]" value="unrealistic beauty standards - Google Search - Google Chrome" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~beauty standards - Google Search - Google Chrome]" value="unrealistic beauty standards - Google Search - Google Chrome" />
+      <element name="[Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome~WordLog MainDoc]" value="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome~unrealistic beauty standards - Google Search - Google Chrome]" value="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" />
+      <element name="[beauty standards - Google Search - Google Chrome~WordLog MainDoc]" value="beauty standards - Google Search - Google Chrome" />
+      <element name="[beauty standards - Google Search - Google Chrome~body dysmorphia - Google Search - Google Chrome]" value="beauty standards - Google Search - Google Chrome" />
+      <element name="[body dysmorphia - Google Search - Google Chrome~WordLog MainDoc]" value="body dysmorphia - Google Search - Google Chrome" />
+      <element name="[body dysmorphia - Google Search - Google Chrome~New Tab - Google Chrome]" value="body dysmorphia - Google Search - Google Chrome" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~WordLog MainDoc]" value="Tureng - sorun - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~TASKBAR]" value="Tureng - sorun - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~New Tab - Google Chrome]" value="Tureng - sorun - Turkish English Dictionary - Google Chrome" />
+      <element name="[worth to note synonym - Google Search - Google Chrome~WordLog MainDoc]" value="worth to note synonym - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionTo " ignoreForMerge="1">
+      <element name="[Snap Assist~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[Snap Assist~Search]" value="Search" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="Chrome Remote Desktop" />
+      <element name="[WordLog MainDoc~Search]" value="Search" />
+      <element name="[WordLog MainDoc~Snap Assist]" value="Snap Assist" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~when did the internet become popular - Google Search - Google Chrome]" value="when did the internet become popular - Google Search - Google Chrome" />
+      <element name="[TASKBAR~support synonym - Google Search - Google Chrome]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[TASKBAR~concern synonym - Google Search - Google Chrome]" value="concern synonym - Google Search - Google Chrome" />
+      <element name="[TASKBAR~teenagers developing mentally - Google Search - Google Chrome]" value="teenagers developing mentally - Google Search - Google Chrome" />
+      <element name="[TASKBAR~serious synonym - Google Search - Google Chrome]" value="serious synonym - Google Search - Google Chrome" />
+      <element name="[TASKBAR~young adolescent age - Google Search - Google Chrome]" value="young adolescent age - Google Search - Google Chrome" />
+      <element name="[TASKBAR~unrealistic beauty standards - Google Search - Google Chrome]" value="unrealistic beauty standards - Google Search - Google Chrome" />
+      <element name="[TASKBAR~Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome]" value="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" />
+      <element name="[TASKBAR~beauty standards - Google Search - Google Chrome]" value="beauty standards - Google Search - Google Chrome" />
+      <element name="[TASKBAR~body dysmorphia - Google Search - Google Chrome]" value="body dysmorphia - Google Search - Google Chrome" />
+      <element name="[TASKBAR~Tureng - sorun - Turkish English Dictionary - Google Chrome]" value="Tureng - sorun - Turkish English Dictionary - Google Chrome" />
+      <element name="[TASKBAR~Inputlog 9.5.0.1]" value="Inputlog 9.5.0.1" />
+      <element name="[New Tab - Google Chrome~tran - Google Search - Google Chrome]" value="tran - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[New Tab - Google Chrome~Search]" value="Search" />
+      <element name="[New Tab - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[New Tab - Google Chrome~when did the internet become popular - Google Search - Google Chrome]" value="when did the internet become popular - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~teenagers developing - Google Search - Google Chrome]" value="teenagers developing - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~ture - Google Search - Google Chrome]" value="ture - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~pop culture - Google Search - Google Chrome]" value="pop culture - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~young adolescent age - Google Search - Google Chrome]" value="young adolescent age - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~Tureng - emek - Turkish English Dictionary - Google Chrome]" value="Tureng - emek - Turkish English Dictionary - Google Chrome" />
+      <element name="[New Tab - Google Chrome~worth to note synonym - Google Search - Google Chrome]" value="worth to note synonym - Google Search - Google Chrome" />
+      <element name="[tran - Google Search - Google Chrome~translate - Google Search - Google Chrome]" value="translate - Google Search - Google Chrome" />
+      <element name="[translate - Google Search - Google Chrome~Search]" value="Search" />
+      <element name="[translate - Google Search - Google Chrome~conscious synonym - Google Search - Google Chrome]" value="conscious synonym - Google Search - Google Chrome" />
+      <element name="[Search~translate - Google Search - Google Chrome]" value="translate - Google Search - Google Chrome" />
+      <element name="[Search~TASKBAR]" value="TASKBAR" />
+      <element name="[Search~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[Search~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[conscious synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[support synonym - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[support synonym - Google Search - Google Chrome~concern synonym - Google Search - Google Chrome]" value="concern synonym - Google Search - Google Chrome" />
+      <element name="[support synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[concern synonym - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[concern synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[teenagers developing - Google Search - Google Chrome~teenagers developing mental - Google Search - Google Chrome]" value="teenagers developing mental - Google Search - Google Chrome" />
+      <element name="[teenagers developing mental - Google Search - Google Chrome~teenagers developing mentally - Google Search - Google Chrome]" value="teenagers developing mentally - Google Search - Google Chrome" />
+      <element name="[teenagers developing mentally - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[teenagers developing mentally - Google Search - Google Chrome~serious synonym - Google Search - Google Chrome]" value="serious synonym - Google Search - Google Chrome" />
+      <element name="[serious synonym - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[serious synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[serious synonym - Google Search - Google Chrome~share synonym - Google Search - Google Chrome]" value="share synonym - Google Search - Google Chrome" />
+      <element name="[ture - Google Search - Google Chrome~Tureng - ture - Turkish English Dictionary - Google Chrome]" value="Tureng - ture - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - ture - Turkish English Dictionary - Google Chrome~Tureng - caba - Turkish English Dictionary - Google Chrome]" value="Tureng - caba - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - ture - Turkish English Dictionary - Google Chrome~Tureng - sorun - Turkish English Dictionary - Google Chrome]" value="Tureng - sorun - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - caba - Turkish English Dictionary - Google Chrome~Tureng - emek - Turkish English Dictionary - Google Chrome]" value="Tureng - emek - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - emek - Turkish English Dictionary - Google Chrome~serious synonym - Google Search - Google Chrome]" value="serious synonym - Google Search - Google Chrome" />
+      <element name="[Tureng - emek - Turkish English Dictionary - Google Chrome~Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome]" value="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" />
+      <element name="[share synonym - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[pop culture - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[young adolescent age - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[young adolescent age - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[young adolescent age - Google Search - Google Chrome~unrealistic beauty standards - Google Search - Google Chrome]" value="unrealistic beauty standards - Google Search - Google Chrome" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~beauty standards - Google Search - Google Chrome]" value="beauty standards - Google Search - Google Chrome" />
+      <element name="[Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome~unrealistic beauty standards - Google Search - Google Chrome]" value="unrealistic beauty standards - Google Search - Google Chrome" />
+      <element name="[beauty standards - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[beauty standards - Google Search - Google Chrome~body dysmorphia - Google Search - Google Chrome]" value="body dysmorphia - Google Search - Google Chrome" />
+      <element name="[body dysmorphia - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[body dysmorphia - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[worth to note synonym - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+    </block>
+    <block name="transitionCount ">
+      <element name="[Snap Assist~WordLog MainDoc]" value="1" />
+      <element name="[Snap Assist~Search]" value="1" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="48" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="2" />
+      <element name="[WordLog MainDoc~Search]" value="1" />
+      <element name="[WordLog MainDoc~Snap Assist]" value="1" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="6" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="23" />
+      <element name="[TASKBAR~when did the internet become popular - Google Search - Google Chrome]" value="2" />
+      <element name="[TASKBAR~support synonym - Google Search - Google Chrome]" value="3" />
+      <element name="[TASKBAR~concern synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[TASKBAR~teenagers developing mentally - Google Search - Google Chrome]" value="1" />
+      <element name="[TASKBAR~serious synonym - Google Search - Google Chrome]" value="2" />
+      <element name="[TASKBAR~young adolescent age - Google Search - Google Chrome]" value="2" />
+      <element name="[TASKBAR~unrealistic beauty standards - Google Search - Google Chrome]" value="4" />
+      <element name="[TASKBAR~Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome]" value="1" />
+      <element name="[TASKBAR~beauty standards - Google Search - Google Chrome]" value="3" />
+      <element name="[TASKBAR~body dysmorphia - Google Search - Google Chrome]" value="4" />
+      <element name="[TASKBAR~Tureng - sorun - Turkish English Dictionary - Google Chrome]" value="2" />
+      <element name="[TASKBAR~Inputlog 9.5.0.1]" value="1" />
+      <element name="[New Tab - Google Chrome~tran - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~WordLog MainDoc]" value="3" />
+      <element name="[New Tab - Google Chrome~Search]" value="2" />
+      <element name="[New Tab - Google Chrome~TASKBAR]" value="1" />
+      <element name="[New Tab - Google Chrome~when did the internet become popular - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~teenagers developing - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~ture - Google Search - Google Chrome]" value="2" />
+      <element name="[New Tab - Google Chrome~pop culture - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~young adolescent age - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~Tureng - emek - Turkish English Dictionary - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~worth to note synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[tran - Google Search - Google Chrome~translate - Google Search - Google Chrome]" value="1" />
+      <element name="[translate - Google Search - Google Chrome~Search]" value="1" />
+      <element name="[translate - Google Search - Google Chrome~conscious synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[Search~translate - Google Search - Google Chrome]" value="1" />
+      <element name="[Search~TASKBAR]" value="1" />
+      <element name="[Search~WordLog MainDoc]" value="2" />
+      <element name="[Search~New Tab - Google Chrome]" value="1" />
+      <element name="[conscious synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~WordLog MainDoc]" value="1" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~TASKBAR]" value="1" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="2" />
+      <element name="[support synonym - Google Search - Google Chrome~WordLog MainDoc]" value="3" />
+      <element name="[support synonym - Google Search - Google Chrome~concern synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[support synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="2" />
+      <element name="[concern synonym - Google Search - Google Chrome~WordLog MainDoc]" value="1" />
+      <element name="[concern synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[teenagers developing - Google Search - Google Chrome~teenagers developing mental - Google Search - Google Chrome]" value="1" />
+      <element name="[teenagers developing mental - Google Search - Google Chrome~teenagers developing mentally - Google Search - Google Chrome]" value="1" />
+      <element name="[teenagers developing mentally - Google Search - Google Chrome~WordLog MainDoc]" value="1" />
+      <element name="[teenagers developing mentally - Google Search - Google Chrome~serious synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[serious synonym - Google Search - Google Chrome~WordLog MainDoc]" value="2" />
+      <element name="[serious synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[serious synonym - Google Search - Google Chrome~share synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[ture - Google Search - Google Chrome~Tureng - ture - Turkish English Dictionary - Google Chrome]" value="2" />
+      <element name="[Tureng - ture - Turkish English Dictionary - Google Chrome~Tureng - caba - Turkish English Dictionary - Google Chrome]" value="1" />
+      <element name="[Tureng - ture - Turkish English Dictionary - Google Chrome~Tureng - sorun - Turkish English Dictionary - Google Chrome]" value="1" />
+      <element name="[Tureng - caba - Turkish English Dictionary - Google Chrome~Tureng - emek - Turkish English Dictionary - Google Chrome]" value="1" />
+      <element name="[Tureng - emek - Turkish English Dictionary - Google Chrome~serious synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[Tureng - emek - Turkish English Dictionary - Google Chrome~Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome]" value="1" />
+      <element name="[share synonym - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[pop culture - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[young adolescent age - Google Search - Google Chrome~WordLog MainDoc]" value="1" />
+      <element name="[young adolescent age - Google Search - Google Chrome~TASKBAR]" value="1" />
+      <element name="[young adolescent age - Google Search - Google Chrome~unrealistic beauty standards - Google Search - Google Chrome]" value="1" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~WordLog MainDoc]" value="2" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~TASKBAR]" value="2" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~beauty standards - Google Search - Google Chrome]" value="1" />
+      <element name="[Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome~WordLog MainDoc]" value="1" />
+      <element name="[Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome~unrealistic beauty standards - Google Search - Google Chrome]" value="1" />
+      <element name="[beauty standards - Google Search - Google Chrome~WordLog MainDoc]" value="3" />
+      <element name="[beauty standards - Google Search - Google Chrome~body dysmorphia - Google Search - Google Chrome]" value="1" />
+      <element name="[body dysmorphia - Google Search - Google Chrome~WordLog MainDoc]" value="4" />
+      <element name="[body dysmorphia - Google Search - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~WordLog MainDoc]" value="1" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~TASKBAR]" value="1" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[worth to note synonym - Google Search - Google Chrome~WordLog MainDoc]" value="1" />
+    </block>
+  </module>
+  <module name="Intervals">
+    <block name="Start Time">
+      <element name="Interval 1" value="0.000" />
+      <element name="Interval 2" value="439.033" />
+      <element name="Interval 3" value="878.066" />
+      <element name="Interval 4" value="1317.099" />
+      <element name="Interval 5" value="1756.132" />
+      <element name="Interval 6" value="2195.165" />
+      <element name="Interval 7" value="2634.198" />
+      <element name="Interval 8" value="3073.231" />
+      <element name="Interval 9" value="3512.264" />
+      <element name="Interval 10" value="3951.297" />
+    </block>
+  </module>
+  <module name="Interval 1 - Window Statistics">
+    <block name="Total Time(s) 1">
+      <element name="Snap Assist" value="1.839" />
+      <element name="WordLog MainDoc" value="360.538" />
+      <element name="TASKBAR" value="4.393" />
+      <element name="New Tab - Google Chrome" value="15.557" />
+      <element name="tran - Google Search - Google Chrome" value="2.016" />
+      <element name="translate - Google Search - Google Chrome" value="21.602" />
+      <element name="Search" value="0.972" />
+      <element name="conscious synonym - Google Search - Google Chrome" value="3.383" />
+    </block>
+    <block name="Total Time(relative) 1">
+      <element name="Snap Assist" value="0.004" />
+      <element name="WordLog MainDoc" value="0.879" />
+      <element name="TASKBAR" value="0.011" />
+      <element name="New Tab - Google Chrome" value="0.038" />
+      <element name="tran - Google Search - Google Chrome" value="0.005" />
+      <element name="translate - Google Search - Google Chrome" value="0.053" />
+      <element name="Search" value="0.002" />
+      <element name="conscious synonym - Google Search - Google Chrome" value="0.008" />
+    </block>
+    <block name="Total Keystrokes 1">
+      <element name="Snap Assist" value="0" />
+      <element name="WordLog MainDoc" value="618" />
+      <element name="TASKBAR" value="0" />
+      <element name="New Tab - Google Chrome" value="16" />
+      <element name="tran - Google Search - Google Chrome" value="0" />
+      <element name="translate - Google Search - Google Chrome" value="44" />
+      <element name="Search" value="2" />
+      <element name="conscious synonym - Google Search - Google Chrome" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 1">
+      <element name="Snap Assist" value="0.000" />
+      <element name="WordLog MainDoc" value="0.909" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="New Tab - Google Chrome" value="0.024" />
+      <element name="tran - Google Search - Google Chrome" value="0.000" />
+      <element name="translate - Google Search - Google Chrome" value="0.065" />
+      <element name="Search" value="0.003" />
+      <element name="conscious synonym - Google Search - Google Chrome" value="0.000" />
+    </block>
+    <block name="Totals 1">
+      <element name="totalTime" value="410.300" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="680" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 2 - Window Statistics">
+    <block name="Total Time(s) 2">
+      <element name="WordLog MainDoc" value="410.955" />
+      <element name="TASKBAR" value="8.984" />
+      <element name="New Tab - Google Chrome" value="12.086" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="7.008" />
+    </block>
+    <block name="Total Time(relative) 2">
+      <element name="WordLog MainDoc" value="0.936" />
+      <element name="TASKBAR" value="0.020" />
+      <element name="New Tab - Google Chrome" value="0.028" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="0.016" />
+    </block>
+    <block name="Total Keystrokes 2">
+      <element name="WordLog MainDoc" value="535" />
+      <element name="TASKBAR" value="2" />
+      <element name="New Tab - Google Chrome" value="57" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 2">
+      <element name="WordLog MainDoc" value="0.901" />
+      <element name="TASKBAR" value="0.003" />
+      <element name="New Tab - Google Chrome" value="0.096" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="0.000" />
+    </block>
+    <block name="Totals 2">
+      <element name="totalTime" value="439.033" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="594" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 3 - Window Statistics">
+    <block name="Total Time(s) 3">
+      <element name="WordLog MainDoc" value="434.876" />
+      <element name="TASKBAR" value="1.532" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="2.125" />
+      <element name="Chrome Remote Desktop" value="0.500" />
+    </block>
+    <block name="Total Time(relative) 3">
+      <element name="WordLog MainDoc" value="0.991" />
+      <element name="TASKBAR" value="0.003" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="0.005" />
+      <element name="Chrome Remote Desktop" value="0.001" />
+    </block>
+    <block name="Total Keystrokes 3">
+      <element name="WordLog MainDoc" value="624" />
+      <element name="TASKBAR" value="0" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="0" />
+      <element name="Chrome Remote Desktop" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 3">
+      <element name="WordLog MainDoc" value="1.000" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="0.000" />
+      <element name="Chrome Remote Desktop" value="0.000" />
+    </block>
+    <block name="Totals 3">
+      <element name="totalTime" value="439.033" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="624" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 4 - Window Statistics">
+    <block name="Total Time(s) 4">
+      <element name="WordLog MainDoc" value="423.046" />
+      <element name="TASKBAR" value="2.204" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="5.278" />
+      <element name="support synonym - Google Search - Google Chrome" value="7.706" />
+      <element name="Search" value="0.799" />
+    </block>
+    <block name="Total Time(relative) 4">
+      <element name="WordLog MainDoc" value="0.964" />
+      <element name="TASKBAR" value="0.005" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="0.012" />
+      <element name="support synonym - Google Search - Google Chrome" value="0.018" />
+      <element name="Search" value="0.002" />
+    </block>
+    <block name="Total Keystrokes 4">
+      <element name="WordLog MainDoc" value="498" />
+      <element name="TASKBAR" value="0" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="11" />
+      <element name="support synonym - Google Search - Google Chrome" value="0" />
+      <element name="Search" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 4">
+      <element name="WordLog MainDoc" value="0.978" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="when did the internet become popular - Google Search - Google Chrome" value="0.022" />
+      <element name="support synonym - Google Search - Google Chrome" value="0.000" />
+      <element name="Search" value="0.000" />
+    </block>
+    <block name="Totals 4">
+      <element name="totalTime" value="439.033" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="509" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 5 - Window Statistics">
+    <block name="Total Time(s) 5">
+      <element name="WordLog MainDoc" value="401.597" />
+      <element name="Snap Assist" value="0.773" />
+      <element name="Search" value="1.413" />
+      <element name="TASKBAR" value="1.172" />
+      <element name="support synonym - Google Search - Google Chrome" value="7.229" />
+      <element name="concern synonym - Google Search - Google Chrome" value="26.849" />
+    </block>
+    <block name="Total Time(relative) 5">
+      <element name="WordLog MainDoc" value="0.915" />
+      <element name="Snap Assist" value="0.002" />
+      <element name="Search" value="0.003" />
+      <element name="TASKBAR" value="0.003" />
+      <element name="support synonym - Google Search - Google Chrome" value="0.016" />
+      <element name="concern synonym - Google Search - Google Chrome" value="0.061" />
+    </block>
+    <block name="Total Keystrokes 5">
+      <element name="WordLog MainDoc" value="704" />
+      <element name="Snap Assist" value="1" />
+      <element name="Search" value="0" />
+      <element name="TASKBAR" value="0" />
+      <element name="support synonym - Google Search - Google Chrome" value="9" />
+      <element name="concern synonym - Google Search - Google Chrome" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 5">
+      <element name="WordLog MainDoc" value="0.986" />
+      <element name="Snap Assist" value="0.001" />
+      <element name="Search" value="0.000" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="support synonym - Google Search - Google Chrome" value="0.013" />
+      <element name="concern synonym - Google Search - Google Chrome" value="0.000" />
+    </block>
+    <block name="Totals 5">
+      <element name="totalTime" value="439.033" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="714" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 6 - Window Statistics">
+    <block name="Total Time(s) 6">
+      <element name="WordLog MainDoc" value="362.986" />
+      <element name="TASKBAR" value="1.203" />
+      <element name="concern synonym - Google Search - Google Chrome" value="2.031" />
+      <element name="New Tab - Google Chrome" value="7.252" />
+      <element name="teenagers developing - Google Search - Google Chrome" value="12.418" />
+      <element name="teenagers developing mental - Google Search - Google Chrome" value="3.074" />
+      <element name="teenagers developing mentally - Google Search - Google Chrome" value="29.312" />
+      <element name="serious synonym - Google Search - Google Chrome" value="6.618" />
+      <element name="ture - Google Search - Google Chrome" value="2.264" />
+      <element name="Tureng - ture - Turkish English Dictionary - Google Chrome" value="3.924" />
+      <element name="Tureng - caba - Turkish English Dictionary - Google Chrome" value="4.240" />
+      <element name="Tureng - emek - Turkish English Dictionary - Google Chrome" value="3.711" />
+    </block>
+    <block name="Total Time(relative) 6">
+      <element name="WordLog MainDoc" value="0.827" />
+      <element name="TASKBAR" value="0.003" />
+      <element name="concern synonym - Google Search - Google Chrome" value="0.005" />
+      <element name="New Tab - Google Chrome" value="0.017" />
+      <element name="teenagers developing - Google Search - Google Chrome" value="0.028" />
+      <element name="teenagers developing mental - Google Search - Google Chrome" value="0.007" />
+      <element name="teenagers developing mentally - Google Search - Google Chrome" value="0.067" />
+      <element name="serious synonym - Google Search - Google Chrome" value="0.015" />
+      <element name="ture - Google Search - Google Chrome" value="0.005" />
+      <element name="Tureng - ture - Turkish English Dictionary - Google Chrome" value="0.009" />
+      <element name="Tureng - caba - Turkish English Dictionary - Google Chrome" value="0.010" />
+      <element name="Tureng - emek - Turkish English Dictionary - Google Chrome" value="0.008" />
+    </block>
+    <block name="Total Keystrokes 6">
+      <element name="WordLog MainDoc" value="312" />
+      <element name="TASKBAR" value="0" />
+      <element name="concern synonym - Google Search - Google Chrome" value="0" />
+      <element name="New Tab - Google Chrome" value="28" />
+      <element name="teenagers developing - Google Search - Google Chrome" value="9" />
+      <element name="teenagers developing mental - Google Search - Google Chrome" value="3" />
+      <element name="teenagers developing mentally - Google Search - Google Chrome" value="11" />
+      <element name="serious synonym - Google Search - Google Chrome" value="0" />
+      <element name="ture - Google Search - Google Chrome" value="0" />
+      <element name="Tureng - ture - Turkish English Dictionary - Google Chrome" value="8" />
+      <element name="Tureng - caba - Turkish English Dictionary - Google Chrome" value="5" />
+      <element name="Tureng - emek - Turkish English Dictionary - Google Chrome" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 6">
+      <element name="WordLog MainDoc" value="0.830" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="concern synonym - Google Search - Google Chrome" value="0.000" />
+      <element name="New Tab - Google Chrome" value="0.074" />
+      <element name="teenagers developing - Google Search - Google Chrome" value="0.024" />
+      <element name="teenagers developing mental - Google Search - Google Chrome" value="0.008" />
+      <element name="teenagers developing mentally - Google Search - Google Chrome" value="0.029" />
+      <element name="serious synonym - Google Search - Google Chrome" value="0.000" />
+      <element name="ture - Google Search - Google Chrome" value="0.000" />
+      <element name="Tureng - ture - Turkish English Dictionary - Google Chrome" value="0.021" />
+      <element name="Tureng - caba - Turkish English Dictionary - Google Chrome" value="0.013" />
+      <element name="Tureng - emek - Turkish English Dictionary - Google Chrome" value="0.000" />
+    </block>
+    <block name="Totals 6">
+      <element name="totalTime" value="439.033" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="376" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 7 - Window Statistics">
+    <block name="Total Time(s) 7">
+      <element name="WordLog MainDoc" value="370.736" />
+      <element name="TASKBAR" value="3.750" />
+      <element name="serious synonym - Google Search - Google Chrome" value="2.774" />
+      <element name="share synonym - Google Search - Google Chrome" value="8.789" />
+      <element name="support synonym - Google Search - Google Chrome" value="9.937" />
+      <element name="New Tab - Google Chrome" value="5.721" />
+      <element name="pop culture - Google Search - Google Chrome" value="29.122" />
+      <element name="young adolescent age - Google Search - Google Chrome" value="8.141" />
+      <element name="Chrome Remote Desktop" value="0.063" />
+    </block>
+    <block name="Total Time(relative) 7">
+      <element name="WordLog MainDoc" value="0.844" />
+      <element name="TASKBAR" value="0.009" />
+      <element name="serious synonym - Google Search - Google Chrome" value="0.006" />
+      <element name="share synonym - Google Search - Google Chrome" value="0.020" />
+      <element name="support synonym - Google Search - Google Chrome" value="0.023" />
+      <element name="New Tab - Google Chrome" value="0.013" />
+      <element name="pop culture - Google Search - Google Chrome" value="0.066" />
+      <element name="young adolescent age - Google Search - Google Chrome" value="0.019" />
+      <element name="Chrome Remote Desktop" value="0.000" />
+    </block>
+    <block name="Total Keystrokes 7">
+      <element name="WordLog MainDoc" value="408" />
+      <element name="TASKBAR" value="0" />
+      <element name="serious synonym - Google Search - Google Chrome" value="7" />
+      <element name="share synonym - Google Search - Google Chrome" value="13" />
+      <element name="support synonym - Google Search - Google Chrome" value="0" />
+      <element name="New Tab - Google Chrome" value="25" />
+      <element name="pop culture - Google Search - Google Chrome" value="0" />
+      <element name="young adolescent age - Google Search - Google Chrome" value="3" />
+      <element name="Chrome Remote Desktop" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 7">
+      <element name="WordLog MainDoc" value="0.895" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="serious synonym - Google Search - Google Chrome" value="0.015" />
+      <element name="share synonym - Google Search - Google Chrome" value="0.029" />
+      <element name="support synonym - Google Search - Google Chrome" value="0.000" />
+      <element name="New Tab - Google Chrome" value="0.055" />
+      <element name="pop culture - Google Search - Google Chrome" value="0.000" />
+      <element name="young adolescent age - Google Search - Google Chrome" value="0.007" />
+      <element name="Chrome Remote Desktop" value="0.000" />
+    </block>
+    <block name="Totals 7">
+      <element name="totalTime" value="439.033" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="456" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 8 - Window Statistics">
+    <block name="Total Time(s) 8">
+      <element name="WordLog MainDoc" value="338.217" />
+      <element name="TASKBAR" value="0.750" />
+      <element name="young adolescent age - Google Search - Google Chrome" value="5.155" />
+      <element name="unrealistic beauty standards - Google Search - Google Chrome" value="52.902" />
+      <element name="New Tab - Google Chrome" value="2.680" />
+      <element name="Tureng - emek - Turkish English Dictionary - Google Chrome" value="2.741" />
+      <element name="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" value="4.235" />
+      <element name="beauty standards - Google Search - Google Chrome" value="27.705" />
+      <element name="body dysmorphia - Google Search - Google Chrome" value="4.648" />
+    </block>
+    <block name="Total Time(relative) 8">
+      <element name="WordLog MainDoc" value="0.770" />
+      <element name="TASKBAR" value="0.002" />
+      <element name="young adolescent age - Google Search - Google Chrome" value="0.012" />
+      <element name="unrealistic beauty standards - Google Search - Google Chrome" value="0.120" />
+      <element name="New Tab - Google Chrome" value="0.006" />
+      <element name="Tureng - emek - Turkish English Dictionary - Google Chrome" value="0.006" />
+      <element name="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" value="0.010" />
+      <element name="beauty standards - Google Search - Google Chrome" value="0.063" />
+      <element name="body dysmorphia - Google Search - Google Chrome" value="0.011" />
+    </block>
+    <block name="Total Keystrokes 8">
+      <element name="WordLog MainDoc" value="314" />
+      <element name="TASKBAR" value="0" />
+      <element name="young adolescent age - Google Search - Google Chrome" value="20" />
+      <element name="unrealistic beauty standards - Google Search - Google Chrome" value="16" />
+      <element name="New Tab - Google Chrome" value="11" />
+      <element name="Tureng - emek - Turkish English Dictionary - Google Chrome" value="13" />
+      <element name="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" value="0" />
+      <element name="beauty standards - Google Search - Google Chrome" value="11" />
+      <element name="body dysmorphia - Google Search - Google Chrome" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 8">
+      <element name="WordLog MainDoc" value="0.816" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="young adolescent age - Google Search - Google Chrome" value="0.052" />
+      <element name="unrealistic beauty standards - Google Search - Google Chrome" value="0.042" />
+      <element name="New Tab - Google Chrome" value="0.029" />
+      <element name="Tureng - emek - Turkish English Dictionary - Google Chrome" value="0.034" />
+      <element name="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" value="0.000" />
+      <element name="beauty standards - Google Search - Google Chrome" value="0.029" />
+      <element name="body dysmorphia - Google Search - Google Chrome" value="0.000" />
+    </block>
+    <block name="Totals 8">
+      <element name="totalTime" value="439.033" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="385" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 9 - Window Statistics">
+    <block name="Total Time(s) 9">
+      <element name="body dysmorphia - Google Search - Google Chrome" value="34.433" />
+      <element name="WordLog MainDoc" value="396.148" />
+      <element name="TASKBAR" value="1.640" />
+      <element name="New Tab - Google Chrome" value="5.499" />
+      <element name="Search" value="1.313" />
+    </block>
+    <block name="Total Time(relative) 9">
+      <element name="body dysmorphia - Google Search - Google Chrome" value="0.078" />
+      <element name="WordLog MainDoc" value="0.902" />
+      <element name="TASKBAR" value="0.004" />
+      <element name="New Tab - Google Chrome" value="0.013" />
+      <element name="Search" value="0.003" />
+    </block>
+    <block name="Total Keystrokes 9">
+      <element name="body dysmorphia - Google Search - Google Chrome" value="0" />
+      <element name="WordLog MainDoc" value="484" />
+      <element name="TASKBAR" value="0" />
+      <element name="New Tab - Google Chrome" value="15" />
+      <element name="Search" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 9">
+      <element name="body dysmorphia - Google Search - Google Chrome" value="0.000" />
+      <element name="WordLog MainDoc" value="0.970" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="New Tab - Google Chrome" value="0.030" />
+      <element name="Search" value="0.000" />
+    </block>
+    <block name="Totals 9">
+      <element name="totalTime" value="439.033" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="499" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 10 - Window Statistics">
+    <block name="Total Time(s) 10">
+      <element name="WordLog MainDoc" value="405.730" />
+      <element name="TASKBAR" value="7.703" />
+      <element name="New Tab - Google Chrome" value="7.399" />
+      <element name="ture - Google Search - Google Chrome" value="1.647" />
+      <element name="Tureng - ture - Turkish English Dictionary - Google Chrome" value="3.138" />
+      <element name="Tureng - sorun - Turkish English Dictionary - Google Chrome" value="5.143" />
+      <element name="worth to note synonym - Google Search - Google Chrome" value="5.703" />
+      <element name="Inputlog 9.5.0.1" value="2.562" />
+    </block>
+    <block name="Total Time(relative) 10">
+      <element name="WordLog MainDoc" value="0.924" />
+      <element name="TASKBAR" value="0.018" />
+      <element name="New Tab - Google Chrome" value="0.017" />
+      <element name="ture - Google Search - Google Chrome" value="0.004" />
+      <element name="Tureng - ture - Turkish English Dictionary - Google Chrome" value="0.007" />
+      <element name="Tureng - sorun - Turkish English Dictionary - Google Chrome" value="0.012" />
+      <element name="worth to note synonym - Google Search - Google Chrome" value="0.013" />
+      <element name="Inputlog 9.5.0.1" value="0.006" />
+    </block>
+    <block name="Total Keystrokes 10">
+      <element name="WordLog MainDoc" value="611" />
+      <element name="TASKBAR" value="0" />
+      <element name="New Tab - Google Chrome" value="35" />
+      <element name="ture - Google Search - Google Chrome" value="0" />
+      <element name="Tureng - ture - Turkish English Dictionary - Google Chrome" value="8" />
+      <element name="Tureng - sorun - Turkish English Dictionary - Google Chrome" value="0" />
+      <element name="worth to note synonym - Google Search - Google Chrome" value="0" />
+      <element name="Inputlog 9.5.0.1" value="0" />
+    </block>
+    <block name="Total Keystrokes(relative) 10">
+      <element name="WordLog MainDoc" value="0.934" />
+      <element name="TASKBAR" value="0.000" />
+      <element name="New Tab - Google Chrome" value="0.054" />
+      <element name="ture - Google Search - Google Chrome" value="0.000" />
+      <element name="Tureng - ture - Turkish English Dictionary - Google Chrome" value="0.012" />
+      <element name="Tureng - sorun - Turkish English Dictionary - Google Chrome" value="0.000" />
+      <element name="worth to note synonym - Google Search - Google Chrome" value="0.000" />
+      <element name="Inputlog 9.5.0.1" value="0.000" />
+    </block>
+    <block name="Totals 10">
+      <element name="totalTime" value="439.025" />
+      <element name="relativeTimeTotal" value="1.000" />
+      <element name="totalKeypresses" value="654" />
+      <element name="relativeKeyPressTotal" value="1.000" />
+    </block>
+  </module>
+  <module name="Interval 1 - Window Transition Statistics" totalTransitions="22">
+    <block name="transitionFrom 1" ignoreForMerge="1">
+      <element name="[Snap Assist~WordLog MainDoc]" value="Snap Assist" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[New Tab - Google Chrome~tran - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~WordLog MainDoc]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~Search]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~TASKBAR]" value="New Tab - Google Chrome" />
+      <element name="[tran - Google Search - Google Chrome~translate - Google Search - Google Chrome]" value="tran - Google Search - Google Chrome" />
+      <element name="[translate - Google Search - Google Chrome~Search]" value="translate - Google Search - Google Chrome" />
+      <element name="[translate - Google Search - Google Chrome~conscious synonym - Google Search - Google Chrome]" value="translate - Google Search - Google Chrome" />
+      <element name="[Search~translate - Google Search - Google Chrome]" value="Search" />
+      <element name="[Search~TASKBAR]" value="Search" />
+      <element name="[conscious synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="conscious synonym - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionTo 1" ignoreForMerge="1">
+      <element name="[Snap Assist~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[New Tab - Google Chrome~tran - Google Search - Google Chrome]" value="tran - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[New Tab - Google Chrome~Search]" value="Search" />
+      <element name="[New Tab - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[tran - Google Search - Google Chrome~translate - Google Search - Google Chrome]" value="translate - Google Search - Google Chrome" />
+      <element name="[translate - Google Search - Google Chrome~Search]" value="Search" />
+      <element name="[translate - Google Search - Google Chrome~conscious synonym - Google Search - Google Chrome]" value="conscious synonym - Google Search - Google Chrome" />
+      <element name="[Search~translate - Google Search - Google Chrome]" value="translate - Google Search - Google Chrome" />
+      <element name="[Search~TASKBAR]" value="TASKBAR" />
+      <element name="[conscious synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+    </block>
+    <block name="transitionCount 1">
+      <element name="[Snap Assist~WordLog MainDoc]" value="1" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="4" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="4" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="2" />
+      <element name="[New Tab - Google Chrome~tran - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~WordLog MainDoc]" value="2" />
+      <element name="[New Tab - Google Chrome~Search]" value="1" />
+      <element name="[New Tab - Google Chrome~TASKBAR]" value="1" />
+      <element name="[tran - Google Search - Google Chrome~translate - Google Search - Google Chrome]" value="1" />
+      <element name="[translate - Google Search - Google Chrome~Search]" value="1" />
+      <element name="[translate - Google Search - Google Chrome~conscious synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[Search~translate - Google Search - Google Chrome]" value="1" />
+      <element name="[Search~TASKBAR]" value="1" />
+      <element name="[conscious synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 2 - Window Transition Statistics" totalTransitions="12">
+    <block name="transitionFrom 2" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="TASKBAR" />
+      <element name="[New Tab - Google Chrome~when did the internet become popular - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~WordLog MainDoc]" value="when did the internet become popular - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionTo 2" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~when did the internet become popular - Google Search - Google Chrome]" value="when did the internet become popular - Google Search - Google Chrome" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+    </block>
+    <block name="transitionCount 2">
+      <element name="[WordLog MainDoc~TASKBAR]" value="5" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="4" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~when did the internet become popular - Google Search - Google Chrome]" value="1" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~WordLog MainDoc]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 3 - Window Transition Statistics" totalTransitions="8">
+    <block name="transitionFrom 3" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~when did the internet become popular - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~TASKBAR]" value="when did the internet become popular - Google Search - Google Chrome" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="Chrome Remote Desktop" />
+    </block>
+    <block name="transitionTo 3" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="Chrome Remote Desktop" />
+      <element name="[TASKBAR~when did the internet become popular - Google Search - Google Chrome]" value="when did the internet become popular - Google Search - Google Chrome" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="WordLog MainDoc" />
+    </block>
+    <block name="transitionCount 3">
+      <element name="[WordLog MainDoc~TASKBAR]" value="2" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="1" />
+      <element name="[TASKBAR~when did the internet become popular - Google Search - Google Chrome]" value="1" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="2" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~TASKBAR]" value="1" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 4 - Window Transition Statistics" totalTransitions="10">
+    <block name="transitionFrom 4" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[WordLog MainDoc~Search]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[TASKBAR~when did the internet become popular - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="when did the internet become popular - Google Search - Google Chrome" />
+      <element name="[support synonym - Google Search - Google Chrome~WordLog MainDoc]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[Search~WordLog MainDoc]" value="Search" />
+    </block>
+    <block name="transitionTo 4" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[WordLog MainDoc~Search]" value="Search" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~when did the internet become popular - Google Search - Google Chrome]" value="when did the internet become popular - Google Search - Google Chrome" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[support synonym - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[Search~WordLog MainDoc]" value="WordLog MainDoc" />
+    </block>
+    <block name="transitionCount 4">
+      <element name="[WordLog MainDoc~TASKBAR]" value="3" />
+      <element name="[WordLog MainDoc~Search]" value="1" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="2" />
+      <element name="[TASKBAR~when did the internet become popular - Google Search - Google Chrome]" value="1" />
+      <element name="[when did the internet become popular - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[support synonym - Google Search - Google Chrome~WordLog MainDoc]" value="1" />
+      <element name="[Search~WordLog MainDoc]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 5 - Window Transition Statistics" totalTransitions="7">
+    <block name="transitionFrom 5" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~Snap Assist]" value="WordLog MainDoc" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[Snap Assist~Search]" value="Snap Assist" />
+      <element name="[Search~WordLog MainDoc]" value="Search" />
+      <element name="[TASKBAR~support synonym - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[support synonym - Google Search - Google Chrome~concern synonym - Google Search - Google Chrome]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[concern synonym - Google Search - Google Chrome~WordLog MainDoc]" value="concern synonym - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionTo 5" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~Snap Assist]" value="Snap Assist" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[Snap Assist~Search]" value="Search" />
+      <element name="[Search~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~support synonym - Google Search - Google Chrome]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[support synonym - Google Search - Google Chrome~concern synonym - Google Search - Google Chrome]" value="concern synonym - Google Search - Google Chrome" />
+      <element name="[concern synonym - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+    </block>
+    <block name="transitionCount 5">
+      <element name="[WordLog MainDoc~Snap Assist]" value="1" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="1" />
+      <element name="[Snap Assist~Search]" value="1" />
+      <element name="[Search~WordLog MainDoc]" value="1" />
+      <element name="[TASKBAR~support synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[support synonym - Google Search - Google Chrome~concern synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[concern synonym - Google Search - Google Chrome~WordLog MainDoc]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 6 - Window Transition Statistics" totalTransitions="22">
+    <block name="transitionFrom 6" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~concern synonym - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~teenagers developing mentally - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~serious synonym - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[concern synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="concern synonym - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~teenagers developing - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~ture - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[teenagers developing - Google Search - Google Chrome~teenagers developing mental - Google Search - Google Chrome]" value="teenagers developing - Google Search - Google Chrome" />
+      <element name="[teenagers developing mental - Google Search - Google Chrome~teenagers developing mentally - Google Search - Google Chrome]" value="teenagers developing mental - Google Search - Google Chrome" />
+      <element name="[teenagers developing mentally - Google Search - Google Chrome~WordLog MainDoc]" value="teenagers developing mentally - Google Search - Google Chrome" />
+      <element name="[teenagers developing mentally - Google Search - Google Chrome~serious synonym - Google Search - Google Chrome]" value="teenagers developing mentally - Google Search - Google Chrome" />
+      <element name="[serious synonym - Google Search - Google Chrome~WordLog MainDoc]" value="serious synonym - Google Search - Google Chrome" />
+      <element name="[serious synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="serious synonym - Google Search - Google Chrome" />
+      <element name="[ture - Google Search - Google Chrome~Tureng - ture - Turkish English Dictionary - Google Chrome]" value="ture - Google Search - Google Chrome" />
+      <element name="[Tureng - ture - Turkish English Dictionary - Google Chrome~Tureng - caba - Turkish English Dictionary - Google Chrome]" value="Tureng - ture - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - caba - Turkish English Dictionary - Google Chrome~Tureng - emek - Turkish English Dictionary - Google Chrome]" value="Tureng - caba - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - emek - Turkish English Dictionary - Google Chrome~serious synonym - Google Search - Google Chrome]" value="Tureng - emek - Turkish English Dictionary - Google Chrome" />
+    </block>
+    <block name="transitionTo 6" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[TASKBAR~concern synonym - Google Search - Google Chrome]" value="concern synonym - Google Search - Google Chrome" />
+      <element name="[TASKBAR~teenagers developing mentally - Google Search - Google Chrome]" value="teenagers developing mentally - Google Search - Google Chrome" />
+      <element name="[TASKBAR~serious synonym - Google Search - Google Chrome]" value="serious synonym - Google Search - Google Chrome" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[concern synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~teenagers developing - Google Search - Google Chrome]" value="teenagers developing - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~ture - Google Search - Google Chrome]" value="ture - Google Search - Google Chrome" />
+      <element name="[teenagers developing - Google Search - Google Chrome~teenagers developing mental - Google Search - Google Chrome]" value="teenagers developing mental - Google Search - Google Chrome" />
+      <element name="[teenagers developing mental - Google Search - Google Chrome~teenagers developing mentally - Google Search - Google Chrome]" value="teenagers developing mentally - Google Search - Google Chrome" />
+      <element name="[teenagers developing mentally - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[teenagers developing mentally - Google Search - Google Chrome~serious synonym - Google Search - Google Chrome]" value="serious synonym - Google Search - Google Chrome" />
+      <element name="[serious synonym - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[serious synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[ture - Google Search - Google Chrome~Tureng - ture - Turkish English Dictionary - Google Chrome]" value="Tureng - ture - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - ture - Turkish English Dictionary - Google Chrome~Tureng - caba - Turkish English Dictionary - Google Chrome]" value="Tureng - caba - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - caba - Turkish English Dictionary - Google Chrome~Tureng - emek - Turkish English Dictionary - Google Chrome]" value="Tureng - emek - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - emek - Turkish English Dictionary - Google Chrome~serious synonym - Google Search - Google Chrome]" value="serious synonym - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionCount 6">
+      <element name="[WordLog MainDoc~TASKBAR]" value="4" />
+      <element name="[TASKBAR~concern synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[TASKBAR~teenagers developing mentally - Google Search - Google Chrome]" value="1" />
+      <element name="[TASKBAR~serious synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="1" />
+      <element name="[concern synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~teenagers developing - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~ture - Google Search - Google Chrome]" value="1" />
+      <element name="[teenagers developing - Google Search - Google Chrome~teenagers developing mental - Google Search - Google Chrome]" value="1" />
+      <element name="[teenagers developing mental - Google Search - Google Chrome~teenagers developing mentally - Google Search - Google Chrome]" value="1" />
+      <element name="[teenagers developing mentally - Google Search - Google Chrome~WordLog MainDoc]" value="1" />
+      <element name="[teenagers developing mentally - Google Search - Google Chrome~serious synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[serious synonym - Google Search - Google Chrome~WordLog MainDoc]" value="2" />
+      <element name="[serious synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[ture - Google Search - Google Chrome~Tureng - ture - Turkish English Dictionary - Google Chrome]" value="1" />
+      <element name="[Tureng - ture - Turkish English Dictionary - Google Chrome~Tureng - caba - Turkish English Dictionary - Google Chrome]" value="1" />
+      <element name="[Tureng - caba - Turkish English Dictionary - Google Chrome~Tureng - emek - Turkish English Dictionary - Google Chrome]" value="1" />
+      <element name="[Tureng - emek - Turkish English Dictionary - Google Chrome~serious synonym - Google Search - Google Chrome]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 7 - Window Transition Statistics" totalTransitions="26">
+    <block name="transitionFrom 7" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~serious synonym - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~support synonym - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[TASKBAR~young adolescent age - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[serious synonym - Google Search - Google Chrome~share synonym - Google Search - Google Chrome]" value="serious synonym - Google Search - Google Chrome" />
+      <element name="[share synonym - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="share synonym - Google Search - Google Chrome" />
+      <element name="[support synonym - Google Search - Google Chrome~WordLog MainDoc]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[support synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~pop culture - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~young adolescent age - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[pop culture - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="pop culture - Google Search - Google Chrome" />
+      <element name="[young adolescent age - Google Search - Google Chrome~WordLog MainDoc]" value="young adolescent age - Google Search - Google Chrome" />
+      <element name="[young adolescent age - Google Search - Google Chrome~TASKBAR]" value="young adolescent age - Google Search - Google Chrome" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="Chrome Remote Desktop" />
+    </block>
+    <block name="transitionTo 7" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="Chrome Remote Desktop" />
+      <element name="[TASKBAR~serious synonym - Google Search - Google Chrome]" value="serious synonym - Google Search - Google Chrome" />
+      <element name="[TASKBAR~support synonym - Google Search - Google Chrome]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~young adolescent age - Google Search - Google Chrome]" value="young adolescent age - Google Search - Google Chrome" />
+      <element name="[serious synonym - Google Search - Google Chrome~share synonym - Google Search - Google Chrome]" value="share synonym - Google Search - Google Chrome" />
+      <element name="[share synonym - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[support synonym - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[support synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~pop culture - Google Search - Google Chrome]" value="pop culture - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~young adolescent age - Google Search - Google Chrome]" value="young adolescent age - Google Search - Google Chrome" />
+      <element name="[pop culture - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="support synonym - Google Search - Google Chrome" />
+      <element name="[young adolescent age - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[young adolescent age - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="WordLog MainDoc" />
+    </block>
+    <block name="transitionCount 7">
+      <element name="[WordLog MainDoc~TASKBAR]" value="6" />
+      <element name="[WordLog MainDoc~Chrome Remote Desktop]" value="1" />
+      <element name="[TASKBAR~serious synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[TASKBAR~support synonym - Google Search - Google Chrome]" value="2" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="3" />
+      <element name="[TASKBAR~young adolescent age - Google Search - Google Chrome]" value="1" />
+      <element name="[serious synonym - Google Search - Google Chrome~share synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[share synonym - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[support synonym - Google Search - Google Chrome~WordLog MainDoc]" value="2" />
+      <element name="[support synonym - Google Search - Google Chrome~New Tab - Google Chrome]" value="2" />
+      <element name="[New Tab - Google Chrome~pop culture - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~young adolescent age - Google Search - Google Chrome]" value="1" />
+      <element name="[pop culture - Google Search - Google Chrome~support synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[young adolescent age - Google Search - Google Chrome~WordLog MainDoc]" value="1" />
+      <element name="[young adolescent age - Google Search - Google Chrome~TASKBAR]" value="1" />
+      <element name="[Chrome Remote Desktop~WordLog MainDoc]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 8 - Window Transition Statistics" totalTransitions="35">
+    <block name="transitionFrom 8" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~young adolescent age - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~unrealistic beauty standards - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[TASKBAR~Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~beauty standards - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[young adolescent age - Google Search - Google Chrome~unrealistic beauty standards - Google Search - Google Chrome]" value="young adolescent age - Google Search - Google Chrome" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~WordLog MainDoc]" value="unrealistic beauty standards - Google Search - Google Chrome" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~TASKBAR]" value="unrealistic beauty standards - Google Search - Google Chrome" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~New Tab - Google Chrome]" value="unrealistic beauty standards - Google Search - Google Chrome" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~beauty standards - Google Search - Google Chrome]" value="unrealistic beauty standards - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~Tureng - emek - Turkish English Dictionary - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[Tureng - emek - Turkish English Dictionary - Google Chrome~Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome]" value="Tureng - emek - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome~WordLog MainDoc]" value="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome~unrealistic beauty standards - Google Search - Google Chrome]" value="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" />
+      <element name="[beauty standards - Google Search - Google Chrome~WordLog MainDoc]" value="beauty standards - Google Search - Google Chrome" />
+      <element name="[beauty standards - Google Search - Google Chrome~body dysmorphia - Google Search - Google Chrome]" value="beauty standards - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionTo 8" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[TASKBAR~young adolescent age - Google Search - Google Chrome]" value="young adolescent age - Google Search - Google Chrome" />
+      <element name="[TASKBAR~unrealistic beauty standards - Google Search - Google Chrome]" value="unrealistic beauty standards - Google Search - Google Chrome" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome]" value="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" />
+      <element name="[TASKBAR~beauty standards - Google Search - Google Chrome]" value="beauty standards - Google Search - Google Chrome" />
+      <element name="[young adolescent age - Google Search - Google Chrome~unrealistic beauty standards - Google Search - Google Chrome]" value="unrealistic beauty standards - Google Search - Google Chrome" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~beauty standards - Google Search - Google Chrome]" value="beauty standards - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~Tureng - emek - Turkish English Dictionary - Google Chrome]" value="Tureng - emek - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - emek - Turkish English Dictionary - Google Chrome~Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome]" value="Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome~unrealistic beauty standards - Google Search - Google Chrome]" value="unrealistic beauty standards - Google Search - Google Chrome" />
+      <element name="[beauty standards - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[beauty standards - Google Search - Google Chrome~body dysmorphia - Google Search - Google Chrome]" value="body dysmorphia - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionCount 8">
+      <element name="[WordLog MainDoc~TASKBAR]" value="9" />
+      <element name="[TASKBAR~young adolescent age - Google Search - Google Chrome]" value="1" />
+      <element name="[TASKBAR~unrealistic beauty standards - Google Search - Google Chrome]" value="4" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="2" />
+      <element name="[TASKBAR~Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome]" value="1" />
+      <element name="[TASKBAR~beauty standards - Google Search - Google Chrome]" value="3" />
+      <element name="[young adolescent age - Google Search - Google Chrome~unrealistic beauty standards - Google Search - Google Chrome]" value="1" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~WordLog MainDoc]" value="2" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~TASKBAR]" value="2" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[unrealistic beauty standards - Google Search - Google Chrome~beauty standards - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~Tureng - emek - Turkish English Dictionary - Google Chrome]" value="1" />
+      <element name="[Tureng - emek - Turkish English Dictionary - Google Chrome~Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome]" value="1" />
+      <element name="[Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome~WordLog MainDoc]" value="1" />
+      <element name="[Tureng - maruz kalmak - Turkish English Dictionary - Google Chrome~unrealistic beauty standards - Google Search - Google Chrome]" value="1" />
+      <element name="[beauty standards - Google Search - Google Chrome~WordLog MainDoc]" value="3" />
+      <element name="[beauty standards - Google Search - Google Chrome~body dysmorphia - Google Search - Google Chrome]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 9 - Window Transition Statistics" totalTransitions="18">
+    <block name="transitionFrom 9" ignoreForMerge="1">
+      <element name="[body dysmorphia - Google Search - Google Chrome~WordLog MainDoc]" value="body dysmorphia - Google Search - Google Chrome" />
+      <element name="[body dysmorphia - Google Search - Google Chrome~New Tab - Google Chrome]" value="body dysmorphia - Google Search - Google Chrome" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[TASKBAR~body dysmorphia - Google Search - Google Chrome]" value="TASKBAR" />
+      <element name="[New Tab - Google Chrome~Search]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~WordLog MainDoc]" value="New Tab - Google Chrome" />
+      <element name="[Search~New Tab - Google Chrome]" value="Search" />
+    </block>
+    <block name="transitionTo 9" ignoreForMerge="1">
+      <element name="[body dysmorphia - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[body dysmorphia - Google Search - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~body dysmorphia - Google Search - Google Chrome]" value="body dysmorphia - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~Search]" value="Search" />
+      <element name="[New Tab - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[Search~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+    </block>
+    <block name="transitionCount 9">
+      <element name="[body dysmorphia - Google Search - Google Chrome~WordLog MainDoc]" value="4" />
+      <element name="[body dysmorphia - Google Search - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[WordLog MainDoc~TASKBAR]" value="5" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="1" />
+      <element name="[TASKBAR~body dysmorphia - Google Search - Google Chrome]" value="4" />
+      <element name="[New Tab - Google Chrome~Search]" value="1" />
+      <element name="[New Tab - Google Chrome~WordLog MainDoc]" value="1" />
+      <element name="[Search~New Tab - Google Chrome]" value="1" />
+    </block>
+  </module>
+  <module name="Interval 10 - Window Transition Statistics" totalTransitions="27">
+    <block name="transitionFrom 10" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="TASKBAR" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~Tureng - sorun - Turkish English Dictionary - Google Chrome]" value="TASKBAR" />
+      <element name="[TASKBAR~Inputlog 9.5.0.1]" value="TASKBAR" />
+      <element name="[New Tab - Google Chrome~ture - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[New Tab - Google Chrome~worth to note synonym - Google Search - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[ture - Google Search - Google Chrome~Tureng - ture - Turkish English Dictionary - Google Chrome]" value="ture - Google Search - Google Chrome" />
+      <element name="[Tureng - ture - Turkish English Dictionary - Google Chrome~Tureng - sorun - Turkish English Dictionary - Google Chrome]" value="Tureng - ture - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~WordLog MainDoc]" value="Tureng - sorun - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~TASKBAR]" value="Tureng - sorun - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~New Tab - Google Chrome]" value="Tureng - sorun - Turkish English Dictionary - Google Chrome" />
+      <element name="[worth to note synonym - Google Search - Google Chrome~WordLog MainDoc]" value="worth to note synonym - Google Search - Google Chrome" />
+    </block>
+    <block name="transitionTo 10" ignoreForMerge="1">
+      <element name="[WordLog MainDoc~TASKBAR]" value="TASKBAR" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[TASKBAR~Tureng - sorun - Turkish English Dictionary - Google Chrome]" value="Tureng - sorun - Turkish English Dictionary - Google Chrome" />
+      <element name="[TASKBAR~Inputlog 9.5.0.1]" value="Inputlog 9.5.0.1" />
+      <element name="[New Tab - Google Chrome~ture - Google Search - Google Chrome]" value="ture - Google Search - Google Chrome" />
+      <element name="[New Tab - Google Chrome~worth to note synonym - Google Search - Google Chrome]" value="worth to note synonym - Google Search - Google Chrome" />
+      <element name="[ture - Google Search - Google Chrome~Tureng - ture - Turkish English Dictionary - Google Chrome]" value="Tureng - ture - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - ture - Turkish English Dictionary - Google Chrome~Tureng - sorun - Turkish English Dictionary - Google Chrome]" value="Tureng - sorun - Turkish English Dictionary - Google Chrome" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~TASKBAR]" value="TASKBAR" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~New Tab - Google Chrome]" value="New Tab - Google Chrome" />
+      <element name="[worth to note synonym - Google Search - Google Chrome~WordLog MainDoc]" value="WordLog MainDoc" />
+    </block>
+    <block name="transitionCount 10">
+      <element name="[WordLog MainDoc~TASKBAR]" value="9" />
+      <element name="[TASKBAR~WordLog MainDoc]" value="6" />
+      <element name="[TASKBAR~New Tab - Google Chrome]" value="1" />
+      <element name="[TASKBAR~Tureng - sorun - Turkish English Dictionary - Google Chrome]" value="2" />
+      <element name="[TASKBAR~Inputlog 9.5.0.1]" value="1" />
+      <element name="[New Tab - Google Chrome~ture - Google Search - Google Chrome]" value="1" />
+      <element name="[New Tab - Google Chrome~worth to note synonym - Google Search - Google Chrome]" value="1" />
+      <element name="[ture - Google Search - Google Chrome~Tureng - ture - Turkish English Dictionary - Google Chrome]" value="1" />
+      <element name="[Tureng - ture - Turkish English Dictionary - Google Chrome~Tureng - sorun - Turkish English Dictionary - Google Chrome]" value="1" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~WordLog MainDoc]" value="1" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~TASKBAR]" value="1" />
+      <element name="[Tureng - sorun - Turkish English Dictionary - Google Chrome~New Tab - Google Chrome]" value="1" />
+      <element name="[worth to note synonym - Google Search - Google Chrome~WordLog MainDoc]" value="1" />
+    </block>
+  </module>
+</session>

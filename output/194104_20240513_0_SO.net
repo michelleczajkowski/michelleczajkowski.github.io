@@ -1,0 +1,68 @@
+*Vertices 18
+1 "Inputlog 9.5.0.1" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic Fuchsia bc Fuchsia lr 6 fos 10
+2 "TASKBAR" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic JungleGreen bc JungleGreen lr 6 fos 10
+3 "Remote Support - Chrome Remote Desktop - Google Chrome" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic Yellow bc Yellow lr 6 fos 10
+4 "WordLog MainDoc" 0.0 0.0 0.5 ellipse x_fact 88 y_fact 88 ic Lavender bc Lavender lr 6 fos 10
+5 "New Tab - Google Chrome" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic SeaGreen bc SeaGreen lr 6 fos 10
+6 "Leave site?" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic Goldenrod bc Goldenrod lr 6 fos 10
+7 "Online Javascript Editor - Google Chrome" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic Thistle bc Thistle lr 6 fos 10
+8 "Word Options" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic Green bc Green lr 6 fos 10
+9 "Microsoft Word" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic Dandelion bc Dandelion lr 6 fos 10
+10 "meaning of echo chambers - Google Search - Google Chrome" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic Orchid bc Orchid lr 6 fos 10
+11 "meaning of echo chambers in social media - Google Search - Google Chrome" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic ForestGreen bc ForestGreen lr 6 fos 10
+12 "google translate - Google Search - Google Chrome" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic Apricot bc Apricot lr 6 fos 10
+13 "synonym of encounter - Google Search - Google Chrome" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic DarkOrchid bc DarkOrchid lr 6 fos 10
+14 "negative effects of echo chambers in social media - Google Search - Google Chrome" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic PineGreen bc PineGreen lr 6 fos 10
+15 "Chrome Remote Desktop" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic Peach bc Peach lr 6 fos 10
+16 "synonym of in the worst case - Google Search - Google Chrome" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic Purple bc Purple lr 6 fos 10
+17 "synonym of bad - Google Search - Google Chrome" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic LimeGreen bc LimeGreen lr 6 fos 10
+18 "synonym of to encourage - Google Search - Google Chrome" 0.0 0.0 0.5 ellipse x_fact 5 y_fact 5 ic Melon bc Melon lr 6 fos 10
+*Arcs
+1 2 1 w 1
+1 15 1 w 1
+2 3 2 w 1
+2 4 16 w 1
+2 5 3 w 1
+2 11 2 w 1
+2 12 3 w 1
+2 13 2 w 1
+2 16 1 w 1
+2 17 2 w 1
+2 1 2 w 1
+3 2 1 w 1
+3 5 1 w 1
+4 2 16 w 1
+4 8 2 w 1
+4 9 2 w 1
+4 15 1 w 1
+5 6 1 w 1
+5 2 3 w 1
+5 10 1 w 1
+5 12 1 w 1
+5 13 1 w 1
+5 17 1 w 1
+6 7 1 w 1
+7 5 1 w 1
+8 4 2 w 1
+9 4 2 w 1
+10 11 1 w 1
+11 2 2 w 1
+11 5 1 w 1
+11 12 1 w 1
+11 14 1 w 1
+12 2 4 w 1
+12 11 2 w 1
+12 5 2 w 1
+12 17 1 w 1
+13 2 2 w 1
+13 12 1 w 1
+13 16 1 w 1
+14 13 1 w 1
+15 4 1 w 1
+15 2 1 w 1
+16 2 1 w 1
+16 12 1 w 1
+17 2 2 w 1
+17 12 1 w 1
+17 18 1 w 1
+18 12 1 w 1

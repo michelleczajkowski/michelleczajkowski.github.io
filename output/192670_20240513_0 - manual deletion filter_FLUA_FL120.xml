@@ -1,0 +1,663 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="Style/fluency_analysis.xsl"?>
+<session>
+  <meta>
+    <entry name="Logfile" value="192670_0 - manual deletion filter.idfx" />
+    <entry name="MainDocument" value="Writing Task 192670.20240513171520.docx" />
+    <entry name="LogCreationDate" value="13/05/24 17:15:23.385" />
+    <entry name="LogGUID" value="fe4a0e3a-e560-4b64-a8a3-23a4b7bd448d" />
+    <entry name="LogProgramVersion" value="9.5.0.1" />
+    <entry name="AnalysisCreationDate" value="28/05/24 13:56:45" />
+    <entry name="AnalysisGUID" value="a93a7fa9-9f09-4530-b085-d790eb29d678" />
+    <entry name="AnalysisProgramVersion" value="9.5.0.1" />
+  </meta>
+  <sessionIdentification>
+    <entry name="Participant" value="192670" />
+    <entry name="Text Language" value="EN" />
+    <entry name="Age" value="" />
+    <entry name="Gender" value="" />
+    <entry name="Session" value="" />
+    <entry name="Group" value="" />
+    <entry name="Experience" value="" />
+    <entry name="Restricted Logging" value="" />
+  </sessionIdentification>
+  <extraInfo title="Parameters">
+    <entry name="Fluency Analysis Type" value="Fixed Length Intervals" />
+    <entry name="Length of Interval (sec)" value="120" />
+    <entry name="Task Maximum Mode" value="Basic" />
+    <entry name="Only Character production" value="No" />
+  </extraInfo>
+  <module name="Statistics">
+    <block name="Statistics">
+      <element name="Average Strokes per Minute (10 intervals)" value="271" />
+      <element name="Standard Deviation (Intervals)" value="153.46" />
+      <element name="Standard Deviation (Overall)" value="73.94" />
+      <element name="Total Length" value="01:14:00" />
+      <element name="Total Strokes" value="20009" />
+      <element name="Interval Length" value="02:00" />
+    </block>
+  </module>
+  <module name="Absolute Maximum">
+    <block name="Maximum">
+      <element name="Maximum" value="400" />
+      <element name="Coefficient of Variation of % Abs.Maximum" value="0.40" />
+      <element name="Mean of % Abs. Maximum" value="0.68" />
+      <element name="Median of % Abs. Maximum" value="0.52" />
+      <element name="Standard Deviation of % Abs. Maximum" value="0.38" />
+    </block>
+    <block name="ID">
+      <element name="Interval_1" value="07:24:27" />
+      <element name="Interval_2" value="07:26:31" />
+      <element name="Interval_3" value="07:28:36" />
+      <element name="Interval_4" value="07:30:33" />
+      <element name="Interval_5" value="00:00:00" />
+      <element name="Interval_6" value="07:34:31" />
+      <element name="Interval_7" value="07:36:27" />
+      <element name="Interval_8" value="07:38:28" />
+      <element name="Interval_9" value="07:40:33" />
+      <element name="Interval_10" value="07:42:27" />
+      <element name="Interval_11" value="07:44:28" />
+      <element name="Interval_12" value="07:46:27" />
+      <element name="Interval_13" value="07:48:40" />
+      <element name="Interval_14" value="07:50:27" />
+      <element name="Interval_15" value="07:52:28" />
+      <element name="Interval_16" value="07:54:45" />
+      <element name="Interval_17" value="07:56:36" />
+      <element name="Interval_18" value="07:58:27" />
+      <element name="Interval_19" value="08:00:28" />
+      <element name="Interval_20" value="08:02:27" />
+      <element name="Interval_21" value="08:04:27" />
+      <element name="Interval_22" value="08:06:29" />
+      <element name="Interval_23" value="08:08:27" />
+      <element name="Interval_24" value="08:10:28" />
+      <element name="Interval_25" value="08:12:27" />
+      <element name="Interval_26" value="08:14:28" />
+      <element name="Interval_27" value="08:16:27" />
+      <element name="Interval_28" value="08:18:27" />
+      <element name="Interval_29" value="08:20:32" />
+      <element name="Interval_30" value="08:22:27" />
+      <element name="Interval_31" value="00:00:00" />
+      <element name="Interval_32" value="08:26:30" />
+      <element name="Interval_33" value="08:28:30" />
+      <element name="Interval_34" value="08:30:31" />
+      <element name="Interval_35" value="08:32:27" />
+      <element name="Interval_36" value="08:34:36" />
+      <element name="Interval_37" value="08:36:28" />
+    </block>
+    <block name="Total Strokes">
+      <element name="Interval_1" value="413" />
+      <element name="Interval_2" value="1124" />
+      <element name="Interval_3" value="416" />
+      <element name="Interval_4" value="224" />
+      <element name="Interval_5" value="1271" />
+      <element name="Interval_6" value="562" />
+      <element name="Interval_7" value="258" />
+      <element name="Interval_8" value="304" />
+      <element name="Interval_9" value="259" />
+      <element name="Interval_10" value="208" />
+      <element name="Interval_11" value="167" />
+      <element name="Interval_12" value="193" />
+      <element name="Interval_13" value="471" />
+      <element name="Interval_14" value="500" />
+      <element name="Interval_15" value="941" />
+      <element name="Interval_16" value="452" />
+      <element name="Interval_17" value="395" />
+      <element name="Interval_18" value="355" />
+      <element name="Interval_19" value="163" />
+      <element name="Interval_20" value="343" />
+      <element name="Interval_21" value="522" />
+      <element name="Interval_22" value="383" />
+      <element name="Interval_23" value="576" />
+      <element name="Interval_24" value="281" />
+      <element name="Interval_25" value="989" />
+      <element name="Interval_26" value="303" />
+      <element name="Interval_27" value="679" />
+      <element name="Interval_28" value="376" />
+      <element name="Interval_29" value="917" />
+      <element name="Interval_30" value="762" />
+      <element name="Interval_31" value="618" />
+      <element name="Interval_32" value="398" />
+      <element name="Interval_33" value="994" />
+      <element name="Interval_34" value="709" />
+      <element name="Interval_35" value="818" />
+      <element name="Interval_36" value="1271" />
+      <element name="Interval_37" value="394" />
+    </block>
+    <block name="Strokes per Minute">
+      <element name="Interval_1" value="207" />
+      <element name="Interval_2" value="562" />
+      <element name="Interval_3" value="208" />
+      <element name="Interval_4" value="112" />
+      <element name="Interval_5" value="636" />
+      <element name="Interval_6" value="281" />
+      <element name="Interval_7" value="129" />
+      <element name="Interval_8" value="152" />
+      <element name="Interval_9" value="130" />
+      <element name="Interval_10" value="104" />
+      <element name="Interval_11" value="84" />
+      <element name="Interval_12" value="97" />
+      <element name="Interval_13" value="236" />
+      <element name="Interval_14" value="250" />
+      <element name="Interval_15" value="471" />
+      <element name="Interval_16" value="226" />
+      <element name="Interval_17" value="198" />
+      <element name="Interval_18" value="178" />
+      <element name="Interval_19" value="82" />
+      <element name="Interval_20" value="172" />
+      <element name="Interval_21" value="261" />
+      <element name="Interval_22" value="192" />
+      <element name="Interval_23" value="288" />
+      <element name="Interval_24" value="141" />
+      <element name="Interval_25" value="495" />
+      <element name="Interval_26" value="152" />
+      <element name="Interval_27" value="340" />
+      <element name="Interval_28" value="188" />
+      <element name="Interval_29" value="459" />
+      <element name="Interval_30" value="381" />
+      <element name="Interval_31" value="309" />
+      <element name="Interval_32" value="199" />
+      <element name="Interval_33" value="497" />
+      <element name="Interval_34" value="355" />
+      <element name="Interval_35" value="409" />
+      <element name="Interval_36" value="636" />
+      <element name="Interval_37" value="197" />
+    </block>
+    <block name="Percentage of Maximum">
+      <element name="Interval_1" value="51.75 %" />
+      <element name="Interval_2" value="140.50 %" />
+      <element name="Interval_3" value="52.00 %" />
+      <element name="Interval_4" value="28.00 %" />
+      <element name="Interval_5" value="159.00 %" />
+      <element name="Interval_6" value="70.25 %" />
+      <element name="Interval_7" value="32.25 %" />
+      <element name="Interval_8" value="38.00 %" />
+      <element name="Interval_9" value="32.50 %" />
+      <element name="Interval_10" value="26.00 %" />
+      <element name="Interval_11" value="21.00 %" />
+      <element name="Interval_12" value="24.25 %" />
+      <element name="Interval_13" value="59.00 %" />
+      <element name="Interval_14" value="62.50 %" />
+      <element name="Interval_15" value="117.75 %" />
+      <element name="Interval_16" value="56.50 %" />
+      <element name="Interval_17" value="49.50 %" />
+      <element name="Interval_18" value="44.50 %" />
+      <element name="Interval_19" value="20.50 %" />
+      <element name="Interval_20" value="43.00 %" />
+      <element name="Interval_21" value="65.25 %" />
+      <element name="Interval_22" value="48.00 %" />
+      <element name="Interval_23" value="72.00 %" />
+      <element name="Interval_24" value="35.25 %" />
+      <element name="Interval_25" value="123.75 %" />
+      <element name="Interval_26" value="38.00 %" />
+      <element name="Interval_27" value="85.00 %" />
+      <element name="Interval_28" value="47.00 %" />
+      <element name="Interval_29" value="114.75 %" />
+      <element name="Interval_30" value="95.25 %" />
+      <element name="Interval_31" value="77.25 %" />
+      <element name="Interval_32" value="49.75 %" />
+      <element name="Interval_33" value="124.25 %" />
+      <element name="Interval_34" value="88.75 %" />
+      <element name="Interval_35" value="102.25 %" />
+      <element name="Interval_36" value="159.00 %" />
+      <element name="Interval_37" value="49.25 %" />
+    </block>
+    <block name="Period Length">
+      <element name="Interval_1" value="02:00" />
+      <element name="Interval_2" value="02:00" />
+      <element name="Interval_3" value="02:00" />
+      <element name="Interval_4" value="02:00" />
+      <element name="Interval_5" value="02:00" />
+      <element name="Interval_6" value="02:00" />
+      <element name="Interval_7" value="02:00" />
+      <element name="Interval_8" value="02:00" />
+      <element name="Interval_9" value="02:00" />
+      <element name="Interval_10" value="02:00" />
+      <element name="Interval_11" value="02:00" />
+      <element name="Interval_12" value="02:00" />
+      <element name="Interval_13" value="02:00" />
+      <element name="Interval_14" value="02:00" />
+      <element name="Interval_15" value="02:00" />
+      <element name="Interval_16" value="02:00" />
+      <element name="Interval_17" value="02:00" />
+      <element name="Interval_18" value="02:00" />
+      <element name="Interval_19" value="02:00" />
+      <element name="Interval_20" value="02:00" />
+      <element name="Interval_21" value="02:00" />
+      <element name="Interval_22" value="02:00" />
+      <element name="Interval_23" value="02:00" />
+      <element name="Interval_24" value="02:00" />
+      <element name="Interval_25" value="02:00" />
+      <element name="Interval_26" value="02:00" />
+      <element name="Interval_27" value="02:00" />
+      <element name="Interval_28" value="02:00" />
+      <element name="Interval_29" value="02:00" />
+      <element name="Interval_30" value="02:00" />
+      <element name="Interval_31" value="02:00" />
+      <element name="Interval_32" value="02:00" />
+      <element name="Interval_33" value="02:00" />
+      <element name="Interval_34" value="02:00" />
+      <element name="Interval_35" value="02:00" />
+      <element name="Interval_36" value="02:00" />
+      <element name="Interval_37" value="02:00" />
+    </block>
+  </module>
+  <module name="Task Maximum">
+    <block name="Maximum">
+      <element name="Maximum" value="1940" />
+      <element name="PeriodSize" value="00:10" />
+      <element name="WindowSize" value="3" />
+      <element name="MaximumLocation" value="01:11:30  01:12:00" />
+      <element name="Coefficient of Variation of % Task Maximum" value="0.08" />
+      <element name="Mean of % Task Maximum" value="0.14" />
+      <element name="Median of % Task Maximum" value="0.11" />
+      <element name="Standard Deviation of % Task Maximum" value="0.08" />
+      <element name="Coefficient of Variation of Strokes/Interval" value="∞" />
+      <element name="Mean of Strokes/Interval " value="540.78" />
+      <element name="Median of Strokes/Interval" value="416.00" />
+      <element name="Standard Deviation of Strokes/Interval" value="306.90" />
+      <element name="Coefficient of Variation of Strokes/Min." value="∞" />
+      <element name="Mean of Strokes/Min." value="270.65" />
+      <element name="Median of Strokes/Min." value="208.00" />
+      <element name="Standard Deviation of Strokes/Min." value="153.46" />
+    </block>
+    <block name="ID">
+      <element name="Interval_1" value="07:24:27" />
+      <element name="Interval_2" value="07:26:31" />
+      <element name="Interval_3" value="07:28:36" />
+      <element name="Interval_4" value="07:30:33" />
+      <element name="Interval_5" value="00:00:00" />
+      <element name="Interval_6" value="07:34:31" />
+      <element name="Interval_7" value="07:36:27" />
+      <element name="Interval_8" value="07:38:28" />
+      <element name="Interval_9" value="07:40:33" />
+      <element name="Interval_10" value="07:42:27" />
+      <element name="Interval_11" value="07:44:28" />
+      <element name="Interval_12" value="07:46:27" />
+      <element name="Interval_13" value="07:48:40" />
+      <element name="Interval_14" value="07:50:27" />
+      <element name="Interval_15" value="07:52:28" />
+      <element name="Interval_16" value="07:54:45" />
+      <element name="Interval_17" value="07:56:36" />
+      <element name="Interval_18" value="07:58:27" />
+      <element name="Interval_19" value="08:00:28" />
+      <element name="Interval_20" value="08:02:27" />
+      <element name="Interval_21" value="08:04:27" />
+      <element name="Interval_22" value="08:06:29" />
+      <element name="Interval_23" value="08:08:27" />
+      <element name="Interval_24" value="08:10:28" />
+      <element name="Interval_25" value="08:12:27" />
+      <element name="Interval_26" value="08:14:28" />
+      <element name="Interval_27" value="08:16:27" />
+      <element name="Interval_28" value="08:18:27" />
+      <element name="Interval_29" value="08:20:32" />
+      <element name="Interval_30" value="08:22:27" />
+      <element name="Interval_31" value="00:00:00" />
+      <element name="Interval_32" value="08:26:30" />
+      <element name="Interval_33" value="08:28:30" />
+      <element name="Interval_34" value="08:30:31" />
+      <element name="Interval_35" value="08:32:27" />
+      <element name="Interval_36" value="08:34:36" />
+      <element name="Interval_37" value="08:36:28" />
+    </block>
+    <block name="Total Strokes">
+      <element name="Interval_1" value="413" />
+      <element name="Interval_2" value="1124" />
+      <element name="Interval_3" value="416" />
+      <element name="Interval_4" value="224" />
+      <element name="Interval_5" value="1271" />
+      <element name="Interval_6" value="562" />
+      <element name="Interval_7" value="258" />
+      <element name="Interval_8" value="304" />
+      <element name="Interval_9" value="259" />
+      <element name="Interval_10" value="208" />
+      <element name="Interval_11" value="167" />
+      <element name="Interval_12" value="193" />
+      <element name="Interval_13" value="471" />
+      <element name="Interval_14" value="500" />
+      <element name="Interval_15" value="941" />
+      <element name="Interval_16" value="452" />
+      <element name="Interval_17" value="395" />
+      <element name="Interval_18" value="355" />
+      <element name="Interval_19" value="163" />
+      <element name="Interval_20" value="343" />
+      <element name="Interval_21" value="522" />
+      <element name="Interval_22" value="383" />
+      <element name="Interval_23" value="576" />
+      <element name="Interval_24" value="281" />
+      <element name="Interval_25" value="989" />
+      <element name="Interval_26" value="303" />
+      <element name="Interval_27" value="679" />
+      <element name="Interval_28" value="376" />
+      <element name="Interval_29" value="917" />
+      <element name="Interval_30" value="762" />
+      <element name="Interval_31" value="618" />
+      <element name="Interval_32" value="398" />
+      <element name="Interval_33" value="994" />
+      <element name="Interval_34" value="709" />
+      <element name="Interval_35" value="818" />
+      <element name="Interval_36" value="1271" />
+      <element name="Interval_37" value="394" />
+    </block>
+    <block name="Strokes per Minute">
+      <element name="Interval_1" value="207" />
+      <element name="Interval_2" value="562" />
+      <element name="Interval_3" value="208" />
+      <element name="Interval_4" value="112" />
+      <element name="Interval_5" value="636" />
+      <element name="Interval_6" value="281" />
+      <element name="Interval_7" value="129" />
+      <element name="Interval_8" value="152" />
+      <element name="Interval_9" value="130" />
+      <element name="Interval_10" value="104" />
+      <element name="Interval_11" value="84" />
+      <element name="Interval_12" value="97" />
+      <element name="Interval_13" value="236" />
+      <element name="Interval_14" value="250" />
+      <element name="Interval_15" value="471" />
+      <element name="Interval_16" value="226" />
+      <element name="Interval_17" value="198" />
+      <element name="Interval_18" value="178" />
+      <element name="Interval_19" value="82" />
+      <element name="Interval_20" value="172" />
+      <element name="Interval_21" value="261" />
+      <element name="Interval_22" value="192" />
+      <element name="Interval_23" value="288" />
+      <element name="Interval_24" value="141" />
+      <element name="Interval_25" value="495" />
+      <element name="Interval_26" value="152" />
+      <element name="Interval_27" value="340" />
+      <element name="Interval_28" value="188" />
+      <element name="Interval_29" value="459" />
+      <element name="Interval_30" value="381" />
+      <element name="Interval_31" value="309" />
+      <element name="Interval_32" value="199" />
+      <element name="Interval_33" value="497" />
+      <element name="Interval_34" value="355" />
+      <element name="Interval_35" value="409" />
+      <element name="Interval_36" value="636" />
+      <element name="Interval_37" value="197" />
+    </block>
+    <block name="Percentage of Maximum">
+      <element name="Interval_1" value="10.67 %" />
+      <element name="Interval_2" value="28.97 %" />
+      <element name="Interval_3" value="10.72 %" />
+      <element name="Interval_4" value="5.77 %" />
+      <element name="Interval_5" value="32.78 %" />
+      <element name="Interval_6" value="14.48 %" />
+      <element name="Interval_7" value="6.65 %" />
+      <element name="Interval_8" value="7.84 %" />
+      <element name="Interval_9" value="6.70 %" />
+      <element name="Interval_10" value="5.36 %" />
+      <element name="Interval_11" value="4.33 %" />
+      <element name="Interval_12" value="5.00 %" />
+      <element name="Interval_13" value="12.16 %" />
+      <element name="Interval_14" value="12.89 %" />
+      <element name="Interval_15" value="24.28 %" />
+      <element name="Interval_16" value="11.65 %" />
+      <element name="Interval_17" value="10.21 %" />
+      <element name="Interval_18" value="9.18 %" />
+      <element name="Interval_19" value="4.23 %" />
+      <element name="Interval_20" value="8.87 %" />
+      <element name="Interval_21" value="13.45 %" />
+      <element name="Interval_22" value="9.90 %" />
+      <element name="Interval_23" value="14.85 %" />
+      <element name="Interval_24" value="7.27 %" />
+      <element name="Interval_25" value="25.52 %" />
+      <element name="Interval_26" value="7.84 %" />
+      <element name="Interval_27" value="17.53 %" />
+      <element name="Interval_28" value="9.69 %" />
+      <element name="Interval_29" value="23.66 %" />
+      <element name="Interval_30" value="19.64 %" />
+      <element name="Interval_31" value="15.93 %" />
+      <element name="Interval_32" value="10.26 %" />
+      <element name="Interval_33" value="25.62 %" />
+      <element name="Interval_34" value="18.30 %" />
+      <element name="Interval_35" value="21.08 %" />
+      <element name="Interval_36" value="32.78 %" />
+      <element name="Interval_37" value="10.15 %" />
+    </block>
+    <block name="Period Length">
+      <element name="Interval_1" value="02:00" />
+      <element name="Interval_2" value="02:00" />
+      <element name="Interval_3" value="02:00" />
+      <element name="Interval_4" value="02:00" />
+      <element name="Interval_5" value="02:00" />
+      <element name="Interval_6" value="02:00" />
+      <element name="Interval_7" value="02:00" />
+      <element name="Interval_8" value="02:00" />
+      <element name="Interval_9" value="02:00" />
+      <element name="Interval_10" value="02:00" />
+      <element name="Interval_11" value="02:00" />
+      <element name="Interval_12" value="02:00" />
+      <element name="Interval_13" value="02:00" />
+      <element name="Interval_14" value="02:00" />
+      <element name="Interval_15" value="02:00" />
+      <element name="Interval_16" value="02:00" />
+      <element name="Interval_17" value="02:00" />
+      <element name="Interval_18" value="02:00" />
+      <element name="Interval_19" value="02:00" />
+      <element name="Interval_20" value="02:00" />
+      <element name="Interval_21" value="02:00" />
+      <element name="Interval_22" value="02:00" />
+      <element name="Interval_23" value="02:00" />
+      <element name="Interval_24" value="02:00" />
+      <element name="Interval_25" value="02:00" />
+      <element name="Interval_26" value="02:00" />
+      <element name="Interval_27" value="02:00" />
+      <element name="Interval_28" value="02:00" />
+      <element name="Interval_29" value="02:00" />
+      <element name="Interval_30" value="02:00" />
+      <element name="Interval_31" value="02:00" />
+      <element name="Interval_32" value="02:00" />
+      <element name="Interval_33" value="02:00" />
+      <element name="Interval_34" value="02:00" />
+      <element name="Interval_35" value="02:00" />
+      <element name="Interval_36" value="02:00" />
+      <element name="Interval_37" value="02:00" />
+    </block>
+  </module>
+  <module name="Personal Maximum">
+    <block name="Maximum">
+      <element name="Maximum" value="2022" />
+      <element name="Coefficient of Variation of % Pers.Maximum" value="0.08" />
+      <element name="Mean of % Pers.Maximum" value="0.13" />
+      <element name="Median of % Pers.Maximum" value="0.10" />
+      <element name="Standard Deviation of % Pers.Maximum" value="0.08" />
+    </block>
+    <block name="ID">
+      <element name="Interval_1" value="07:24:27" />
+      <element name="Interval_2" value="07:26:31" />
+      <element name="Interval_3" value="07:28:36" />
+      <element name="Interval_4" value="07:30:33" />
+      <element name="Interval_5" value="00:00:00" />
+      <element name="Interval_6" value="07:34:31" />
+      <element name="Interval_7" value="07:36:27" />
+      <element name="Interval_8" value="07:38:28" />
+      <element name="Interval_9" value="07:40:33" />
+      <element name="Interval_10" value="07:42:27" />
+      <element name="Interval_11" value="07:44:28" />
+      <element name="Interval_12" value="07:46:27" />
+      <element name="Interval_13" value="07:48:40" />
+      <element name="Interval_14" value="07:50:27" />
+      <element name="Interval_15" value="07:52:28" />
+      <element name="Interval_16" value="07:54:45" />
+      <element name="Interval_17" value="07:56:36" />
+      <element name="Interval_18" value="07:58:27" />
+      <element name="Interval_19" value="08:00:28" />
+      <element name="Interval_20" value="08:02:27" />
+      <element name="Interval_21" value="08:04:27" />
+      <element name="Interval_22" value="08:06:29" />
+      <element name="Interval_23" value="08:08:27" />
+      <element name="Interval_24" value="08:10:28" />
+      <element name="Interval_25" value="08:12:27" />
+      <element name="Interval_26" value="08:14:28" />
+      <element name="Interval_27" value="08:16:27" />
+      <element name="Interval_28" value="08:18:27" />
+      <element name="Interval_29" value="08:20:32" />
+      <element name="Interval_30" value="08:22:27" />
+      <element name="Interval_31" value="00:00:00" />
+      <element name="Interval_32" value="08:26:30" />
+      <element name="Interval_33" value="08:28:30" />
+      <element name="Interval_34" value="08:30:31" />
+      <element name="Interval_35" value="08:32:27" />
+      <element name="Interval_36" value="08:34:36" />
+      <element name="Interval_37" value="08:36:28" />
+    </block>
+    <block name="Total Strokes">
+      <element name="Interval_1" value="413" />
+      <element name="Interval_2" value="1124" />
+      <element name="Interval_3" value="416" />
+      <element name="Interval_4" value="224" />
+      <element name="Interval_5" value="1271" />
+      <element name="Interval_6" value="562" />
+      <element name="Interval_7" value="258" />
+      <element name="Interval_8" value="304" />
+      <element name="Interval_9" value="259" />
+      <element name="Interval_10" value="208" />
+      <element name="Interval_11" value="167" />
+      <element name="Interval_12" value="193" />
+      <element name="Interval_13" value="471" />
+      <element name="Interval_14" value="500" />
+      <element name="Interval_15" value="941" />
+      <element name="Interval_16" value="452" />
+      <element name="Interval_17" value="395" />
+      <element name="Interval_18" value="355" />
+      <element name="Interval_19" value="163" />
+      <element name="Interval_20" value="343" />
+      <element name="Interval_21" value="522" />
+      <element name="Interval_22" value="383" />
+      <element name="Interval_23" value="576" />
+      <element name="Interval_24" value="281" />
+      <element name="Interval_25" value="989" />
+      <element name="Interval_26" value="303" />
+      <element name="Interval_27" value="679" />
+      <element name="Interval_28" value="376" />
+      <element name="Interval_29" value="917" />
+      <element name="Interval_30" value="762" />
+      <element name="Interval_31" value="618" />
+      <element name="Interval_32" value="398" />
+      <element name="Interval_33" value="994" />
+      <element name="Interval_34" value="709" />
+      <element name="Interval_35" value="818" />
+      <element name="Interval_36" value="1271" />
+      <element name="Interval_37" value="394" />
+    </block>
+    <block name="Strokes per Minute">
+      <element name="Interval_1" value="207" />
+      <element name="Interval_2" value="562" />
+      <element name="Interval_3" value="208" />
+      <element name="Interval_4" value="112" />
+      <element name="Interval_5" value="636" />
+      <element name="Interval_6" value="281" />
+      <element name="Interval_7" value="129" />
+      <element name="Interval_8" value="152" />
+      <element name="Interval_9" value="130" />
+      <element name="Interval_10" value="104" />
+      <element name="Interval_11" value="84" />
+      <element name="Interval_12" value="97" />
+      <element name="Interval_13" value="236" />
+      <element name="Interval_14" value="250" />
+      <element name="Interval_15" value="471" />
+      <element name="Interval_16" value="226" />
+      <element name="Interval_17" value="198" />
+      <element name="Interval_18" value="178" />
+      <element name="Interval_19" value="82" />
+      <element name="Interval_20" value="172" />
+      <element name="Interval_21" value="261" />
+      <element name="Interval_22" value="192" />
+      <element name="Interval_23" value="288" />
+      <element name="Interval_24" value="141" />
+      <element name="Interval_25" value="495" />
+      <element name="Interval_26" value="152" />
+      <element name="Interval_27" value="340" />
+      <element name="Interval_28" value="188" />
+      <element name="Interval_29" value="459" />
+      <element name="Interval_30" value="381" />
+      <element name="Interval_31" value="309" />
+      <element name="Interval_32" value="199" />
+      <element name="Interval_33" value="497" />
+      <element name="Interval_34" value="355" />
+      <element name="Interval_35" value="409" />
+      <element name="Interval_36" value="636" />
+      <element name="Interval_37" value="197" />
+    </block>
+    <block name="Percentage of Maximum">
+      <element name="Interval_1" value="10.24 %" />
+      <element name="Interval_2" value="27.79 %" />
+      <element name="Interval_3" value="10.29 %" />
+      <element name="Interval_4" value="5.54 %" />
+      <element name="Interval_5" value="31.45 %" />
+      <element name="Interval_6" value="13.90 %" />
+      <element name="Interval_7" value="6.38 %" />
+      <element name="Interval_8" value="7.52 %" />
+      <element name="Interval_9" value="6.43 %" />
+      <element name="Interval_10" value="5.14 %" />
+      <element name="Interval_11" value="4.15 %" />
+      <element name="Interval_12" value="4.80 %" />
+      <element name="Interval_13" value="11.67 %" />
+      <element name="Interval_14" value="12.36 %" />
+      <element name="Interval_15" value="23.29 %" />
+      <element name="Interval_16" value="11.18 %" />
+      <element name="Interval_17" value="9.79 %" />
+      <element name="Interval_18" value="8.80 %" />
+      <element name="Interval_19" value="4.06 %" />
+      <element name="Interval_20" value="8.51 %" />
+      <element name="Interval_21" value="12.91 %" />
+      <element name="Interval_22" value="9.50 %" />
+      <element name="Interval_23" value="14.24 %" />
+      <element name="Interval_24" value="6.97 %" />
+      <element name="Interval_25" value="24.48 %" />
+      <element name="Interval_26" value="7.52 %" />
+      <element name="Interval_27" value="16.82 %" />
+      <element name="Interval_28" value="9.30 %" />
+      <element name="Interval_29" value="22.70 %" />
+      <element name="Interval_30" value="18.84 %" />
+      <element name="Interval_31" value="15.28 %" />
+      <element name="Interval_32" value="9.84 %" />
+      <element name="Interval_33" value="24.58 %" />
+      <element name="Interval_34" value="17.56 %" />
+      <element name="Interval_35" value="20.23 %" />
+      <element name="Interval_36" value="31.45 %" />
+      <element name="Interval_37" value="9.74 %" />
+    </block>
+    <block name="Period Length">
+      <element name="Interval_1" value="02:00" />
+      <element name="Interval_2" value="02:00" />
+      <element name="Interval_3" value="02:00" />
+      <element name="Interval_4" value="02:00" />
+      <element name="Interval_5" value="02:00" />
+      <element name="Interval_6" value="02:00" />
+      <element name="Interval_7" value="02:00" />
+      <element name="Interval_8" value="02:00" />
+      <element name="Interval_9" value="02:00" />
+      <element name="Interval_10" value="02:00" />
+      <element name="Interval_11" value="02:00" />
+      <element name="Interval_12" value="02:00" />
+      <element name="Interval_13" value="02:00" />
+      <element name="Interval_14" value="02:00" />
+      <element name="Interval_15" value="02:00" />
+      <element name="Interval_16" value="02:00" />
+      <element name="Interval_17" value="02:00" />
+      <element name="Interval_18" value="02:00" />
+      <element name="Interval_19" value="02:00" />
+      <element name="Interval_20" value="02:00" />
+      <element name="Interval_21" value="02:00" />
+      <element name="Interval_22" value="02:00" />
+      <element name="Interval_23" value="02:00" />
+      <element name="Interval_24" value="02:00" />
+      <element name="Interval_25" value="02:00" />
+      <element name="Interval_26" value="02:00" />
+      <element name="Interval_27" value="02:00" />
+      <element name="Interval_28" value="02:00" />
+      <element name="Interval_29" value="02:00" />
+      <element name="Interval_30" value="02:00" />
+      <element name="Interval_31" value="02:00" />
+      <element name="Interval_32" value="02:00" />
+      <element name="Interval_33" value="02:00" />
+      <element name="Interval_34" value="02:00" />
+      <element name="Interval_35" value="02:00" />
+      <element name="Interval_36" value="02:00" />
+      <element name="Interval_37" value="02:00" />
+    </block>
+  </module>
+</session>

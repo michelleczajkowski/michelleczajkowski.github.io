@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="Style/summary_analysis.xsl"?>
+<session>
+  <meta>
+    <entry name="Logfile" value="192670_0 - manual deletion filter.idfx" />
+    <entry name="MainDocument" value="Writing Task 192670.20240513171520.docx" />
+    <entry name="LogCreationDate" value="13/05/24 17:15:23.385" />
+    <entry name="LogGUID" value="fe4a0e3a-e560-4b64-a8a3-23a4b7bd448d" />
+    <entry name="LogProgramVersion" value="9.5.0.1" />
+    <entry name="AnalysisCreationDate" value="28/05/24 14:17:35" />
+    <entry name="AnalysisGUID" value="1c771085-17d4-4c7a-bd90-c34f9fb57a00" />
+    <entry name="AnalysisProgramVersion" value="9.5.0.1" />
+  </meta>
+  <sessionIdentification>
+    <entry name="Participant" value="192670" />
+    <entry name="Text Language" value="EN" />
+    <entry name="Age" value="" />
+    <entry name="Gender" value="" />
+    <entry name="Session" value="" />
+    <entry name="Group" value="" />
+    <entry name="Experience" value="" />
+    <entry name="Restricted Logging" value="" />
+  </sessionIdentification>
+  <extraInfo title="Parameters">
+    <entry name="Pause Threshold (ms)" value="0" />
+  </extraInfo>
+  <module name="Process Information">
+    <block name="Keystrokes Produced in This Session">
+      <element name="Total Keystrokes incl. Inserted and Replaced Characters in Main Document" value="11688.000" />
+      <element name="- Total Non-Character Keys" value="100.000" />
+      <element name="- Characters Inserted" value="107.000" />
+      <element name="- Characters Replaced" value="7464.000" />
+      <element name="- Total Typed (incl.spaces)" value="4017.000" />
+      <element name="- Per Minute (incl. spaces)" value="54.898" />
+      <element name="- Total Typed (excl.spaces)" value="3362" />
+      <element name="- Per Minute (excl.spaces)" value="45.947" />
+    </block>
+    <block name="Words">
+      <element name="Total Words in Main Document" value="624.000" />
+      <element name="Per Minute" value="8.528" />
+      <element name="Mean Word Length" value="5.258" />
+      <element name="Median Word Length" value="4.000" />
+      <element name="Standard Deviation Word Length" value="3.522" />
+    </block>
+    <block name="Sentences">
+      <element name="Total Sentences in Main Document" value="50.000" />
+      <element name="Mean Characters/Sentence " value="80.340" />
+      <element name="Median Characters/Sentence " value="43.000" />
+      <element name="Standard Deviation Characters/Sentence" value="64.220" />
+      <element name="Mean Words/Sentence" value="12.480" />
+      <element name="Median Words/Sentence" value="7.000" />
+      <element name="Standard Deviation Words/Sentence" value="12.873" />
+    </block>
+    <block name="Paragraphs">
+      <element name="Total Paragraphs in Main Document" value="48.000" />
+      <element name="Mean Characters/Paragraph" value="83.688" />
+      <element name="Median Characters/Paragraph" value="43.000" />
+      <element name="Standard Deviation Characters/Paragraph" value="86.466" />
+      <element name="Mean Words/Paragraph" value="13.000" />
+      <element name="Median Words/Paragraph" value="7.000" />
+      <element name="Standard Deviation Words/Paragraph" value="17.393" />
+      <element name="Mean Sentences/Paragraph" value="1.042" />
+      <element name="Median Sentences/Paragraph" value="1.000" />
+      <element name="Standard Deviation Sentences/Paragraph" value="0.611" />
+    </block>
+  </module>
+  <module name="Product Information">
+    <block name="Initial Text">
+      <element name="Total Characters (incl.spaces)" value="49.000" />
+      <element name="Total Characters (excl.spaces)" value="44.000" />
+      <element name="Total Words Initially " value="7.000" />
+    </block>
+    <block name="Characters in Final Text of This Session">
+      <element name="Total (incl.spaces)" value="2391.000" />
+      <element name="Per Minute (incl. spaces)" value="32.676" />
+      <element name="Total (excl.spaces)" value="2011.000" />
+      <element name="Per Minute (excl.spaces)" value="27.483" />
+    </block>
+    <block name="Words">
+      <element name="Total Words in Main Document" value="383.000" />
+      <element name="Per Minute" value="5.234" />
+    </block>
+    <block name="Paragraphs">
+      <element name="Total Paragraphs in Main Document" value="5" />
+    </block>
+    <block name="Lines">
+      <element name="Total Lines in Main Document" value="23" />
+    </block>
+    <block name="Pages">
+      <element name="Total Pages in Main Document" value="2" />
+    </block>
+  </module>
+  <module name="Product/Process">
+    <block name="Ratio">
+      <element name="Produced Ratio (incl.spaces)" value="0.213" />
+    </block>
+    <block name="Proportion">
+      <element name="Characters (incl.spaces)" value="0.595" />
+      <element name="Characters (excl.spaces)" value="0.598" />
+      <element name="Words" value="0.614" />
+    </block>
+  </module>
+  <module name="Process Time">
+    <block name="General" value="01:13:10">
+      <element name="Total Process Time (s)" value="4390.322" />
+    </block>
+    <module name="Writing Mode">
+      <block name="Keyboard" value="00:27:02">
+        <element name="Total Time (s)" value="1622.012" />
+        <element name="Number of Clusters Keyboard" value="228.000" />
+        <element name="Mean Cluster Time Keyboard" value="7.114" />
+        <element name="Median Cluster Time Keyboard" value="2.453" />
+        <element name="Standard Deviation Cluster Time Keyboard" value="11.921" />
+        <element name="Number of M-Bursts Keyboard" value="5574.000" />
+        <element name="Mean M-Burst Time Keyboard" value="0.107" />
+        <element name="Median M-Burst Time Keyboard" value="0.105" />
+        <element name="Standard Deviation M-Burst Time Keyboard" value="0.080" />
+        <element name="Switches Mouse to Keyboard" value="228" />
+      </block>
+      <block name="Mouse" value="00:33:28">
+        <element name="Total Time (s)" value="2008.139" />
+        <element name="Number of Clusters Mouse" value="228.000" />
+        <element name="Mean Cluster Time Mouse" value="8.807" />
+        <element name="Median Cluster Time Mouse" value="3.109" />
+        <element name="Standard Deviation Cluster Time Mouse" value="14.383" />
+        <element name="Number of M-Bursts Mouse" value="6755.000" />
+        <element name="Mean M-Burst Time Mouse" value="0.093" />
+        <element name="Median M-Burst Time Mouse" value="0.078" />
+        <element name="Standard Deviation M-Burst Time Mouse" value="0.535" />
+        <element name="Switches Keyboard to Mouse" value="227" />
+      </block>
+    </module>
+  </module>
+</session>

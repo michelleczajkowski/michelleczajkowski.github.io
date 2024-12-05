@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annotated Video Player</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #video-container {
+      position: relative;
+      width: 100%;
+
+    }
+
+    #video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .comment-overlay {
+      position: absolute;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 25px;
+      text-align: center;
+      display: none;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      max-width: 20%; /* Adjust to the desired width */
+      padding: 10px;    /* Adjust the padding if needed */
+      word-wrap: break-word; /* Ensure long words wrap */
+    }
+
+    /* Commenter 1 styles */
+    .commenter-1 {
+      background-color: rgba(85, 13, 13, 0.8); /* Red for Commenter 1 */
+      bottom: 50%;
+      left: 20%;
+      transform: translateX(-50%);
+    }
+
+    /* Commenter 2 styles */
+    .commenter-2 {
+      background-color: rgba(12, 12, 95, 0.8); /* Blue for Commenter 2 */
+      top: 30%;
+      right: 20%;
+      transform: translateX(50%);
+    }
+
+    #continue-btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 25px;
+    }
+
+    #continue-btn:hover {
+      background-color: #45a049;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+
+<div id="video-container">
+  <video id="video" controls>
+    <source src="videos/dallas_4x.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div id="comment-overlay-1" class="comment-overlay commenter-1">
+    <div id="comment-text-1"></div>
+    <button id="continue-btn-1" onclick="continueVideo(1)">Continue</button>
+  </div>
+  <div id="comment-overlay-2" class="comment-overlay commenter-2">
+    <div id="comment-text-2"></div>
+    <button id="continue-btn-2" onclick="continueVideo(2)">Continue</button>
+  </div>
+</div>
+
+<script>
+  const video = document.getElementById('video');
+  const overlay1 = document.getElementById('comment-overlay-1');
+  const overlay2 = document.getElementById('comment-overlay-2');
+  const commentText1 = document.getElementById('comment-text-1');
+  const commentText2 = document.getElementById('comment-text-2');
+  const welcomeModal = document.getElementById('welcome-modal');
+  let currentCommentIndex = 0;
+
+  // Load comments (this would be replaced with data fetched from Qualtrics or a file)
+  const comments = [
+    { time: 2.5, comment: "Good use of an outline, but simplify it for later use.", commenter: 1 },
+    { time: 4.0, comment: "Make sure your transitions are smoother between ideas.", commenter: 2 },
+    { time: 5.2, comment: "Poor use of transition here, try a better connector.", commenter: 1 },
+    { time: 8.0, comment: "The intro could use more clarity.", commenter: 2 },
+    { time: 10.1, comment: "Excellent use of the thesaurus tool!", commenter: 1 }
+  ];
+
+  function displayComment(comment, commenter) {
+    if (commenter === 1) {
+      commentText1.textContent = comment;
+      overlay1.style.display = 'block';
+    } else if (commenter === 2) {
+      commentText2.textContent = comment;
+      overlay2.style.display = 'block';
+    }
+
+    // Pause the video
+    video.pause();
+  }
+
+  // Function to continue the video after the comment is displayed
+  function continueVideo(commenter) {
+    if (commenter === 1) {
+      overlay1.style.display = 'none';
+    } else if (commenter === 2) {
+      overlay2.style.display = 'none';
+    }
+    video.play();
+  }
+
+  // Function to close the welcome modal
+  function closeModal() {
+    welcomeModal.style.display = 'none';
+    video.play(); // Start video playback when the modal is closed
+  }
+
+  // Listen for time updates in the video
+  video.addEventListener('timeupdate', function() {
+    if (currentCommentIndex < comments.length) {
+      const nextComment = comments[currentCommentIndex];
+
+      // If the video time matches the comment's timestamp (with a small tolerance)
+      if (video.currentTime >= nextComment.time && video.currentTime < nextComment.time + 0.5) {
+        displayComment(nextComment.comment, nextComment.commenter);
+        currentCommentIndex++;
+      }
+    }
+  });
+
+  // Show the welcome modal on page load
+  window.onload = function() {
+    welcomeModal.style.display = 'flex';
+    welcomeModal.style.alignItems = 'center';
+    welcomeModal.style.justifyContent = 'center';
+  };
+</script>
+
+</body>
+</html>

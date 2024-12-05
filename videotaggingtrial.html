@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Video with Sidebar Comments</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* Prevent scrolling */
+      font-family: Arial, sans-serif;
+    }
+
+    #container {
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
+
+    #content-container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    #video-container {
+      position: relative;
+      width: 70%;
+      background-color: black;
+      overflow: hidden; /* Prevent overflow */
+    }
+
+    video {
+      width: 100%; /* Fill the container */
+      height: 100%; /* Fill the container */
+      object-fit: contain;
+    }
+
+    #sidebar {
+      width: 30%;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-left: 2px solid #ccc;
+      box-sizing: border-box;
+      overflow: auto; /* Allow scrolling if needed */
+      height: 100%; /* Fill the container */
+    }
+
+    #comment-box {
+      width: 100%; /* Fill the container */
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      resize: none; /* Prevent resizing of textarea */
+    }
+
+    #add-comment-btn, #export-button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    #add-comment-btn:hover, #export-button:hover {
+      background-color: #45a049;
+    }
+
+    #export-button {
+      background-color: #ff6666; /* Red color for submit button */
+    }
+
+    #comments-log {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+      max-height: 300px;
+      overflow-y: auto;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+    }
+
+    .comment-item {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Make sidebar and video adjustable */
+    .resizer {
+      width: 10px;
+      height: 100%;
+      cursor: ew-resize;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 10;
+    }
+
+    /* Popup styles */
+    #name-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 20;
+      width: 80%; /* Wider popup */
+      max-width: 500px; /* Maximum width */
+      overflow-y: auto; /* Allow scrolling */
+      height: 60%; /* Height of the popup */
+    }
+
+    #name-popup h3 {
+      margin-top: 0;
+    }
+
+    #name-popup textarea {
+      width: 100%;
+      height: 80%; /* Height for the textarea */
+      margin-bottom: 10px;
+    }
+
+    #name-popup input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    #name-popup button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <!-- Video and sidebar section -->
+  <div id="content-container">
+    <!-- Video section -->
+    <div id="video-container">
+      <video id="myVideo" controls>
+        <source src="videos/dallas_4x.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="resizer" id="video-resizer"></div>
+    </div>
+
+    <!-- Sidebar for adding comments -->
+    <div id="sidebar">
+      <h3>Add a Comment</h3>
+      <p>Add a comment at this point in time in the video (the video will pause while commenting).</p>
+      <textarea id="comment-box" rows="4" placeholder="Enter your comment here..." maxlength="150"></textarea>
+      <p id="char-count">150 characters remaining</p>
+      <p id="total-count">1,500 characters remaining</p>
+      <button id="add-comment-btn" onclick="addComment()">Add Comment</button>
+      <button id="export-button" onclick="submitToQualtrics()">Submit All Comments and Stop Task</button>
+      
+      <!-- Log of comments with timestamps -->
+      <div id="comments-log"></div>
+      <div class="resizer" id="sidebar-resizer"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Popup for user name -->
+<div id="name-popup">
+  <h3>Instructions & Enter Your Name</h3>
+  <p>In this exercise, you will view the student completing the task (sped up). As you watch, consider what advice you would give to them as feedback on the writing process. This can include comments on their planning, outlining, revision, use of technology, use of internet resources, revision behavior, time management, etc. This advice could comment on behaviors observed or not observed, but should take the form of advice; that is, focus on the weak points. Remember the task is to help students improve. You are limited to a total character count of 1500.</p>
+  <p><br>You can resize the video and comment frames. When you are done, click the red button to submit all comments. Do NOT close the window or the tab while working; you will lose all of your comments.</p>
+  <p>Please enter your name or rater ID and hit continue to start.</p>
+  <input type="text" id="user-name" placeholder="Your name">
+  <button onclick="submitName()">Continue</button>
+</div>
+
+<!-- Hidden form to submit annotations -->
+<form id="qualtrics-form" action="https://radboudletteren.eu.qualtrics.com/jfe/form/SV_41j8JDYKTTMiC2i" method="GET" style="display:none;">
+  <input type="hidden" id="annotations-field" name="annotations" value="">
+  <input type="hidden" id="video-name-field" name="video_name" value="dallas_4x"> <!-- Video name -->
+  <input type="hidden" id="user-name-field" name="user_name" value=""> <!-- User name -->
+  <input type="submit" value="Submit Annotations">
+</form>
+
+<script>
+  const video = document.getElementById('myVideo');
+  const commentBox = document.getElementById('comment-box');
+  const commentsLog = document.getElementById('comments-log');
+  const charCount = document.getElementById('char-count');
+  const totalCount = document.getElementById('total-count');
+  const maxTotalCharacters = 1500;
+  const maxCommentCharacters = 150;
+  let totalCharacterCount = maxTotalCharacters; // Initialize total character count
+  let annotations = []; // To store annotations
+  let userName = ''; // To store user name
+
+  // Show name input popup
+  document.getElementById('name-popup').style.display = 'block';
+
+  function submitName() {
+    const nameInput = document.getElementById('user-name');
+    userName = nameInput.value;
+    document.getElementById('user-name-field').value = userName; // Store user name in hidden field
+    document.getElementById('name-popup').style.display = 'none'; // Hide the popup
+    video.play(); // Start playing the video
+  }
+
+  function addComment() {
+    const commentText = commentBox.value;
+
+    // Check if adding the comment exceeds the total character limit
+    if (totalCharacterCount > 0 && commentText.length > 0) {
+      const commentLength = commentText.length;
+
+      // Store the annotation (comment and timestamp)
+      annotations.push({ t: video.currentTime, c: commentText }); // Shortened keys
+
+      // Create a new comment element
+      const commentItem = document.createElement('div');
+      commentItem.classList.add('comment-item');
+      commentItem.textContent = `Time: ${video.currentTime.toFixed(2)}s - Comment: ${commentText}`;
+      
+      // Prepend the new comment at the top of the comments log
+      commentsLog.insertBefore(commentItem, commentsLog.firstChild);
+      
+      // Update total character count
+      totalCharacterCount -= commentLength;
+      totalCount.textContent = `${totalCharacterCount} characters remaining`;
+
+      // Clear the comment box
+      commentBox.value = '';
+      charCount.textContent = `${maxCommentCharacters} characters remaining`; // Reset individual character count
+
+      // Resume video
+      video.play();
+    }
+  }
+
+  // Automatically pause the video when the user starts typing a comment
+  commentBox.addEventListener('focus', function() {
+    video.pause();
+  });
+
+  // Update character count while typing
+  commentBox.addEventListener('input', function() {
+    const commentLength = commentBox.value.length;
+    charCount.textContent = `${maxCommentCharacters - commentLength} characters remaining`;
+    
+    // Prevent exceeding the max character limit for comments
+    if (commentLength >= maxCommentCharacters) {
+      commentBox.value = commentBox.value.substring(0, maxCommentCharacters);
+    }
+  });
+
+  // Submit annotations to Qualtrics via hidden form
+  function submitToQualtrics() {
+    const annotationsStr = JSON.stringify(annotations);
+    document.getElementById('annotations-field').value = annotationsStr;
+    document.getElementById('user-name-field').value = userName; // Store user name
+
+    // Submit the form programmatically
+    document.getElementById('qualtrics-form').submit();
+  }
+
+  // Make video and sidebar adjustable
+  let isResizingVideo = false;
+  let isResizingSidebar = false;
+
+  document.getElementById('video-resizer').addEventListener('mousedown', function(e) {
+    isResizingVideo = true;
+    document.addEventListener('mousemove', resizeContainers);
+    document.addEventListener('mouseup', stopResizing);
+  });
+
+  document.getElementById('sidebar-resizer').addEventListener('mousedown', function(e) {
+    isResizingSidebar = true;
+    document.addEventListener('mousemove', resizeContainers);
+    document.addEventListener('mouseup', stopResizing);
+  });
+
+  function resizeContainers(e) {
+    const videoContainer = document.getElementById('video-container');
+    const sidebar = document.getElementById('sidebar');
+
+    if (isResizingVideo) {
+      const newWidth = e.clientX - videoContainer.getBoundingClientRect().left;
+      if (newWidth > 100 && newWidth < window.innerWidth - 100) {
+        videoContainer.style.width = newWidth + 'px';
+        sidebar.style.width = `calc(100% - ${newWidth}px)`; // Adjust sidebar width
+        video.style.width = '100%'; // Ensure video fills container
+      }
+    }
+
+    if (isResizingSidebar) {
+      const newWidth = window.innerWidth - e.clientX;
+      if (newWidth > 100 && newWidth < window.innerWidth - 100) {
+        sidebar.style.width = newWidth + 'px';
+        videoContainer.style.width = `calc(100% - ${newWidth}px)`; // Adjust video width
+        sidebar.style.width = '100%'; // Ensure sidebar fills container
+      }
+    }
+  }
+
+  function stopResizing() {
+    isResizingVideo = false;
+    isResizingSidebar = false;
+    document.removeEventListener('mousemove', resizeContainers);
+    document.removeEventListener('mouseup', stopResizing);
+  }
+</script>
+
+</body>
+</html>

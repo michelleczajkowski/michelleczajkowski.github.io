@@ -1,0 +1,319 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="7.17.0" title="Shotcut version 23.06.14" producer="main_bin">
+  <profile description="PAL 4:3 DV or DVD" width="1920" height="1080" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="16" display_aspect_den="9" frame_rate_num="24" frame_rate_den="1" colorspace="709"/>
+  <playlist id="main_bin">
+    <property name="xml_retain">1</property>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:00:51.958">
+    <property name="length">00:00:52.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:00:51.958"/>
+  </playlist>
+  <producer id="producer0" in="00:00:00.000" out="03:59:59.958">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">#FFFFFFFF</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="shotcut:caption">#FFFFFFFF</property>
+    <property name="shotcut:detail">#FFFFFFFF</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <property name="seekable">1</property>
+    <filter id="filter0" out="00:00:02.042">
+      <property name="argument">Test Tutorial:
+
+Part 1: Correct Errors with Help</property>
+      <property name="geometry">145 176 1665 599 1</property>
+      <property name="family">Times New Roman</property>
+      <property name="size">96</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#000000</property>
+      <property name="bgcolour">#ffffff</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+      <property name="disable">0</property>
+      <property name="shotcut:pointSize">72</property>
+    </filter>
+    <filter id="filter2" out="00:00:02.042">
+      <property name="version">1</property>
+      <property name="mlt_service">frei0r.cairogradient</property>
+      <property name="shotcut:filter">gradient</property>
+      <property name="0">gradient_linear</property>
+      <property name="1">#000000</property>
+      <property name="2">1</property>
+      <property name="3">#000000</property>
+      <property name="4">0</property>
+      <property name="9">0</property>
+      <property name="10">normal</property>
+      <property name="shotcut:rect">50% 65% 0 25%</property>
+      <property name="5">0.5</property>
+      <property name="6">0.75</property>
+      <property name="7">0.5</property>
+      <property name="8">1</property>
+      <property name="disable">1</property>
+    </filter>
+    <filter id="filter3" out="00:00:02.042">
+      <property name="argument">Edit your text using the Filters panel.</property>
+      <property name="geometry">0% 75% 100% 25%</property>
+      <property name="family">Sans</property>
+      <property name="size">80</property>
+      <property name="weight">1000</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">top</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:pointSize">60</property>
+      <property name="disable">1</property>
+    </filter>
+    <filter id="filter4" out="00:00:02.042">
+      <property name="rect">0 0 1735 146 1</property>
+      <property name="mlt_service">spot_remover</property>
+      <property name="shotcut:filter">spotRemover</property>
+      <property name="disable">1</property>
+    </filter>
+    <filter id="filter5" out="00:00:02.042">
+      <property name="filter">frei0r.alphaspot</property>
+      <property name="mlt_service">mask_start</property>
+      <property name="shotcut:filter">maskSimpleShape</property>
+      <property name="filter.9">0</property>
+      <property name="filter.0">0</property>
+      <property name="shotcut:rect">14 7 1548 139 1</property>
+      <property name="filter.1">0.410417</property>
+      <property name="filter.2">0.0708333</property>
+      <property name="filter.3">0.403125</property>
+      <property name="filter.4">0.0643519</property>
+      <property name="filter.5">0.499722</property>
+      <property name="filter.6">0.2</property>
+      <property name="disable">1</property>
+    </filter>
+  </producer>
+  <producer id="producer1" in="00:00:00.000" out="00:01:03.333">
+    <property name="length">00:01:03.375</property>
+    <property name="eof">pause</property>
+    <property name="resource">1.5:C:/Users/mtcza/OneDrive/Documents/GitHub/michelleczajkowski.github.io/instructions/2024-12-13 14-01-02.mp4</property>
+    <property name="aspect_ratio">1</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="warp_speed">1.5</property>
+    <property name="warp_resource">C:/Users/mtcza/OneDrive/Documents/GitHub/michelleczajkowski.github.io/instructions/2024-12-13 14-01-02.mp4</property>
+    <property name="mlt_service">timewarp</property>
+    <property name="shotcut:producer">avformat</property>
+    <property name="video_delay">0</property>
+    <property name="shotcut:hash">38af6297638540c1d27e4f61f162076d</property>
+    <property name="shotcut:caption">2024-12-13 14-01-02.mp4 (1.5x)</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer2" in="00:00:00.000" out="03:59:59.958">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">#FFFFFFFF</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="shotcut:caption">Color</property>
+    <property name="shotcut:detail">#FFFFFFFF</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <property name="seekable">1</property>
+    <filter id="filter1" out="00:00:02.708">
+      <property name="argument">Part 2:  Find the errors</property>
+      <property name="geometry">25 199 1790 413 1</property>
+      <property name="family">Times New Roman</property>
+      <property name="size">96</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#000000</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+      <property name="shotcut:pointSize">72</property>
+    </filter>
+  </producer>
+  <producer id="producer3" in="00:00:00.000" out="00:01:03.333">
+    <property name="length">00:01:03.375</property>
+    <property name="eof">pause</property>
+    <property name="resource">1.5:C:/Users/mtcza/OneDrive/Documents/GitHub/michelleczajkowski.github.io/instructions/2024-12-13 14-01-02.mp4</property>
+    <property name="aspect_ratio">1</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="warp_speed">1.5</property>
+    <property name="warp_resource">C:/Users/mtcza/OneDrive/Documents/GitHub/michelleczajkowski.github.io/instructions/2024-12-13 14-01-02.mp4</property>
+    <property name="mlt_service">timewarp</property>
+    <property name="shotcut:producer">avformat</property>
+    <property name="video_delay">0</property>
+    <property name="shotcut:hash">38af6297638540c1d27e4f61f162076d</property>
+    <property name="shotcut:caption">2024-12-13 14-01-02.mp4 (1.5x)</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer4" in="00:00:00.000" out="03:59:59.958">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">#FFFFFFFF</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="shotcut:caption">#FFFFFFFF</property>
+    <property name="shotcut:detail">#FFFFFFFF</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <property name="seekable">1</property>
+    <filter id="filter6" in="00:00:01.500" out="00:00:03.958">
+      <property name="argument">Part 3: Correct the Errors</property>
+      <property name="geometry">-23 135 1920 428 1</property>
+      <property name="family">Times New Roman</property>
+      <property name="size">96</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#000000</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+      <property name="shotcut:pointSize">72</property>
+    </filter>
+  </producer>
+  <producer id="producer5" in="00:00:00.000" out="00:01:03.333">
+    <property name="length">00:01:03.375</property>
+    <property name="eof">pause</property>
+    <property name="resource">1.5:C:/Users/mtcza/OneDrive/Documents/GitHub/michelleczajkowski.github.io/instructions/2024-12-13 14-01-02.mp4</property>
+    <property name="aspect_ratio">1</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="warp_speed">1.5</property>
+    <property name="warp_resource">C:/Users/mtcza/OneDrive/Documents/GitHub/michelleczajkowski.github.io/instructions/2024-12-13 14-01-02.mp4</property>
+    <property name="mlt_service">timewarp</property>
+    <property name="shotcut:producer">avformat</property>
+    <property name="video_delay">0</property>
+    <property name="shotcut:hash">38af6297638540c1d27e4f61f162076d</property>
+    <property name="shotcut:caption">2024-12-13 14-01-02.mp4 (1.5x)</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer6" in="00:00:00.000" out="00:01:03.333">
+    <property name="length">00:01:03.375</property>
+    <property name="eof">pause</property>
+    <property name="resource">1.5:C:/Users/mtcza/OneDrive/Documents/GitHub/michelleczajkowski.github.io/instructions/2024-12-13 14-01-02.mp4</property>
+    <property name="aspect_ratio">1</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="warp_speed">1.5</property>
+    <property name="warp_resource">C:/Users/mtcza/OneDrive/Documents/GitHub/michelleczajkowski.github.io/instructions/2024-12-13 14-01-02.mp4</property>
+    <property name="mlt_service">timewarp</property>
+    <property name="shotcut:producer">avformat</property>
+    <property name="video_delay">0</property>
+    <property name="shotcut:hash">38af6297638540c1d27e4f61f162076d</property>
+    <property name="shotcut:caption">2024-12-13 14-01-02.mp4 (1.5x)</property>
+    <property name="xml">was here</property>
+  </producer>
+  <chain id="chain0" out="00:01:35.042">
+    <property name="length">00:01:35.083</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/mtcza/OneDrive/Documents/GitHub/michelleczajkowski.github.io/instructions/2024-12-13 14-01-02.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-12-13T13:02:39</property>
+    <property name="shotcut:caption">2024-12-13 14-01-02.mp4</property>
+    <property name="shotcut:hash">38af6297638540c1d27e4f61f162076d</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+  </chain>
+  <tractor id="tractor0" in="00:00:00.000" out="00:00:01.458">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="chain0" in="00:01:26.000" out="00:01:27.458"/>
+    <track producer="producer4" in="00:00:00.000" out="00:00:01.458"/>
+    <transition id="transition0" out="00:00:01.458">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+      <property name="fix_background_alpha">1</property>
+    </transition>
+    <transition id="transition1" out="00:00:01.458">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="producer0" in="00:00:00.000" out="00:00:02.042"/>
+    <entry producer="producer1" in="00:00:02.667" out="00:00:15.042"/>
+    <entry producer="producer2" in="00:00:00.000" out="00:00:02.708"/>
+    <entry producer="producer3" in="00:00:22.208" out="00:00:35.875"/>
+    <entry producer="producer4" in="00:00:01.500" out="00:00:03.958"/>
+    <entry producer="producer5" in="00:00:40.292" out="00:00:57.250"/>
+    <entry producer="producer6" in="00:00:57.292" out="00:00:57.292"/>
+    <entry producer="tractor0" in="00:00:00.000" out="00:00:01.458"/>
+  </playlist>
+  <tractor id="tractor1" title="Shotcut version 23.06.14" in="00:00:00.000" out="00:00:51.958">
+    <property name="shotcut">1</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <track producer="background"/>
+    <track producer="playlist0" hide="audio"/>
+    <transition id="transition2">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition3">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.1</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="threads">0</property>
+      <property name="disable">1</property>
+    </transition>
+  </tractor>
+</mlt>

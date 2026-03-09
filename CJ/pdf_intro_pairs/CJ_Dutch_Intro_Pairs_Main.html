@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comparative Judgement Dutch - Task: Inleiding</title>
+  <style>
+    :root {
+      --bg: #f7f7f9;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --link: #1d4ed8;
+      --link-hover: #1e40af;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 32px;
+    }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+    }
+
+    p {
+      margin: 0 0 24px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 8px 10px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    .item a {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .item a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 520px) {
+      body { padding: 20px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Comparative Judgement Dutch - Task: Inleiding</h1>
+    <p>Click a name to open the corresponding PDF.</p>
+
+    <div class="grid">
+      <div class="item"><a target="_blank" href="Anna.pdf">Anna</a></div>
+      <div class="item"><a target="_blank" href="Bram.pdf">Bram</a></div>
+      <div class="item"><a target="_blank" href="Charlotte.pdf">Charlotte</a></div>
+      <div class="item"><a target="_blank" href="Daan.pdf">Daan</a></div>
+      <div class="item"><a target="_blank" href="Emma.pdf">Emma</a></div>
+      <div class="item"><a target="_blank" href="Femke.pdf">Femke</a></div>
+      <div class="item"><a target="_blank" href="Gijs.pdf">Gijs</a></div>
+      <div class="item"><a target="_blank" href="Hanne.pdf">Hanne</a></div>
+      <div class="item"><a target="_blank" href="Iris.pdf">Iris</a></div>
+      <div class="item"><a target="_blank" href="Jasper.pdf">Jasper</a></div>
+      <div class="item"><a target="_blank" href="Koen.pdf">Koen</a></div>
+      <div class="item"><a target="_blank" href="Lotte.pdf">Lotte</a></div>
+      <div class="item"><a target="_blank" href="Milan.pdf">Milan</a></div>
+      <div class="item"><a target="_blank" href="Noor.pdf">Noor</a></div>
+      <div class="item"><a target="_blank" href="Olivier.pdf">Olivier</a></div>
+      <div class="item"><a target="_blank" href="Pieter.pdf">Pieter</a></div>
+      <div class="item"><a target="_blank" href="Quinten.pdf">Quinten</a></div>
+      <div class="item"><a target="_blank" href="Ruben.pdf">Ruben</a></div>
+      <div class="item"><a target="_blank" href="Sanne.pdf">Sanne</a></div>
+      <div class="item"><a target="_blank" href="Thomas.pdf">Thomas</a></div>
+      <div class="item"><a target="_blank" href="Ursula.pdf">Ursula</a></div>
+      <div class="item"><a target="_blank" href="Victor.pdf">Victor</a></div>
+      <div class="item"><a target="_blank" href="Willem.pdf">Willem</a></div>
+      <div class="item"><a target="_blank" href="Xander.pdf">Xander</a></div>
+    </div>
+  </div>
+</body>
+</html>

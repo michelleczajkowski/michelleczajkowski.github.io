@@ -1,70 +1,98 @@
 <!DOCTYPE html>
 <html>
-<style>
-        /* Import Open Sans font from Google Fonts */
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-      
-        /* Set font family to Open Sans for the body element */
-    body {
-          font-family: 'Open Sans', sans-serif;
-    }
-</style>
-<style>
-    /* Style links with class "black" to be black */
-    .black {
-      color: black;
-    }
-  
+<head>
 
-</style>
 <style>
-    /* Remove underline for links with class "no-underline" */
-    .no-underline {
-      text-decoration: none;
-    }
-  </style>
-  <style>
-    /* Default styles for the GIF container */
-    .gif-container {
-      text-align: center;
-    }
-  
-    /* Default styles for the GIF */
-    .gif {
-      display: inline-block;
-      max-width: 100%;
-      height: 200px;
-    }
-  
-    /* Styles for smaller screens */
-    @media (max-width: 600px) {
-      .gif-container {
-        text-align: left; 
-        height: 50px
-      }
-    }
-  </style>
-  
-<body><center>
-<br><a>****</a><br><a>\ michelle czajkowski /</a><br>
-<a>/ language test development \</a>
-<a>\ radboud university | melbourne university /</a>
-<br><a>****</a><br>
+/* Load Testimonial font */
+@font-face {
+  font-family: 'Testimonial';
+  src: url('Testimonial.ttf') format('truetype');
+  font-display: swap;
+}
 
+html {
+  font-size: 20px;
+}
+
+/* Apply font */
+body {
+  font-family: 'Testimonial', serif;
+}
+
+/* Name styling */
+.name {
+  font-weight: 700;
+}
+
+/* Link styling (only real links) */
+a[href] {
+  color: #0b57d0;
+  text-decoration: none;
+}
+
+a[href]:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+.center {
+  text-align: center;
+}
+
+/* GIF */
+.gif-container {
+  text-align: center;
+}
+
+.gif {
+  display: inline-block;
+  max-width: 100%;
+  height: 200px;
+}
+
+@media (max-width: 600px) {
+  .gif-container {
+    text-align: left;
+    height: 50px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="center">
+  <br><div>****</div>
+  <div>\ <span class="name">michelle czajkowski</span> /</div>
+  <div>/ language test development \</div>
+  <div>\ radboud university | the university of melbourne /</div>
+  <div>****</div>
+</div>
+<div class="center">
+  <div>/ links \</div>
+
+  <a href="CV/reports.html" target="_blank" rel="noopener noreferrer">
+    Publications and Reports
+  </a><br>
+
+  <a href="CV/test_development.html" target="_blank" rel="noopener noreferrer">
+    Test Development and Evaluation
+  </a><br>
+
+  <a href="CV/conferences_talks.html" target="_blank" rel="noopener noreferrer">
+    Talks, Workshops, Presentations
+  </a><br>
+</div>
 <div class="gif-container">
-<img src="writing.gif" alt="" class="gif">
+  <img src="writing.gif" alt="" class="gif">
 </div>
 
+<br>
 
 
-<br><center><a>/ links \</a><br>
-<a href="CV/reports.html" class="black no-underline">Publications and Reports</a><br>
-<a href="CV/test_development.html" class="no-underline black">Test Development and Evaluation</a><br>
-<a href="CV/conferences_talks.html" class="no-underline black">Talks, Workshops, Presentations</a><br>
 
-</center><br><bR></bR><br><br><br><br><br><br>
-
-
+<br><br><br><br><br><br>
 
 </body>
 </html>

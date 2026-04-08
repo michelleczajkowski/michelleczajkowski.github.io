@@ -1,98 +1,200 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Michelle Czajkowski</title>
 
-<style>
-/* Load Testimonial font */
-@font-face {
-  font-family: 'Testimonial';
-  src: url('Testimonial.ttf') format('truetype');
-  font-display: swap;
-}
+  <style>
+    @font-face {
+      font-family: 'Testimonial';
+      src: url('Testimonial.ttf') format('truetype');
+    }
 
-html {
-  font-size: 20px;
-}
+    @font-face {
+      font-family: 'BiroScript';
+      src: url('Biro_script_reduced.ttf') format('truetype');
+    }
 
-/* Apply font */
-body {
-  font-family: 'Testimonial', serif;
-}
+    :root {
+      --nav-width: 20%;
+      --content-width: 80%;
+      --muted: #555;
+      --link: #0b57d0;
+    }
 
-/* Name styling */
-.name {
-  font-weight: 700;
-}
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
 
-/* Link styling (only real links) */
-a[href] {
-  color: #0b57d0;
-  text-decoration: none;
-}
+    body {
+      font-family: 'Testimonial', serif;
+      color: #111;
+      background: #fff;
+    }
 
-a[href]:hover {
-  text-decoration: underline;
-}
+    .layout {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+    }
 
-/* Layout */
-.center {
-  text-align: center;
-}
+    .sidebar {
+      width: var(--nav-width);
+      min-width: 200px;
+      max-width: 320px;
+      box-sizing: border-box;
+      padding: 20px 16px;
+      border-right: 1px solid rgba(200, 0, 0, 0.6);
+      overflow-y: auto;
+      background: #fff;
+      background-image: linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+      background-size: 100% 24px;
+    }
 
-/* GIF */
-.gif-container {
-  text-align: center;
-}
+    .sidebar h1 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    font-family: 'BiroScript', serif;
+    color: #8b0000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    }
 
-.gif {
-  display: inline-block;
-  max-width: 100%;
-  height: 200px;
-}
+    .sidebar p {
+      margin: 0 0 20px 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
 
-@media (max-width: 600px) {
-  .gif-container {
-    text-align: left;
-    height: 50px;
-  }
-}
-</style>
+    .nav-group {
+      margin-bottom: 18px;
+    }
 
+    .nav-group-title {
+      margin: 0 0 6px 0;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin: 0 0 6px 0;
+    }
+
+    .nav-links a {
+      color: var(--link);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover {
+    font-weight: 700;
+    }
+
+    .nav-links a.active {
+      color: #8b0000;
+      font-family: 'BiroScript', serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 1.08rem;
+      letter-spacing: 1px;
+    }
+
+    .content {
+      width: var(--content-width);
+      height: 100vh;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .content-frame {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    @media (max-width: 800px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        height: auto;
+        border-right: 0;
+        border-bottom: 2px solid rgba(200, 0, 0, 0.6);
+      }
+
+      .content {
+        width: 100%;
+        height: calc(100vh - 220px);
+    }
+  
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="center">
-  <br><div>****</div>
-  <div>\ <span class="name">michelle czajkowski</span> /</div>
-  <div>/ language test development \</div>
-  <div>\ radboud university | the university of melbourne /</div>
-  <div>****</div>
+<div class="layout">
+
+  <aside class="sidebar">
+    <h1><center>Michelle Czajkowski</center></h1>
+    <p><center>Test development, test evaluation, validation, research, language teaching, curriculum devlopment, teacher training</center></p>
+    <p><i><center>Netherlands, Australia, USA, China, Poland</center></i></p>
+
+    <div class="nav-group">
+      <div class="nav-group-title"></div>
+      <ul class="nav-links">
+        <li><a href="about_me.html" target="contentFrame" class="active">Curriculum Vitae</a></li>
+        <li><a href="reports.html" target="contentFrame">Research Publications</a></li>
+        <li><a href="conferences_talks.html" target="contentFrame">Research Presentations</a></li>
+        <li><a href="reports.html" target="contentFrame">Projects and Reports</a></li>
+        <li><a href="test_development.html" target="contentFrame">Test Development</a></li>
+        <li><a href="teaching.html" target="contentFrame">Teaching</a></li>
+        <li><a href="academic_engagement.html" target="contentFrame">Community Engagement</a></li>
+        <li><a href="research_methods_software.html" target="contentFrame">Methods and Tools</a></li>
+        <li><a href="media.html" target="contentFrame">In the Media</a></li>
+      </ul>
+    </div>
+
+
+
+  </aside>
+
+  <main class="content">
+    <iframe
+      class="content-frame"
+      name="contentFrame"
+      src="about_me.html"
+      title="Content">
+    </iframe>
+  </main>
+
 </div>
-<div class="center">
-  <div>/ links \</div>
 
-  <a href="CV/reports.html" target="_blank" rel="noopener noreferrer">
-    Publications and Reports
-  </a><br>
+<script>
+  const links = document.querySelectorAll('.nav-links a');
 
-  <a href="CV/test_development.html" target="_blank" rel="noopener noreferrer">
-    Test Development and Evaluation
-  </a><br>
-
-  <a href="CV/conferences_talks.html" target="_blank" rel="noopener noreferrer">
-    Talks, Workshops, Presentations
-  </a><br>
-</div>
-<div class="gif-container">
-  <img src="writing.gif" alt="" class="gif">
-</div>
-
-<br>
-
-
-
-<br><br><br><br><br><br>
+  links.forEach(link => {
+    link.addEventListener('click', function() {
+      links.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
 
 </body>
 </html>

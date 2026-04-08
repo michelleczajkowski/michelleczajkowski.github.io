@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Research Presentations | Michelle Czajkowski</title>
+
+<style>
+@font-face {
+  font-family: 'Testimonial';
+  src: url('Testimonial.ttf') format('truetype');
+}
+
+:root {
+  --maxw: 900px;
+  --muted: #555;
+  --link: #0b57d0;
+}
+
+html { font-size: 15px; }
+
+body {
+  font-family: 'Testimonial', serif;
+  font-size: 1rem;
+  line-height: 1.45;
+  margin: 0;
+  color: #111;
+  letter-spacing: 0.2px;
+  background-color: #fff;
+  position: relative;
+}
+
+/* horizontal notebook lines only */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px);
+  background-size: 100% 24px;
+  z-index: 0;
+}
+
+header, main, footer {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+header { padding: 16px 16px 6px 16px; }
+main   { padding: 6px 16px 16px 16px; }
+footer { padding: 10px 16px; }
+
+header h1 {
+  margin: 0 0 4px 0;
+  font-size: 1.4rem;
+}
+
+header p {
+  margin: 0 0 6px 0;
+  color: var(--muted);
+}
+
+/* ---------- List ---------- */
+ul.list {
+  list-style: none;
+  padding: 0;
+  margin: 2px 0 0 0;
+}
+
+li.item {
+  padding: 14px 0;
+}
+
+.meta,
+.title,
+.links {
+  font-size: 0.9rem;
+}
+
+.meta {
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.title {
+  margin: 0 0 4px 0;
+}
+
+.title strong {
+  font-weight: 600;
+}
+
+.links a {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+/* ---------- Modal ---------- */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.modal-overlay.open {
+  display: block;
+}
+
+.modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(60vw, 700px);
+  max-width: calc(100vw - 40px);
+  background: #fff;
+  border: 2px solid #111;
+  padding: 22px;
+  box-sizing: border-box;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #111;
+  font-family: inherit;
+}
+
+.modal-body {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #111;
+  padding-right: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Research Presentations</h1>
+</header>
+
+<main>
+<section aria-label="Research presentations">
+
+<ul class="list">
+
+<li class="item"> 
+  <div class="links">
+    <a href="https://ealta-annual-conference.org/" target="_blank">
+      EALTA Conference 2026 Siena</a>  |  
+    <a href="#" class="abstract-link"
+       data-abstract=
+       "This paper examines the validation of multilingual post-entry language assessment, 
+       with a focus on equivalence, stakeholder interpretation, and the challenges of using 
+       one test in two languages.">Paper Presentation (abstract) </a><br>
+       <strong>What Does It Mean to Use a Test in Two Languages? Validation, Equivalence, and Stakeholder Understanding in Multilingual 
+      Post-Entry Assessment </strong>
+  </div>
+</li>
+
+<li class="item"> 
+  <div class="links">
+    <a href="https://www.nut-talen.eu/conferentie/welkom/" target="_blank">
+      NUT Conference 2026 Delft</a>  |  
+    <a href="#" class="abstract-link"
+       data-abstract=
+       "put abstract here">Practitioner Workshop (abstract) </a><br>
+       <strong>A practical roadmap for the validation of local language tests (with Bram de Jong)</strong>
+  </div>
+</li>
+
+<li class="item"> 
+  <div class="links">
+    <a href="https://www.rug.nl/research/clcg/research/nld2017/tblt2025/?lang=en" target="_blank">
+      TBLT Conference 2025 Groningen</a>  |  
+    <a href="#" class="abstract-link"
+       data-abstract=
+       "put abstract here">Research Paper (abstract) </a><br>
+       <strong>Assessing Novice Writers’ Use of Digital Revision Tools to Support Academic Writing</strong>
+  </div>
+</li>
+
+<li class="item"> 
+  <div class="links">
+    <a href="https://www.southampton.ac.uk/humanities/news/2025/04/language-testing-forum-2025.page" target="_blank">
+      LTF 2025 Southampton</a>  |  
+    <a href="#" class="abstract-link"
+       data-abstract=
+       "put abstract here">Methodology Paper (abstract) </a><br>
+       <strong>Beyond the Lab: A Virtual Desktop Data Collection Method for Writing Process Research</strong>
+  </div>
+</li>
+
+<li class="item"> 
+  <div class="links">
+    <a href="https://www.altaanz.org/altaanz-online-conference-2025.html" target="_blank">
+      ALTAANZ Conference 2025 (Online)</a>  |  
+    <a href="#" class="abstract-link"
+       data-abstract=
+       "put abstract here">Research Paper (abstract) </a><br>
+       <strong>A Collaborative Approach to Test Validation: Using a Rating Scale to Evaluate Evidence and Guide Discussion (with Bram de Jong)</strong>
+  </div>
+</li>
+
+<li class="item"> 
+  <div class="links">
+    <a href="https://wp.lancs.ac.uk/ltrg/" target="_blank">
+      LTRG 2025 Lancaster University</a>  |  
+    <a href="#" class="abstract-link"
+       data-abstract=
+       "put abstract here">Invited Talk (information) </a><br>
+       <strong>Assessing Novice Writers’ Use of Digital Revision Tools</strong>
+  </div>
+</li>
+
+<li class="item"> 
+  <div class="links">
+    <a href="https://www.uibk.ac.at/en/congress/ltrc2024/" target="_blank">
+      LTRC 2024 Innsbruck</a>  |  
+    <a href="#" class="abstract-link"
+       data-abstract=
+       "put abstract here">Work in Progress (abstract)</a><br>
+       <strong>Process and Product in Diagnostic Assessment of Writing</strong>
+  </div>
+</li>
+
+<li class="item"> 
+  <div class="links">
+    <a href="https://anela.nl/en/activiteiten/juniorendag/" target="_blank">
+      ANéLA Juniorendag 2024 Nijmegen</a>  |  
+    <a href="#" class="abstract-link"
+       data-abstract=
+       "put abstract here">Poster Presentation (abstract)   |  <i>Winner Best Poster</i></a><br>
+       <strong>Motivating Test Design, Research and Policy via the Validation of a Post-entry Language Test Used at a Bilingual University</strong>
+  </div>
+</li>
+
+<li class="item"> 
+  <div class="links">
+    <a href="https://www.uni-marburg.de/de/fb09/igs/arbeitsgruppen/dafz/forschung/medien/nachwuchsfoerderung_
+    seite_medien-1/x-foko_abstract_2023.pdf/@@download/file/X.FOKO_Abstract_2023.pdf" target="_blank">
+      International Early Career Conference on German as a Foreign Language 2023 Nijmegen</a>  |  
+    <a href="#" class="abstract-link"
+       data-abstract=
+       "put abstract here">Talk (abstract)</a><br>
+       <strong>Digital Language Tools in Language Testing</strong>
+  </div>
+</li>
+
+<li class="item"> 
+  <div class="links">
+    <a href="https://www.altaanz.org/altaanz-conference-auckland-2016.html" target="_blank">
+      ALTAANZ Conference 2016 Auckland</a>  |  
+    <a href="#" class="abstract-link"
+       data-abstract=
+       "put abstract here">Talk (abstract)</a>  |  <a href="https://www.altaanz.org/altaanz-best-student-paper-award.html" 
+       target="_blank"><i>Winner Best Student Paper</i></a><br>
+       <strong>Judgements of Writing Proficiency by Non-native and Native English-speaking Teachers: Comparing Holistic and Analytic Scoring</strong>
+  </div>
+</li>
+
+</ul>
+</section>
+</main>
+
+
+<footer>
+  <p>Last updated: <span id="lastUpdated"></span></p>
+</footer>
+
+<!-- Modal -->
+<div id="abstractModal" class="modal-overlay">
+  <div class="modal-box">
+    <button id="modalClose" class="modal-close">&times;</button>
+    <div id="modalBody" class="modal-body"></div>
+  </div>
+</div>
+
+<script>
+document.getElementById("lastUpdated").textContent =
+  new Date().toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "2-digit"
+  });
+
+const modal = document.getElementById("abstractModal");
+const modalBody = document.getElementById("modalBody");
+const modalClose = document.getElementById("modalClose");
+
+document.querySelectorAll(".abstract-link").forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    modalBody.textContent = this.getAttribute("data-abstract");
+    modal.classList.add("open");
+  });
+});
+
+modalClose.onclick = () => modal.classList.remove("open");
+
+modal.onclick = (e) => {
+  if (e.target === modal) modal.classList.remove("open");
+};
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") modal.classList.remove("open");
+});
+</script>
+
+</body>
+</html>

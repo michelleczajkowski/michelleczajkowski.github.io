@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Teaching | Michelle Czajkowski</title>
+
+<style>
+@font-face {
+  font-family: 'Testimonial';
+  src: url('Testimonial.ttf') format('truetype');
+}
+
+:root {
+  --maxw: 900px;
+  --muted: #555;
+  --link: #0b57d0;
+}
+
+html { font-size: 15px; }
+
+body {
+  font-family: 'Testimonial', serif;
+  font-size: 1rem;
+  line-height: 1.45;
+  margin: 0;
+  color: #111;
+  letter-spacing: 0.2px;
+  background-color: #fff;
+  position: relative;
+}
+
+/* notebook lines */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px);
+  background-size: 100% 24px;
+  z-index: 0;
+}
+
+header, main, footer {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+header { padding: 16px; }
+main   { padding: 6px 16px 16px; }
+footer { padding: 10px 16px; }
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+/* list */
+ul.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li.item {
+  padding: 14px 0;
+}
+
+.meta, .title, .links {
+  font-size: 0.9rem;
+}
+
+.meta {
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.title {
+  margin: 0 0 4px 0;
+}
+
+.title strong {
+  font-weight: 600;
+}
+
+.links a {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.modal-overlay.open {
+  display: block;
+}
+
+.modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(60vw, 700px);
+  max-width: calc(100vw - 40px);
+  background: #fff;
+  border: 2px solid #111;
+  padding: 22px;
+  box-sizing: border-box;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #111;
+  font-family: inherit;
+}
+
+.modal-body {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #111;
+  padding-right: 20px;
+}
+
+footer {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.logo {
+  height: 18px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 6px;
+  margin-bottom: 2px;
+}
+
+.role {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.logo-large {
+  height: 40px;
+  width: auto;
+  margin-top: 2px;
+}
+
+.role-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.logo-row img {
+  height: 28px;
+  width: auto;
+  opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Teaching</h1>
+</header>
+
+<main>
+
+<section>
+<ul class="list">
+
+<li class="item"> 
+  <div class="links"><b>--- Teaching-Related Qualifications ---</b><br>
+    <a href="https://study.unimelb.edu.au/find/courses/graduate/master-of-applied-linguistics/" target="_blank">
+      MA in Applied Linguistics (University of Melbourne)</a> |
+    2015<br>
+
+    <a href="https://www.cambridgeenglish.org/teaching-english/teaching-qualifications/delta/" target="_blank">
+      DELTA (Diploma in English Language Teaching to Adults)</a> |
+    2004 <br>
+
+    <a href="https://www.cambridgeenglish.org/teaching-english/teaching-qualifications/celta/" target="_blank">
+      CELTA (Certificate in English Language Teaching to Adults)</a> |
+    1998
+  </div>
+</li>
+
+<li class="item"> 
+  <div class="links"><b>--- University Teaching and Supervising ---</b><br>
+    <a href="#">
+      MA Course Taaltoetsing / Language Testing (Radboud University)</a> | Seminar Instructor  |
+    <a href="#" class="abstract-link"
+       data-abstract="2022-2026. Graduate course on language testing taken by students in MA programmes in primary / secondary education, Nt2 education, and other related programmes.">About this course</a><br>
+
+    <a href="#">
+      Research Project and Thesis Supervision (Radboud University)</a> | MA and BA Students | 
+    
+  </div>
+</li>
+
+<li class="item"> 
+  <div class="links"><b>--- Teacher Training ---</b><br>
+    <a href="#">
+      in'to Languages</a> | Occasional Workshops - Student Writing |<br>
+
+    <a href="https://www.els.edu/" target="_blank">
+      ELS Language Centres</a> | Design and deliver regular teacher training sessions |
+    <a href="#" class="abstract-link"
+       data-abstract="As part of my role as Academic Director, I provided initial and ongoing training for the centre's teachers on a range of topics including theoretical topics such as language acquisition and practical topics such as teaching pronunciation and classroom management.">More information about this role</a><br>
+  </div>
+</li>
+<li class="item"> 
+  <div class="links"><b>--- Language Teaching ---</b><br>
+    <a href="https://www.impactenglish.edu.au/" target="_blank">
+      Impact English College (Melbourne)</a> | Teacher: Academic English, Cambridge Advanced + Proficiency, General English |
+    <a href="#" class="abstract-link"
+       data-abstract="2013-2016. Taught a range of ESL / EFL / EAP courses to young adult learners from a range of L1 backgrounds.">
+       More about this</a><br>
+       <a href="https://www.britishcouncil.cn/en" target="_blank">
+      British Council (Beijing)</a> | In-House Language Trainer 
+    <a href="#" class="abstract-link"
+       data-abstract="2003-2009. Designed and delivered tailor-made language instruction for Chinese staff at the British Council and UK Embassyin Beijing, 
+       focusing mainly on workplace English.">
+       More about this</a><br>
+    <a href="https://www.els.edu/" target="_blank">
+      ELS Language Centres (Penang, Beijing, Tianjin)</a> | ESL Language Teacher and Academic Director 
+      <a href="#" class="abstract-link"
+       data-abstract="2000-2003. Taught a range of courses in all three locations, 
+       mainly general English and EAP courses. Served as assistant academic director in 
+       Penang, and academic director in Tianjin and Beijing.">More</a>
+       <br>
+    <a href="https://ihworld.com/" target="_blank">
+      International House (Katowice, Wroclaw</a> | ESL Language Teacher
+      <a href="#" class="abstract-link"
+       data-abstract="1998-2000. Taught a range of ESL courses, all levels and ages.">More</a>
+       <br>
+
+  </div>
+</ul>
+</section>
+
+</main>
+
+<footer>
+  <p>Last updated: <span id="lastUpdated"></span></p>
+</footer>
+
+<div id="abstractModal" class="modal-overlay">
+  <div class="modal-box">
+    <button id="modalClose" class="modal-close" aria-label="Close">&times;</button>
+    <div id="modalBody" class="modal-body"></div>
+  </div>
+</div>
+
+
+</li>
+
+
+<script>
+document.getElementById("lastUpdated").textContent =
+  new Date().toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "2-digit"
+  });
+
+const modal = document.getElementById("abstractModal");
+const modalBody = document.getElementById("modalBody");
+const modalClose = document.getElementById("modalClose");
+
+document.querySelectorAll(".abstract-link").forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    modalBody.textContent = this.getAttribute("data-abstract") || "More information coming soon.";
+    modal.classList.add("open");
+  });
+});
+
+modalClose.onclick = () => modal.classList.remove("open");
+
+modal.onclick = (e) => {
+  if (e.target === modal) modal.classList.remove("open");
+};
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") modal.classList.remove("open");
+});
+</script>
+
+</body>
+</html>

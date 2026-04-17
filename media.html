@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Michelle Czajkowski | Curriculum Vitae</title>
+  <title>In the Media | Michelle Czajkowski</title>
 
   <style>
     @font-face {
@@ -59,20 +59,8 @@
       font-size: 1rem;
     }
 
-    .contact {
-      margin-top: 10px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .contact span {
-      display: inline-block;
-      margin-right: 14px;
-    }
-
     h2 {
       margin: 28px 0 10px 0;
-      padding-top: 2px;
       font-size: 1.08rem;
       color: var(--accent);
       border-top: 1px solid var(--line);
@@ -81,21 +69,6 @@
 
     p {
       margin: 0 0 10px 0;
-    }
-
-    ul {
-      margin: 8px 0 0 20px;
-      padding: 0;
-    }
-
-    li {
-      margin: 0 0 7px 0;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 28px;
     }
 
     .entry {
@@ -111,23 +84,11 @@
       font-weight: 700;
     }
 
-    .org {
-      font-style: italic;
-    }
-
     .meta {
       color: var(--muted);
       font-size: 0.95rem;
       margin-top: 2px;
       margin-bottom: 6px;
-    }
-
-    .small {
-      font-size: 0.96rem;
-    }
-
-    .tagline {
-      color: var(--muted);
     }
 
     a {
@@ -139,15 +100,6 @@
       text-decoration: underline;
     }
 
-    .skills-list,
-    .compact-list {
-      margin-left: 18px;
-    }
-
-    .compact-list li {
-      margin-bottom: 5px;
-    }
-
     footer {
       margin-top: 34px;
       padding-top: 12px;
@@ -156,87 +108,88 @@
       font-size: 0.85rem;
     }
 
-    @media (max-width: 820px) {
-      .two-col {
-        grid-template-columns: 1fr;
-        gap: 8px;
+    @media print {
+      @page {
+        size: A4;
+        margin: 12mm;
       }
 
-      h1 {
-        font-size: 1.7rem;
+      body {
+        font-size: 10.5pt;
+        line-height: 1.35;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .entry {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      h2 {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
       }
     }
-    @media print {
-  body {
-    font-size: 11pt;
-    line-height: 1.4;
-  }
-
-  .page {
-    padding: 0;
-  }
-
-  h2 {
-    page-break-after: avoid;
-  }
-
-  .entry {
-    page-break-inside: avoid;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  @media print {
-  @page {
-    size: A4;
-    margin: 12mm;
-  }
-
-  body {
-    font-size: 10.5pt;
-    line-height: 1.35;
-  }
-
-  .page {
-    max-width: none;
-    padding: 0;
-  }
-
-  .two-col {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 20px;
-  }
-
-  .entry {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-
-  h2 {
-    page-break-after: avoid;
-    break-after: avoid;
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-  }
-}
-}
   </style>
 </head>
 <body>
-    
-    
-    <section>
-          <h2>In the Media</h2>
-          About my work: <br>
-          <a href="https://www.voxweb.nl/nieuws/studenten-scoren-steeds-slechter-op-de-taaltoets-is-dat-een-probleem" target="_blank">Students Score Worse on the Language Test: Is That A Problem?</a><br>
-          Written by me: <br>
-          <a href="https://www.mpi.nl/blog/link-between-thinking-and-writing-your-keyboard" target="_blank">The Link Between Thinking and Writing: Your Keyboard</a><br>
-          <a href="https://www.mpi.nl/blog/watching-writers-write" target="_blank">Watching Writers Write</a><br>
+  <div class="page">
 
-        <section>
+    <header>
+      <h1>In the Media</h1>
+      <p class="subtitle">Media coverage related to my research, along with selected public-facing writing.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>About my work</h2>
+
+        <div class="entry">
+          <div class="role">
+            <a href="https://www.voxweb.nl/nieuws/studenten-scoren-steeds-slechter-op-de-taaltoets-is-dat-een-probleem" target="_blank">
+              Students Score Worse on the Language Test: Is That A Problem?
+            </a>
+          </div>
+          <div class="meta">Vox</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Written by me</h2>
+
+        <div class="entry">
+          <div class="role">
+            <a href="https://www.mpi.nl/blog/link-between-thinking-and-writing-your-keyboard" target="_blank">
+              The Link Between Thinking and Writing: Your Keyboard
+            </a>
+          </div>
+          <div class="meta">Max Planck Institute for Psycholinguistics</div>
+        </div>
+
+        <div class="entry">
+          <div class="role">
+            <a href="https://www.mpi.nl/blog/watching-writers-write" target="_blank">
+              Watching Writers Write
+            </a>
+          </div>
+          <div class="meta">Max Planck Institute for Psycholinguistics</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Last updated: April 2026</p>
+    </footer>
+
+  </div>
+</body>
+</html>

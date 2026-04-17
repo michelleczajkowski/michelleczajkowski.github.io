@@ -166,9 +166,24 @@ footer {
 }
 
 .panel-logos img {
-  max-width: 70px;
+  max-width: 80px;
   height: auto;
   object-fit: contain;
+}
+.logo-row {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* align vertically */
+  gap: 24px;                 /* space between logos */
+  margin: 10px 0 16px 0;
+  flex-wrap: wrap;           /* responsive */
+}
+
+.logo-row img {
+  height: 30px;              /* fixed height */
+  width: auto;               /* keep aspect ratio */
+  object-fit: contain;
+  opacity: 0.9;              /* optional subtle styling */
 }
 </style>
 </head>
@@ -179,7 +194,21 @@ footer {
   <h1>Test Development &amp; Validation</h1>
   <p>Selected projects across test development, item writing, benchmarking/alignment, equating, validation, and operational monitoring. <br>Click <b>test name</b> for external site and <b>role</b> for more information in a drop down box.</p>
 </header>
-
+<div class="logo-row">
+  <img src="logo_cambridge.png" alt="Cambridge Assessment">
+  <img src="logo_ltrc.png" alt="LTRC">
+  <img src="logo_auckland.jpg" alt="University of Auckland logo">
+  <img src="logo_uom.jpg" alt="University of Melbourne logo">
+  <img src="logo_oet.png" alt="OET logo">
+  <img src="logo_linguaskill.jpg" alt="Linguaskill logo">
+  <img src="logo_babel.png" alt="Babel logo">
+  <img src="logo_cnavt.png" alt="CNaVT logo">
+  <img src="logo_naati.png" alt="NAATI">
+  <img src="logo_kaplan.png" alt="Kaplan">
+  <img src="logo_crella.jpg" alt="CRELLA">
+  <img src="logo_englishscore.png" alt="EnglishScore">
+  <img src="logo_edumaxi.png" alt="Edumaxi logo">
+</div>
 <main>
 
 
@@ -323,19 +352,20 @@ footer {
   <div class="panel">
     <div class="panel-text">
       <p class="project-meta">
-        
+        The Occupational English Test (OET) is a profession-specific English proficiency 
+        test for healthcare professionals, used mainly for registration and migration in countries like the UK, Australia, and Ireland.  
       </p>
       <p class="project-meta keywords">
-        <strong>Role: I provided quality assurance for C2-level items, working closely with and providing detailed feedback to the C1 item writer. 
-          I was responsible for reviewing items, ensuring the principles of good item writing were followed and the items were leveled appropriately and 
-          adhered to the specifications of the test.</strong> <br>
+        <strong>Role: As part of the LTRC team, I helped with the paneling, trialing and analysis of the new form of the OET, which was 
+          changed as part of the handover from the LTRC to CBLA.
+        </strong> <br>
         <a href="https://oet.com/test" target="_blank"><b>About this test</b></a>
       </p>
     </div>
 
     <div class="panel-logos">
       <img src="logo_oet.png" alt="OET logo">
-      <img src="logo_cambridge.png" alt="Cambridge logo"
+      <img src="logo_cambridge.png" alt="Cambridge logo">
     </div>
   </div>
 </details>
@@ -499,7 +529,36 @@ and the workplace. The test is primarily concerned with the occupational, public
   </div>
 </details>
 
+<details class="item">
+  <summary>
+    <div class="summary-line">
+      <span class="summary-title">
+        Test: <a href="https://www.cnavt.org/" target="_blank">CNaVT</a> | Role: Item Benchmarking A2 | Client: Nederlandse Taalunie
+      </span>
+    </div>
+  </summary>
+  <div class="panel">
+    <div class="panel-text">
+      <p class="project-meta">
+        The CNaVT is an international, CEFR-aligned Dutch language proficiency test designed for non-native speakers to demonstrate 
+        their ability to use Dutch in academic, professional, or everyday contexts.
 
+      </p>
+      <p class="project-meta keywords">
+        <strong>Role: As part of ongoing test development and validation, I was invited to take part in an exercise evaluating newly developed lower-level 
+          items for their appropriacy as A2-level items. </strong> <br>
+        </strong> <br>
+        
+      </p>
+    </div>
+
+    <div class="panel-logos">
+      <img src="logo_cnavt.png" alt="CNaVT logo">
+      <img src="logo_taalunie.png" alt="Taalunie logo">
+
+    </div>
+  </div>
+</details>
 
 
     <details class="item">
@@ -549,8 +608,15 @@ and the workplace. The test is primarily concerned with the occupational, public
 </main>
 
 <footer>
-  Last updated: Apr 01, 2026
+  Last updated: <span id="last-updated"></span>
 </footer>
+
+<script>
+  const today = new Date();
+  const options = { month: 'short', day: '2-digit', year: 'numeric' };
+  document.getElementById('last-updated').textContent =
+    today.toLocaleDateString('en-US', options);
+</script>
 
 </body>
 </html>

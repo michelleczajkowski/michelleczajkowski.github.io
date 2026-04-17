@@ -1,0 +1,79 @@
+
+/*
+ * JavaScript for Zeno Report Comments.
+ *
+ * License: GPLv2.
+ */
+
+
+document.addEventListener('DOMContentLoaded', function() {
+	document.querySelectorAll( 'span.zeno-comments-report-link span a' ).forEach(function( a_element ) {
+		a_element.addEventListener('click', function (event) {
+			event.preventDefault();
+
+			var comment_id = a_element.getAttribute('data-zeno-comment-id');
+			var timeout = zenocommentsajax.timeout;
+			var timeout2 = zenocommentsajax.timeout2;
+			var timer = Number(document.querySelector('input.' + timeout).value);
+			var timer2 = Number(document.querySelector('input.' + timeout2).value);
+
+			var data = new FormData();
+			data.append( 'comment_id', comment_id );
+			data.append( 'sc_nonce', zenocommentsajax.nonce );
+			data.append( 'action', 'zeno_report_comments_flag_comment' );
+			data.append( timeout, timer );
+			data.append( timeout2, timer2 );
+
+			fetch( zenocommentsajax.ajaxurl, {
+				method: 'POST',
+				credentials: 'include',
+				body: data
+			})
+			.then(response => response.text())
+			.then(responsetext => {
+				var resultspan = document.getElementById('zeno-comments-result-' + comment_id);
+				if (resultspan) {
+					resultspan.innerHTML = responsetext;
+				}
+			});
+		});
+	});
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+	document.querySelectorAll('.zeno-comments-report-link .hide-if-js').forEach(function (el) {
+		el.style.display = 'none';
+	});
+
+	document.querySelectorAll('.zeno-comments-report-link .hide-if-no-js').forEach(function (el) {
+		el.style.display = 'inline';
+	});
+});
+
+
+/*
+* Mangle data for the form timeout.
+*/
+document.addEventListener("DOMContentLoaded", () => {
+	document.querySelectorAll('.zeno-report-comments-container form')?.forEach( function(form) {
+
+		var timeout  = zenocommentsajax.timeout;
+		var timeout2 = zenocommentsajax.timeout2;
+
+		var timer  = parseInt( form.querySelector(`input.${timeout}`)?.value, 10 );
+		var timer2 = parseInt( form.querySelector(`input.${timeout2}`)?.value, 10 );
+
+		if ( ! isNaN( timer ) && ! isNaN( timer2 ) && (typeof timer != "undefined") && (typeof timer2 != "undefined") ) {
+
+			var timer  = ( timer - 1 );
+			var timer2 = ( timer2 + 1 );
+
+			form.querySelector(`input.${timeout}`).value = timer;
+			form.querySelector(`input.${timeout2}`).value = timer2;
+
+		}
+
+	});
+});

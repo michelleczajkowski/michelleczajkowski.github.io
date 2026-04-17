@@ -1,0 +1,108 @@
+
+Eagerly_Tools_Cookie.prototype.enableFacebook = function () {}
+Eagerly_Tools_Cookie.prototype.enableTwitter = function() {}
+Eagerly_Tools_Cookie.prototype.enableLinkedin = function() {}
+Eagerly_Tools_Cookie.prototype.enableScript = function () {}
+
+
+Eagerly_Tools_Cookie.prototype.changeEmbedWarning = function() {
+	var embedNames = ['maps', 'youtu', 'vimeo', 'dailym', '9292', 'soundcl', 'pippa', 'spotify', 'mixcloud', 'instagram', 'soundsgood', 'twit', 'mailchimp', 'Mailchimp', 'MailChimp', 'facebook'];
+	var embedNicenames = ['Google Maps', 'YouTube', 'Vimeo', 'Dailymotion', '9292', 'SoundCloud', 'Pippa', 'Spotify', 'MixCloud', 'Instagram', 'Soundsgood', 'Twitter', 'Mailchimp', 'Mailchimp', 'Mailchimp','Facebook'];
+	if ( embedNames.length > 0 ) {
+		$('.eagerly-tools-cookie-blocked').each(function () {
+			for (var i = 0; i < embedNames.length; i++){
+				embedName = embedNames[i];
+				embedNicename = embedNicenames[i];
+				var regexName = RegExp(embedName);
+				if (regexName.test($(this).data('embed'))) {
+					$(this).html(`<span> ${embedNicename} maakt gebruik van marketingcookies.</span><br><span> Om deze content te bekijken moet u akkoord gaan met het gebruik van deze cookies.</span><br><span><a href="#" class="js-enable-embed-${embedName}">Klik hier</a> om akkoord te gaan en de content in te laden.</span><div class="warning-background"></div>`  );
+				}
+			}
+		});
+	}
+
+	$('a.js-enable-embed-youtu').on('click', function (event) {
+		event.preventDefault();
+		enableYoutube( $( this ).closest( '.eagerly-tools-cookie-blocked' ) );
+	});
+
+	$('a.js-enable-embed-facebook').on('click', function (event) {
+		event.preventDefault();
+		$('a.js-enable-embed-facebook').each(function () {
+			enableFacebook($(this).closest('.eagerly-tools-cookie-blocked'));
+		});
+	});
+
+	$('a.js-enable-embed-twit').on('click', function (event) {
+		event.preventDefault();
+		$('a.js-enable-embed-twit').each(function (){
+			enableTwitter($(this).closest('.eagerly-tools-cookie-blocked'));
+		});
+	});
+	$('a.js-enable-embed-vimeo').on('click', function (event) {
+		event.preventDefault();
+		$('a.js-enable-embed-vimeo').each(function (){
+			enableTwitter($(this).closest('.eagerly-tools-cookie-blocked'));
+		});
+	});
+}
+
+Eagerly_Tools_Cookie.prototype.enableEmbeds = function (exceptions) {
+
+	if ('undefined' == typeof exceptions) {
+		var exceptions = [];
+	}
+
+	if (exceptions.indexOf('functional') > -1) {
+		if ($('.eagerly-tools-cookie-blocked').length > 0) {
+			$('.eagerly-tools-cookie-blocked').each(function () {
+				$(this).removeClass('hide');
+				var embed = $(this).data('embed');
+				// decode if embed is not youtube, facebook, twitter or vimeo
+				if (typeof embed !== 'undefined') {
+					if (embed.indexOf('youtu') == -1 && embed.indexOf('facebook') == -1 && embed.indexOf('twit') == -1 && embed.indexOf('vimeo') == -1) {
+						$(this).next('.warning-background').hide();
+						$(this).replaceWith(urldecode(embed));
+					}
+				}
+			});
+		}
+	}
+
+	// $('.eagerly-tools-cookie-blocked').removeClass('hide');
+
+}
+
+
+function enableYoutube(selector) {
+	if (selector) {
+		if ( $(selector).hasClass('is-carousel') ) {
+			selector.replaceWith('<iframe src="' + selector.data('embed') + '" frameborder="no" allowFullscreen></iframe>');
+		}
+		selector.replaceWith(urldecode(selector.data('embed')));
+	}
+}
+
+function enableFacebook(selector) {
+	if (selector) {
+		selector.replaceWith(urldecode(selector.data('embed')));
+	}
+}
+
+function enableTwitter(selector) {
+	if (selector) {
+		selector.replaceWith(urldecode(selector.data('embed')));
+		var check_init = false, t = 0, max = 10;
+		check_init = setInterval(function () {
+			if (t >= max) {
+				clearInterval(check_init);
+				// console.log('failed to load twttr');
+			}
+			if ('undefined' != typeof twttr) {
+				clearInterval(check_init);
+				twttr.widgets.load(); // this initializes the widgets if added after initial page load
+			}
+			t++;
+		},500);
+	}
+}

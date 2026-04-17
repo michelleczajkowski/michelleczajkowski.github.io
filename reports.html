@@ -131,6 +131,62 @@ li.item {
 .client-link:hover {
   text-decoration: underline;
 }
+/* ---------- Modal ---------- */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.modal-overlay.open {
+  display: block;
+}
+
+.modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(60vw, 700px);
+  max-width: calc(100vw - 40px);
+  background: #fff;
+  border: 2px solid #111;
+  padding: 22px;
+  box-sizing: border-box;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #111;
+  font-family: inherit;
+}
+
+.modal-body {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #111;
+  padding-right: 20px;
+}
+
+/* optional trigger link style */
+.popup-link {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.popup-link:hover {
+  text-decoration: underline;
+}
 
 /* ---------- Footer ---------- */
 footer {
@@ -161,13 +217,16 @@ footer {
     <li class="item">
       <p class="citation">
         <span class="author">Naranjo-Escobar, F., Chen, F., &amp; Czajkowski, M. (2021).</span> A low proficiency test of expeditious reading. <em>Lenguas Modernas, 57</em>, 137–165.
-        <a href="https://lenguasmodernas.uchile.cl/index.php/LM/article/download/65172/68492/235215" target="_blank" rel="noopener noreferrer">Link</a>
+        <a href="https://lenguasmodernas.uchile.cl/index.php/LM/article/download/65172/68492/235215" 
+        target="_blank" rel="noopener noreferrer">Link</a>
       </p>
     </li>
 
     <li class="item">
       <p class="citation">
-        <span class="author">Czajkowski, M. (2015).</span> <em>Judgements of writing proficiency by non-native and native English speaking teachers: Comparing holistic and analytical scoring</em> [Unpublished master’s thesis]. The University of Melbourne.
+        <span class="author">Czajkowski, M. (2015).</span> <em>Judgements of writing proficiency by non-native 
+          and native English speaking teachers: Comparing holistic and analytical scoring</em> 
+          [Unpublished master’s thesis]. The University of Melbourne.
       </p>
     </li>
   </ul>
@@ -183,8 +242,10 @@ footer {
         target="_blank" rel="noopener noreferrer">Radboud University, Nijmegen</a><br>
         <strong><span class="author">Czajkowski, M.</span> (2025).</strong> <br>
         <em>- Using A Remote Desktop Setup for Data Collection. Methodological Report prepared for Centre for Language Studies Lab.</em> 
+        <a href="#" class="popup-link" data-popup="This document describes a remote data collection protocol developed to capture writing process data in a familiar and naturalistic environment. The protocol was designed for research on student writing, but the underlying method is applicable beyond this specific project. The central methodological problem addressed here is the tension between control and ecological validity. Writing research and writing assessment often rely on lab-based or test-like conditions, even though much real academic writing is produced in familiar, resource-rich environments. Students typically write on their own devices, in their own spaces, using their usual tools and routines. For some research questions, especially those concerning writing processes rather than only written products, this mismatch matters. The method described in this document was developed to make it possible to collect rich process data while allowing participants to work in a familiar setting. Participants complete the task from home, using their own keyboard, screen, and physical environment. At the same time, the task itself runs on a university-controlled experiment computer accessed remotely through Chrome Remote Desktop. This allows the researcher to use approved software without requiring participants to install anything on their own machines.">[summary]</a>
         <br>
         <em>- A Validation Study of the Radboud Academic Diagnostic Assessment (RADAr): Internal Report for Language Policy Commission.</em> 
+        <a href="#" class="popup-link" data-popup="This report presents a comprehensive validation study of the Radboud Academic Diagnostic Assessment (RADAr), a compulsory post-entry language test used to assess incoming students’ academic language proficiency at Radboud University. The study was conducted to evaluate whether the test effectively fulfills its diagnostic purpose within the university’s bilingual language policy and to inform future policy and test development decisions. This was done using argument-based validation, with Knoch and Elder (2013) serving as a key guide. Evidence was drawn from multiple sources, including test data, surveys, institutional documents, and stakeholder input, and evaluated through an iterative, collaborative process. Findings indicate that the RADAr functions well overall as a low-stakes diagnostic tool. It is reliable, clearly structured, and positively received by students, with results showing meaningful relationships to academic performance. However, several points of attention were identified. Most notably, the writing component underrepresents higher-order skills such as argumentation and coherence, focusing instead on surface-level accuracy. The test also does not yet fully reflect contemporary digital writing practices, including the use of AI tools. Additionally, there is limited evidence on how students act on feedback. Overall, the RADAr is a strong instrument, but its continued effectiveness depends on targeted revisions and closer alignment with evolving academic and technological contexts.">[summary]</a>
         
         
       </p>
@@ -287,9 +348,51 @@ footer {
   <p>Last updated: <span id="lastUpdated"></span></p>
 </footer>
 
+<!-- Modal -->
+<div id="infoModal" class="modal-overlay">
+  <div class="modal-box">
+    <button id="modalClose" class="modal-close">&times;</button>
+    <div id="modalBody" class="modal-body"></div>
+  </div>
+</div>
+
 <script>
 document.getElementById("lastUpdated").textContent =
-  new Date().toLocaleDateString(undefined, { year: "numeric", month: "short", day: "2-digit" });
+  new Date().toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "2-digit"
+  });
+
+const modal = document.getElementById("infoModal");
+const modalBody = document.getElementById("modalBody");
+const modalClose = document.getElementById("modalClose");
+
+if (modal && modalBody && modalClose) {
+  document.querySelectorAll(".popup-link").forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      modalBody.textContent = this.getAttribute("data-popup");
+      modal.classList.add("open");
+    });
+  });
+
+  modalClose.addEventListener("click", () => {
+    modal.classList.remove("open");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("open");
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      modal.classList.remove("open");
+    }
+  });
+}
 </script>
 
 </body>

@@ -13,7 +13,6 @@
 
 html { font-size: 15px; }
 
-/* ---------- Base layout ---------- */
 :root {
   --maxw: 900px;
   --pad: 16px;
@@ -40,7 +39,6 @@ header { padding: 16px 16px 6px 16px; }
 main   { padding: 6px 16px 16px 16px; }
 footer { padding: 10px 16px; }
 
-/* ---------- Header ---------- */
 header h1 {
   margin: 0 0 4px 0;
   font-size: 1.55rem;
@@ -51,26 +49,6 @@ header p {
   color: var(--muted);
 }
 
-/* ---------- Top navigation ---------- */
-.navbox {
-  margin: 10px 0 18px 0;
-  padding: 8px 0 10px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.navbox a {
-  color: var(--link);
-  text-decoration: none;
-  font-weight: 600;
-  margin-right: 14px;
-}
-
-.navbox a:hover {
-  text-decoration: underline;
-}
-
-/* ---------- Section headings ---------- */
 h2.section {
   margin: 18px 0 6px 0;
   font-size: 1.05rem;
@@ -78,50 +56,73 @@ h2.section {
   color: #111;
 }
 
-h3.subsection {
-  margin: 14px 0 6px 0;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #111;
-}
-
-/* ---------- List styling ---------- */
-ul.list {
-  list-style: none;
-  padding: 0;
+.list {
   margin: 6px 0 0 0;
   border-top: 1px solid var(--border);
 }
 
-ul.list li,
-ul.list li::marker {
-  list-style: none;
-  content: "";
-}
-
-li.item {
-  padding: 8px 0;
+details.item {
   border-bottom: 1px solid var(--border);
+  padding: 0;
 }
 
-/* ---------- Typography ---------- */
-.citation {
-  margin: 0;
-  font-size: 1rem;
-  padding-left: 1.5em;
-  text-indent: -1.5em;
+summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px 0;
 }
 
-.citation strong {
-  font-weight: 600;
+summary::-webkit-details-marker {
+  display: none;
 }
 
-.author {
+.summary-line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.summary-title {
   font-weight: 600;
   color: #111;
 }
 
-/* ---------- Links ---------- */
+.summary-meta {
+  color: var(--muted);
+}
+
+.summary-line::before {
+  content: "▸";
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-right: 4px;
+}
+
+details[open] .summary-line::before {
+  content: "▾";
+}
+
+.panel {
+  padding: 0 0 12px 20px;
+}
+
+.panel p {
+  margin: 0 0 6px 0;
+}
+
+.citation {
+  font-weight: 600;
+}
+
+.project-meta {
+  margin: 0 0 6px 0;
+}
+
+.keywords strong {
+  font-weight: 600;
+}
+
 .client-link {
   color: var(--link);
   text-decoration: none;
@@ -132,144 +133,309 @@ li.item {
   text-decoration: underline;
 }
 
-/* ---------- Footer ---------- */
 footer {
   color: var(--muted);
   font-size: 0.85rem;
+}
+.panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 0 12px 20px;
+}
+
+.panel-text {
+  flex: 1;
+}
+
+.panel-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.panel-logos img {
+  max-width: 70px;
+  height: auto;
+  object-fit: contain;
 }
 </style>
 </head>
 
 <body>
 
-
 <header>
   <h1>Test Development &amp; Validation</h1>
-  <p>Selected projects across test development, item and form design, benchmarking/alignment, equating, validation, and operational monitoring.</p>
+  <p>Selected projects across test development, item and form design, benchmarking/alignment, equating, validation, and operational monitoring. <br>Click each for more information.</p>
 </header>
 
 <main>
   <h2 class="section">Portfolio</h2>
-  <ul class="list">
-    <li class="item">
-      <p class="citation"><strong>National Accreditation Authority for Translators and Interpreters (NAATI)</strong> — Australia — 2016</p>
-      <p class="project-meta"><strong>Community Language Aide (CLA) / LOTE Public Service Language Aide Test</strong></p>
-      <p class="project-meta">Bilingual workforce screening assessment (English + LOTE).</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> Test developer (co-lead) • Construct definition • Test specifications author • Task writer • Trial design • Trial data analysis • Examiner training materials • Stakeholder/client liaison • Workforce language assessment (procedural pragmatics, intelligibility, routine clarification)</p>
-    </li>
 
-    <li class="item">
-      <p class="citation"><strong>Large-scale Japanese school English assessment (commissioned via LTRC)</strong> — 2016–2022</p>
-      <p class="project-meta"><strong>Japanese National English Examination (name withheld)</strong></p>
-      <p class="project-meta">Multi-level assessment delivered to school learners across proficiency bands.</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> Co-lead test development • Multi-level item development • Item-writer supervision • Item-writer training • Quality control • Version renewal cycles • Client liaison • Contract delivery oversight</p>
-    </li>
+  <div class="list">
 
-    <li class="item">
-      <p class="citation"><strong>China — national university English assessment</strong> — year TBC (post-LTRC)</p>
-      <p class="project-meta"><strong>CET high-level item development (CSE-aligned)</strong></p>
-      <p class="project-meta">Advanced item development aligned to China’s Standards of English Language Ability (CSE).</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> High-level item writer • Framework alignment (CSE) • Construct calibration • Advanced proficiency targeting • Client collaboration (publisher commissioning)</p>
-    </li>
+<details class="item">
+  <summary>
+    <div class="summary-line">
+      <span class="summary-title">
+        <a href="https://www.naati.com.au/cla/" target="_blank">Language Aide (CLA) Test</a> | Role: Project Lead | LTRC | Client: NAATI  
+      </span>
+    </div>
+  </summary>
 
-    <li class="item">
-      <p class="citation"><strong>Kaplan English assessment product</strong> — 2025 (Aug–Sep)</p>
-      <p class="project-meta"><strong>Kaplan English Test — C2 reading &amp; listening item development support</strong></p>
-      <p class="project-meta">Supervisory review of texts and items with iterative writer feedback.</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> Supervisory item reviewer • Advanced-level (C2) item evaluation • Construct alignment review • Text suitability judgment • Quality assurance • Item-writer feedback/training • Client-facing consultancy</p>
-    </li>
+  <div class="panel">
 
-    <li class="item">
-      <p class="citation"><strong>Cambridge Boxhill Language Assessments / OET</strong> — 2016</p>
-      <p class="project-meta"><strong>OET Listening &amp; Reading redevelopment (trial + stakeholder study)</strong></p>
-      <p class="project-meta">Validation-focused trial work supporting revised test components.</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> Redevelopment team member • Trial support/coordination • Stakeholder perception study • Trial/validation reporting • Healthcare English construct evaluation • Client reporting</p>
-    </li>
+    <div class="panel-text">
+      <p class="project-meta">
+        A LOTE (Languages other than English) test for interpreters in low-stakes settings. LTRC commissioned by NAATI 
+        (National Accreditation Authority for Translators and Interpreters). The test enables people to demonstrate 
+        their basic oral communication skills in a language other than English, and their ability to support clients, 
+        students or stakeholders in a two-way conversation.
+      </p>
 
-    <li class="item">
-      <p class="citation"><strong>Australian Education Assessment Services (AEAS)</strong> — 2016–2017</p>
-      <p class="project-meta"><strong>AEAS — routine item/material development (school sector)</strong></p>
-      <p class="project-meta">Reading, vocabulary, and listening materials for school-age learners.</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> Item writer • Materials development • Reading/listening/vocabulary • Team-based production • Version updates (routine)</p>
-    </li>
+      <p class="project-meta keywords">
+        <strong>Role: With LTRC guidance and NAATI input and support, I designed, trialled, and benchmarked the test. 
+          Additionally, I developed both training materials for examiners and practice / preparation material for candidates.</strong> <br>
+        <a href="https://vimeo.com/1073420889?fl=pl&fe=cm" target="_blank">About this test</a>
+      </p>
+    </div>
 
-    <li class="item">
-      <p class="citation"><strong>LTRC / University of Melbourne</strong> — 2016–2017</p>
-      <p class="project-meta"><strong>AEST / PAAL — post-entry academic screening test development</strong></p>
-      <p class="project-meta">Online-delivered screening tasks including C-tests and cloze-elide.</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> Test form developer • C-test development • Cloze-elide development • Item panel coordination • Trial data analysis • Technical reporting • Diagnostic screening design</p>
-    </li>
+    <div class="panel-logos">
+      <img src="logo_ltrc.png" alt="LTRC logo">
+      <img src="logo_naati.png" alt="NAATI logo">
+    </div>
+    
 
-    <li class="item">
-      <p class="citation"><strong>DELA / DELNA — LTRC / University of Melbourne</strong> — 2016–2018</p>
-      <p class="project-meta"><strong>DELA / DELNA — diagnostic testing, operational monitoring &amp; equating</strong></p>
-      <p class="project-meta">Diagnostic assessment used to identify academic language strengths and needs.</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> Post-administration analysis • Item performance monitoring • Reliability analysis • Form equating • Operational reporting • Diagnostic assessment support</p>
-    </li>
+  </div>
+</details>
 
-    <li class="item">
-      <p class="citation"><strong>Radboud University</strong> — 2022–present (internal report: 2025)</p>
-      <p class="project-meta"><strong>RADAr — post-entry diagnostic assessment: monitoring, equating &amp; validation</strong></p>
-      <p class="project-meta">Ongoing evaluation of item functioning and form comparability; policy-facing reporting.</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> Item performance analysis • Reliability analysis • Form equating • Predictive validity analysis • Internal validation report author (2025) • Diagnostic interpretation • Policy reporting</p>
-    </li>
+<details class="item">
+  <summary>
+    <div class="summary-line">
+      <span class="summary-title">
+        <a href="" target="_blank">Large-Scale School and University Entrance Exam</a> | Role: Project Head | LTRC | Client: (withheld)
+      </span>
+    </div>
+  </summary>
+  <div class="panel">
+    <div class="panel-text">
+      <p class="project-meta">
+        In long-term cooperation with the LTRC, this overseas test developer commissioned item development for their series of tests 
+        benchmarked from A1 to B2 across four skill areas. The test is used in a range of contexts, including in primary and secondary school settings, and for university entrance. The test is delivered in large volumes, with regular version renewal cycles, and is used by a wide range of learners across the country.
+        and as university language entrance or placement exams.  
+      </p>
+      <p class="project-meta keywords">
+        <strong>Role: I lead this team, which included one other dedicated test developer and item reviewer, and a range of 
+        freelance item writers which I recruited and trained. My main duties involved coordinating the team, training 
+        and supervising item writers, liaising with the client, and overseeing contract delivery. This was a 
+        long-term project lasting from 2016 to 2020.</strong> <br>
+        <a href="https://vimeo.com/1073420889?fl=pl&fe=cm" target="_blank">About this test</a>
+      </p>
+    </div>
 
-    <li class="item">
-      <p class="citation"><strong>Radboud University</strong> — 2022–present</p>
-      <p class="project-meta"><strong>Revision Tools Test (RTT) — diagnostic assessment of writing with automated feedback</strong></p>
-      <p class="project-meta">Diagnostic test of writers’ decisions when interacting with spelling/grammar suggestions and surface-level feedback.</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> Test designer • Construct innovation (human–AI/tool interaction) • Subskill framework • Item writing • Scoring logic design • Trial study design • Psychometric analysis • Diagnostic feedback framework</p>
-    </li>
+    <div class="panel-logos">
+      <img src="logo_ltrc.png" alt="LTRC logo">
+    </div>
+  </div>
+</details>
 
-    <li class="item">
-      <p class="citation"><strong>CRELLA (UK)</strong> — 2021 (approx.)</p>
-      <p class="project-meta"><strong>CEFR benchmarking / alignment project</strong></p>
-      <p class="project-meta">Benchmarking items to CEFR levels as part of an alignment study.</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> CEFR benchmarking • Standard-setting support • Alignment analysis • External consultancy • Client reporting</p>
-    </li>
 
-    <li class="item">
-      <p class="citation"><strong>EnglishScore (British Council)</strong> — 2022 (approx. 6 months)</p>
-      <p class="project-meta"><strong>EnglishScore — test evaluation &amp; validation (writing and speaking)</strong></p>
-      <p class="project-meta">Validation work including evidence for scoring and level interpretation.</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> Test evaluation/validation • Writing &amp; speaking assessment • CEFR alignment • Hybrid scoring validation (automated + peer + human) • Score interpretation analysis • Client liaison</p>
-    </li>
+<details class="item">
+  <summary>
+    <div class="summary-line">
+      <span class="summary-title">
+        <a href="https://www.kaplanenglishtest.com/" target="_blank">Kaplan Test of English</a> | Role: CEFR C2 SME | Client: Kaplan Testing Services (KSE)
+      </span>
+    </div>
+  </summary>
+  <div class="panel">
+    <div class="panel-text">
+      <p class="project-meta">
+        This project involved development ofreading and listening texts and items for B2-C2 levels in the Kaplan Test of English (KTE), 
+        an adaptive English language proficiency test.
+      </p>
+      <p class="project-meta keywords">
+        <strong>Role: I provided quality assurance for C2-level items, working closely with and providing detailed feedback to the C1 item writer. 
+          I was responsible for reviewing items, ensuring the principles of good item writing were followed and the items were leveled appropriately and 
+          adhered to the specifications of the test.</strong> <br>
+        <a href="https://www.kaplanenglishtest.com/" target="_blank">About this test</a>
+      </p>
+    </div>
 
-    <li class="item">
-      <p class="citation"><strong>CNaVT</strong> — Netherlands — 2026 (Jan–Feb)</p>
-      <p class="project-meta"><strong>CNaVT A2 — CEFR benchmarking and item panel review</strong></p>
-      <p class="project-meta">Independent panel work with consensus discussion.</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> Independent panel member • CEFR A2 alignment • Item evaluation • Panel feedback • Consensus standard-setting</p>
-    </li>
+    <div class="panel-logos">
+      <img src="logo_kaplan.png" alt="Kaplan logo">
+    </div>
+  </div>
+</details>
 
-    <li class="item">
-      <p class="citation"><strong>Babel / BIG registry context</strong> — Netherlands — 2024 (approx.)</p>
-      <p class="project-meta"><strong>BIG registry tests — development-stage expert review (B1/B2)</strong></p>
-      <p class="project-meta">Review of new test materials following regulatory change.</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> External test expert reviewer • CEFR alignment (B1/B2) • Item/test design feedback • Development-stage panel review • Regulatory assessment context</p>
-    </li>
+<details class="item">
+  <summary>
+    <div class="summary-line">
+      <span class="summary-title">
+        <a href="https://www.auckland.ac.nz/en/students/student-support/academic-support/delna.html" target="_blank">DELNA</a> | 
+        Role: Test Development and Evaluation | LTRC | Partner: The University of Auckland
+      </span>
+    </div>
+  </summary>
+  <div class="panel">
+    <div class="panel-text">
+      <p class="project-meta">
+        The DELNA (Diagnostic English Language Needs Assessment) is a post-entry diagnostic language test developed and 
+        used at the University of Auckland and the University of Melbourne. The DELNA is used to 
+        identify students who may require further language support to succeed at university.
+      </p>
+      <p class="project-meta keywords">
+        <strong>Role: As part of my work with the LTRC, I helped develop, trial, evaluate and equate several versions of the DELNA (Diagnostic English Language Needs Assessment). 
+        This is a post-entry diagnostic language test used at the University of Auckland and the University of Melbourne 
+        which is used to identify students who may require further language support to succeed at university.</strong> <br>
+        <a href="https://youtu.be/192d_IbbRpU?si=3G4TPAM94oL3Wcl9" target="_blank">About this test</a>
+      </p>
+    </div>
 
-    <li class="item">
-      <p class="citation"><strong>UNSW Global</strong> — Australia — 2020–2021</p>
-      <p class="project-meta"><strong>UEEC10 — assessment review &amp; benchmarking (Phase 1–2)</strong></p>
-      <p class="project-meta">Alignment with learning outcomes and the UNSW Global Academic English Framework.</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> Assessment review • Learning outcome alignment • Framework benchmarking • Standard-setting contribution • Stakeholder consultation • Institutional reporting</p>
-    </li>
+    <div class="panel-logos">
+      <img src="logo_ltrc.png" alt="LTRC logo">
+      <img src="logo_auckland.jpg" alt="University of Auckland logo">
+      <img src="logo_uom.jpg" alt="University of Melbourne logo">
+    </div>
+  </div>
+</details>
 
-    <li class="item">
-      <p class="citation"><strong>RMIT University Vietnam</strong> — 2016–2017</p>
-      <p class="project-meta"><strong>Centre of English Language Pathways — assessment review (Levels 4–5)</strong></p>
-      <p class="project-meta">Review of pathway programme assessments supporting conditional progression.</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> Assessment review • Programme alignment analysis • Task evaluation • Reporting • Client liaison</p>
-    </li>
 
-    <li class="item">
-      <p class="citation"><strong>EduMaxi (New Zealand)</strong> — years TBC (ongoing/various)</p>
-      <p class="project-meta"><strong>EduMaxi — curriculum &amp; assessment development consultancy</strong></p>
-      <p class="project-meta">Mix of curriculum development and language assessment work (placement/proficiency).</p>
-      <p class="project-meta keywords"><strong>Role keywords:</strong> Curriculum development • Placement test development • Language proficiency test development • Item writing • Assessment design support • Long-term consultancy</p>
-    </li>
-  </ul>
+<details class="item">
+  <summary>
+    <div class="summary-line">
+      <span class="summary-title">
+        <a href="https://www.kaplanenglishtest.com/" target="_blank">Kaplan Test of English</a> | C2 SME | Client: Kaplan Testing Services (KSE)
+      </span>
+    </div>
+  </summary>
+  <div class="panel">
+    <div class="panel-text">
+      <p class="project-meta">
+        This project involved development ofreading and listening texts and items for B2-C2 levels in the Kaplan Test of English (KTE), 
+        an adaptive English language proficiency test.
+      </p>
+      <p class="project-meta keywords">
+        <strong>Role: I provided quality assurance for C2-level items, working closely with and providing detailed feedback to the C1 item writer. 
+          I was responsible for reviewing items, ensuring the principles of good item writing were followed and the items were leveled appropriately and 
+          adhered to the specifications of the test.</strong> <br>
+        <a href="https://www.kaplanenglishtest.com/" target="_blank">About this test</a>
+      </p>
+    </div>
+
+    <div class="panel-logos">
+      <img src="logo_kaplan.png" alt="Kaplan logo">
+    </div>
+  </div>
+</details>
+
+
+    <details class="item">
+      <summary>
+        <div class="summary-line">
+          <span class="summary-title">CET high-level item development (CSE-aligned)</span>
+          <span class="summary-meta">China — national university English assessment — year TBC</span>
+        </div>
+      </summary>
+      <div class="panel">
+        <p class="project-meta">Advanced item development aligned to China’s Standards of English Language Ability (CSE).</p>
+        <p class="project-meta keywords"><strong>Role keywords:</strong> High-level item writer • Framework alignment (CSE) • Construct calibration • Advanced proficiency targeting • Client collaboration (publisher commissioning)</p>
+      </div>
+    </details>
+
+    <details class="item">
+      <summary>
+        <div class="summary-line">
+          <span class="summary-title">Kaplan English Test — C2 reading &amp; listening item development support</span>
+          <span class="summary-meta">Kaplan English assessment product — 2025 (Aug–Sep)</span>
+        </div>
+      </summary>
+      <div class="panel">
+        <p class="project-meta">Supervisory review of texts and items with iterative writer feedback.</p>
+        <p class="project-meta keywords"><strong>Role keywords:</strong> Supervisory item reviewer • Advanced-level (C2) item evaluation • Construct alignment review • Text suitability judgment • Quality assurance • Item-writer feedback/training • Client-facing consultancy</p>
+      </div>
+    </details>
+
+    <details class="item">
+      <summary>
+        <div class="summary-line">
+          <span class="summary-title">OET Listening &amp; Reading redevelopment (trial + stakeholder study)</span>
+          <span class="summary-meta">Cambridge Boxhill Language Assessments / OET — 2016</span>
+        </div>
+      </summary>
+      <div class="panel">
+        <p class="project-meta">Validation-focused trial work supporting revised test components.</p>
+        <p class="project-meta keywords"><strong>Role keywords:</strong> Redevelopment team member • Trial support/coordination • Stakeholder perception study • Trial/validation reporting • Healthcare English construct evaluation • Client reporting</p>
+      </div>
+    </details>
+
+    <details class="item">
+      <summary>
+        <div class="summary-line">
+          <span class="summary-title">AEAS — routine item/material development (school sector)</span>
+          <span class="summary-meta">Australian Education Assessment Services (AEAS) — 2016–2017</span>
+        </div>
+      </summary>
+      <div class="panel">
+        <p class="project-meta">Reading, vocabulary, and listening materials for school-age learners.</p>
+        <p class="project-meta keywords"><strong>Role keywords:</strong> Item writer • Materials development • Reading/listening/vocabulary • Team-based production • Version updates (routine)</p>
+      </div>
+    </details>
+
+    <details class="item">
+      <summary>
+        <div class="summary-line">
+          <span class="summary-title">AEST / PAAL — post-entry academic screening test development</span>
+          <span class="summary-meta">LTRC / University of Melbourne — 2016–2017</span>
+        </div>
+      </summary>
+      <div class="panel">
+        <p class="project-meta">Online-delivered screening tasks including C-tests and cloze-elide.</p>
+        <p class="project-meta keywords"><strong>Role keywords:</strong> Test form developer • C-test development • Cloze-elide development • Item panel coordination • Trial data analysis • Technical reporting • Diagnostic screening design</p>
+      </div>
+    </details>
+
+    <details class="item">
+      <summary>
+        <div class="summary-line">
+          <span class="summary-title">DELA / DELNA — diagnostic testing, operational monitoring &amp; equating</span>
+          <span class="summary-meta">DELA / DELNA — LTRC / University of Melbourne — 2016–2018</span>
+        </div>
+      </summary>
+      <div class="panel">
+        <p class="project-meta">Diagnostic assessment used to identify academic language strengths and needs.</p>
+        <p class="project-meta keywords"><strong>Role keywords:</strong> Post-administration analysis • Item performance monitoring • Reliability analysis • Form equating • Operational reporting • Diagnostic assessment support</p>
+      </div>
+    </details>
+
+    <details class="item">
+      <summary>
+        <div class="summary-line">
+          <span class="summary-title">RADAr — post-entry diagnostic assessment: monitoring, equating &amp; validation</span>
+          <span class="summary-meta">Radboud University — 2022–present</span>
+        </div>
+      </summary>
+      <div class="panel">
+        <p class="project-meta">Ongoing evaluation of item functioning and form comparability; policy-facing reporting.</p>
+        <p class="project-meta keywords"><strong>Role keywords:</strong> Item performance analysis • Reliability analysis • Form equating • Predictive validity analysis • Internal validation report author (2025) • Diagnostic interpretation • Policy reporting</p>
+      </div>
+    </details>
+
+    <details class="item">
+      <summary>
+        <div class="summary-line">
+          <span class="summary-title">Revision Tools Test (RTT) — diagnostic assessment of writing with automated feedback</span>
+          <span class="summary-meta">Radboud University — 2022–present</span>
+        </div>
+      </summary>
+      <div class="panel">
+        <p class="project-meta">Diagnostic test of writers’ decisions when interacting with spelling/grammar suggestions and surface-level feedback.</p>
+        <p class="project-meta keywords"><strong>Role keywords:</strong> Test designer • Construct innovation (human–AI/tool interaction) • Subskill framework • Item writing • Scoring logic design • Trial study design • Psychometric analysis • Diagnostic feedback framework</p>
+      </div>
+    </details>
+
+  </div>
 </main>
 
 <footer>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Publications & Project Reports | Michelle Czajkowski</title>
+<title>Project Reports & Publications | Michelle Czajkowski</title>
 
 <style>
 @font-face {
@@ -11,7 +11,9 @@
   src: url('Testimonial.ttf') format('truetype');
 }
 
-html { font-size: 15px; }
+html { 
+  font-size: 15px; 
+}
 
 /* ---------- Base layout ---------- */
 :root {
@@ -20,6 +22,7 @@ html { font-size: 15px; }
   --border: #e6e6e6;
   --muted: #555;
   --link: #0b57d0;
+  --active: #8b0000;
 }
 
 body {
@@ -36,9 +39,17 @@ header, main, footer {
   margin: 0 auto;
 }
 
-header { padding: 16px 16px 6px 16px; }
-main   { padding: 6px 16px 16px 16px; }
-footer { padding: 10px 16px; }
+header { 
+  padding: 16px 16px 6px 16px; 
+}
+
+main { 
+  padding: 6px 16px 16px 16px; 
+}
+
+footer { 
+  padding: 10px 16px; 
+}
 
 /* ---------- Header ---------- */
 header h1 {
@@ -51,23 +62,43 @@ header p {
   color: var(--muted);
 }
 
-/* ---------- Top navigation ---------- */
-.navbox {
+/* ---------- Client navigation ---------- */
+.client-nav {
   margin: 10px 0 18px 0;
   padding: 8px 0 10px 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
 }
 
-.navbox a {
+.client-tab {
+  font-family: inherit;
+  font-size: 1rem;
   color: var(--link);
-  text-decoration: none;
-  font-weight: 600;
-  margin-right: 14px;
+  background: transparent;
+  border: none;
+  padding: 2px 0;
+  cursor: pointer;
 }
 
-.navbox a:hover {
+.client-tab:hover {
   text-decoration: underline;
+}
+
+.client-tab.active {
+  color: var(--active);
+  font-weight: 700;
+}
+
+/* ---------- Client panels ---------- */
+.client-panel {
+  display: none;
+}
+
+.client-panel.active {
+  display: block;
 }
 
 /* ---------- Section headings ---------- */
@@ -83,6 +114,11 @@ h3.subsection {
   font-size: 1rem;
   font-weight: 600;
   color: #111;
+}
+
+.client-context {
+  margin: 0 0 12px 0;
+  color: var(--muted);
 }
 
 /* ---------- List styling ---------- */
@@ -131,6 +167,18 @@ li.item {
 .client-link:hover {
   text-decoration: underline;
 }
+
+.popup-link {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.popup-link:hover {
+  text-decoration: underline;
+}
+
 /* ---------- Modal ---------- */
 .modal-overlay {
   display: none;
@@ -176,22 +224,27 @@ li.item {
   padding-right: 20px;
 }
 
-/* optional trigger link style */
-.popup-link {
-  color: var(--link);
-  text-decoration: none;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.popup-link:hover {
-  text-decoration: underline;
-}
-
 /* ---------- Footer ---------- */
 footer {
   color: var(--muted);
   font-size: 0.85rem;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 700px) {
+  .client-nav {
+    display: block;
+  }
+
+  .client-tab {
+    display: block;
+    margin: 0 0 6px 0;
+    text-align: left;
+  }
+
+  .modal-box {
+    width: calc(100vw - 30px);
+  }
 }
 </style>
 </head>
@@ -199,122 +252,283 @@ footer {
 <body>
 
 <header>
-  <h1>Publications & Project Reports</h1>
-  <p>Research outputs, reviews, theses, and technical or commissioned reports.</p>
+  <h1>Project Reports & Publications</h1>
+  Click below for information on reports and publications related to specific clients and projects.
 </header>
 
 <main>
 
-<nav class="navbox" aria-label="Page navigation">
-  <a href="#research">Research</a>
-  <a href="#project-reports">Project Reports</a>
-  <a href="#book-reviews">Book Reviews</a>
+<nav class="client-nav" aria-label="Client navigation">
+
+  <button type="button" class="client-tab active" data-client="ets">ETS</button>
+  <button type="button" class="client-tab" data-client="oet">OET</button>  
+  <button type="button" class="client-tab" data-client="delna">DELNA</button>  
+  <button type="button" class="client-tab" data-client="unsw">UNSW</button>  
+  <button type="button" class="client-tab" data-client="aeas">AEAS</button>
+  <button type="button" class="client-tab" data-client="rmit">RMIT</button>
+  <button type="button" class="client-tab" data-client="naati">NAATI</button>  
+  <button type="button" class="client-tab" data-client="radboud">Radboud University</button>
 </nav>
 
-<section id="research">
-  <h2 class="section">Research</h2>
+<section class="client-panel" id="radboud">
+  <h2 class="section">
+    <a class="client-link"
+       href="https://www.ru.nl/en/radboud-into-languages/services/radboud-academic-diagnostic-assessment-radar"
+       target="_blank"
+       rel="noopener noreferrer">
+      Radboud University, Nijmegen
+    </a>
+  </h2>
+
   <ul class="list">
     <li class="item">
       <p class="citation">
-        <span class="author">Naranjo-Escobar, F., Chen, F., &amp; Czajkowski, M. (2021).</span> A low proficiency test of expeditious reading. <em>Lenguas Modernas, 57</em>, 137–165.
-        <a href="https://lenguasmodernas.uchile.cl/index.php/LM/article/download/65172/68492/235215" 
-        target="_blank" rel="noopener noreferrer">Link</a>
-      </p>
-    </li>
-
-    <li class="item">
-      <p class="citation">
-        <span class="author">Czajkowski, M. (2015).</span> <em>Judgements of writing proficiency by non-native 
-          and native English speaking teachers: Comparing holistic and analytical scoring</em> 
-          [Unpublished master’s thesis]. The University of Melbourne.
-      </p>
-    </li>
-  </ul>
-</section>
-
-<section id="project-reports">
-  <h2 class="section">Project Reports</h2>
-  <ul class="list">
-
-    <li class="item">
-      <p class="citation">
-        <a class="client-link" href="https://www.ru.nl/en/radboud-into-languages/services/radboud-academic-diagnostic-assessment-radar" 
-        target="_blank" rel="noopener noreferrer">Radboud University, Nijmegen</a><br>
-        <strong><span class="author">Czajkowski, M.</span> (2025).</strong> <br>
-        <em>- Using A Remote Desktop Setup for Data Collection. Methodological Report prepared for Centre for Language Studies Lab.</em> 
+        <strong><span class="author">Czajkowski, M.</span> (2025a).</strong>
+        <em>Using a remote desktop setup for data collection</em> [Methodological report].
+        Centre for Language Studies Lab.
         <a href="#" class="popup-link" data-popup="This document describes a remote data collection protocol developed to capture writing process data in a familiar and naturalistic environment. The protocol was designed for research on student writing, but the underlying method is applicable beyond this specific project. The central methodological problem addressed here is the tension between control and ecological validity. Writing research and writing assessment often rely on lab-based or test-like conditions, even though much real academic writing is produced in familiar, resource-rich environments. Students typically write on their own devices, in their own spaces, using their usual tools and routines. For some research questions, especially those concerning writing processes rather than only written products, this mismatch matters. The method described in this document was developed to make it possible to collect rich process data while allowing participants to work in a familiar setting. Participants complete the task from home, using their own keyboard, screen, and physical environment. At the same time, the task itself runs on a university-controlled experiment computer accessed remotely through Chrome Remote Desktop. This allows the researcher to use approved software without requiring participants to install anything on their own machines.">[summary]</a>
-        <br>
-        <em>- A Validation Study of the Radboud Academic Diagnostic Assessment (RADAr): Internal Report for Language Policy Commission.</em> 
+      </p>
+    </li>
+
+    <li class="item">
+      <p class="citation">
+        <strong><span class="author">Czajkowski, M.</span> (2025b).</strong>
+        <em>A validation study of the Radboud Academic Diagnostic Assessment (RADAr): Internal report for the Language Policy Commission</em> [Internal report].
         <a href="#" class="popup-link" data-popup="This report presents a comprehensive validation study of the Radboud Academic Diagnostic Assessment (RADAr), a compulsory post-entry language test used to assess incoming students’ academic language proficiency at Radboud University. The study was conducted to evaluate whether the test effectively fulfills its diagnostic purpose within the university’s bilingual language policy and to inform future policy and test development decisions. This was done using argument-based validation, with Knoch and Elder (2013) serving as a key guide. Evidence was drawn from multiple sources, including test data, surveys, institutional documents, and stakeholder input, and evaluated through an iterative, collaborative process. Findings indicate that the RADAr functions well overall as a low-stakes diagnostic tool. It is reliable, clearly structured, and positively received by students, with results showing meaningful relationships to academic performance. However, several points of attention were identified. Most notably, the writing component underrepresents higher-order skills such as argumentation and coherence, focusing instead on surface-level accuracy. The test also does not yet fully reflect contemporary digital writing practices, including the use of AI tools. Additionally, there is limited evidence on how students act on feedback. Overall, the RADAr is a strong instrument, but its continued effectiveness depends on targeted revisions and closer alignment with evolving academic and technological contexts.">[summary]</a>
-        
-        
       </p>
     </li>
-
-    <li class="item">
-      <p class="citation">
-        <a class="client-link" href="https://www.unswcollege.edu.au/study/university-english-entry-course" target="_blank" rel="noopener noreferrer">University of New South Wales (UNSW)</a><br>
-        <strong>O’Hagan, S., McKenna, A., Chen, I., <span class="author">Czajkowski, M.</span> &amp; Knoch, U. (2021, 2020).</strong> <br><em>- UEEC10 Assessment review and benchmarking: PHASE 2. Examination of the alignment of the UEEC10 assessments against the UNSW Global Academic English Framework.</em> Final report prepared for UNSW Global. Melbourne: Language Testing Research Centre, University of Melbourne.<br>
-        <em>- UEEC10 Assessment review and benchmarking: PHASE 1. Examination of the alignment between UEEC10 assessments and course and program learning outcomes.</em> Final report prepared for UNSW Global. Melbourne: Language Testing Research Centre, University of Melbourne.
-      </p>
-    </li>
-
-    <li class="item">
-      <p class="citation">
-        <a class="client-link" href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer">Educational Testing Service (ETS) TOEFL</a><br>
-        <strong>Knoch, U., O'Hagan, S., <span class="author">Czajkowski, M.</span>, Wattam, C., Macqueen, S., Ikeda, N., Wendiady, J. &amp; Hoang, T. (2018).</strong> <em>Modelling the writing processes on the integrated listening/reading-to-write task across proficiency levels.</em> Melbourne: Language Testing Research Centre, University of Melbourne.<br>
-        <strong>Knoch, U., O’Hagan, S., <span class="author">Czajkowski, M.</span>, Macqueen, S., Ikeda, N., Wendiady, J., Hoang, T., Khamboonruang, A. (2018).</strong> <em>Examining writing processes on the TOEFL integrated listening/reading-to-write task across score levels.</em>
-      </p>
-    </li>
-
-    <li class="item">
-      <p class="citation">
-        <a class="client-link" href="https://aeas.com.au/" target="_blank" rel="noopener noreferrer">AEAS (Australian Education Assessment Services)</a><br>
-        <strong>O’Hagan, S., Chandran, R., <span class="author">Czajkowski, M.</span> &amp; Huisman, A. (2017).</strong> <em>Development of AEAS Test Materials for Years 4-6 Version 2: Reading, Vocabulary, Listening.</em> Melbourne: The Language Testing Research Centre, the University of Melbourne. 29 pp.
-      </p>
-    </li>
-
-    <li class="item">
-      <p class="citation">
-        <a class="client-link" href="https://www.rmit.edu.vn/" target="_blank" rel="noopener noreferrer">RMIT University Vietnam</a><br>
-        <strong>O’Hagan, S., <span class="author">Czajkowski, M.</span> &amp; Knoch, U. (2017, 2016).</strong><br> <em>- RMIT University Vietnam, Centre of English Language Pathways Assessment Review: Level 5 (Pre-Advanced).</em> Melbourne: The Language Testing Research Centre, University of Melbourne. 50 pp.<br>
-        <em>- RMIT University Vietnam, Centre of English Language Pathways Assessments Review: Level 4 (Upper Intermediate).</em> Melbourne: The Language Testing Research Centre, University of Melbourne.
-      </p>
-    </li>
-
-    <li class="item">
-      <p class="citation">
-        <a class="client-link" href="https://www.cambridgeenglish.org/exams-and-tests/oet/" target="_blank" rel="noopener noreferrer">Occupational English Test (OET)</a><br>
-        <strong>Huisman, A., <span class="author">Czajkowski, M.</span>, O’Hagan, S. &amp; Frost, K. (2016).</strong> <br><em>- Trialling and stakeholder perceptions of revised OET Reading test.</em> Final Report to Cambridge Boxhill Language Assessments. Melbourne: Language Testing Research Centre, the University of Melbourne. 25 pp.<br>
-        <em>- Re-trialling and stakeholder perceptions of revised OET Listening test.</em> Final Report to Cambridge Boxhill Language Assessments. Melbourne: Language Testing Research Centre, the University of Melbourne. 29 pp.
-      </p>
-    </li>
-
-    <li class="item">
-      <p class="citation">
-        <a class="client-link" href="https://www.naati.com.au/cla/" target="_blank" rel="noopener noreferrer">NAATI (National Accreditation Authority for Translators and Interpreters)</a><br>
-        <strong><span class="author">Czajkowski, M.</span> &amp; Knoch, U. (2016).</strong> <em>LOTE Public Service Language Aide Test: Test specifications and tasks.</em> Report to the National Accreditation Authority for Interpreters and Translators (NAATI). Melbourne: Language Testing Research Centre.
-      </p>
-    </li>
-
-    <li class="item">
-      <p class="citation">
-        <a class="client-link" href="https://www.auckland.ac.nz/en/students/student-support/academic-support/delna.html" target="_blank" rel="noopener noreferrer">University of Auckland | University of Melbourne</a><br>
-        <strong><span class="author">Czajkowski, M.</span> (2017, 2016).</strong> <br><em>- Report on DELNA post-test administration analysis - Reading V10 (Maps and Citizenship).</em> Melbourne: The Language Testing Research Centre, the University of Melbourne.<br>
-        <em>- Report on DELNA post-test administration analysis - Reading V11 (Rewilding and Indigenous Rights).</em> Melbourne: The Language Testing Research Centre, the University of Melbourne.<br>
-        <em>- Report on DELNA post-test administration analysis - Listening V8 (Happiness).</em> Melbourne: The Language Testing Research Centre, the University of Melbourne.<br>
-        <em>- Report on DELNA post-test administration analysis: Reading V9.</em> Melbourne: The Language Testing Research Centre, the University of Melbourne.<br>
-        <em>- Report on DELNA post-test administration analysis: Listening V7.</em> Melbourne: The Language Testing Research Centre, the University of Melbourne.<br>
-        <em>- Report on DELNA post-test administration analysis (Listening V6): Comparing two sets of test takers.</em> Melbourne: The Language Testing Research Centre, the University of Melbourne.<br>
-        <strong><span class="author">Czajkowski, M.</span> &amp; Frost, K. (2016).</strong> <em>Report on DELNA post-test administration analysis: August 2016.</em> Melbourne: The Language Testing Research Centre, the University of Melbourne.
-      </p>
-    </li>
-
   </ul>
 </section>
 
-<section id="book-reviews">
+<section class="client-panel" id="unsw">
+  <h2 class="section">
+    <a class="client-link"
+       href="https://www.unswcollege.edu.au/study/university-english-entry-course"
+       target="_blank"
+       rel="noopener noreferrer">
+      University of New South Wales (UNSW)
+    </a>
+  </h2>
+
+  <ul class="list">
+    <li class="item">
+      <p class="citation">
+        <strong>O’Hagan, S., McKenna, A., Chen, I., <span class="author">Czajkowski, M.</span>, &amp; Knoch, U. (2021).</strong>
+        <em>UEEC10 assessment review and benchmarking: Phase 2. Examination of the alignment of the UEEC10 assessments against the UNSW Global Academic English Framework</em> [Final report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+
+    <li class="item">
+      <p class="citation">
+        <strong>O’Hagan, S., McKenna, A., Chen, I., <span class="author">Czajkowski, M.</span>, &amp; Knoch, U. (2020).</strong>
+        <em>UEEC10 assessment review and benchmarking: Phase 1. Examination of the alignment between UEEC10 assessments and course and program learning outcomes</em> [Final report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+  </ul>
+</section>
+
+<section class="client-panel active" id="ets">
+  <h2 class="section">
+    <a class="client-link"
+       href="https://www.ets.org/toefl.html"
+       target="_blank"
+       rel="noopener noreferrer">
+      Educational Testing Service (ETS) TOEFL
+    </a>
+  </h2>
+
+  <ul class="list">
+    <li class="item">
+      <p class="citation">
+        <strong>Knoch, U., O’Hagan, S., <span class="author">Czajkowski, M.</span>, Wattam, C., Macqueen, S., Ikeda, N., Wendiady, J., &amp; Hoang, T. (2018).</strong>
+        <em>Modelling the writing processes on the integrated listening/reading-to-write task across proficiency levels</em> [Research report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+
+    <li class="item">
+      <p class="citation">
+        <strong>Knoch, U., O’Hagan, S., <span class="author">Czajkowski, M.</span>, Macqueen, S., Ikeda, N., Wendiady, J., Hoang, T., &amp; Khamboonruang, A. (2018).</strong>
+        <em>Examining writing processes on the TOEFL integrated listening/reading-to-write task across score levels</em> [Research report].
+      </p>
+    </li>
+  </ul>
+</section>
+
+<section class="client-panel" id="aeas">
+  <h2 class="section">
+    <a class="client-link"
+       href="https://aeas.com.au/"
+       target="_blank"
+       rel="noopener noreferrer">
+      AEAS (Australian Education Assessment Services)
+    </a>
+  </h2>
+
+  <ul class="list">
+    <li class="item">
+      <p class="citation">
+        <strong>O’Hagan, S., Chandran, R., <span class="author">Czajkowski, M.</span>, &amp; Huisman, A. (2017).</strong>
+        <em>Development of AEAS test materials for years 4–6 version 2: Reading, vocabulary, listening</em> [Report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+  </ul>
+</section>
+
+<section class="client-panel" id="rmit">
+  <h2 class="section">
+    <a class="client-link"
+       href="https://www.rmit.edu.vn/"
+       target="_blank"
+       rel="noopener noreferrer">
+      RMIT University Vietnam
+    </a>
+  </h2>
+
+  <ul class="list">
+    <li class="item">
+      <p class="citation">
+        <strong>O’Hagan, S., <span class="author">Czajkowski, M.</span>, &amp; Knoch, U. (2017).</strong>
+        <em>RMIT University Vietnam, Centre of English Language Pathways assessment review: Level 5 (Pre-Advanced)</em> [Report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+
+    <li class="item">
+      <p class="citation">
+        <strong>O’Hagan, S., <span class="author">Czajkowski, M.</span>, &amp; Knoch, U. (2016).</strong>
+        <em>RMIT University Vietnam, Centre of English Language Pathways assessments review: Level 4 (Upper Intermediate)</em> [Report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+  </ul>
+</section>
+
+<section class="client-panel" id="oet">
+  <h2 class="section">
+    <a class="client-link"
+       href="https://www.cambridgeenglish.org/exams-and-tests/oet/"
+       target="_blank"
+       rel="noopener noreferrer">
+      Occupational English Test (OET)
+    </a>
+  </h2>
+
+  <ul class="list">
+    <li class="item">
+      <p class="citation">
+        <strong>Huisman, A., <span class="author">Czajkowski, M.</span>, O’Hagan, S., &amp; Frost, K. (2016).</strong>
+        <em>Trialling and stakeholder perceptions of revised OET reading test</em> [Final report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+
+    <li class="item">
+      <p class="citation">
+        <strong>Huisman, A., <span class="author">Czajkowski, M.</span>, O’Hagan, S., &amp; Frost, K. (2016).</strong>
+        <em>Re-trialling and stakeholder perceptions of revised OET listening test</em> [Final report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+  </ul>
+</section>
+
+<section class="client-panel" id="naati">
+  <h2 class="section">
+    <a class="client-link"
+       href="https://www.naati.com.au/cla/"
+       target="_blank"
+       rel="noopener noreferrer">
+      NAATI (National Accreditation Authority for Translators and Interpreters)
+    </a>
+  </h2>
+
+  <ul class="list">
+    <li class="item">
+      <p class="citation">
+        <strong><span class="author">Czajkowski, M.</span>, &amp; Knoch, U. (2016).</strong>
+        <em>LOTE public service language aide test: Test specifications and tasks</em> [Report].
+        Language Testing Research Centre.
+      </p>
+    </li>
+  </ul>
+</section>
+
+<section class="client-panel" id="delna">
+  <h2 class="section">
+    <a class="client-link"
+       href="https://www.auckland.ac.nz/en/students/student-support/academic-support/delna.html"
+       target="_blank"
+       rel="noopener noreferrer">
+      University of Auckland | University of Melbourne
+    </a>
+  </h2>
+
+  <ul class="list">
+    <li class="item">
+      <p class="citation">
+        <strong><span class="author">Czajkowski, M.</span> (2017).</strong>
+        <em>Report on DELNA post-test administration analysis: Reading V10 (Maps and citizenship)</em> [Report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+
+    <li class="item">
+      <p class="citation">
+        <strong><span class="author">Czajkowski, M.</span> (2017).</strong>
+        <em>Report on DELNA post-test administration analysis: Reading V11 (Rewilding and Indigenous rights)</em> [Report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+
+    <li class="item">
+      <p class="citation">
+        <strong><span class="author">Czajkowski, M.</span> (2017).</strong>
+        <em>Report on DELNA post-test administration analysis: Listening V8 (Happiness)</em> [Report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+
+    <li class="item">
+      <p class="citation">
+        <strong><span class="author">Czajkowski, M.</span> (2016).</strong>
+        <em>Report on DELNA post-test administration analysis: Reading V9</em> [Report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+
+    <li class="item">
+      <p class="citation">
+        <strong><span class="author">Czajkowski, M.</span> (2016).</strong>
+        <em>Report on DELNA post-test administration analysis: Listening V7</em> [Report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+
+    <li class="item">
+      <p class="citation">
+        <strong><span class="author">Czajkowski, M.</span> (2016).</strong>
+        <em>Report on DELNA post-test administration analysis (Listening V6): Comparing two sets of test takers</em> [Report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+
+    <li class="item">
+      <p class="citation">
+        <strong><span class="author">Czajkowski, M.</span>, &amp; Frost, K. (2016).</strong>
+        <em>Report on DELNA post-test administration analysis: August 2016</em> [Report].
+        Language Testing Research Centre, University of Melbourne.
+      </p>
+    </li>
+  </ul>
+</section>
+
+<section class="client-panel" id="book-reviews">
   <h2 class="section">Book Reviews</h2>
+
   <ul class="list">
     <li class="item">
       <p class="citation">
@@ -357,6 +571,7 @@ footer {
 </div>
 
 <script>
+/* ---------- Last updated date ---------- */
 document.getElementById("lastUpdated").textContent =
   new Date().toLocaleDateString(undefined, {
     year: "numeric",
@@ -364,6 +579,23 @@ document.getElementById("lastUpdated").textContent =
     day: "2-digit"
   });
 
+/* ---------- Client tab switching ---------- */
+const tabs = document.querySelectorAll(".client-tab");
+const panels = document.querySelectorAll(".client-panel");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    const clientId = tab.getAttribute("data-client");
+
+    tabs.forEach(t => t.classList.remove("active"));
+    panels.forEach(panel => panel.classList.remove("active"));
+
+    tab.classList.add("active");
+    document.getElementById(clientId).classList.add("active");
+  });
+});
+
+/* ---------- Summary modal ---------- */
 const modal = document.getElementById("infoModal");
 const modalBody = document.getElementById("modalBody");
 const modalClose = document.getElementById("modalClose");

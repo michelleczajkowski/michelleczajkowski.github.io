@@ -12,8 +12,8 @@
     }
 
     @font-face {
-      font-family: 'BiroScript';
-      src: url('Biro_Script_reduced.ttf') format('truetype');
+      font-family: 'Testimonial-Bold';
+      src: url('Testimonial.ttf') format('truetype');
     }
 
     :root {
@@ -56,7 +56,7 @@
     .sidebar h1 {
     margin: 0 0 10px 0;
     font-size: 1.3rem;
-    font-family: 'BiroScript', serif;
+    font-family: 'Testimonial', serif;
     color: #8b0000;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -93,6 +93,7 @@
       color: var(--link);
       text-decoration: none;
       font-size: 0.95rem;
+
       transition: all 0.2s ease;
     }
 
@@ -102,9 +103,8 @@
 
     .nav-links a.active {
       color: #8b0000;
-      font-family: 'BiroScript', serif;
+      font-family: 'Testimonial-Bold', serif;
       font-weight: 700;
-      text-transform: uppercase;
       font-size: 1.08rem;
       letter-spacing: 1px;
     }
@@ -143,6 +143,25 @@
     }
   
     }
+    .nav-group {
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .nav-group-title {
+      margin: 0 0 12px 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #8b0000;
+      text-align: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -152,18 +171,20 @@
 
   <aside class="sidebar">
     <h1><center>Michelle Czajkowski</center></h1>
-    <p><center>Test development, test evaluation, validation, research, language teaching, curriculum devlopment, teacher training</center></p>
-    <p><i><center>Netherlands, Australia, USA, China, Poland</center></i></p>
+    <p><center>Research, Assessment, Instruction</center></p>
+    <p><b><center>Radboud University<br>University of Melbourne<br>British Council<br></center></b></p>
 
     <div class="nav-group">
       <div class="nav-group-title"></div>
+
       <ul class="nav-links">
-        <li><a href="curriculum_vitae.html" target="contentFrame" class="active">Curriculum Vitae</a></li>
+        <li><a href="curriculum_vitae_brief.html" target="contentFrame" class="active">Brief C.V.</a></li>
+        <li><a href="research.html" target="contentFrame">Academic Publications</a></li>        
+        <li><a href="reports.html" target="contentFrame">Project Reports</a></li>    
         <li><a href="test_development.html" target="contentFrame">Test Development</a></li>
-        <li><a href="reports.html" target="contentFrame">Research | Publications</a></li>        
-        <li><a href="conferences_talks.html" target="contentFrame">Talks | Presentations</a></li>
-        <li><a href="teaching.html" target="contentFrame">Teaching Experience</a></li>        
-        <li><a href="academic_engagement.html" target="contentFrame">Community Engagement</a></li>
+        <li><a href="conferences_talks.html" target="contentFrame">Academic Presentations</a></li>
+        <li><a href="teaching.html" target="contentFrame">Teaching and Training</a></li>        
+        <li><a href="academic_engagement.html" target="contentFrame">Professional Engagement</a></li>
         <li><a href="research_methods_software.html" target="contentFrame">Methods and Tools</a></li>
         <li><a href="media.html" target="contentFrame">In the Media</a></li>
       </ul>
@@ -177,7 +198,7 @@
     <iframe
       class="content-frame"
       name="contentFrame"
-      src="curriculum_vitae.html"
+      src="curriculum_vitae_brief.html"
       title="Content">
     </iframe>
   </main>

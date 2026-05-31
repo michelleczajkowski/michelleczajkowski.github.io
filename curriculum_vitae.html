@@ -2,16 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Michelle Czajkowski | Curriculum Vitae</title>
 
   <style>
-    @font-face {
-      font-family: 'Testimonial';
-      src: url('Testimonial.ttf') format('truetype');
-      font-display: swap;
-    }
-
     :root {
       --maxw: 980px;
       --text: #111;
@@ -23,40 +17,55 @@
     }
 
     html {
-      font-size: 15px;
+      font-size: 18px;
     }
 
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: 'Testimonial', Georgia, serif;
+      font-family: "Times New Roman", Times, serif;
       line-height: 1.5;
     }
 
     .page {
       max-width: var(--maxw);
       margin: 0 auto;
-      padding: 28px 20px 48px 20px;
+      padding: 28px 20px 48px;
     }
 
     header {
       border-bottom: 2px solid var(--accent);
-      padding-bottom: 14px;
-      margin-bottom: 24px;
+      padding-bottom: 1cap;
+      margin-bottom: 0px;
     }
 
     h1 {
-      margin: 0 0 6px 0;
+      margin: 0 0 6px;
       font-size: 2rem;
       line-height: 1.1;
       letter-spacing: 0.2px;
     }
 
-    .subtitle {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1rem;
+    h2 {
+      margin: 28px 0 10px;
+      padding-top: 10px;
+      font-size: 1.08rem;
+      color: var(--accent);
+      border-top: 1px solid var(--line);
+    }
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .contact {
@@ -70,32 +79,15 @@
       margin-right: 14px;
     }
 
-    h2 {
-      margin: 28px 0 10px 0;
-      padding-top: 2px;
-      font-size: 1.08rem;
-      color: var(--accent);
-      border-top: 1px solid var(--line);
-      padding-top: 10px;
-    }
-
-    p {
-      margin: 0 0 10px 0;
-    }
-
-    ul {
-      margin: 8px 0 0 20px;
-      padding: 0;
-    }
-
-    li {
-      margin: 0 0 7px 0;
+    .profile-text {
+      font-size: 0.96rem;
     }
 
     .two-col {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 28px;
+      grid-template-columns: 2fr 1fr;
+      gap: 15px;
+      align-items: start;
     }
 
     .entry {
@@ -111,10 +103,6 @@
       font-weight: 700;
     }
 
-    .org {
-      font-style: italic;
-    }
-
     .meta {
       color: var(--muted);
       font-size: 0.95rem;
@@ -122,38 +110,24 @@
       margin-bottom: 6px;
     }
 
-    .small {
+    .small,
+    .list-block,
+    aside {
       font-size: 0.96rem;
     }
 
-    .tagline {
-      color: var(--muted);
+    .list-block {
+      line-height: 1.45;
     }
 
-    a {
-      color: var(--link);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .skills-list,
-    .compact-list {
-      margin-left: 18px;
-    }
-
-    .compact-list li {
+    .list-block div {
       margin-bottom: 5px;
     }
 
-    footer {
-      margin-top: 34px;
-      padding-top: 12px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.85rem;
+    .list-heading {
+      font-weight: 700;
+      margin-top: 10px;
+      margin-bottom: 4px;
     }
 
     @media (max-width: 820px) {
@@ -166,97 +140,78 @@
         font-size: 1.7rem;
       }
     }
+
     @media print {
-  body {
-    font-size: 11pt;
-    line-height: 1.4;
-  }
+      @page {
+        size: A4;
+        margin: 8mm;
+      }
 
-  .page {
-    padding: 0;
-  }
+      html {
+        font-size: 11pt;
+      }
 
-  h2 {
-    page-break-after: avoid;
-  }
+      body {
+        line-height: 1.35;
+      }
 
-  .entry {
-    page-break-inside: avoid;
-  }
+      .page {
+        max-width: none;
+        padding: 0;
+      }
 
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  @media print {
-  @page {
-    size: A4;
-    margin: 12mm;
-  }
+      .two-col {
+        display: grid;
+        grid-template-columns: 1.7fr 1.3fr;
+        gap: 15px;
+      }
 
-  body {
-    font-size: 10.5pt;
-    line-height: 1.35;
-  }
+      h2 {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
 
-  .page {
-    max-width: none;
-    padding: 0;
-  }
+      .entry {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
 
-  .two-col {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 20px;
-  }
-
-  .entry {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-
-  h2 {
-    page-break-after: avoid;
-    break-after: avoid;
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-  }
-}
-}
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="page">
 
     <header>
       <h1>Michelle Czajkowski</h1>
-      
       <p class="contact">
-        <span>Language Assessment Researcher and Practitioner | Based in the Netherlands</span><br>
-        <span>Email: michelle.czajkowski@ru.nl | mtczajkowski@yahoo.com</span><br>
-        <span><u><a href="https://michelleczajkowski.github.io/" target="_blank">Personal Website</a></u></span>
+        <span>Language Assessment Researcher and Practitioner | American | Based in the Netherlands</span><br>
+        <span>Email: michelle.czajkowski@ru.nl | Professional Website:
+          <u><a href="https://michelleczajkowski.github.io/" target="_blank">https://michelleczajkowski.github.io/</a></u>
+        </span>
       </p>
     </header>
 
     <section>
       <h2>Profile</h2>
-      <p>
-        Language assessment researcher and practitioner with extensive experience in test development, 
-        validation, benchmarking, examiner training, and test administration. I also have a strong 
-        background in teaching. I enjoy engaging with professional communities, whether learners, 
-        teachers, and testers, or academic and professional associations, and contributing to organisation, 
-        outreach, and collaborative projects.
+      <p class="profile-text">
+        Language assessment researcher and practitioner with experience in test development, validation,
+        benchmarking, examiner training, test administration, and language teaching. My work focuses on
+        diagnostic assessment, writing assessment, academic language readiness, and the interpretation and
+        use of assessment results. I am especially interested in collaborative research and professional
+        engagement that connects learners, teachers, test users, and assessment researchers across
+        educational contexts.
       </p>
     </section>
 
     <div class="two-col">
 
       <main>
-        
-
         <section>
           <h2>Professional Experience</h2>
 
@@ -264,8 +219,11 @@
             <div class="role">Researcher, Instructor</div>
             <div class="meta">Radboud University | 2022–present</div>
             <p class="small">
-                As part of a PhD position at Radboud University, I supported the university's language policy and the language center through research on the post-entry language test (in Dutch and English) and by examining studetn writing samples and the writing process. Other duties included teaching (MA course <i>Language Testing</i>) consultation with stakeholders and language test pratitioners at the university, and professional development courses. 
-
+              As part of a PhD position at Radboud University, I supported the university's language
+              policy and the language centre through research on the post-entry language test (in Dutch
+              and English) and by examining student writing samples and the writing process. Other duties
+              included teaching (MA course <i>Language Testing</i>), consultation with stakeholders and
+              language test practitioners at the university, and professional development courses.
             </p>
           </div>
 
@@ -273,49 +231,53 @@
             <div class="role">Research Fellow, Test Developer</div>
             <div class="meta">Language Testing Research Centre, The University of Melbourne | 2016–2022</div>
             <p class="small">
-              Work included a large range of <u><a href="https://arts.unimelb.edu.au/language-testing-research-centre/research/publications#project-reports" 
-              target="_blank">projects</a></u> in assessment research, validation, benchmarking, and development. Noteworthy project include leading a team of item writers for a major internationa client, designing a LOTE test at B1 for Australia's national translation authority, and participation in a major research project for ETS (IELTS integrated writing). 
+              Work included a wide range of
+              <u><a href="https://arts.unimelb.edu.au/language-testing-research-centre/research/publications#project-reports" target="_blank">projects</a></u>
+              in assessment research, validation, benchmarking, and development. Noteworthy projects
+              included leading a team of item writers for a major international client, designing a LOTE
+              test at B1 for Australia's national translation authority, and participating in a major
+              research project for ETS.
+            </p>
           </div>
 
           <div class="entry">
             <div class="role">In-house Language Trainer</div>
-            <div class="meta">British Council | British Embassy | Beijing | 2003-2013</div>
+            <div class="meta">British Council | British Embassy | Beijing | 2003–2013</div>
             <p class="small">
-              In-house language trainer for Cultural and Education section of the embassy. In addition to teaching, I was responsible for copy editing, curriculum design, and materials development. Also led or contributed to language-related projects associated with important events; 2008/2012 Olympics, state visits, outreach programmes, and institutional-level research.
+              In-house language trainer for the Cultural and Education section of the embassy. In addition
+              to teaching, I was responsible for copy editing, curriculum design, and materials development.
             </p>
           </div>
 
           <div class="entry">
             <div class="role">Examiner, Examiner Trainer, Enquiry on Results Marking</div>
-            <div class="meta">British Council, IDP Education Australia, Cambridge Exams 2004–2013</div>
+            <div class="meta">British Council, IDP Education Australia, Cambridge Exams | 2004–2013</div>
             <p class="small">
-              IELTS: Examiner trainer (China), EoR marker (East and South Asia). Cambridge Main Suite: Examiner. 
+              IELTS: Examiner trainer (China), EoR marker (East and South Asia). Cambridge Main Suite:
+              Examiner.
             </p>
           </div>
-          
-          <div class="entry">
-            <div class="role">Other Roles</div>
-            <div class="meta">Academic Director, ELS Language Centres, Penang / Tianjin / Beijing | 2000–2003</div>
-            <div class="meta">Examiner, IDP: IELTS Australia, Melbourne | 2013–2016</div>
-            <div class="meta">EAP and Exams Trainer, Impact English College, Melbourne | 2013–2016</div>            
-            <div class="meta">Examiner, Cambridge Main Suite, Beijing / Melbourne / Rotterdam | 2001–present</div>   
-            <div class="meta">Cambridge Test Administrator, Babel, Utrecht | 2018-2020</div>  
-            <div class="meta">Examiner, Various, Deakin University, Melbourne | 2013-2016</div>  
-          </div>
 
+          <div class="entry list-block">
+            <div class="list-heading">Other Roles</div>
+            <div>Academic Director, ELS Language Centres, Penang | Tianjin | Beijing</div>
+            <div>Examiner, IDP: IELTS Australia, Melbourne</div>
+            <div>EAP and Exams Trainer, Impact English College, Melbourne</div>
+            <div>Examiner, Cambridge Main Suite, Beijing | Melbourne | Rotterdam</div>
+            <div>Cambridge Test Administrator, Babel, Utrecht</div>
+          </div>
         </section>
-        
-        
+
         <section>
           <h2>Academic Service and Community Engagement</h2>
 
           <div class="entry">
-            <div class="role">Webinar Coordinator</div>
+            <div class="role">ILTA Webinar Coordinator</div>
             <div class="meta">International Language Testing Association (ILTA) | 2025–present</div>
             <p class="small">
-              Coordinate webinar planning and delivery in collaboration with Special Interest Groups and the Graduate
-              Student Association. Contribute to maintaining a visible and accessible webinar series
-              for the professional community.
+              Coordinate webinar planning and delivery in collaboration with Special Interest Groups and
+              the Graduate Student Association. Contribute to maintaining a visible and accessible webinar
+              series for the professional community.
             </p>
           </div>
 
@@ -324,21 +286,13 @@
             <div class="meta">International Max Planck Research School (IMPRS) Conference | 2023–2024</div>
             <div class="meta">Moving Humanities Conference, Groningen | 2023–2024</div>
             <p class="small">
-              Member of the organizing committee for the above conferences. 
+              Member of the organizing committee for the above conferences.
             </p>
           </div>
-
         </section>
-
-
-        
       </main>
 
       <aside>
-        
-
-        
-
         <section>
           <h2>Education and Qualifications</h2>
 
@@ -353,76 +307,90 @@
           </div>
 
           <div class="entry">
-            <div class="role">DELTA | CELTA | IDLTM</div>
+            <div class="role">DELTA | CELTA | IDLTM | BA</div>
+          </div>
+        </section>
+
+        <section class="list-block">
+          <h2>Selected Recent Conference Presentations</h2>
+          <div>EALTA (2026) Multilingual Post-Entry Assessment</div>
+          <div>NUT (2026) Roadmap for Language Test Validation</div>
+          <div>TBLT (2025) Assessing Use of Digital Writing Tools</div>
+          <div>ALTAANZ (2025) Collaborative Approach to Validation</div>
+          <div>LTF (2025) Virtual Desktop for Data Collection</div>
+          <div>LTRC (2024) Process + Product in Writing Assessment</div>
+        </section>
+
+        <section class="list-block">
+          <h2>Selected Assessment and Validation Work</h2>
+          <div>Radboud University: validation of the
+            <a href="https://www.ru.nl/radboud-into-languages/services/radboud-academic-diagnostic-assessment-radar" target="_blank">RADAr</a>
+          </div>
+          <div>Kaplan:
+            <a href="https://www.kaplanenglishtest.com/" target="_blank">KTE</a> C2 Item Development Supervision
+          </div>
+          <div>Babel:
+            <a href="https://www.babel.nl/en/ela-wp/" target="_blank">Academic Staff Exam</a>, Examiner, Consultant
+          </div>
+          <div>
+            <a href="https://www.englishscore.com/" target="_blank">EnglishScore</a>: Validation and Reliability, Consultant
+          </div>
+          <div>NAATI:
+            <a href="https://www.naati.com.au/" target="_blank">CLA (LOTE)</a> Project Lead, Test Development
+          </div>
+          <div>
+            <a href="https://www.cnavt.com/" target="_blank">CNaVT</a>: A2 Item Benchmarking
+          </div>
+          <div>
+            <a href="https://oet.com/" target="_blank">OET</a>: Item Development and Trialling
+          </div>
+          <div>
+            <a href="https://www.beds.ac.uk/crella/" target="_blank">CRELLA</a>: Benchmarking and Standardization
+          </div>
+          <div>
+            <a href="https://www.auckland.ac.nz/en/students/student-support/academic-support/delna.html" target="_blank">DELNA</a>: Test Development, Trialling, Equating
+          </div>
+          <div>
+            <a href="https://www.ets.org/toefl.html" target="_blank">TOEFL iBT</a>: Research, Integrated Writing
+          </div>
+        </section>
+
+        <section class="list-block">
+          <h2>Technical Expertise</h2>
+          <div>R | RStudio</div>
+          <div>Python | VS Code</div>
+          <div>HTML | JavaScript</div>
+          <div>Winsteps | FACETS</div>
+          <div>SPSS | JASP</div>
+          <div>Inputlog</div>
+          <div>ELAN</div>
+        </section>
+
+        <section class="list-block">
+          <h2>In the Media</h2>
+          <div class="list-heading">About my work:</div>
+          <div>
+            <a href="https://www.voxweb.nl/nieuws/studenten-scoren-steeds-slechter-op-de-taaltoets-is-dat-een-probleem" target="_blank">Students Score Worse on the Language Test: Is That a Problem?</a>
           </div>
 
+          <div class="list-heading">Written by me:</div>
+          <div>
+            <a href="https://www.mpi.nl/blog/link-between-thinking-and-writing-your-keyboard" target="_blank">The Link Between Thinking and Writing: Your Keyboard</a>
+          </div>
+          <div>
+            <a href="https://www.mpi.nl/blog/watching-writers-write" target="_blank">Watching Writers Write</a>
+          </div>
         </section>
 
-        <section>
-          <h2>Selected Conference Presentations</h2>
-          
-            EALTA (2026) Multilingual Post-Entry Assessment <br>
-            NUT (2026) Roadmap for Language Test Validation <br>
-            TBLT (2005) Assessing Use of Digital Writing Tools <br>
-            ALTAANZ (2025) Collaborative Approach to Validation <br>
-            LTF (2025) Virtual Desktop for Data Collection <br>
-            LTRC (2024) Process + Product in Writing Assessment <br>
-          
-        </section>
-
-        <section>
-          <h2>Selected Assessment and Validation Work</h2>
-          Radboud University: validation of the <a href="https://www.ru.nl/radboud-into-languages/services/radboud-academic-diagnostic-assessment-radar" 
-            target="_blank">RADAr</a><br>
-            Kaplan: <a href="https://www.kaplanenglishtest.com/" target="_blank">KTE</a> C2 Item Development Supervision <br>
-            Babel: <a href="https://www.babel.nl/en/ela-wp/ ta" target="_blank">Academic Staff Exam</a>, Examiner, Consultant <br>
-            <a href="https://www.englishscore.com/" target="_blank">EnglishScore</a>: Validation and Reliability, Consultant <br>
-            NAATI: <a href="https://www.naati.com.au/" target="_blank">CLA (LOTE)</a> Project Lead, Test Development <br>
-            <a href="https://www.cnavt.com/" target="_blank">CNaVT:</a> A2 Item Benchmarking<br>
-            <a href="https://oet.com/" target="_blank">OET:</a> Item Development and Trialling <br>
-            <a href="https://www.beds.ac.uk/crella/" target="_blank">CRELLA:</a> Benchmarking and Standardization <br>
-            <a href="https://www.auckland.ac.nz/en/students/student-support/academic-support/delna.html" target="_blank">DELNA:</a> Test Development, Trailing, Equating <br>
-            <a href="https://www.ets.org/toefl.html" target="_blank">TOEFL iBT:</a> Research, Integrated Writing <br>
-
-
-          </ul>
-        </section>
-        
-        <section>
-          <h2>Technical Expertise</h2>
-          
-            R | R Studio<br>
-            Python | VS Code<br>
-            HTML | JavaScript <br>
-            Winsteps | FACETS <br>
-            SPSS | JASP <br>
-            Inputlog <br>
-            ELAN <br>
-        
-        </section>
-
-        <section>
-          <h2>In the Media</h2>
-          About my work: <br>
-          <a href="https://www.voxweb.nl/nieuws/studenten-scoren-steeds-slechter-op-de-taaltoets-is-dat-een-probleem" target="_blank">Students Score Worse on the Language Test: Is That A Problem?</a><br>
-          Written by me: <br>
-          <a href="https://www.mpi.nl/blog/link-between-thinking-and-writing-your-keyboard" target="_blank">The Link Between Thinking and Writing: Your Keyboard</a><br>
-          <a href="https://www.mpi.nl/blog/watching-writers-write" target="_blank">Watching Writers Write</a><br>
-
-        <section>
+        <section class="list-block">
           <h2>Languages</h2>
-          English (Native)
-          Dutch (C1)
-          Putonghua (formerly B2)  
+          <div>English: native</div>
+          <div>Dutch: C1</div>
+          <div>Putonghua: formerly B2</div>
         </section>
       </aside>
 
     </div>
-
-    <footer>
-      <p>References available on request.</p>
-    </footer>
-
   </div>
 </body>
 </html>

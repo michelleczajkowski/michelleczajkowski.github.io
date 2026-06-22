@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -42,8 +43,8 @@
 
     header {
       border-bottom: 2px solid var(--accent);
-      padding-bottom:2px;
-      margin-bottom:2px;
+      padding-bottom: 2px;
+      margin-bottom: 2px;
     }
 
     h1 {
@@ -71,12 +72,11 @@
     }
 
     h2 {
-      margin:2px 0 10px 0;
+      margin: 2px 0 10px 0;
       padding-top: 2px;
       font-size: 1.08rem;
       color: var(--accent);
       border-top: 1px solid var(--line);
-      
     }
 
     p {
@@ -94,13 +94,13 @@
 
     .two-col {
       display: grid;
-      grid-template-columns: 1fr  1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 28px;
     }
 
     .entry {
       padding: 2px 0;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 0px solid var(--line);
     }
 
     .entry:last-child {
@@ -166,124 +166,95 @@
         font-size: 1.7rem;
       }
     }
+
     @media print {
-  body {
-    font-size: 11pt;
-    line-height: 1.4;
-  }
+      @page {
+        size: A4;
+        margin: 12mm;
+      }
 
-  .page {
-    padding: 0;
-  }
+      body {
+        font-size: 10.5pt;
+        line-height: 1.35;
+      }
 
-  h2 {
-    page-break-after: avoid;
-  }
+      .page {
+        max-width: none;
+        padding: 0;
+      }
 
-  .entry {
-    page-break-inside: avoid;
-  }
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
 
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  @media print {
-  @page {
-    size: A4;
-    margin: 12mm;
-  }
+      .entry {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
 
-  body {
-    font-size: 10.5pt;
-    line-height: 1.35;
-  }
+      h2 {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
 
-  .page {
-    max-width: none;
-    padding: 0;
-  }
-
-  .two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-
-  .entry {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-
-  h2 {
-    page-break-after: avoid;
-    break-after: avoid;
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-  }
-}
-}
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="page">
 
     <header>
       <h1>Michelle Czajkowski</h1>
-      
+
       <p class="contact">
-        <span>Language Assessment Researcher and Practitioner | American | Based in the Netherlands</span><br>
+        <span>Language Assessment Researcher and Practitioner</span><br>
         <span>Email: michelle.czajkowski@ru.nl | mtczajkowski@yahoo.com</span><br>
+        <span><a href="https://orcid.org/0009-0005-6298-0619" target="_blank">ORCID Number: 0009-0005-6298-0619</a></span><br>
       </p>
     </header>
 
     <section>
       <h2>Profile</h2>
-    <p>
-      I have experience in test development, teaching, and teacher training. 
-      I have worked with a range of testing organizations, including the British Council, ETS, 
-      and Cambridge English, and with language tests such as IELTS, TOEFL iBT, OET, KTE, Linguaskill, 
-      CNaVT, and DELNA/DELTA. I have also worked at the Language Testing Research Centre at the 
-      University of Melbourne. I am currently completing my PhD at Radboud University, where my research 
-      focuses on the validation of a post-entry language assessment in a bilingual university context. 
-      Alongside my research, I enjoy teaching and contributing to the wider language testing field, 
-      including through my role as ILTA Webinar Coordinator and conference organization.
-    </p>
+      <p>
+        I am a language test developer and researcher with wide experience in language assessment.
+      </p>
     </section>
 
     <div class="two-col">
 
       <main>
-        
 
         <section>
           <h2>Professional Experience</h2>
 
           <div class="entry">
-            <div class="role">Researcher | CLS | Radboud University </div>
-
+            <div class="role">Researcher and PhD Candidate</div>
+            <div class="meta">Center for Language Studies, Radboud University</div>
           </div>
 
           <div class="entry">
-            <div class="role">Test Developer | LTRC | The University of Melbourne </div>
+            <div class="role">Research Fellow and Test Developer</div>
+            <div class="meta">Language Testing Research Centre, The University of Melbourne</div>
           </div>
 
           <div class="entry">
-            <div class="role">In-house Language Trainer | British Council </div>
+            <div class="role">Language Trainer and Consultant</div>
+            <div class="meta">British Council, Beijing, China</div>
           </div>
 
           <div class="entry">
-            <div class="role">Senior Examiner, Trainer | IELTS </div>
+            <div class="role">Senior Examiner and Examiner Trainer</div>
+            <div class="meta">IELTS, Northern China</div>
           </div>
-          
-       
-
         </section>
-        
-        
+
         <section>
           <h2>Teaching</h2>
 
@@ -291,40 +262,21 @@
             <div class="meta">Radboud University (MA course Language Testing)</div>
             <div class="meta">British Council (ESP / ESL Teaching)</div>
             <div class="meta">International House (ESL Teaching)</div>
-            <p class="small">
- 
-            </p>
           </div>
-
         </section>
+
         <section>
           <h2>Academic Service and Community Engagement</h2>
 
           <div class="entry">
             <div class="role">Webinar Coordinator</div>
             <div class="meta">International Language Testing Association (ILTA) | 2025–present</div>
-  
           </div>
-
-          <div class="entry">
-            <div class="role">Conference Organization</div>
-            <div class="meta">International Max Planck Research School (IMPRS) Conference | 2023–2024</div>
-            <div class="meta">Moving Humanities Conference, Groningen | 2023–2024</div>
-            <p class="small">
- 
-            </p>
-          </div>
-
         </section>
 
-
-        
       </main>
 
       <aside>
-        
-
-        
 
         <section>
           <h2>Education and Qualifications</h2>
@@ -342,36 +294,31 @@
           <div class="entry">
             <div class="role">DELTA | CELTA | IDLTM</div>
           </div>
-
         </section>
 
-      
-        <section>
-          <h2>Selected Assessment and Validation Work</h2>
-          Radboud University: validation of the <a href="https://www.ru.nl/radboud-into-languages/services/radboud-academic-diagnostic-assessment-radar" 
-            target="_blank">RADAr</a><br>
-            Kaplan: <a href="https://www.kaplanenglishtest.com/" target="_blank">KTE</a> C2 Item Development Supervision <br>
-            Babel: <a href="https://www.babel.nl/en/ela-wp/ ta" target="_blank">Academic Staff Exam</a>, Examiner, Consultant <br>
-            <a href="https://www.englishscore.com/" target="_blank">EnglishScore</a>: Validation and Reliability, Consultant <br>
-            NAATI: <a href="https://www.naati.com.au/" target="_blank">CLA (LOTE)</a> Project Lead, Test Development <br>
-            <a href="https://www.cnavt.com/" target="_blank">CNaVT:</a> A2 Item Benchmarking<br>
-            <a href="https://oet.com/" target="_blank">OET:</a> Item Development and Trialling <br>
-            <a href="https://www.beds.ac.uk/crella/" target="_blank">CRELLA:</a> Benchmarking and Standardization <br>
-            <a href="https://www.auckland.ac.nz/en/students/student-support/academic-support/delna.html" target="_blank">DELNA:</a> Test Development, Trailing, Equating <br>
-            <a href="https://www.ets.org/toefl.html" target="_blank">TOEFL iBT:</a> Research, Integrated Writing <br>
+<section>
+  <h2>Selected Assessment and Validation Work</h2>
+
+  <p>
+    Radboud Academic Diagnostic Assessment (RADAr)<br>
+    Kaplan Test of English (KTE)<br>
+    De Algemene Kennis- en Vaardighedentoets voor academici (AKV) <br>
+    EnglishScore<br>
+    Credentialed Community Language (CCL) Test<br>
+    Het Certificaat Nederlands als Vreemde taal (CNaVT)<br>
+    Occupational English Test (OET)<br>
+    Diagnostic English Language Needs Assessment (DELNA)<br>
+    TOEFL iBT: research on integrated writing
+  </p>
+</section>
 
 
-          </ul>
-        </section>
-        
-        
 
-        
       </aside>
 
     </div>
 
-
   </div>
 </body>
 </html>
+
